@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+</head>
+
+<body bgcolor="#330066">
+<p><font color="#FFFF33" size="+3" face="楷体_GB2312">跟踪程序至StrnCpy函数内：</font><font color="#6633FF" size="+2" face="楷体_GB2312"><br>
+  </font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312">a.客户端程序使用gdb调入，在向目标服务器发送trans2open数据报处设置中断：<br>
+  (gdb) b 282<br>
+  Breakpoint 1 at 0x8048e3a: file trans2root.c, line 282.</font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312"> b.运行客户端程序：<br>
+  (gdb) r 127.0.0.1 0xbffff714<br>
+  Starting program: /home/zzg/hmm/Linux/test 127.0.0.1 0xbffff714<br>
+  Connect! -&gt; dest host...</font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312"> Breakpoint 1, trans2_open 
+  (sock=5) at trans2root.c:283<br>
+  283</font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312"> c.查看目标服务器产生的子进程，使用ps –aux命令获得子进程ID；</font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312"> d.使用gdb跟踪该子进程：gdb /usr/local/samba/bin/smbd 
+  pid</font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312"> e.设置断点，由于客户端可控，使用客户端向服务端发送的trans2open数据报将包含大量的0x90(NOP) 
+  ，</font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312">猜测fname的地址空间在0xbffff000至0xbfffff00之间，设置硬中断：<br>
+  (gdb) watch *(unsigned int *)0xbffff600==0x90909090<br>
+  Hardware watchpoint 1: *(unsigned int *) 3221222912 == 2425393296<br>
+  (gdb) c<br>
+  Continuing.<br>
+  Hardware watchpoint 1: *(unsigned int *) 3221222912 == 2425393296</font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312"> f.客户端继续执行；</font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312"> g.由于猜测的地址范围正确，预先设置的硬中断发生，此时服务进程应该在StrnCpy函数中。<br>
+  Old value = 0<br>
+  New value = 1<br>
+  0x08101036 in StrnCpy () at eval.c:41<br>
+  41 eval.c: No such file or directory.<br>
+  in eval.c<br>
+  (gdb)<br>
+  </font><font color="#FFFFFF" size="+2"></font> </p>
+<p><font size="+2" face="楷体_GB2312"><br>
+  </font><font size="+2" face="楷体_GB2312"><br>
+  </font> </p>
+<p> <a href="17.htm"><img src="images/backoff.jpg" width="38" height="29" border="0"></a></p>
+</body>
+</html>

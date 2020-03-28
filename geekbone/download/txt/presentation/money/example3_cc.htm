@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+</head>
+
+<body bgcolor="#330066">
+<p><font size="+2"><strong><font color="#FFCCCC">example3.c:</font></strong><br>
+  <font color="#FFFFFF">------------------------------------------------------------------------------ 
+  <br>
+  <font face="楷体_GB2312">void function(char *str) <br>
+  { <br>
+  char buffer[256]; <br>
+  <br>
+  strcpy(buffer,str); <br>
+  printf(&quot;hello, %s\n&quot;,buffer);<br>
+  return;<br>
+  } </font></font></font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312">void main(int argc, char *argvp[]) 
+  <br>
+  { <br>
+  if (argc != 2)<br>
+  {<br>
+  printf(&quot;Usage: %s yourname\n&quot;, argv[0]);<br>
+  return;<br>
+  }<br>
+  function(argv[1]); <br>
+  printf(&quot;OK!\n&quot;);<br>
+  return;<br>
+  } <br>
+  ------------------------------------------------------------------------------</font><font color="#FFFFFF" size="+2"> 
+  </font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312">我们想把要执行的代码放到我们想使其溢出的缓冲区里，并且覆盖函数的返回地址，使其指向这个缓冲区，如此一来，我们构造的参数应该是这样的：</font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312">NOP NOP ... NOP Shellcode 
+  ADDR ADDR</font><br>
+</p>
+<p><font size="+2"> </font> </p>
+<p><font size="+2"><br>
+  </font> </p>
+<p> <a href="16.htm"><img src="images/backoff.jpg" width="38" height="29" border="0"></a></p>
+</body>
+</html>

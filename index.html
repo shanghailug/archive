@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>index</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="归档日志">归档日志</h1>
+<h2 id="数据来源">数据来源</h2>
+<ol type="1">
+<li>Lightening，包括如下数据：</li>
+</ol>
+<ul>
+<li>shlug.zip：包括www.geekbone.org的网站、演讲活动资料；</li>
+<li>haproxy.odp、20100725.odp、shlug2010review.pdf：演讲活动资料。</li>
+</ul>
+<ol start="2" type="1">
+<li>Wayback Machine <a href="http://www.shlug.org">主网站</a>在改用GitHub页面前的<a href="https://web.archive.org/web/20151119122625/http://www.shlug.org/">快照</a>.</li>
+</ol>
+<h2 id="数据处理">数据处理</h2>
+<h3 id="shlug.zip">shlug.zip</h3>
+<p><code>shlug.zip</code>中包括<code>geekbone</code>和<code>meeting</code>目录，分别是网站数据和分享活动相关的资料。</p>
+<h4 id="geekbone目录">geekbone目录</h4>
+<ol type="1">
+<li>去除无关数据内容</li>
+</ol>
+<ul>
+<li>去除<code>geekbone</code>目录下除了<code>geekbone</code>子目录的其他文件和目录；</li>
+<li>去除<code>geekbone/geekbone/cert</code>目录；</li>
+<li>去除<code>geekbone/geekbone/webalizer</code>；</li>
+<li>去除从来没用过的<code>geekbone/geekbone/discuss</code>；</li>
+</ul>
+<ol start="2" type="1">
+<li>转换GBK编码的文本文件</li>
+</ol>
+<blockquote>
+<p>find -name ’*.txt’ -print0|xargs -0 recode gbk..utf8</p>
+</blockquote>
+</body>
+</html>

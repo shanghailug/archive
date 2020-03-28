@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+</head>
+
+<body bgcolor="#330066">
+<p><font color="#FF99CC" size="+2"><strong><font color="#FFCCCC">exit.c</font></strong></font><font size="+2" face="楷体_GB2312"><br>
+  </font><font size="+2" face="楷体_GB2312"> <font color="#FFFFFF">------------------------------------------------------------------------------ 
+  <br>
+  #include &lt;unistd.h&gt;<br>
+  void main() { <br>
+  exit(0); <br>
+  } <br>
+  ------------------------------------------------------------------------------ 
+  <br>
+  gcc -o exit -static exit.c<br>
+  通过gdb反汇编_exit调用，观察到底发生了什么：<br>
+  ------------------------------------------------------------------------------ 
+  <br>
+  0x800034c &lt;_exit&gt;: pushl %ebp <br>
+  0x800034d &lt;_exit+1&gt;: movl %esp,%ebp <br>
+  0x800034f &lt;_exit+3&gt;: pushl %ebx <br>
+  0x8000350 &lt;_exit+4&gt;: movl $0x1,%eax 0x1放到寄存器EAX，0x1是系统调用表的索引，就是exit<br>
+  0x8000355 &lt;_exit+9&gt;: movl 0x8(%ebp),%ebx 放置退出码，返回0, 以表示没有错误<br>
+  0x8000358 &lt;_exit+12&gt;: int $0x80 <br>
+  0x800035a &lt;_exit+14&gt;: movl 0xfffffffc(%ebp),%ebx <br>
+  0x800035d &lt;_exit+17&gt;: movl %ebp,%esp <br>
+  0x800035f &lt;_exit+19&gt;: popl %ebp <br>
+  0x8000360 &lt;_exit+20&gt;: ret <br>
+  0x8000361 &lt;_exit+21&gt;: nop <br>
+  0x8000362 &lt;_exit+22&gt;: nop <br>
+  0x8000363 &lt;_exit+23&gt;: nop <br>
+  ------------------------------------------------------------------------------<br>
+  </font><br>
+  </font> </p>
+<p> <a href="15.htm"><img src="images/backoff.jpg" width="38" height="29" border="0"></a></p>
+</body>
+</html>

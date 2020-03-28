@@ -1,0 +1,62 @@
+#Unix频道的自动服务器的简明FAQ
+
+一 公共用户访问部分
+
+1 什么是#Unix/root?
+  A #Unix/root是指安装在#Unix频道中的一个用于增强irc功能的自动机
+
+2 #Unix/root有什么功能？
+  A 目前，root可以完成文件共享和留言功能，以后根据需求可开发新的服务功能。
+
+3 任何人都可以使用#Unix/root吗？
+  A root已经对所有人开放，可以输入/msg root .help得到简明帮助
+
+4 为什么我无法下载root中的文件?
+  A 如果你用的是mIRC，则请在file->options->dcc->folders->DCC ignore设为disabled
+    其它的irc client参照修改
+
+5  进入#Unix时候，提示有留言，该怎么看？
+  A 输入/msg root .getnotes 
+
+6  如何对某人留言？
+  A 输入/msg root .leavenote <nickname> <text>
+
+7 为什么我刚刚还看到留言，改了一个nick上来后，留言就看不到了？
+  A 因为，留言是根据使用者的nick来识别的。注意：由于这种识别机制无法进行身份验证，
+    请勿要在notes中存放私密信息。
+
+8 如何下载文件？
+  A 可先用/msg root .getlist列出文件目录，再用/msg root .getfile <filename>下载文件
+
+9 为什么我无法联上root?，我是在防火墙后面。
+  A 请将file->local info->ip address改成你正在使用的计算机在局域网的私有地址。
+    另外, 有些防火墙不支持irc, 因此, 你可能需要联系你的系统管理员.
+
+10 大文章如何贴在root上？
+  A 一般情况下root的留言功能主要是用来发短消息的功能。如果是长篇的文档请以文件的形式
+    放在root的文件共享区中，或者发在wizard.linux.org.cn(紫桐BBS论坛)上。
+    如果是希望放在root上, 请联系root的维护人员.
+
+11 root现有哪些维护人员?
+  A root现在由JaCkZ,gEEk,Mada,Lightning,Chaos`Immortal等人负责维护
+
+二 维护人员访问部分
+
+1 如何进入root
+  A step1: DCC chat到root
+    step2: 输入密码
+    step3: 输入.help得到命令列表
+
+2 如何使用root的文件共享功能?
+  A  step1: 进入root
+     step2: 输入.files
+     step3: 输入.help得到命令列表
+
+3 为什么我进不了root?
+  A 请用你注册帐号时的nick联接root
+
+4 维护人员如何写headlines
+  A 用headlines.txt的名字保存写完的headlines,然后进入root的文件共享环境
+    用DCC的Send功能上传文件进入/incoming子目录中。删除/pub中原先的headlines.txt
+    mv /incoming中的headlines.txt进入/pub中。
+   

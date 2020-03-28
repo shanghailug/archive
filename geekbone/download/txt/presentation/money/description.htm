@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+</head>
+
+<body bgcolor="#330066">
+<p><font color="#FFCCCC" size="+2" face="楷体_GB2312"> Samba &lt; 2.2.8版本存在缓冲区溢出漏洞，具体如下：</font></p>
+<p><font color="#FFFF33" size="+2" face="楷体_GB2312">smb.h</font><font color="#000000" size="+2" face="楷体_GB2312"><br>
+  <font color="#FFFFFF">--------------------------------------------------------------------------------<br>
+  #define PSTRING_LEN 1024<br>
+  typedef char pstring[PSTRING_LEN];<br>
+  --------------------------------------------------------------------------------</font></font></p>
+<p><font color="#FFFF33" size="+2" face="楷体_GB2312">trans2.c</font><font color="#000000" size="+2" face="楷体_GB2312"><br>
+  <font color="#FFFFFF">--------------------------------------------------------------------------------<br>
+  static int call_trans2open(connection_struct *conn, char *inbuf, char *outbuf,<br>
+  int bufsize,<br>
+  char **pparams, char **ppdata)<br>
+  {<br>
+  ……<br>
+  char *pname = &amp;params[28];<br>
+  int16 namelen = strlen(pname)+1;</font></font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312">pstring fname; <br>
+  ……<br>
+  StrnCpy(fname,pname,namelen);//未严格检查字符串长度，导致溢出<br>
+  ……<br>
+  }<br>
+  --------------------------------------------------------------------------------</font></p>
+<p><font color="#FFFF33" size="+2" face="楷体_GB2312">util_str.c</font><font color="#000000" size="+2" face="楷体_GB2312"><br>
+  <font color="#FFFFFF">--------------------------------------------------------------------------------<br>
+  char *StrnCpy(char *dest,const char *src,size_t n)<br>
+  {<br>
+  char *d = dest;<br>
+  if (!dest) return(NULL);<br>
+  if (!src) {<br>
+  *dest = 0;<br>
+  return(dest);<br>
+  }<br>
+  while (n-- &amp;&amp; (*d++ = *src++)) ;<br>
+  *d = 0;<br>
+  return(dest);<br>
+  }<br>
+  --------------------------------------------------------------------------------</font></font></p>
+<p><font color="#FFFF33" size="+2" face="楷体_GB2312">trans2.c</font><font color="#000000" size="+2" face="楷体_GB2312"><br>
+  <font color="#FFFFFF">--------------------------------------------------------------------------------<br>
+  int reply_trans2(connection_struct *conn,<br>
+  char *inbuf,char *outbuf,int length,int bufsize)<br>
+  --------------------------------------------------------------------------------<br>
+  </font></font></p>
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312">pname为客户端输入的数据包结构的一部分，只要该部分长度大于1024字节，即可造成缓冲区溢出。</font><font color="#FFFFFF"><br>
+  </font></p>
+<p><font size="+2" face="楷体_GB2312"><br>
+  </font><font size="+2" face="楷体_GB2312"><br>
+  </font> </p>
+<p> <a href="17.htm"><img src="images/backoff.jpg" width="38" height="29" border="0"></a></p>
+</body>
+</html>

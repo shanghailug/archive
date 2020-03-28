@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+</head>
+
+<body bgcolor="#330066">
+<font size="+2"><strong><font color="#FFCCCC">example1.c:</font></strong><br>
+<font color="#FFFFFF">------------------------------------------------------------------------------ 
+<br>
+void function(int a, int b, int c) { <br>
+char buffer1[5]; <br>
+char buffer2[10]; <br>
+} 
+<p>void main() { <br>
+  function(1, 2, 3); <br>
+  } <br>
+  ------------------------------------------------------------------------------ 
+</p>
+</font>
+<p><font color="#FFFF33">对function的调用：</font><br>
+  <font color="#FFFFFF">pushl $3<br>
+  pushl $2 <br>
+  pushl $1<br>
+  call function -&gt; 指令call会把指令指针(IP)也压入栈中 称这个地址为RET</font></p>
+</font> 
+<p><font color="#FFFFFF" size="+2"><br>
+  程序流程陷入function函数，函数首先进行例程的序幕工作：<br>
+  pushl %ebp <br>
+  movl %esp, %ebp <br>
+  subl $20, %esp</font><font size="+2"><br>
+  </font></p>
+<p> <a href="9.htm"><img src="images/backoff.jpg" width="38" height="29" border="0"></a></p>
+</body>
+</html>

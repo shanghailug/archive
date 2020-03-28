@@ -1,0 +1,81 @@
+GeekBone的Mail和FTP服务开始试运行
+
+Mail与FTP系统使用统一的帐号和密码，帐号密码与原先旧服务器系统上邮件系统的帐号、密码一样。
+修改密码可访问:
+https://secure.geekbone.org/cgi-bin/chpass.cgi
+
+邮件系统: smtp 服务器地址: mail.geekbone.org ，使用smtp验证。
+          imap 服务器地址: mail.geekbone.org
+          web  方式访问:   http://mail.geekbone.org/
+
+ftp系统: 地址: ftp.geekbone.org, 端口， 与老tux上端口同
+
+1.
+Q: 为什么我的信箱打不开？
+A: 确认正确地设置了 smtp服务器地址和imap服务器地址
+
+2.
+Q: 为什么说我密码错？
+A: 确认你的用户名填写正确， 与老系统不同之处在于 新系统不再要求用户名带有 @geekbone.org的后缀了
+
+3.
+Q: 我把@geekbone.org这个后缀去掉了，还是说我密码错
+A: 你是不是忘记了密码？
+   可以找chaos或者geek reset你的密码，然后去
+   https://secure.geekbone.org/cgi-bin/chpass.cgi 修改
+
+4.
+Q: 我不能发邮件
+A: 在outlook express设置中，确认你的smtp服务器设置中，选中了 "我的服务器需要身份认证"
+   对于mozilla, 确认你的smpt服务器设置中 选中了 "use name and password", 并正确地输入了用户名，
+   注意，用户名没有@geekbone.org这样的后缀
+
+5.
+Q: 我设置好了，但仍然不能发邮件
+A: 你是不是开了什么个人防火墙?
+   把防火墙关闭然后重试
+
+6.
+Q: 我还是不能发邮件
+A: 联系你的供应商或者RTFM
+
+7.
+Q: 我没法连ftp
+A: ftp服务器地址和端口都对么?
+
+8.
+Q: 我还是没法连ftp
+A: 用户名和密码对么？
+   注意用户名和密码与前面邮件设置中的用户名和密码相同
+
+9.
+Q: 我把防火墙什么的都关了，还是连不上ftp
+A: 去龙华寺烧香吧
+
+
+=== 关于GeekBone SSL的若干问题:
+
+10.
+Q. 什么是SSL? 什么是根证书? 
+A: 这两个问题您应该问Google, 由于篇幅所限，我们不做解答。
+
+11. 
+Q: GeekBone为什么要使用SSL
+A: 出于安全方面的考虑, 我们将会把部分服务运行在SSL协议之上, 
+   因为我们财力所限，无法购置Verisign等公司的通用SSL证书, 
+   所以我们决定创建自己的根证书。今后与GeekBone相关之SSL的
+   都会通过该根证书方发放。
+
+
+12.
+Q: 如何安装GeekBone的SSL根证书？
+   根证书可从以下地址download:
+   https://secure.geekbone.org/geekbone.cer
+
+A: 在打开上面地址过程会弹出一个SSL的提示匡, 
+   提示该证书并非为IE所信任的ROOT CA, 点击 Yes(是) 继续,
+   文件下载后, 选择‘在文件的当前位置处打开’ -> 选择‘安装证书’ -> 
+   选择‘下一步’，弹出下面窗口后选择‘根据证书类型，自动选择证书存储区' ->
+   并选‘下一步’ -> 点击‘完成’ -> 选择‘是’，完成GeekBone根证书的安装.
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+</head>
+
+<body bgcolor="#330066">
+<p><font size="+2"><strong><font color="#FFCCCC">example3.c:</font></strong><br>
+  <font color="#FFFFFF">------------------------------------------------------------------------------ 
+  <br>
+  void function(char *str) <br>
+  { <br>
+  char buffer[256]; <br>
+  <br>
+  strcpy(buffer,str); <br>
+  printf(&quot;hello, %s\n&quot;,buffer);<br>
+  return;<br>
+  } </font></font></p>
+<p><font color="#FFFFFF" size="+2">void main(int argc, char *argvp[]) <br>
+  { <br>
+  if (argc != 2)<br>
+  {<br>
+  printf(&quot;Usage: %s yourname\n&quot;, argv[0]);<br>
+  return;<br>
+  }<br>
+  function(argv[1]); <br>
+  printf(&quot;OK!\n&quot;);<br>
+  return;<br>
+  } <br>
+  ------------------------------------------------------------------------------ 
+  </font></p>
+<p><font color="#FFFFFF" size="+2">执行：./a.out `perl -e &quot;print 'A' x 265`<br>
+  出现Segmentation fault错误。<br>
+  </font> </p>
+<p><font size="+2"><br>
+  </font> </p>
+<p> <a href="12.htm"><img src="images/backoff.jpg" width="38" height="29" border="0"></a></p>
+</body>
+</html>

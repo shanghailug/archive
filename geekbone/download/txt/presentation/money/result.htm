@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+</head>
+
+<body bgcolor="#330066">
+<p><font color="#FFFFFF" size="+2" face="楷体_GB2312">(gdb) disassemble main<br>
+  Dump of assembler code for function main:<br>
+  0x80484c0 &lt;main&gt;: push %ebp<br>
+  0x80484c1 &lt;main+1&gt;: mov %esp,%ebp<br>
+  0x80484c3 &lt;main+3&gt;: sub $0x8,%esp<br>
+  0x80484c6 &lt;main+6&gt;: cmpl $0x2,0x8(%ebp)<br>
+  0x80484ca &lt;main+10&gt;: je 0x80484e4 &lt;main+36&gt;<br>
+  0x80484cc &lt;main+12&gt;: sub $0x8,%esp<br>
+  0x80484cf &lt;main+15&gt;: mov 0xc(%ebp),%eax<br>
+  0x80484d2 &lt;main+18&gt;: pushl (%eax)<br>
+  0x80484d4 &lt;main+20&gt;: push $0x8048583<br>
+  0x80484d9 &lt;main+25&gt;: call 0x8048360 &lt;printf&gt;<br>
+  0x80484de &lt;main+30&gt;: add $0x10,%esp<br>
+  0x80484e1 &lt;main+33&gt;: jmp 0x8048507 &lt;main+71&gt;<br>
+  0x80484e3 &lt;main+35&gt;: nop<br>
+  0x80484e4 &lt;main+36&gt;: sub $0xc,%esp<br>
+  0x80484e7 &lt;main+39&gt;: mov 0xc(%ebp),%eax<br>
+  0x80484ea &lt;main+42&gt;: add $0x4,%eax<br>
+  0x80484ed &lt;main+45&gt;: pushl (%eax)<br>
+  0x80484ef &lt;main+47&gt;: call 0x8048490 &lt;function&gt;<br>
+  0x80484f4 &lt;main+52&gt;: add $0x10,%esp<br>
+  0x80484f7 &lt;main+55&gt;: sub $0xc,%esp<br>
+  0x80484fa &lt;main+58&gt;: push $0x8048597 &lt;--------&quot;OK!\n&quot;的地址<br>
+  0x80484ff &lt;main+63&gt;: call 0x8048360 &lt;printf&gt; &lt;--------调用printf<br>
+  0x8048504 &lt;main+68&gt;: add $0x10,%esp<br>
+  0x8048507 &lt;main+71&gt;: leave &lt;--------希望至此直接返回，跳过printf<br>
+  0x8048508 &lt;main+72&gt;: ret<br>
+  End of assembler dump.<br>
+  只需提供参数如下形式：<br>
+  A.....A[0x8048507]<br>
+  其中256+4个A，4字节的0x8048507，即可实现跳过printf(&quot;OK!\n&quot;)直接结束。<br>
+  因此，缓冲区溢出的利用主要思路是通过改变函数返回地址RET而改变程序流程去执行我们想要执行的代码。<br>
+  <br>
+  </font> </p>
+<p> <a href="13.htm"><img src="images/backoff.jpg" width="38" height="29" border="0"></a></p>
+</body>
+</html>

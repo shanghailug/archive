@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Other architecture</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+
+<body>
+<table width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr bgcolor="#000066"> 
+    <td width="73" height="107"><font face="Tahoma, Arial">&nbsp;</font></td>
+    <td width="2" height="107" align="center" valign="bottom"><font face="Tahoma, Arial"><img src="images/sep-up.png" width="2" height="107"></font></td>
+    <td width="676" height="107"><table width="676" height="107" border="0" cellpadding="20" cellspacing="0">
+        <tr> 
+          <td width="676" height="107" align="left" valign="bottom"><div align="center"><font color="#FFFFFF" size="+7">函数调用流程1</font><br>
+              <br>
+            </div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr bgcolor="#000066"> 
+    <td width="73" height="2" align="right" valign="middle"><font face="Tahoma, Arial"><img src="images/sep-left.png" width="73" height="2"></font></td>
+    <td width="2" height="2" bgcolor="#FFFFFF"><font face="Tahoma, Arial"><img src="images/spacer.gif" width="2" height="2"></font></td>
+    <td width="676" height="2" align="left" valign="middle"><font face="Tahoma, Arial"><img src="images/sep-right.png" width="676" height="2"></font></td>
+  </tr>
+  <tr bgcolor="#000066"> 
+    <td width="73" height="391" background="images/fill-left.png"> <table width="73" height="391" border="0" cellpadding="10" cellspacing="0">
+        <tr> 
+          <td height="391" align="center" valign="bottom"><a href="8.htm"><img src="images/prev.png" width="23" height="34" border="0"></a><a href="10.htm"><img src="images/next.png" width="23" height="34" border="0"></a></td>
+        </tr>
+      </table></td>
+    <td width="2" height="391" align="center" valign="top"><font face="Tahoma, Arial"><img src="images/sep-down.png" width="2" height="291"></font></td>
+    <td width="676" height="391" background="images/fill-right.png"><table width="676" height="391" border="0" cellpadding="10" cellspacing="0">
+        <tr align="left"> 
+          <td height="391" valign="top"> <p><font color="#FFFFFF"><br>
+              <img src="images/cy_diam.gif" width="19" height="19"> <font size="+1" face="楷体_GB2312">堆栈是一块保存数据的连续内存。 
+              一个名为堆栈指针(SP)的寄存器指向堆栈的顶部。堆栈的底部在一个固定的地址。 堆栈的大小在运行时由内核动态地调整。 CPU实现指令PUSH和POP， 
+              向堆栈中添加元素和从中移去元素。</font></font><font color="#FFFFFF" size="+1" face="楷体_GB2312">堆栈由一系列逻辑堆栈帧组成。</font><font size="+1" face="楷体_GB2312"><br>
+              </font><font color="#FFFFFF" size="+1" face="楷体_GB2312"><img src="images/cy_diam.gif" width="19" height="19"> 
+              堆栈帧：包括函数的参数， 函数地局部变量， 以及恢复前一个堆栈帧所需要的数据， 其中包括在函数调用时指令指针(IP)的值。</font></p>
+            <p><font color="#FFFFFF" size="+1" face="楷体_GB2312"><img src="images/cy_diam.gif" width="19" height="20"> 
+              除了堆栈指针(SP指向堆栈顶部的的低地址)之外， 为了使用方便还有指向帧内固定地址的指针叫做帧指针(FP)。 </font></p>
+            <p><font color="#FFFFFF" size="+1" face="楷体_GB2312"><img src="images/cy_diam.gif" width="19" height="20"></font><font color="#FFFF66" size="+1" face="楷体_GB2312"> 
+              当一个例程被调用时所必须做的第一件事是保存前一个FP(这样当例程退出时就可以恢复)。 然后它把SP复制到FP， 创建新的FP， 
+              把SP向前移动为局部变量保留空间。 这称为例程的序幕(prolog)工作。 当例程退出时， 堆栈必须被清除干净， 这称为例程的收尾(epilog)工作。</font></p>
+            <p><font color="#FFFF66" size="+1" face="楷体_GB2312"><img src="images/or_diam.gif" width="19" height="19"> 
+              </font><font color="#FF9999" size="+2"><a href="example1_c.htm">example1.c</a></font><br>
+              <font color="#FFFFFF"> </font> </p>
+            <p><br>
+            </p>
+            <p><font color="#FFFFFF" size="+2" face="楷体_GB2312"> </font></p>
+            <p align="left">&nbsp;</p>
+            </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>
