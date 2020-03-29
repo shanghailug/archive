@@ -26,8 +26,11 @@
 <li>haproxy.odp、20100725.odp、shlug2010review.pdf：演讲活动资料。</li>
 </ul>
 <ol start="2" type="1">
-<li>Wayback Machine <a href="http://www.shlug.org">主网站</a>在改用GitHub页面前的<a href="https://web.archive.org/web/20151119122625/http://www.shlug.org/">快照</a>.</li>
+<li>Wayback Machine</li>
 </ol>
+<ul>
+<li><a href="http://www.shlug.org">主网站</a>在改用GitHub页面前的<a href="https://web.archive.org/web/20151119122625/http://www.shlug.org/">快照</a>.</li>
+</ul>
 <h2 id="数据处理">数据处理</h2>
 <h3 id="shlug.zip">shlug.zip</h3>
 <p><code>shlug.zip</code>中包括<code>geekbone</code>和<code>meeting</code>目录，分别是网站数据和分享活动相关的资料。</p>
@@ -44,8 +47,12 @@
 <ol start="2" type="1">
 <li>转换GBK编码的文本文件</li>
 </ol>
-<blockquote>
-<p>find -name ’*.txt’ -print0|xargs -0 recode gbk..utf8</p>
-</blockquote>
+<pre><code>find -name &#39;*.txt&#39; -print0|xargs -0 recode gbk..utf8</code></pre>
+<ol start="3" type="1">
+<li>转换GBK编码的HTML文件</li>
+</ol>
+<pre><code>find -name &#39;*htm*&#39; -type f -exec fgrep -q  -i charset=gb &#39;{}&#39;  \;  -print0 | xargs -0 -L1  -I{} recode gbk..utf8 &#39;{}&#39;
+
+find -name &#39;*htm*&#39; -type f -exec fgrep -q  -i charset=gb &#39;{}&#39;  \;  -print0 | xargs -0 -L1 sed -i -e &#39;s/charset=..2312/charset=utf-8/g&#39;</code></pre>
 </body>
 </html>
