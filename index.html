@@ -54,5 +54,9 @@
 <pre><code>find -name &#39;*htm*&#39; -type f -exec fgrep -q  -i charset=gb &#39;{}&#39;  \;  -print0 | xargs -0 -L1  -I{} recode gbk..utf8 &#39;{}&#39;
 
 find -name &#39;*htm*&#39; -type f -exec fgrep -q  -i charset=gb &#39;{}&#39;  \;  -print0 | xargs -0 -L1 sed -i -e &#39;s/charset=..2312/charset=utf-8/g&#39;</code></pre>
+<ol start="4" type="1">
+<li>转换其他文件的编码</li>
+</ol>
+<pre><code>find -name &#39;*.js&#39; -type f -print0 | xargs -0 -L1 recode gbk..utf8</code></pre>
 </body>
 </html>

@@ -1,5 +1,5 @@
-var title = "Geekbone 2005 春季年会"
-var subTitle = " 2005 春季年会相册"
+var title = "Geekbone 2005 鏄ュ骞翠細"
+var subTitle = " 2005 鏄ュ骞翠細鐩稿唽"
 var URL = "http://www.geekbone.org"
 var BGCOLOR = "#FFFFFF"
 var TEXT = "#000000"
