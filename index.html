@@ -59,7 +59,7 @@ find -name &#39;*htm*&#39; -type f -exec fgrep -q  -i charset=gb &#39;{}&#39;  \
 </ol>
 <pre><code>find -name &#39;*.js&#39; -type f -print0 | xargs -0 -L1 recode gbk..utf8</code></pre>
 <ol start="5" type="1">
-<li>站内绝对路径链接改为相对路径</li>
+<li>站内绝对路径链接改为相对路径，以及其他修正</li>
 </ol>
 <ul>
 <li>查找所有htm文件中使用域名或绝对路径指向站内的资源的URL，手动修改为相对路径；</li>
