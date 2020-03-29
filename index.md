@@ -45,3 +45,8 @@ find -name '*htm*' -type f -exec fgrep -q  -i charset=gb '{}'  \;  -print0 | xar
 ```
 find -name '*.js' -type f -print0 | xargs -0 -L1 recode gbk..utf8
 ```
+
+5. 站内绝对路径链接改为相对路径
+
+* 查找所有htm文件中使用域名或绝对路径指向站内的资源的URL，手动修改为相对路径；
+* 可能查找不全，如有问题请提issue；
