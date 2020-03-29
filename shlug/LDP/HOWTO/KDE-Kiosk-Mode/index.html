@@ -1,119 +1,39 @@
-<HTML
-><HEAD
-><TITLE
->KDE Kiosk Mode HOWTO</TITLE
-><META
-NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
-"><LINK
-REL="NEXT"
-TITLE="Introduction"
-HREF="intro.html"></HEAD
-><BODY
-CLASS="ARTICLE"
-BGCOLOR="#FFFFFF"
-TEXT="#000000"
-LINK="#0000FF"
-VLINK="#840084"
-ALINK="#0000FF"
-><DIV
-CLASS="ARTICLE"
-><DIV
-CLASS="TITLEPAGE"
-><H1
-CLASS="TITLE"
-><A
-NAME="AEN2">KDE Kiosk Mode HOWTO</H1
-><H3
-CLASS="AUTHOR"
-><A
-NAME="AEN4"
->Roland Fehrenbacher</A
-></H3
-><DIV
-CLASS="AFFILIATION"
-><DIV
-CLASS="ADDRESS"
-><P
-CLASS="ADDRESS"
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rfehrenb@transtec.de<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P
-></DIV
-></DIV
-><H3
-CLASS="AUTHOR"
-><A
-NAME="AEN10"
->Peter Kruse</A
-></H3
-><DIV
-CLASS="AFFILIATION"
-><DIV
-CLASS="ADDRESS"
-><P
-CLASS="ADDRESS"
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Peter.Kruse@wolnet.de<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P
-></DIV
-></DIV
-><DIV
-CLASS="REVHISTORY"
-><TABLE
-WIDTH="100%"
-BORDER="0"
-><TR
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
-COLSPAN="3"
-><B
->Revision History</B
-></TH
-></TR
-><TR
-><TD
-ALIGN="LEFT"
->Revision 1.4</TD
-><TD
-ALIGN="LEFT"
->2002-09-26</TD
-><TD
-ALIGN="LEFT"
->Revised by: gjf</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
-COLSPAN="3"
->Archived.</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
->Revision $Revision: 1.3 $</TD
-><TD
-ALIGN="LEFT"
->$Date: 2001/08/14 07:44:07 $</TD
-><TD
-ALIGN="LEFT"
->Revised by: $Author: kruse $</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
-COLSPAN="3"
-></TD
-></TR
-></TABLE
-></DIV
-><DIV
-><DIV
-CLASS="ABSTRACT"
-><A
-NAME="AEN28"><P
-></P
-><P
->The requirements for the desktop environment of users in a large
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>KDE Kiosk Mode HOWTO</title>
+<meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.76b+
+">
+<link rel="NEXT" title="Introduction" href="intro.html">
+</head>
+<body class="ARTICLE" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="ARTICLE">
+<div class="TITLEPAGE">
+<h1 class="TITLE"><a name="AEN2">KDE Kiosk Mode HOWTO</a></h1>
+<h3 class="AUTHOR"><a name="AEN4">Roland Fehrenbacher</a></h3>
+<div class="AFFILIATION"><div class="ADDRESS"><p class="ADDRESS">           rfehrenb@transtec.de<br>
+        </p></div></div>
+<h3 class="AUTHOR"><a name="AEN10">Peter Kruse</a></h3>
+<div class="AFFILIATION"><div class="ADDRESS"><p class="ADDRESS">           Peter.Kruse@wolnet.de<br>
+        </p></div></div>
+<div class="REVHISTORY"><table width="100%" border="0">
+<tr><th align="LEFT" valign="TOP" colspan="3"><b>Revision History</b></th></tr>
+<tr>
+<td align="LEFT">Revision 1.4</td>
+<td align="LEFT">2002-09-26</td>
+<td align="LEFT">Revised by: gjf</td>
+</tr>
+<tr><td align="LEFT" colspan="3">Archived.</td></tr>
+<tr>
+<td align="LEFT">Revision $Revision: 1.3 $</td>
+<td align="LEFT">$Date: 2001/08/14 07:44:07 $</td>
+<td align="LEFT">Revised by: $Author: kruse $</td>
+</tr>
+<tr><td align="LEFT" colspan="3"></td></tr>
+</table></div>
+<div><div class="ABSTRACT"><a name="AEN28"><p></p>
+<p>The requirements for the desktop environment of users in a large
 network environment is often very different to a typical homeuser. The
 number of applications that these users need to run is usually very
 limited, and the users themselves are not very experienced in solving
@@ -123,183 +43,74 @@ and can be started by the users with a minimum of hassle. For
 security, stability, and also administrative reasons it is then
 advisable to provide only the absolutely necessary applications and
 functionality.
-    </P
-><P
->With the advent of modern desktop technology like KDE, this goal has become
+    </p>
+<p>With the advent of modern desktop technology like KDE, this goal has become
 harder to achieve. Interoperability between different desktop programs, ease
 of configuration by configuration engines, etc. allow the user a great deal
 of control over her/his desktop, which is great when needed. The above large
 network scenario, however, is not addressable in standard KDE. This is where
 the restricted mode tries to fill in the gap.
-    </P
-><P
->   <DIV
-CLASS="IMPORTANT"
-><P
-></P
-><TABLE
-CLASS="IMPORTANT"
-WIDTH="100%"
-BORDER="0"
-><TR
-><TD
-WIDTH="25"
-ALIGN="CENTER"
-VALIGN="TOP"
-><IMG
-SRC="../images/important.gif"
-HSPACE="5"
-ALT="Important"></TD
-><TD
-ALIGN="LEFT"
-VALIGN="TOP"
-><P
->    <STRONG
->Archived Document Notice: </STRONG
->
+    </p>
+<p>   </p>
+<div class="IMPORTANT">
+<p></p>
+<table class="IMPORTANT" width="100%" border="0"><tr>
+<td width="25" align="CENTER" valign="TOP"><img src="../images/important.gif" hspace="5" alt="Important"></td>
+<td align="LEFT" valign="TOP"><p>    <strong>Archived Document Notice: </strong>
      This document has been archived by the LDP because it does not apply
      to modern Linux systems. It is no longer being actively maintained.
      Further information on this topic can be found at
-     <A
-HREF="http://www.brigadoon.de/peter/kde/"
-TARGET="_top"
->http://www.brigadoon.de/peter/kde/</A
->.
-    </P
-></TD
-></TR
-></TABLE
-></DIV
->
-  </P
-><P
-></P
-></DIV
-></DIV
-><HR></DIV
-><DIV
-CLASS="TOC"
-><DL
-><DT
-><B
->Table of Contents</B
-></DT
-><DT
->1. <A
-HREF="intro.html"
->Introduction</A
-></DT
-><DD
-><DL
-><DT
->1.1. <A
-HREF="intro.html#COPYRIGHT"
->Copyright Information</A
-></DT
-><DT
->1.2. <A
-HREF="intro.html#DISCLAIMER"
->Disclaimer</A
-></DT
-><DT
->1.3. <A
-HREF="intro.html#NEWVERSIONS"
->New Versions</A
-></DT
-><DT
->1.4. <A
-HREF="intro.html#CREDITS"
->Credits</A
-></DT
-><DT
->1.5. <A
-HREF="intro.html#FEEDBACK"
->Feedback</A
-></DT
-></DL
-></DD
-><DT
->2. <A
-HREF="motivation.html"
->Motivation</A
-></DT
-><DT
->3. <A
-HREF="implementation.html"
->Implementation</A
-></DT
-><DD
-><DL
-><DT
->3.1. <A
-HREF="implementation.html#PATCHES"
->Source Code Patches</A
-></DT
-><DT
->3.2. <A
-HREF="implementation.html#GLOBAL-MODIFICATION"
->Global modifications</A
-></DT
-><DT
->3.3. <A
-HREF="implementation.html#KDE-MODE"
->How to set the variable KDE_MODE</A
-></DT
-></DL
-></DD
-></DL
-></DIV
-></DIV
-><DIV
-CLASS="NAVFOOTER"
-><HR
-ALIGN="LEFT"
-WIDTH="100%"><TABLE
-SUMMARY="Footer navigation table"
-WIDTH="100%"
-BORDER="0"
-CELLPADDING="0"
-CELLSPACING="0"
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
-><A
-HREF="intro.html"
-ACCESSKEY="N"
->Next</A
-></TD
-></TR
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
->Introduction</TD
-></TR
-></TABLE
-></DIV
-></BODY
-></HTML
->
+     <a href="http://www.brigadoon.de/peter/kde/" target="_top">http://www.brigadoon.de/peter/kde/</a>.
+    </p></td>
+</tr></table>
+</div>
+  <p></p></a></div></div>
+<hr>
+</div>
+<div class="TOC"><dl>
+<dt><b>Table of Contents</b></dt>
+<dt>1. <a href="intro.html">Introduction</a>
+</dt>
+<dd><dl>
+<dt>1.1. <a href="intro.html#COPYRIGHT">Copyright Information</a>
+</dt>
+<dt>1.2. <a href="intro.html#DISCLAIMER">Disclaimer</a>
+</dt>
+<dt>1.3. <a href="intro.html#NEWVERSIONS">New Versions</a>
+</dt>
+<dt>1.4. <a href="intro.html#CREDITS">Credits</a>
+</dt>
+<dt>1.5. <a href="intro.html#FEEDBACK">Feedback</a>
+</dt>
+</dl></dd>
+<dt>2. <a href="motivation.html">Motivation</a>
+</dt>
+<dt>3. <a href="implementation.html">Implementation</a>
+</dt>
+<dd><dl>
+<dt>3.1. <a href="implementation.html#PATCHES">Source Code Patches</a>
+</dt>
+<dt>3.2. <a href="implementation.html#GLOBAL-MODIFICATION">Global modifications</a>
+</dt>
+<dt>3.3. <a href="implementation.html#KDE-MODE">How to set the variable KDE_MODE</a>
+</dt>
+</dl></dd>
+</dl></div>
+</div>
+<div class="NAVFOOTER">
+<hr align="LEFT" width="100%">
+<table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="33%" align="left" valign="top"> </td>
+<td width="34%" align="center" valign="top"> </td>
+<td width="33%" align="right" valign="top"><a href="intro.html" accesskey="N">Next</a></td>
+</tr>
+<tr>
+<td width="33%" align="left" valign="top"> </td>
+<td width="34%" align="center" valign="top"> </td>
+<td width="33%" align="right" valign="top">Introduction</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -5,7 +5,7 @@
 <meta name="robots" content="index,nofollow">
 
 <title>WikiName - Geekbone.Org</title>
-<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+<script type="text/javascript" src="../htdocs/common/js/common.js"></script>
 
 <script type="text/javascript">
 <!--// common functions
@@ -76,38 +76,34 @@ function actionsMenuInit(title) {
 </script>
 
 
-<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="/Geekbone">
-<link rel="Alternate" title="Wiki Markup" href="/WikiName?action=raw">
-<link rel="Alternate" media="print" title="Print View" href="/WikiName?action=print">
-<link rel="Search" href="/FindPage">
-<link rel="Index" href="/TitleIndex">
-<link rel="Glossary" href="/WordIndex">
-<link rel="Help" href="/HelpOnFormatting">
+<link rel="Start" href="../Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="../WikiName%3Faction=raw">
+<link rel="Alternate" media="print" title="Print View" href="../WikiName%3Faction=print">
+<link rel="Search" href="../FindPage">
+<link rel="Index" href="../TitleIndex">
+<link rel="Glossary" href="../WordIndex">
+<link rel="Help" href="../HelpOnFormatting">
 </head>
 
-<body  lang="en" dir="ltr">
+<body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../Geekbone">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="context" value="180">
 <label for="searchinput">Search:</label>
-<input id="searchinput" type="text" name="value" value="" size="20"
-    onfocus="searchFocus(this)" onblur="searchBlur(this)"
-    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
-<input id="titlesearch" name="titlesearch" type="submit"
-    value="Titles" alt="Search Titles">
-<input id="fullsearch" name="fullsearch" type="submit"
-    value="Text" alt="Search Full Text">
+<input id="searchinput" type="text" name="value" value="" size="20" onfocus="searchFocus(this)" onblur="searchBlur(this)" onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit" value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit" value="Text" alt="Search Full Text">
 </div>
 </form>
 <script type="text/javascript">
@@ -120,29 +116,36 @@ searchBlur(e);
 //-->
 </script>
 
-<ul id="username"><li><a href="/WikiName?action=login" id="login">Login</a></li></ul>
+<ul id="username"><li><a href="../WikiName%3Faction=login" id="login">Login</a></li></ul>
 <div id="locationline">
 
 
 <ul id="pagelocation">
-<li><a class="backlink" title="Click to do a full-text search for this title" href="/WikiName?action=fullsearch&amp;value=linkto%3A%22WikiName%22&amp;context=180">WikiName</a></li>
+<li><a class="backlink" title="Click to do a full-text search for this title" href="../WikiName%3Faction=fullsearch%26value=linkto%3A%22WikiName%22%26context=180">WikiName</a></li>
 </ul>
 
 </div>
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/WikiName">WikiName</a></li>
+<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
+<li class="current"><a href=".">WikiName</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
 
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/WikiName?action=info">Info</a></li><li><a href="/WikiName?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../WikiName%3Faction=info">Info</a></li>
+<li><a href="../WikiName%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -173,25 +176,41 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 </div>
 
 <div id="page" lang="en" dir="ltr">
-<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
-<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line862">A WikiName is a word that uses capitalized words. WikiName<strong></strong>s automagically become hyperlinks to the WikiName's page. What exactly is an uppercase or lowercase letter is determined by the configuration, the default configuration should work for UTF-8 characters (digits are treated like lowercase characters). <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line862">When you click on the highlighted page title (i.e. WikiName on this page), you will see a list of all pages that link to the current page.  This even works on pages that are not defined yet. <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line862">A question mark before a link or a different rendering in grey means that the page is not yet defined: you can click the question mark or page name to offer a definition (e.g., <a class="nonexistent" href="/NoSuchPageForReal">NoSuchPageForReal</a>). If you click on such a link, you will see a default page that you can edit; only after you save the page will it be created for real. A list of all pages that are not yet created but referred on another page is on <a href="/WantedPages">WantedPages</a>. <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line862">To <em>escape</em> a WikiName, i.e. if you want to write the word Wiki<strong></strong>Name without linking it, use an "empty" bold sequence (a sequence of six single quotes) like this: <tt>Wiki''''''Name</tt>. Alternatively, you can use the shorter sequence "<tt>``</tt>" (two backticks), i.e. <tt>Wiki``Name</tt>. <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line867"><img alt="/!\" height="15" src="/htdocs/modern/img/alert.png" title="/!\" width="15" /> On some Wikis, a link to the page Recent<tt class="backtick"></tt>Changes might refer to the same page as this link: <a class="nonexistent" href="/recentchanges">recentchanges</a>. This is especially true for Windows and Mac OS X systems because they are not case-sensitive normally. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><ul><li><p class="line862">To learn more about wiki markup, see <a href="/HelpOnEditing">HelpOnEditing</a>. <span class="anchor" id="line-20"></span></li><li><p class="line862">See also <a href="/HelpOnLinking">HelpOnLinking</a>, "Arbitrary Page Names". <span class="anchor" id="line-21"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">WikiName  (last modified 2006-06-30 07:21:44)</p>
+<div dir="ltr" id="content" lang="en">
+<span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line862">A WikiName is a word that uses capitalized words. WikiName<strong></strong>s automagically become hyperlinks to the WikiName's page. What exactly is an uppercase or lowercase letter is determined by the configuration, the default configuration should work for UTF-8 characters (digits are treated like lowercase characters). <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span></p>
+<p class="line862">When you click on the highlighted page title (i.e. WikiName on this page), you will see a list of all pages that link to the current page.  This even works on pages that are not defined yet. <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span></p>
+<p class="line862">A question mark before a link or a different rendering in grey means that the page is not yet defined: you can click the question mark or page name to offer a definition (e.g., <a class="nonexistent" href="../NoSuchPageForReal">NoSuchPageForReal</a>). If you click on such a link, you will see a default page that you can edit; only after you save the page will it be created for real. A list of all pages that are not yet created but referred on another page is on <a href="../WantedPages">WantedPages</a>. <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span></p>
+<p class="line862">To <em>escape</em> a WikiName, i.e. if you want to write the word Wiki<strong></strong>Name without linking it, use an "empty" bold sequence (a sequence of six single quotes) like this: <tt>Wiki''''''Name</tt>. Alternatively, you can use the shorter sequence "<tt>``</tt>" (two backticks), i.e. <tt>Wiki``Name</tt>. <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span></p>
+<p class="line867"><img alt="/!\" height="15" src="../htdocs/modern/img/alert.png" title="/!\" width="15"> On some Wikis, a link to the page Recent<tt class="backtick"></tt>Changes might refer to the same page as this link: <a class="nonexistent" href="../recentchanges">recentchanges</a>. This is especially true for Windows and Mac OS X systems because they are not case-sensitive normally. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span></p>
+<ul>
+<li><p class="line862">To learn more about wiki markup, see <a href="../HelpOnEditing">HelpOnEditing</a>. <span class="anchor" id="line-20"></span></p></li>
+<li><p class="line862">See also <a href="../HelpOnLinking">HelpOnLinking</a>, "Arbitrary Page Names". <span class="anchor" id="line-21"></span></p></li>
+</ul>
+<span class="anchor" id="bottom"></span>
+</div>
+<p id="pageinfo" class="info" lang="en" dir="ltr">WikiName  (last modified 2006-06-30 07:21:44)</p>
 
 <div id="pagebottom"></div>
 </div>
 
 
 <div id="footer">
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/WikiName?action=info">Info</a></li><li><a href="/WikiName?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../WikiName%3Faction=info">Info</a></li>
+<li><a href="../WikiName%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -222,14 +241,16 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 <ul id="credits">
-<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li>
+<li><a href="http://www.python.org/">Python Powered</a></li>
+<li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
 </ul>
 
 
 </div>
 </body>
 </html>
-

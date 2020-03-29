@@ -1,8 +1,9 @@
-The Linux FAQ
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>The Linux FAQ
 
 David C. Merrill
 
-<dmerrill@ibiblio.org>
+<dmerrill>
 
 2003-09-19
 Revision History                                                             
@@ -132,7 +133,7 @@ miscellany.
 
 Other contributors include:
 
-  * Doug Jensen djen@ispwest.com
+ * Doug Jensen djen@ispwest.com
    
 
 Last but not least, thanks to Linus Torvalds and the other contributors to
@@ -152,7 +153,7 @@ the license is provided in the appendix, GNU Free Documentation License.
 The maintainer would be happy to answer any questions regarding the
 copyright.
 
-Unix is a trademark of AT&T Bell Laboratories. Linux is a trademark of Linus
+Unix is a trademark of AT&amp;T Bell Laboratories. Linux is a trademark of Linus
 Torvalds. Other trademarks belong to their holders.
 -----------------------------------------------------------------------------
 
@@ -223,7 +224,7 @@ systems have passed the Open Group tests.
 A: Unofficially, Linux is very similar to the operating systems which are
 known as Unix, and for many purposes they are equivalent. Linux the kernel is
 an operating system kernel that behaves and performs similarly to the famous
-Unix operating system from AT&T Bell Labs. Linux is often called a
+Unix operating system from AT&amp;T Bell Labs. Linux is often called a
 "Unix-like" operating system. For more information, see http://
 www.unix-systems.org/what_is_unix.html.
 
@@ -270,7 +271,7 @@ english.au or swedish.au from ftp://ftp.funet.fi/pub/Linux/PEOPLE/Linus/
 SillySounds/. If you have a sound card or the PC-speaker audio driver you can
 hear them by typing
 
- $ cat english.au >/dev/audio                                                
+ $ cat english.au &gt;/dev/audio                                                
 
 The difference isn't in the pronunciation of Linux but in the language Linus
 uses to say, "hello".
@@ -1008,7 +1009,7 @@ statements:
 # swapoff /swap                                                              
 # rm /swap                                                                   
 
-Take a look also at the Installation HOWTO and Installation & Getting Started
+Take a look also at the Installation HOWTO and Installation &amp; Getting Started
 for detailed instructions.
 
 If that still doesn't provide enough swap space, refer to How To Have More
@@ -1118,10 +1119,10 @@ lib for a file named, libc.so.5. If it's there, you probably have ELF
 libraries. If you want to know whether your installation actually is ELF you
 can pick a representative program, like ls, and run file on it:
 
- -chiark:~> file /bin/ls                                                     
+ -chiark:~&gt; file /bin/ls                                                     
  /bin/ls: Linux/i386 impure executable (OMAGIC) - stripped                   
                                                                              
- valour:~> file /bin/ls                                                      
+ valour:~&gt; file /bin/ls                                                      
  /bin/ls: ELF 32-bit LSB executable, Intel 80386, version 1, stripped        
 
 There is a patch to get 1.2.x to compile using the ELF compilers, and produce
@@ -1762,7 +1763,7 @@ A: For distributions that use RPM format packages, use the command:
 You need to be logged in as root. You can save the output to a text file for
 future reference, a command like:
 
- $ rpm -qa >installed-packages                                               
+ $ rpm -qa &gt;installed-packages                                               
 
 A: For Debian systems, the equivalent command is:
 
@@ -2115,7 +2116,7 @@ will need the following information:
     ABORT         "NO CARRIER"                                               
     ABORT         VOICE                                                      
     ABORT         "NO DIALTONE"                                              
-    ""            ATDT<your_isp's_phone_number>                              
+    ""            ATDT<your_isp>                              
     ogin          <your_user_name>                                           
     word          <your_password>                                            
    
@@ -2149,7 +2150,7 @@ will need the following information:
      crtscts                                                                 
      lock                                                                    
      noipx                                                                   
-     # ---<End of File>---                                                   
+     # ---<end of file>---                                                   
    
     The options may be given on one line or each on a separate line. Many
     options files are much longer, and come with a description of each
@@ -2419,7 +2420,7 @@ logins. On new systems that have Pluggable Authentication Modules installed,
 look for a file named, "ftp," or "telnet," in the directory /etc/pam/ or /etc
 /pam.d/. If the corresponding authentication file doesn't exist, the
 instructions for configuring FTP and Telnet authentication and other PAM
-configuration, should be in /usr/doc/pam-&version&. Refer also to the answer
+configuration, should be in /usr/doc/pam-&amp;version&amp;. Refer also to the answer
 for FTP server says: "421 service not available, remote server has closed
 connection.".
 
@@ -2587,7 +2588,7 @@ Another possible command is an alias, sane, that can work with generic
 terminals:
 
  $ alias sane='echo -e " c";tput is2;                                        
-> stty sane line 1 rows $LINES columns $COLUMNS'                             
+&gt; stty sane line 1 rows $LINES columns $COLUMNS'                             
 
 The alias is enclosed with open quotes (backticks), not single quotes. The
 line break is included here for clarity, and is not required.
@@ -2605,7 +2606,7 @@ reset the terminal:
  1. Save the output of stty -g to a file. In this example, the file is named
     termset:
    
-     $ stty -g >termset                                                      
+     $ stty -g &gt;termset                                                      
    
     The output of stty -g (the contents of termset) will look something like:
    
@@ -2690,7 +2691,7 @@ A: First make sure that your /dev/lp* port is correctly configured. Its IRQ
 (if any) and port address need to match the settings on the printer card. You
 should be able to dump a file directly to the printer:
 
- $ cat the_file >/dev/lp1                                                    
+ $ cat the_file &gt;/dev/lp1                                                    
 
 If lpr gives you a message like myname@host: host not found" it may mean that
 the TCP/IP loopback interface, lo, isn't working properly. Loopback support
@@ -2812,7 +2813,7 @@ Essentially, you need to follow these steps when you install a new kernel.
     currently loads, and in what order. Save a copy of this file for future
     reference, until you have successfully installed the new kernel's
     modules. Also save the lsmod output to a file, for example, with the
-    command: lsmod >lsmod.old-kernel.output.
+    command: lsmod &gt;lsmod.old-kernel.output.
    
   * Build the new kernel, and install the boot image, either zImage or
     bzImage, to a floppy diskette. To do this, change to the arch/i386/boot
@@ -3501,21 +3502,21 @@ A: Use the setleds program, for example (in /etc/rc.local or one of the /etc/
 rc.d/* files):
  for t in 1 2 3 4 5 6 7 8                                                    
  do                                                                          
-   setleds +num < /dev/tty$t > /dev/null                                     
+   setleds +num &lt; /dev/tty$t &gt; /dev/null                                     
  done                                                                        
 
 setleds is part of the kbd package ("How do I remap my keyboard to UK,
 French, etc.? ").
 
 Alternatively, patch your kernel. You need to arrange for KBD_DEFLEDS to be
-defined to (1 << VC_NUMLOCK) when compiling drivers/char/keyboard.c.
+defined to (1 &lt;&lt; VC_NUMLOCK) when compiling drivers/char/keyboard.c.
 
 Q: How To Set (Or Reset) Initial Terminal Colors
 
 A: The following shell script should work for VGA consoles:
  for n in 1 2 4 5 6 7 8;                                                     
  do                                                                          
-   setterm -fore yellow -bold on -back blue -store > /dev/tty$n              
+   setterm -fore yellow -bold on -back blue -store &gt; /dev/tty$n              
  done                                                                        
 
 Substitute your favorite colors, and use /dev/ttyS$n for serial terminals.
@@ -3524,7 +3525,7 @@ To make sure they are reset when people log out (if they've been changed):
 
 Replace the references to getty (or mingetty or uugetty or whatever) in /etc/
 inittab with references to /sbin/mygetty.
- #!/bin/sh setterm -fore yellow -bold on -back blue -store > $1              
+ #!/bin/sh setterm -fore yellow -bold on -back blue -store &gt; $1              
  exec /sbin/mingetty $@                                                      
 
 [Jim Dennis]
@@ -3595,7 +3596,7 @@ methods:
     refer to the manual page for the X server. (E.g.; man X), and try running
     the X server and redirecting the standard error output to a file so you
     can determine, after you can view text on the screen again, what error
-    messages the server is generating; e.g., X 2>x.error.
+    messages the server is generating; e.g., X 2&gt;x.error.
    
   * With that information, you should be able to safely refer to one of the
     references provided by the Linux Documentation Project. ("Where can I get
@@ -3698,7 +3699,7 @@ following commands:
     server is 192.168.20.1 and the client program name is named clientapp,
     use the following command:
    
-     $ xterm -display 192.168.20.1 -e clientapp &                            
+     $ xterm -display 192.168.20.1 -e clientapp &amp;                            
    
 
 [Pierre Dal Farra]
@@ -4259,7 +4260,7 @@ of the LDP:
   * Virtual Frame buffer HOWTO, by Alex Buell. http://
     www.tahallah.demon.co.uk/programming/prog.html
    
-  * X11 & TrueType Fonts, by Peter Kleiweg. http://www.let.rug.nl/~kleiweg/.
+  * X11 &amp; TrueType Fonts, by Peter Kleiweg. http://www.let.rug.nl/~kleiweg/.
    
 
 Documentation for kernel developers is on-line: http://
@@ -4354,7 +4355,7 @@ Linux:
    
   * Linux Parallel Port Home Page: http://www.torque.net/linux-pp.html
    
-  * Linux MIDI & Sound Applications: http://sound.condorow.net
+  * Linux MIDI &amp; Sound Applications: http://sound.condorow.net
    
   * Linux Start: http://www.linuxstart.com
    
@@ -4585,7 +4586,7 @@ network addresses:
    
   * Online Linux Resources: http://www.linuxinfor.com/en/docfaq.htm
    
-  * O'Reilly & Associates Openbook Project: http://www.oreilly.com/openbook/
+  * O'Reilly &amp; Associates Openbook Project: http://www.oreilly.com/openbook/
    
   * Sendmail: http://www.sendmail.org/faq/
    
@@ -5200,3 +5201,4 @@ If your document contains nontrivial examples of program code, we recommend
 releasing these examples in parallel under your choice of free software
 license, such as the GNU General Public License, to permit their use in free
 software.
+</module-name></architecture></math.h></end></your_password></your_user_name></your_isp></dmerrill></p></body></html>

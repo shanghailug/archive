@@ -5,7 +5,7 @@
 <meta name="robots" content="index,nofollow">
 
 <title>WordIndex - ShangHai Linux User Group</title>
-<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+<script type="text/javascript" src="../htdocs/common/js/common.js"></script>
 
 <script type="text/javascript">
 <!--// common functions
@@ -76,22 +76,22 @@ function actionsMenuInit(title) {
 </script>
 
 
-<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/rightsidebar/css/common.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/rightsidebar/css/screen.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/rightsidebar/css/print.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/rightsidebar/css/projection.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../htdocs/rightsidebar/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../htdocs/rightsidebar/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../htdocs/rightsidebar/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/rightsidebar/css/projection.css">
 
 
-<link rel="Start" href="/Geekbone">
-<link rel="Alternate" title="Wiki Markup" href="/WordIndex?action=raw">
-<link rel="Alternate" media="print" title="Print View" href="/WordIndex?action=print">
-<link rel="Search" href="/FindPage">
-<link rel="Index" href="/TitleIndex">
-<link rel="Glossary" href="/WordIndex">
-<link rel="Help" href="/HelpOnFormatting">
+<link rel="Start" href="../Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="../WordIndex%3Faction=raw">
+<link rel="Alternate" media="print" title="Print View" href="../WordIndex%3Faction=print">
+<link rel="Search" href="../FindPage">
+<link rel="Index" href="../TitleIndex">
+<link rel="Glossary" href=".">
+<link rel="Help" href="../HelpOnFormatting">
 </head>
 
-<body  lang="en" dir="ltr">
+<body lang="en" dir="ltr">
 
 <div id="header">
 
@@ -100,13 +100,9 @@ function actionsMenuInit(title) {
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="context" value="180">
 <label for="searchinput">Search:</label>
-<input id="searchinput" type="text" name="value" value="" size="20"
-    onfocus="searchFocus(this)" onblur="searchBlur(this)"
-    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
-<input id="titlesearch" name="titlesearch" type="submit"
-    value="Titles" alt="Search Titles">
-<input id="fullsearch" name="fullsearch" type="submit"
-    value="Text" alt="Search Full Text">
+<input id="searchinput" type="text" name="value" value="" size="20" onfocus="searchFocus(this)" onblur="searchBlur(this)" onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit" value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit" value="Text" alt="Search Full Text">
 </div>
 </form>
 <script type="text/javascript">
@@ -119,12 +115,12 @@ searchBlur(e);
 //-->
 </script>
 
-<div id="logo"><a href="/Geekbone">ShangHai Linux User Group</a></div>
+<div id="logo"><a href="../Geekbone">ShangHai Linux User Group</a></div>
 <div id="locationline">
 
 
 <ul id="pagelocation">
-<li><a class="backlink" title="Click to do a full-text search for this title" href="/WordIndex?action=fullsearch&amp;value=linkto%3A%22WordIndex%22&amp;context=180">WordIndex</a></li>
+<li><a class="backlink" title="Click to do a full-text search for this title" href="../WordIndex%3Faction=fullsearch%26value=linkto%3A%22WordIndex%22%26context=180">WordIndex</a></li>
 </ul>
 
 </div>
@@ -136,18 +132,25 @@ searchBlur(e);
 <h1>Wiki</h1>
 
 <ul id="navibar">
-<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/WordIndex">WordIndex</a></li>
+<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
+<li class="current"><a href=".">WordIndex</a></li>
 </ul>
 
 </div>
 <div class="sidepanel">
 <h1>Page</h1>
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/WordIndex?action=info">Info</a></li><li><a href="/WordIndex?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../WordIndex%3Faction=info">Info</a></li>
+<li><a href="../WordIndex%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -178,20 +181,73 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 </div>
 <div class="sidepanel">
 <h1>User</h1>
-<ul id="username"><li><a href="/WordIndex?action=login" id="login">Login</a></li></ul>
+<ul id="username"><li><a href="../WordIndex%3Faction=login" id="login">Login</a></li></ul>
 </div>
 </div>
 
 <div id="page" lang="en" dir="ltr">
-<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
-<span class="anchor" id="line-8"></span><p class="line874">This is an index of all words occuring in page titles. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line874">See also: <span class="anchor" id="line-11"></span><ul><li><p class="line891"><a href="/TitleIndex">TitleIndex</a> -- a shorter index <span class="anchor" id="line-12"></span></li><li><p class="line891"><a href="/SiteNavigation">SiteNavigation</a> -- other indexing schemes <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-15"></span><p><a href="#A">A</a> | <a href="#B">B</a> | <a href="#G">G</a> | <a href="#H">H</a> | <a href="#I">I</a> | <a href="#L">L</a> | <a href="#M">M</a> | <a href="#N">N</a> | <a href="#P">P</a> | <a href="#R">R</a> | <a href="#S">S</a> | <a href="#T">T</a> | <a href="#U">U</a> | <a href="#W">W</a><br>
+<div dir="ltr" id="content" lang="en">
+<span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><p class="line874">This is an index of all words occuring in page titles. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span></p>
+<p class="line874">See also: <span class="anchor" id="line-11"></span></p>
+<ul>
+<li><p class="line891"><a href="../TitleIndex">TitleIndex</a> -- a shorter index <span class="anchor" id="line-12"></span></p></li>
+<li><p class="line891"><a href="../SiteNavigation">SiteNavigation</a> -- other indexing schemes <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></p></li>
+</ul>
+<p class="line867"></p>
+<hr>
+<p class="line874"> <span class="anchor" id="line-15"></span></p>
+<p><a href="#A">A</a> | <a href="#B">B</a> | <a href="#G">G</a> | <a href="#H">H</a> | <a href="#I">I</a> | <a href="#L">L</a> | <a href="#M">M</a> | <a href="#N">N</a> | <a href="#P">P</a> | <a href="#R">R</a> | <a href="#S">S</a> | <a href="#T">T</a> | <a href="#U">U</a> | <a href="#W">W</a><br>
 <a href="WordIndex?allpages=1">Include system pages</a>
-</p><a name="A"><h3>A</h3></a><strong>Admin</strong><ul><li><a href="/AdminGroup">AdminGroup</a></li></ul><strong>Avenger</strong><ul><li><a href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8">6月15日 Novell 高级工程师刘俊贤 irc nickname:AvengerMojo 访谈：SUSE 桌面应用</a></li></ul><a name="B"><h3>B</h3></a><strong>Bone</strong><ul><li><a href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8">GeekBone专项基金的收支明细表</a></li><li><a href="/GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90">GeekBone的起源</a></li></ul><a name="G"><h3>G</h3></a><strong>Geek</strong><ul><li><a href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8">GeekBone专项基金的收支明细表</a></li><li><a href="/GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90">GeekBone的起源</a></li></ul><strong>Geekbone</strong><ul><li><a href="/Geekbone">Geekbone</a></li></ul><strong>Group</strong><ul><li><a href="/AdminGroup">AdminGroup</a></li><li><a href="/Shanghai_Linux_User_Group_%E5%9B%9E%E9%A1%BE">Shanghai Linux User Group 回顾</a></li><li><a href="/SystemPagesGroup">SystemPagesGroup</a></li></ul><a name="H"><h3>H</h3></a><strong>Hat9</strong><ul><li><a href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0">Wind的RedHat9学习日记</a></li></ul><a name="I"><h3>I</h3></a><strong>Irc</strong><ul><li><a href="/IrcLogs">IrcLogs</a></li><li><a href="/IrcLogs/2005-09-05">IrcLogs/2005-09-05</a></li></ul><a name="L"><h3>L</h3></a><strong>Lightning</strong><ul><li><a href="/Lightning">Lightning</a></li></ul><strong>Linux</strong><ul><li><a href="/GNU/Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%9F%E6%88%90%E6%A0%91">GNU/Linux 发行版生成树</a></li><li><a href="/Shanghai_Linux_User_Group_%E5%9B%9E%E9%A1%BE">Shanghai Linux User Group 回顾</a></li><li><a href="/%E4%B8%AD%E5%9B%BDLinux%E6%97%A9%E6%9C%9F%E5%8E%86%E5%8F%B2%E7%9A%84%E5%9B%9E%E7%9C%B8">中国Linux早期历史的回眸</a></li></ul><strong>Logs</strong><ul><li><a href="/IrcLogs">IrcLogs</a></li><li><a href="/IrcLogs/2005-09-05">IrcLogs/2005-09-05</a></li></ul><a name="M"><h3>M</h3></a><strong>Mojo</strong><ul><li><a href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8">6月15日 Novell 高级工程师刘俊贤 irc nickname:AvengerMojo 访谈：SUSE 桌面应用</a></li></ul><a name="N"><h3>N</h3></a><strong>Novell</strong><ul><li><a href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8">6月15日 Novell 高级工程师刘俊贤 irc nickname:AvengerMojo 访谈：SUSE 桌面应用</a></li></ul><a name="P"><h3>P</h3></a><strong>Pages</strong><ul><li><a href="/SystemPagesGroup">SystemPagesGroup</a></li></ul><a name="R"><h3>R</h3></a><strong>Red</strong><ul><li><a href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0">Wind的RedHat9学习日记</a></li></ul><a name="S"><h3>S</h3></a><strong>Shanghai</strong><ul><li><a href="/Shanghai_Linux_User_Group_%E5%9B%9E%E9%A1%BE">Shanghai Linux User Group 回顾</a></li></ul><strong>System</strong><ul><li><a href="/SystemPagesGroup">SystemPagesGroup</a></li></ul><a name="T"><h3>T</h3></a><strong>Tux</strong><ul><li><a href="/Tux%E5%B9%B4%E5%BF%97">Tux年志</a></li></ul><a name="U"><h3>U</h3></a><strong>User</strong><ul><li><a href="/Shanghai_Linux_User_Group_%E5%9B%9E%E9%A1%BE">Shanghai Linux User Group 回顾</a></li></ul><a name="W"><h3>W</h3></a><strong>Wind</strong><ul><li><a href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0">Wind的RedHat9学习日记</a></li></ul> <span class="anchor" id="line-16"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">WordIndex  (last modified 2006-06-30 07:21:41)</p>
+</p>
+<a name="A"><h3>A</h3></a><strong>Admin</strong><ul><li><a href="../AdminGroup">AdminGroup</a></li></ul>
+<strong>Avenger</strong><ul><li><a href="../6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8">6月15日 Novell 高级工程师刘俊贤 irc nickname:AvengerMojo 访谈：SUSE 桌面应用</a></li></ul>
+<a name="B"><h3>B</h3></a><strong>Bone</strong><ul>
+<li><a href="../GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8">GeekBone专项基金的收支明细表</a></li>
+<li><a href="../GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90">GeekBone的起源</a></li>
+</ul>
+<a name="G"><h3>G</h3></a><strong>Geek</strong><ul>
+<li><a href="../GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8">GeekBone专项基金的收支明细表</a></li>
+<li><a href="../GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90">GeekBone的起源</a></li>
+</ul>
+<strong>Geekbone</strong><ul><li><a href="../Geekbone">Geekbone</a></li></ul>
+<strong>Group</strong><ul>
+<li><a href="../AdminGroup">AdminGroup</a></li>
+<li><a href="../Shanghai_Linux_User_Group_%E5%9B%9E%E9%A1%BE">Shanghai Linux User Group 回顾</a></li>
+<li><a href="../SystemPagesGroup">SystemPagesGroup</a></li>
+</ul>
+<a name="H"><h3>H</h3></a><strong>Hat9</strong><ul><li><a href="../Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0">Wind的RedHat9学习日记</a></li></ul>
+<a name="I"><h3>I</h3></a><strong>Irc</strong><ul>
+<li><a href="../IrcLogs">IrcLogs</a></li>
+<li><a href="../IrcLogs/2005-09-05">IrcLogs/2005-09-05</a></li>
+</ul>
+<a name="L"><h3>L</h3></a><strong>Lightning</strong><ul><li><a href="../Lightning">Lightning</a></li></ul>
+<strong>Linux</strong><ul>
+<li><a href="../GNU/Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%9F%E6%88%90%E6%A0%91">GNU/Linux 发行版生成树</a></li>
+<li><a href="../Shanghai_Linux_User_Group_%E5%9B%9E%E9%A1%BE">Shanghai Linux User Group 回顾</a></li>
+<li><a href="../%E4%B8%AD%E5%9B%BDLinux%E6%97%A9%E6%9C%9F%E5%8E%86%E5%8F%B2%E7%9A%84%E5%9B%9E%E7%9C%B8">中国Linux早期历史的回眸</a></li>
+</ul>
+<strong>Logs</strong><ul>
+<li><a href="../IrcLogs">IrcLogs</a></li>
+<li><a href="../IrcLogs/2005-09-05">IrcLogs/2005-09-05</a></li>
+</ul>
+<a name="M"><h3>M</h3></a><strong>Mojo</strong><ul><li><a href="../6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8">6月15日 Novell 高级工程师刘俊贤 irc nickname:AvengerMojo 访谈：SUSE 桌面应用</a></li></ul>
+<a name="N"><h3>N</h3></a><strong>Novell</strong><ul><li><a href="../6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8">6月15日 Novell 高级工程师刘俊贤 irc nickname:AvengerMojo 访谈：SUSE 桌面应用</a></li></ul>
+<a name="P"><h3>P</h3></a><strong>Pages</strong><ul><li><a href="../SystemPagesGroup">SystemPagesGroup</a></li></ul>
+<a name="R"><h3>R</h3></a><strong>Red</strong><ul><li><a href="../Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0">Wind的RedHat9学习日记</a></li></ul>
+<a name="S"><h3>S</h3></a><strong>Shanghai</strong><ul><li><a href="../Shanghai_Linux_User_Group_%E5%9B%9E%E9%A1%BE">Shanghai Linux User Group 回顾</a></li></ul>
+<strong>System</strong><ul><li><a href="../SystemPagesGroup">SystemPagesGroup</a></li></ul>
+<a name="T"><h3>T</h3></a><strong>Tux</strong><ul><li><a href="../Tux%E5%B9%B4%E5%BF%97">Tux年志</a></li></ul>
+<a name="U"><h3>U</h3></a><strong>User</strong><ul><li><a href="../Shanghai_Linux_User_Group_%E5%9B%9E%E9%A1%BE">Shanghai Linux User Group 回顾</a></li></ul>
+<a name="W"><h3>W</h3></a><strong>Wind</strong><ul><li><a href="../Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0">Wind的RedHat9学习日记</a></li></ul> <span class="anchor" id="line-16"></span><span class="anchor" id="bottom"></span>
+</div>
+<p id="pageinfo" class="info" lang="en" dir="ltr">WordIndex  (last modified 2006-06-30 07:21:41)</p>
 
 <div id="pagebottom"></div>
 </div>
@@ -199,11 +255,12 @@ actionsMenuInit('More Actions:');
 
 <div id="footer">
 <ul id="credits">
-<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li>
+<li><a href="http://www.python.org/">Python Powered</a></li>
+<li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
 </ul>
 
 
 </div>
 </body>
 </html>
-

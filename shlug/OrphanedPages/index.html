@@ -5,7 +5,7 @@
 <meta name="robots" content="index,nofollow">
 
 <title>OrphanedPages - Geekbone.Org</title>
-<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+<script type="text/javascript" src="../htdocs/common/js/common.js"></script>
 
 <script type="text/javascript">
 <!--// common functions
@@ -76,38 +76,34 @@ function actionsMenuInit(title) {
 </script>
 
 
-<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="/Geekbone">
-<link rel="Alternate" title="Wiki Markup" href="/OrphanedPages?action=raw">
-<link rel="Alternate" media="print" title="Print View" href="/OrphanedPages?action=print">
-<link rel="Search" href="/FindPage">
-<link rel="Index" href="/TitleIndex">
-<link rel="Glossary" href="/WordIndex">
-<link rel="Help" href="/HelpOnFormatting">
+<link rel="Start" href="../Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="../OrphanedPages%3Faction=raw">
+<link rel="Alternate" media="print" title="Print View" href="../OrphanedPages%3Faction=print">
+<link rel="Search" href="../FindPage">
+<link rel="Index" href="../TitleIndex">
+<link rel="Glossary" href="../WordIndex">
+<link rel="Help" href="../HelpOnFormatting">
 </head>
 
-<body  lang="en" dir="ltr">
+<body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../Geekbone">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="context" value="180">
 <label for="searchinput">Search:</label>
-<input id="searchinput" type="text" name="value" value="" size="20"
-    onfocus="searchFocus(this)" onblur="searchBlur(this)"
-    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
-<input id="titlesearch" name="titlesearch" type="submit"
-    value="Titles" alt="Search Titles">
-<input id="fullsearch" name="fullsearch" type="submit"
-    value="Text" alt="Search Full Text">
+<input id="searchinput" type="text" name="value" value="" size="20" onfocus="searchFocus(this)" onblur="searchBlur(this)" onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit" value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit" value="Text" alt="Search Full Text">
 </div>
 </form>
 <script type="text/javascript">
@@ -120,29 +116,36 @@ searchBlur(e);
 //-->
 </script>
 
-<ul id="username"><li><a href="/OrphanedPages?action=login" id="login">Login</a></li></ul>
+<ul id="username"><li><a href="../OrphanedPages%3Faction=login" id="login">Login</a></li></ul>
 <div id="locationline">
 
 
 <ul id="pagelocation">
-<li><a class="backlink" title="Click to do a full-text search for this title" href="/OrphanedPages?action=fullsearch&amp;value=linkto%3A%22OrphanedPages%22&amp;context=180">OrphanedPages</a></li>
+<li><a class="backlink" title="Click to do a full-text search for this title" href="../OrphanedPages%3Faction=fullsearch%26value=linkto%3A%22OrphanedPages%22%26context=180">OrphanedPages</a></li>
 </ul>
 
 </div>
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/OrphanedPages">OrphanedPages</a></li>
+<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
+<li class="current"><a href=".">OrphanedPages</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
 
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/OrphanedPages?action=info">Info</a></li><li><a href="/OrphanedPages?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../OrphanedPages%3Faction=info">Info</a></li>
+<li><a href="../OrphanedPages%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -173,25 +176,44 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 </div>
 
 <div id="page" lang="en" dir="ltr">
-<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
-<span class="anchor" id="line-8"></span><p class="line874">A list of pages no other page links to:  <span class="anchor" id="line-9"></span><ol><li><a generated="1" href="/2006%E5%B9%B4%E5%B9%B4%E4%BC%9A%E6%88%90%E5%8A%9F%E4%B8%BE%E5%8A%9E">2006年年会成功举办</a></li><li><a generated="1" href="/AdminGroup">AdminGroup</a></li><li><a generated="1" href="/GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90">GeekBone的起源</a></li><li><a generated="1" href="/Geekbone">Geekbone</a></li><li><a generated="1" href="/IrcLogs">IrcLogs</a></li><li><a generated="1" href="/IrcLogs/2005-09-05">IrcLogs/2005-09-05</a></li><li><a generated="1" href="/Tux%E5%B9%B4%E5%BF%97">Tux年志</a></li><li><a generated="1" href="/site/sidemenu">site/sidemenu</a></li><li><a generated="1" href="/%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95">活动记录</a></li><li><a generated="1" href="/%E8%AE%B2%E5%8F%91%E8%A1%8C%E7%89%88%E6%97%B6%E7%9A%84%E8%8C%83%E5%9B%B4%E6%8F%90%E8%A6%81">讲发行版时的范围提要</a></li></ol> <span class="anchor" id="line-10"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">OrphanedPages  (last modified 2006-06-30 07:21:43)</p>
+<div dir="ltr" id="content" lang="en">
+<span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><p class="line874">A list of pages no other page links to:  <span class="anchor" id="line-9"></span></p>
+<ol>
+<li><a generated="1" href="../2006%E5%B9%B4%E5%B9%B4%E4%BC%9A%E6%88%90%E5%8A%9F%E4%B8%BE%E5%8A%9E">2006年年会成功举办</a></li>
+<li><a generated="1" href="../AdminGroup">AdminGroup</a></li>
+<li><a generated="1" href="../GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90">GeekBone的起源</a></li>
+<li><a generated="1" href="../Geekbone">Geekbone</a></li>
+<li><a generated="1" href="../IrcLogs">IrcLogs</a></li>
+<li><a generated="1" href="../IrcLogs/2005-09-05">IrcLogs/2005-09-05</a></li>
+<li><a generated="1" href="../Tux%E5%B9%B4%E5%BF%97">Tux年志</a></li>
+<li><a generated="1" href="../site/sidemenu">site/sidemenu</a></li>
+<li><a generated="1" href="../%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95">活动记录</a></li>
+<li><a generated="1" href="../%E8%AE%B2%E5%8F%91%E8%A1%8C%E7%89%88%E6%97%B6%E7%9A%84%E8%8C%83%E5%9B%B4%E6%8F%90%E8%A6%81">讲发行版时的范围提要</a></li>
+</ol> <span class="anchor" id="line-10"></span><span class="anchor" id="bottom"></span>
+</div>
+<p id="pageinfo" class="info" lang="en" dir="ltr">OrphanedPages  (last modified 2006-06-30 07:21:43)</p>
 
 <div id="pagebottom"></div>
 </div>
 
 
 <div id="footer">
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/OrphanedPages?action=info">Info</a></li><li><a href="/OrphanedPages?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../OrphanedPages%3Faction=info">Info</a></li>
+<li><a href="../OrphanedPages%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -222,14 +244,16 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 <ul id="credits">
-<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li>
+<li><a href="http://www.python.org/">Python Powered</a></li>
+<li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
 </ul>
 
 
 </div>
 </body>
 </html>
-

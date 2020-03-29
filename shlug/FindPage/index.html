@@ -5,7 +5,7 @@
 <meta name="robots" content="index,follow">
 
 <title>FindPage - ShangHai Linux User Group</title>
-<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+<script type="text/javascript" src="../htdocs/common/js/common.js"></script>
 
 <script type="text/javascript">
 <!--// common functions
@@ -76,22 +76,22 @@ function actionsMenuInit(title) {
 </script>
 
 
-<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/rightsidebar/css/common.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/rightsidebar/css/screen.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/rightsidebar/css/print.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/rightsidebar/css/projection.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../htdocs/rightsidebar/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../htdocs/rightsidebar/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../htdocs/rightsidebar/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/rightsidebar/css/projection.css">
 
 
-<link rel="Start" href="/Geekbone">
-<link rel="Alternate" title="Wiki Markup" href="/FindPage?action=raw">
-<link rel="Alternate" media="print" title="Print View" href="/FindPage?action=print">
-<link rel="Search" href="/FindPage">
-<link rel="Index" href="/TitleIndex">
-<link rel="Glossary" href="/WordIndex">
-<link rel="Help" href="/HelpOnFormatting">
+<link rel="Start" href="../Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="../FindPage%3Faction=raw">
+<link rel="Alternate" media="print" title="Print View" href="../FindPage%3Faction=print">
+<link rel="Search" href=".">
+<link rel="Index" href="../TitleIndex">
+<link rel="Glossary" href="../WordIndex">
+<link rel="Help" href="../HelpOnFormatting">
 </head>
 
-<body  lang="en" dir="ltr">
+<body lang="en" dir="ltr">
 
 <div id="header">
 
@@ -100,13 +100,9 @@ function actionsMenuInit(title) {
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="context" value="180">
 <label for="searchinput">Search:</label>
-<input id="searchinput" type="text" name="value" value="" size="20"
-    onfocus="searchFocus(this)" onblur="searchBlur(this)"
-    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
-<input id="titlesearch" name="titlesearch" type="submit"
-    value="Titles" alt="Search Titles">
-<input id="fullsearch" name="fullsearch" type="submit"
-    value="Text" alt="Search Full Text">
+<input id="searchinput" type="text" name="value" value="" size="20" onfocus="searchFocus(this)" onblur="searchBlur(this)" onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit" value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit" value="Text" alt="Search Full Text">
 </div>
 </form>
 <script type="text/javascript">
@@ -119,12 +115,12 @@ searchBlur(e);
 //-->
 </script>
 
-<div id="logo"><a href="/Geekbone">ShangHai Linux User Group</a></div>
+<div id="logo"><a href="../Geekbone">ShangHai Linux User Group</a></div>
 <div id="locationline">
 
 
 <ul id="pagelocation">
-<li><a class="backlink" title="Click to do a full-text search for this title" href="/FindPage?action=fullsearch&amp;value=linkto%3A%22FindPage%22&amp;context=180">FindPage</a></li>
+<li><a class="backlink" title="Click to do a full-text search for this title" href="../FindPage%3Faction=fullsearch%26value=linkto%3A%22FindPage%22%26context=180">FindPage</a></li>
 </ul>
 
 </div>
@@ -136,18 +132,24 @@ searchBlur(e);
 <h1>Wiki</h1>
 
 <ul id="navibar">
-<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink current"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li>
+<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
+<li class="wikilink current"><a href=".">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
 </ul>
 
 </div>
 <div class="sidepanel">
 <h1>Page</h1>
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/FindPage?action=info">Info</a></li><li><a href="/FindPage?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../FindPage%3Faction=info">Info</a></li>
+<li><a href="../FindPage%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -178,18 +180,30 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 </div>
 <div class="sidepanel">
 <h1>User</h1>
-<ul id="username"><li><a href="/FindPage?action=login" id="login">Login</a></li></ul>
+<ul id="username"><li><a href="../FindPage%3Faction=login" id="login">Login</a></li></ul>
 </div>
 </div>
 
 <div id="page" lang="en" dir="ltr">
-<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
-<span class="anchor" id="line-8"></span><p class="line862">You can use this page to search all entries in this <a href="/WikiWikiWeb">WikiWikiWeb</a>.  Searches are not case sensitive. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line874">Good starting points to explore a wiki are: <span class="anchor" id="line-11"></span><ul><li><p class="line891"><a href="/RecentChanges">RecentChanges</a>: see where people are currently working <span class="anchor" id="line-12"></span></li><li><p class="line891"><a href="/TitleIndex">TitleIndex</a>: a list of all pages in the wiki <span class="anchor" id="line-13"></span></li><li><p class="line891"><a href="/WordIndex">WordIndex</a>: a list of all words that are part of page title (thus, a list of the concepts in a wiki) <span class="anchor" id="line-14"></span></li><li><p class="line891"><a href="/SiteNavigation">SiteNavigation</a>: a longer list of things to try <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span></li></ul><p class="line862">Here's a title search.  Try something like <em>help</em>: <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><ul><li style="list-style-type:none"><form method="get" action="">
+<div dir="ltr" id="content" lang="en">
+<span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><p class="line862">You can use this page to search all entries in this <a href="../WikiWikiWeb">WikiWikiWeb</a>.  Searches are not case sensitive. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span></p>
+<p class="line874">Good starting points to explore a wiki are: <span class="anchor" id="line-11"></span></p>
+<ul>
+<li><p class="line891"><a href="../RecentChanges">RecentChanges</a>: see where people are currently working <span class="anchor" id="line-12"></span></p></li>
+<li><p class="line891"><a href="../TitleIndex">TitleIndex</a>: a list of all pages in the wiki <span class="anchor" id="line-13"></span></p></li>
+<li><p class="line891"><a href="../WordIndex">WordIndex</a>: a list of all words that are part of page title (thus, a list of the concepts in a wiki) <span class="anchor" id="line-14"></span></p></li>
+<li><p class="line891"><a href="../SiteNavigation">SiteNavigation</a>: a longer list of things to try <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span></p></li>
+</ul>
+<p class="line862">Here's a title search.  Try something like <em>help</em>: <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span></p>
+<ul><li style="list-style-type:none">
+<form method="get" action="">
 <div>
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="titlesearch" value="1">
@@ -197,26 +211,40 @@ actionsMenuInit('More Actions:');
 <input type="submit" value="Search Titles">
 
 </div>
-</form> <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span></li></ul><p class="line874">Here's a full-text search. <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><ul><li style="list-style-type:none"><form method="get" action="">
+</form> <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span>
+</li></ul>
+<p class="line874">Here's a full-text search. <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span></p>
+<ul><li style="list-style-type:none">
+<form method="get" action="">
 <div>
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="titlesearch" value="0">
 <input type="text" name="value" size="30" value="">
 <input type="submit" value="Search Text">
 <br>
-<input type="checkbox" name="context" value="160" checked="checked">
+<input type="checkbox" name="context" value="160" checked>
 Display context of search results
 <br>
 <input type="checkbox" name="case" value="1">
 Case-sensitive searching
 </div>
-</form> <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span></li></ul><p class="line862">You can also use regular expressions and other search modifiers (see <a href="/HelpOnSearching">HelpOnSearching</a>), an example: <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line867"><tt>&nbsp;&nbsp;&nbsp;&nbsp;regex:seriali[sz]e</tt> <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><p class="line874">Or go direct to a page, or create a new page by entering its name here: <span class="anchor" id="line-29"></span><ul><li style="list-style-type:none"><form method="get" action="">
+</form> <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span>
+</li></ul>
+<p class="line862">You can also use regular expressions and other search modifiers (see <a href="../HelpOnSearching">HelpOnSearching</a>), an example: <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span></p>
+<p class="line867"><tt>    regex:seriali[sz]e</tt> <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span></p>
+<p class="line874">Or go direct to a page, or create a new page by entering its name here: <span class="anchor" id="line-29"></span></p>
+<ul><li style="list-style-type:none">
+<form method="get" action="">
 <div>
 <input type="hidden" name="action" value="goto">
 <input type="text" name="target" size="30">
 <input type="submit" value="Go To Page">
 </div>
-</form> <span class="anchor" id="line-30"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">FindPage  (last modified 2006-06-30 07:21:41)</p>
+</form> <span class="anchor" id="line-30"></span>
+</li></ul>
+<span class="anchor" id="bottom"></span>
+</div>
+<p id="pageinfo" class="info" lang="en" dir="ltr">FindPage  (last modified 2006-06-30 07:21:41)</p>
 
 <div id="pagebottom"></div>
 </div>
@@ -224,11 +252,12 @@ Case-sensitive searching
 
 <div id="footer">
 <ul id="credits">
-<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li>
+<li><a href="http://www.python.org/">Python Powered</a></li>
+<li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
 </ul>
 
 
 </div>
 </body>
 </html>
-

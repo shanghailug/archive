@@ -1,77 +1,106 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-	>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml version="1.0" encoding="UTF-8"?><html><body>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
 
 <channel>
-	<title>上海Linux用户组 &#187; 邮件列表</title>
-	<atom:link href="http://www.shlug.org/?feed=rss2&#038;cat=48" rel="self" type="application/rss+xml" />
-	<link>http://www.shlug.org</link>
+	<title>上海Linux用户组 » 邮件列表</title>
+	<link href="../%3Ffeed=rss2%26cat=48" rel="self" type="application/rss+xml">
+	<link>http://www.shlug.org
 	<description>Shanghai Linux User Group</description>
-	<lastBuildDate>Mon, 17 Jun 2013 07:34:58 +0000</lastBuildDate>
+	<lastbuilddate>Mon, 17 Jun 2013 07:34:58 +0000</lastbuilddate>
 	<language>en-US</language>
-	<sy:updatePeriod>hourly</sy:updatePeriod>
-	<sy:updateFrequency>1</sy:updateFrequency>
+	<updateperiod>hourly</updateperiod>
+	<updatefrequency>1</updatefrequency>
 	<generator>http://wordpress.org/?v=3.4.1</generator>
 		<item>
 		<title>shlug maillist</title>
-		<link>http://www.shlug.org/?p=1154</link>
+		<link>http://www.shlug.org/?p=1154
 		<comments>http://www.shlug.org/?p=1154#comments</comments>
-		<pubDate>Mon, 27 Dec 2010 04:38:21 +0000</pubDate>
-		<dc:creator>lightning</dc:creator>
-				<category><![CDATA[邮件列表]]></category>
+		<pubdate>Mon, 27 Dec 2010 04:38:21 +0000</pubdate>
+		<creator>lightning</creator>
+				<category></category>
 
-		<guid isPermaLink="false">http://www.shlug.org/?p=1154</guid>
-		<description><![CDATA[]]></description>
-			<content:encoded><![CDATA[<ul><li>Sun, 23 Jun 2013 08:01:47 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>首先函数里多个参数的估值顺序应该是由编译器决定的。C/C++标准都不对此规<br>定。<p>在x86平台上，使用栈传递参数，从右到左压栈（除非使用一些其他的调用规<br>范；可参见：<a target="_blank" rel="nofollow" href="http://www.google.com/url?q=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FX86_calling_conventions&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEQznN2BAV4s87BISkdcka7Cp0f1w">http://en.wikipedia.org/wiki/X86_calling_conventions</a>）。所<br>以，一般参数的估值顺序也是从右到左，但程序员不应该依赖这样的顺序。</li><li>Sun, 23 Jun 2013 07:56:47 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>函数调用里面参数的计算顺序是不确定的，也就是<br>inet_ntoa(ip-&gt;ip_src)<br>inet_ntoa(ip-&gt;ip_dst)<br>这两句谁先谁后执行是不确定的</li><li>Sun, 23 Jun 2013 07:11:52 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>谢谢，还有一点没理解……请指点<p>The  string  is returned in a statically allocated buffer, which subsequent<br>calls will overwrite.<br>应该是说后面的调用会覆盖返回的静态缓存中的数据</li><li>Sun, 23 Jun 2013 06:30:41 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>为啥用本地栈就有破坏性？<p>难道不是用全局栈才有破坏性的么<p>2013/6/23 none_nobody &lt;lyx...@gmail.com&gt;:</li><li>Sun, 23 Jun 2013 05:39:00 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>或者不可重入是错的（不是多线程的可重入），应该说是，intoa利用本地栈，具有破坏性。</li><li>Sun, 23 Jun 2013 04:53:24 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>应该说是 glibc 里 intoa 具有不可重入性，<p>需要按以下的方法自己写一个。<p>/*<br>* given a packet, print a decode of via tcpdump<br>*/<p>char * xintoa (struct in_addr addr, char *buf, u_short bufLen) {<p>char *cp, *retStr;<br>u_int byte;<br>int n;<p>cp = &amp;buf[bufLen];<br>*--cp = &#39;\0&#39;;<p>n = 4;<br>do {<br>byte = addr.s_addr &amp; (0xff &lt;&lt; 24);<br>byte &gt;&gt;= 24;</li><li>Sun, 23 Jun 2013 04:49:53 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>根据楼上的说法，应该是缓存问题了。。。</li><li>Sun, 23 Jun 2013 04:45:00 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>      The  inet_ntoa()  function converts the Internet host address in,<br>given<br>in network byte order, to a string  in  IPv4  dotted-decimal<br>notation.<br>The  string  is returned in a statically allocated buffer, which<br>subse‐<br>quent calls will overwrite.<p><p>2013/6/23 Bamboo Hui &lt;bamboo...@gmail.com&gt;</li><li>Sun, 23 Jun 2013 02:21:25 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="libpcap抓包疑问">libpcap抓包疑问</a> - Shanghai Linux User Group<br>试着用libpcap的API抓包玩，代码如下，在打印IP header中的源地址和目标地址时（加粗语句），<br>不同的输出方式打印出来不同的结果，十分不解，求指教。<br>为什么用两个printf分别打印源地址和目标地址时，源和目标是不同的（期望值）？而在一个printf中打印输出的源和目标却是相同的？<br>(CentOS 6.4 x64, gcc 4.4.7)<p><br>输出结果为：<br>SRC: 192.168.122.13<br>DST: 192.168.122.1<br>src: 192.168.122.13<br>dst: 192.168.122.13<p>SRC: 192.168.122.13<br>DST: 192.168.12</li><li>Fri, 21 Jun 2013 08:07:42 +0000: <a href="https://groups.google.com/d/topic/shlug/aW22Y9YjANs" target="_self" title="Re: [shlug] 怎么发现网络拓扑">Re: [shlug] 怎么发现网络拓扑</a> - Shanghai Linux User Group<br>找个周末一根一根拔，然后贴标签，没啥办法<p><br>在 2013年6月21日下午4:02，Bamboo Hui &lt;bamboo...@gmail.com&gt;写道：</li><li>Fri, 21 Jun 2013 08:02:49 +0000: <a href="https://groups.google.com/d/topic/shlug/aW22Y9YjANs" target="_self" title="怎么发现网络拓扑">怎么发现网络拓扑</a> - Shanghai Linux User Group<br>刚到公司，公司的网络没有拓扑结构图，交换机的线接的密密麻麻的，看不清线路是怎么接到交换机上的。<p>求指教，有没有什么办法可以作出公司的整个网络拓扑？因为用的都TP-LINK或D-Link二层交换机，基本都没有console口，所以可能需要用软件的办法为解决，<p>谢谢！</li><li>Wed, 19 Jun 2013 14:43:30 +0000: <a href="https://groups.google.com/d/topic/shlug/uOL4vygDk9I" target="_self" title="Re: [shlug] 有没有人来谈谈家用NAS下大家的备份策略?">Re: [shlug] 有没有人来谈谈家用NAS下大家的备份策略?</a> - Shanghai Linux User Group<br>mark同问备份方案。<p><br>在 2013年6月19日下午9:00，Steven Shi &lt;steven...@gmail.com&gt;写道：</li><li>Wed, 19 Jun 2013 13:00:59 +0000: <a href="https://groups.google.com/d/topic/shlug/uOL4vygDk9I" target="_self" title="有没有人来谈谈家用NAS下大家的备份策略?">有没有人来谈谈家用NAS下大家的备份策略?</a> - Shanghai Linux User Group<br>家里有一台HP N40L,装的是ArchLinux,带4个硬盘槽,只支持RAID0和RAID1.<br>现在一块2T硬盘,用了1T左右.但感觉这样储存太不安全了,准备再安装一块硬盘<br>想听听大家平时是怎么在linux下做备份的,是用RAID呢?还是夜间自动备份比如rsync什么<br>因为考虑RAID的话,误删除还是会导致数据丢失,是不是自动备份会比较好一些?<br>暂不考虑火灾水灾地震等灾难<br>还有我碰到的问题顺便问一下,比如我再买块2T硬盘,如果建RAID1,必须要format,那我数据没地方放了,是不是必须买两块2T硬盘,把数据拷出去,建好raid再拷回来才行?</li><li>Mon, 17 Jun 2013 05:48:05 +0000: <a href="https://groups.google.com/d/topic/shlug/uKF-GeWzV1Y" target="_self" title="Re: [shlug] 一道算法题，怎么也想不出来怎么把结果算成标准答案">Re: [shlug] 一道算法题，怎么也想不出来怎么把结果算成标准答案</a> - Shanghai Linux User Group<br>你的算法怎么觉得是无穷递归的？ds一直除以2啊。<br>但是你使用了int型，这样以来就不符合题意了。<p>这种问题还是永数学方法解吧。<p>2013/6/17 Q Zhongyu &lt;snows...@gmail.com&gt;</li><li>Mon, 17 Jun 2013 05:37:45 +0000: <a href="https://groups.google.com/d/topic/shlug/uKF-GeWzV1Y" target="_self" title="一道算法题，怎么也想不出来怎么把结果算成标准答案">一道算法题，怎么也想不出来怎么把结果算成标准答案</a> - Shanghai Linux User Group<br>/* 半径为r的黒圆，里面有个半径r/2的白圆，白圆里又有一个半径为r/4的黒圆，<br>此黒圆里又有一个半径为r/8的白圆入错重复下去，问黑色部分的面积为多少？<br>*******************************************************************************************<br>标准答案输入 2 输出 4pi 下面是我的算法<br>*/<br># include &lt;stdio.h&gt;<br>int sm(int ds,int sum,int flag);<br>int main(){<br>int r;<br>printf(&quot;请输入圆的半径：&quot;);<br>scanf(&quot;%d&quot;</li></ul>
-]]></content:encoded>
-			<wfw:commentRss>http://www.shlug.org/?feed=rss2&#038;p=1154</wfw:commentRss>
-		<slash:comments>0</slash:comments>
+		<guid ispermalink="false">http://www.shlug.org/?p=1154</guid>
+		<description></description>
+			<encoded><li>Sun, 23 Jun 2013 08:01:47 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>首先函数里多个参数的估值顺序应该是由编译器决定的。C/C++标准都不对此规<br>定。<p>在x86平台上，使用栈传递参数，从右到左压栈（除非使用一些其他的调用规<br>范；可参见：<a target="_blank" rel="nofollow" href="http://www.google.com/url?q=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FX86_calling_conventions&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEQznN2BAV4s87BISkdcka7Cp0f1w">http://en.wikipedia.org/wiki/X86_calling_conventions</a>）。所<br>以，一般参数的估值顺序也是从右到左，但程序员不应该依赖这样的顺序。</p>
+</li>
+<li>Sun, 23 Jun 2013 07:56:47 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>函数调用里面参数的计算顺序是不确定的，也就是<br>inet_ntoa(ip-&gt;ip_src)<br>inet_ntoa(ip-&gt;ip_dst)<br>这两句谁先谁后执行是不确定的</li>
+<li>Sun, 23 Jun 2013 07:11:52 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>谢谢，还有一点没理解……请指点<p>The  string  is returned in a statically allocated buffer, which subsequent<br>calls will overwrite.<br>应该是说后面的调用会覆盖返回的静态缓存中的数据</p>
+</li>
+<li>Sun, 23 Jun 2013 06:30:41 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>为啥用本地栈就有破坏性？<p>难道不是用全局栈才有破坏性的么</p>
+<p>2013/6/23 none_nobody &lt;lyx...@gmail.com&gt;:</p>
+</li>
+<li>Sun, 23 Jun 2013 05:39:00 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>或者不可重入是错的（不是多线程的可重入），应该说是，intoa利用本地栈，具有破坏性。</li>
+<li>Sun, 23 Jun 2013 04:53:24 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>应该说是 glibc 里 intoa 具有不可重入性，<p>需要按以下的方法自己写一个。</p>
+<p>/*<br>* given a packet, print a decode of via tcpdump<br>*/</p>
+<p>char * xintoa (struct in_addr addr, char *buf, u_short bufLen) {</p>
+<p>char *cp, *retStr;<br>u_int byte;<br>int n;</p>
+<p>cp = &amp;buf[bufLen];<br>*--cp = '\0';</p>
+<p>n = 4;<br>do {<br>byte = addr.s_addr &amp; (0xff &lt;&lt; 24);<br>byte &gt;&gt;= 24;</p>
+</li>
+<li>Sun, 23 Jun 2013 04:49:53 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>根据楼上的说法，应该是缓存问题了。。。</li>
+<li>Sun, 23 Jun 2013 04:45:00 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="Re: [shlug] libpcap抓包疑问">Re: [shlug] libpcap抓包疑问</a> - Shanghai Linux User Group<br>      The  inet_ntoa()  function converts the Internet host address in,<br>given<br>in network byte order, to a string  in  IPv4  dotted-decimal<br>notation.<br>The  string  is returned in a statically allocated buffer, which<br>subse‐<br>quent calls will overwrite.<p></p>
+<p>2013/6/23 Bamboo Hui &lt;bamboo...@gmail.com&gt;</p>
+</li>
+<li>Sun, 23 Jun 2013 02:21:25 +0000: <a href="https://groups.google.com/d/topic/shlug/PaaRkHoQFmE" target="_self" title="libpcap抓包疑问">libpcap抓包疑问</a> - Shanghai Linux User Group<br>试着用libpcap的API抓包玩，代码如下，在打印IP header中的源地址和目标地址时（加粗语句），<br>不同的输出方式打印出来不同的结果，十分不解，求指教。<br>为什么用两个printf分别打印源地址和目标地址时，源和目标是不同的（期望值）？而在一个printf中打印输出的源和目标却是相同的？<br>(CentOS 6.4 x64, gcc 4.4.7)<p><br>输出结果为：<br>SRC: 192.168.122.13<br>DST: 192.168.122.1<br>src: 192.168.122.13<br>dst: 192.168.122.13</p>
+<p>SRC: 192.168.122.13<br>DST: 192.168.12</p>
+</li>
+<li>Fri, 21 Jun 2013 08:07:42 +0000: <a href="https://groups.google.com/d/topic/shlug/aW22Y9YjANs" target="_self" title="Re: [shlug] 怎么发现网络拓扑">Re: [shlug] 怎么发现网络拓扑</a> - Shanghai Linux User Group<br>找个周末一根一根拔，然后贴标签，没啥办法<p><br>在 2013年6月21日下午4:02，Bamboo Hui &lt;bamboo...@gmail.com&gt;写道：</p>
+</li>
+<li>Fri, 21 Jun 2013 08:02:49 +0000: <a href="https://groups.google.com/d/topic/shlug/aW22Y9YjANs" target="_self" title="怎么发现网络拓扑">怎么发现网络拓扑</a> - Shanghai Linux User Group<br>刚到公司，公司的网络没有拓扑结构图，交换机的线接的密密麻麻的，看不清线路是怎么接到交换机上的。<p>求指教，有没有什么办法可以作出公司的整个网络拓扑？因为用的都TP-LINK或D-Link二层交换机，基本都没有console口，所以可能需要用软件的办法为解决，</p>
+<p>谢谢！</p>
+</li>
+<li>Wed, 19 Jun 2013 14:43:30 +0000: <a href="https://groups.google.com/d/topic/shlug/uOL4vygDk9I" target="_self" title="Re: [shlug] 有没有人来谈谈家用NAS下大家的备份策略?">Re: [shlug] 有没有人来谈谈家用NAS下大家的备份策略?</a> - Shanghai Linux User Group<br>mark同问备份方案。<p><br>在 2013年6月19日下午9:00，Steven Shi &lt;steven...@gmail.com&gt;写道：</p>
+</li>
+<li>Wed, 19 Jun 2013 13:00:59 +0000: <a href="https://groups.google.com/d/topic/shlug/uOL4vygDk9I" target="_self" title="有没有人来谈谈家用NAS下大家的备份策略?">有没有人来谈谈家用NAS下大家的备份策略?</a> - Shanghai Linux User Group<br>家里有一台HP N40L,装的是ArchLinux,带4个硬盘槽,只支持RAID0和RAID1.<br>现在一块2T硬盘,用了1T左右.但感觉这样储存太不安全了,准备再安装一块硬盘<br>想听听大家平时是怎么在linux下做备份的,是用RAID呢?还是夜间自动备份比如rsync什么<br>因为考虑RAID的话,误删除还是会导致数据丢失,是不是自动备份会比较好一些?<br>暂不考虑火灾水灾地震等灾难<br>还有我碰到的问题顺便问一下,比如我再买块2T硬盘,如果建RAID1,必须要format,那我数据没地方放了,是不是必须买两块2T硬盘,把数据拷出去,建好raid再拷回来才行?</li>
+<li>Mon, 17 Jun 2013 05:48:05 +0000: <a href="https://groups.google.com/d/topic/shlug/uKF-GeWzV1Y" target="_self" title="Re: [shlug] 一道算法题，怎么也想不出来怎么把结果算成标准答案">Re: [shlug] 一道算法题，怎么也想不出来怎么把结果算成标准答案</a> - Shanghai Linux User Group<br>你的算法怎么觉得是无穷递归的？ds一直除以2啊。<br>但是你使用了int型，这样以来就不符合题意了。<p>这种问题还是永数学方法解吧。</p>
+<p>2013/6/17 Q Zhongyu &lt;snows...@gmail.com&gt;</p>
+</li>
+<li>Mon, 17 Jun 2013 05:37:45 +0000: <a href="https://groups.google.com/d/topic/shlug/uKF-GeWzV1Y" target="_self" title="一道算法题，怎么也想不出来怎么把结果算成标准答案">一道算法题，怎么也想不出来怎么把结果算成标准答案</a> - Shanghai Linux User Group<br>/* 半径为r的黒圆，里面有个半径r/2的白圆，白圆里又有一个半径为r/4的黒圆，<br>此黒圆里又有一个半径为r/8的白圆入错重复下去，问黑色部分的面积为多少？<br>*******************************************************************************************<br>标准答案输入 2 输出 4pi 下面是我的算法<br>*/<br># include &lt;stdio.h&gt;<br>int sm(int ds,int sum,int flag);<br>int main(){<br>int r;<br>printf("请输入圆的半径：");<br>scanf("%d"</li>
+]]&gt;</encoded>
+			<commentrss>http://www.shlug.org/?feed=rss2&amp;p=1154</commentrss>
+		<comments>0</comments>
 		</item>
 		<item>
 		<title>2010年12月部分精华邮件</title>
-		<link>http://www.shlug.org/?p=790</link>
+		<link>http://www.shlug.org/?p=790
 		<comments>http://www.shlug.org/?p=790#comments</comments>
-		<pubDate>Mon, 20 Dec 2010 03:17:30 +0000</pubDate>
-		<dc:creator>lightning</dc:creator>
-				<category><![CDATA[精华邮件]]></category>
+		<pubdate>Mon, 20 Dec 2010 03:17:30 +0000</pubdate>
+		<creator>lightning</creator>
+				<category></category>
 
-		<guid isPermaLink="false">http://www.shlug.org/?p=790</guid>
-		<description><![CDATA[本期文集为试刊，尚缺少许多杂志要素，在日后我们将不断改进和提高，为大家提供更优质的邮件列表精华文集。]]></description>
-			<content:encoded><![CDATA[<p>本期文集为试刊，尚缺少许多杂志要素，在日后我们将不断改进和提高，为大家提供更优质的邮件列表精华文集。</p>
-]]></content:encoded>
-			<wfw:commentRss>http://www.shlug.org/?feed=rss2&#038;p=790</wfw:commentRss>
-		<slash:comments>0</slash:comments>
+		<guid ispermalink="false">http://www.shlug.org/?p=790</guid>
+		<description></description>
+			<encoded>本期文集为试刊，尚缺少许多杂志要素，在日后我们将不断改进和提高，为大家提供更优质的邮件列表精华文集。
+]]&gt;</encoded>
+			<commentrss>http://www.shlug.org/?feed=rss2&amp;p=790</commentrss>
+		<comments>0</comments>
 		</item>
 		<item>
 		<title>在线直接订阅shlug maillist的功能已经恢复</title>
-		<link>http://www.shlug.org/?p=138</link>
+		<link>http://www.shlug.org/?p=138
 		<comments>http://www.shlug.org/?p=138#comments</comments>
-		<pubDate>Tue, 26 Jan 2010 09:20:09 +0000</pubDate>
-		<dc:creator>ghosTM55</dc:creator>
-				<category><![CDATA[邮件列表的订阅与退订]]></category>
+		<pubdate>Tue, 26 Jan 2010 09:20:09 +0000</pubdate>
+		<creator>ghosTM55</creator>
+				<category></category>
 
-		<guid isPermaLink="false">http://web.shlug.org/?p=138</guid>
-		<description><![CDATA[直接在右上角的google group订阅框中填入email邮箱，就能在线订阅shlug maillist。 注意事项： 在订阅按钮点击后，google group 会发送一封确认邮件到订阅者的邮箱中，其中有一个指向订阅确认页面的URL链接，必须将链接中的http协议改成https协议方能进入该订阅确认页面。 如果无法通过在线订阅功能订阅，也可以往shlug+subscribe@googlegroups.com邮箱发送一份空邮件来进行订阅。 订阅成功后，可以直接往shlug@googlegroups.com邮箱发信进行邮件交流。 如果想退订请往shlug+unsubscribe@googlegroups.com邮箱发送一份空邮件即可退订。 邮箱订阅或退订的问题也可以向webmaster邮箱发信询问。]]></description>
-			<content:encoded><![CDATA[<p>直接在右上角的google group订阅框中填入email邮箱，就能在线订阅shlug maillist。</p>
+		<guid ispermalink="false">http://web.shlug.org/?p=138</guid>
+		<description></description>
+			<encoded>直接在右上角的google group订阅框中填入email邮箱，就能在线订阅shlug maillist。
 <p><strong>注意事项</strong>：</p>
 <ul>
 <li><strong>在订阅按钮点击后，google group 会发送一封确认邮件到订阅者的邮箱中，其中有一个指向订阅确认页面的URL链接，必须将链接中的http协议改成https协议方能进入该订阅确认页面。</strong></li>
-<li><strong>如果无法通过在线订阅功能订阅，也可以往shlug+subscribe@googlegroups.com邮箱发送一份空邮件来进行订阅。<br />
+<li><strong>如果无法通过在线订阅功能订阅，也可以往shlug+subscribe@googlegroups.com邮箱发送一份空邮件来进行订阅。<br>
 </strong></li>
 <li><strong>订阅成功后，可以直接往shlug@googlegroups.com邮箱发信进行邮件交流。</strong></li>
 <li><strong>如果想退订请往shlug+unsubscribe@googlegroups.com邮箱发送一份空邮件即可退订。</strong></li>
-<li><strong>邮箱订阅或退订的问题也可以向webmaster邮箱发信询问。<br />
+<li><strong>邮箱订阅或退订的问题也可以向webmaster邮箱发信询问。<br>
 </strong></li>
 </ul>
-]]></content:encoded>
-			<wfw:commentRss>http://www.shlug.org/?feed=rss2&#038;p=138</wfw:commentRss>
-		<slash:comments>13</slash:comments>
+]]&gt;</encoded>
+			<commentrss>http://www.shlug.org/?feed=rss2&amp;p=138</commentrss>
+		<comments>13</comments>
 		</item>
 	</channel>
 </rss>
+</body></html>

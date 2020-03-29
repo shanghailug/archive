@@ -5,7 +5,7 @@
 <meta name="robots" content="index,nofollow">
 
 <title>AbandonedPages - Geekbone.Org</title>
-<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+<script type="text/javascript" src="../htdocs/common/js/common.js"></script>
 
 <script type="text/javascript">
 <!--// common functions
@@ -76,38 +76,34 @@ function actionsMenuInit(title) {
 </script>
 
 
-<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="/Geekbone">
-<link rel="Alternate" title="Wiki Markup" href="/AbandonedPages?action=raw">
-<link rel="Alternate" media="print" title="Print View" href="/AbandonedPages?action=print">
-<link rel="Search" href="/FindPage">
-<link rel="Index" href="/TitleIndex">
-<link rel="Glossary" href="/WordIndex">
-<link rel="Help" href="/HelpOnFormatting">
+<link rel="Start" href="../Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="../AbandonedPages%3Faction=raw">
+<link rel="Alternate" media="print" title="Print View" href="../AbandonedPages%3Faction=print">
+<link rel="Search" href="../FindPage">
+<link rel="Index" href="../TitleIndex">
+<link rel="Glossary" href="../WordIndex">
+<link rel="Help" href="../HelpOnFormatting">
 </head>
 
-<body  lang="en" dir="ltr">
+<body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../Geekbone">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="context" value="180">
 <label for="searchinput">Search:</label>
-<input id="searchinput" type="text" name="value" value="" size="20"
-    onfocus="searchFocus(this)" onblur="searchBlur(this)"
-    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
-<input id="titlesearch" name="titlesearch" type="submit"
-    value="Titles" alt="Search Titles">
-<input id="fullsearch" name="fullsearch" type="submit"
-    value="Text" alt="Search Full Text">
+<input id="searchinput" type="text" name="value" value="" size="20" onfocus="searchFocus(this)" onblur="searchBlur(this)" onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit" value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit" value="Text" alt="Search Full Text">
 </div>
 </form>
 <script type="text/javascript">
@@ -120,29 +116,36 @@ searchBlur(e);
 //-->
 </script>
 
-<ul id="username"><li><a href="/AbandonedPages?action=login" id="login">Login</a></li></ul>
+<ul id="username"><li><a href="../AbandonedPages%3Faction=login" id="login">Login</a></li></ul>
 <div id="locationline">
 
 
 <ul id="pagelocation">
-<li><a class="backlink" title="Click to do a full-text search for this title" href="/AbandonedPages?action=fullsearch&amp;value=linkto%3A%22AbandonedPages%22&amp;context=180">AbandonedPages</a></li>
+<li><a class="backlink" title="Click to do a full-text search for this title" href="../AbandonedPages%3Faction=fullsearch%26value=linkto%3A%22AbandonedPages%22%26context=180">AbandonedPages</a></li>
 </ul>
 
 </div>
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/AbandonedPages">AbandonedPages</a></li>
+<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
+<li class="current"><a href=".">AbandonedPages</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
 
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/AbandonedPages?action=info">Info</a></li><li><a href="/AbandonedPages?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../AbandonedPages%3Faction=info">Info</a></li>
+<li><a href="../AbandonedPages%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -173,135 +176,144 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 </div>
 
 <div id="page" lang="en" dir="ltr">
-<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
-<span class="anchor" id="line-8"></span><p class="line874">Pages that were not edited since the beginning of history (literally); it's a listing of the oldest entries in the editlog. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line867"><div class="recentchanges" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en">
+<span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><p class="line874">Pages that were not edited since the beginning of history (literally); it's a listing of the oldest entries in the editlog. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span></p>
+<p class="line867"></p>
+<div class="recentchanges" lang="en" dir="ltr">
 <div>
 <p></p>
 </div>
 <table>
 <tr class="rcdaybreak"><td colspan="6"><strong>2005-08-31</strong></td></tr>
 <tr>
-<td class="rcicon1"><a href="/Tux%E5%B9%B4%E5%BF%97?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
-<td class="rcpagelink"><a href="/Tux%E5%B9%B4%E5%BF%97">Tux年志</a></td>
+<td class="rcicon1"><a href="../Tux%E5%B9%B4%E5%BF%97%3Faction=diff"><img alt="[DIFF]" height="11" src="../htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15"></a></td>
+<td class="rcpagelink"><a href="../Tux%E5%B9%B4%E5%BF%97">Tux年志</a></td>
 <td class="rctime">23:25</td>
-<td class="rcicon2"><a href="/Tux%E5%B9%B4%E5%BF%97?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
-<td class="rceditor"><span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span></td>
+<td class="rcicon2"><a href="../Tux%E5%B9%B4%E5%BF%97%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
+<td class="rceditor"><span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="../PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span></td>
 <td class="rccomment"></td>
 </tr>
 <tr>
-<td class="rcicon1"><a href="/GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
-<td class="rcpagelink"><a href="/GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90">GeekBone的起源</a></td>
+<td class="rcicon1"><a href="../GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90%3Faction=diff"><img alt="[DIFF]" height="11" src="../htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15"></a></td>
+<td class="rcpagelink"><a href="../GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90">GeekBone的起源</a></td>
 <td class="rctime">23:25</td>
-<td class="rcicon2"><a href="/GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
-<td class="rceditor"><span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span></td>
+<td class="rcicon2"><a href="../GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
+<td class="rceditor"><span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="../PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span></td>
 <td class="rccomment"></td>
 </tr>
 <tr>
-<td class="rcicon1"><a href="/2004.05.25_yuleshow%E7%9A%84html%E8%AE%B2%E5%BA%A7log?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
-<td class="rcpagelink"><a href="/2004.05.25_yuleshow%E7%9A%84html%E8%AE%B2%E5%BA%A7log">2004.05.25 yuleshow的html讲座log</a></td>
+<td class="rcicon1"><a href="../2004.05.25_yuleshow%E7%9A%84html%E8%AE%B2%E5%BA%A7log%3Faction=diff"><img alt="[DIFF]" height="11" src="../htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15"></a></td>
+<td class="rcpagelink"><a href="../2004.05.25_yuleshow%E7%9A%84html%E8%AE%B2%E5%BA%A7log">2004.05.25 yuleshow的html讲座log</a></td>
 <td class="rctime">23:27</td>
-<td class="rcicon2"><a href="/2004.05.25_yuleshow%E7%9A%84html%E8%AE%B2%E5%BA%A7log?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
-<td class="rceditor"><span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span></td>
+<td class="rcicon2"><a href="../2004.05.25_yuleshow%E7%9A%84html%E8%AE%B2%E5%BA%A7log%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
+<td class="rceditor"><span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="../PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span></td>
 <td class="rccomment"></td>
 </tr>
 <tr class="rcdaybreak"><td colspan="6"><strong>2005-09-01</strong></td></tr>
 <tr>
-<td class="rcicon1"><a href="/IRC_%E9%81%93%E5%BE%B7?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
-<td class="rcpagelink"><a href="/IRC_%E9%81%93%E5%BE%B7">IRC 道德</a></td>
+<td class="rcicon1"><a href="../IRC_%E9%81%93%E5%BE%B7%3Faction=diff"><img alt="[DIFF]" height="11" src="../htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15"></a></td>
+<td class="rcpagelink"><a href="../IRC_%E9%81%93%E5%BE%B7">IRC 道德</a></td>
 <td class="rctime">00:16</td>
-<td class="rcicon2"><a href="/IRC_%E9%81%93%E5%BE%B7?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
-<td class="rceditor"><span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span></td>
+<td class="rcicon2"><a href="../IRC_%E9%81%93%E5%BE%B7%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
+<td class="rceditor"><span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="../PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span></td>
 <td class="rccomment"></td>
 </tr>
 <tr>
-<td class="rcicon1"><a href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
-<td class="rcpagelink"><a href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0">Wind的Red Hat9学习日记</a></td>
+<td class="rcicon1"><a href="../Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%3Faction=diff"><img alt="[DIFF]" height="11" src="../htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15"></a></td>
+<td class="rcpagelink"><a href="../Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0">Wind的Red Hat9学习日记</a></td>
 <td class="rctime">01:13</td>
-<td class="rcicon2"><a href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
-<td class="rceditor"><span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span></td>
+<td class="rcicon2"><a href="../Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
+<td class="rceditor"><span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="../PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span></td>
 <td class="rccomment"></td>
 </tr>
 <tr class="rcdaybreak"><td colspan="6"><strong>2005-09-05</strong></td></tr>
 <tr>
 <td class="rcicon1"></td>
-<td class="rcpagelink"><a href="/IrcLogs">IrcLogs</a></td>
+<td class="rcpagelink"><a href="../IrcLogs">IrcLogs</a></td>
 <td class="rctime">09:38</td>
-<td class="rcicon2"><a href="/IrcLogs?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
-<td class="rceditor"><span title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]">PatrickLi</a></span></td>
+<td class="rcicon2"><a href="../IrcLogs%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
+<td class="rceditor"><span title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]"><a class="nonexistent" href="../PatrickLi" title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]">PatrickLi</a></span></td>
 <td class="rccomment"></td>
 </tr>
 <tr>
 <td class="rcicon1"></td>
-<td class="rcpagelink"><a href="/IrcLogs/2005-09-05">Irc Logs/2005-09-05</a></td>
+<td class="rcpagelink"><a href="../IrcLogs/2005-09-05">Irc Logs/2005-09-05</a></td>
 <td class="rctime">09:41</td>
-<td class="rcicon2"><a href="/IrcLogs/2005-09-05?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
-<td class="rceditor"><span title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]">PatrickLi</a></span></td>
+<td class="rcicon2"><a href="../IrcLogs/2005-09-05%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
+<td class="rceditor"><span title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]"><a class="nonexistent" href="../PatrickLi" title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]">PatrickLi</a></span></td>
 <td class="rccomment"></td>
 </tr>
 <tr class="rcdaybreak"><td colspan="6"><strong>2005-09-07</strong></td></tr>
 <tr>
-<td class="rcicon1"><a href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
-<td class="rcpagelink"><a href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A">2005年夏季技术交流会</a></td>
+<td class="rcicon1"><a href="../2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A%3Faction=diff"><img alt="[DIFF]" height="11" src="../htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15"></a></td>
+<td class="rcpagelink"><a href="../2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A">2005年夏季技术交流会</a></td>
 <td class="rctime">02:21</td>
-<td class="rcicon2"><a href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
-<td class="rceditor"><span title="Jamguo @ 60.63.156.168[60.63.156.168]"><a class="nonexistent" href="/Jamguo" title="Jamguo @ 60.63.156.168[60.63.156.168]">Jamguo</a></span></td>
+<td class="rcicon2"><a href="../2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
+<td class="rceditor"><span title="Jamguo @ 60.63.156.168[60.63.156.168]"><a class="nonexistent" href="../Jamguo" title="Jamguo @ 60.63.156.168[60.63.156.168]">Jamguo</a></span></td>
 <td class="rccomment"></td>
 </tr>
 <tr class="rcdaybreak"><td colspan="6"><strong>2006-05-14</strong></td></tr>
 <tr>
-<td class="rcicon1"><a href="/site/sidemenu?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
-<td class="rcpagelink"><a href="/site/sidemenu">site/sidemenu</a></td>
+<td class="rcicon1"><a href="../site/sidemenu%3Faction=diff"><img alt="[DIFF]" height="11" src="../htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15"></a></td>
+<td class="rcpagelink"><a href="../site/sidemenu">site/sidemenu</a></td>
 <td class="rctime">21:56</td>
-<td class="rcicon2"><a href="/site/sidemenu?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rcicon2"><a href="../site/sidemenu%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
 <td class="rceditor"><span title="??? @ dhcp0404.gradacc.ox.ac.uk[129.67.89.148]">dhcp0404</span></td>
 <td class="rccomment"></td>
 </tr>
 <tr>
-<td class="rcicon1"><a href="/site/sidemenu/default?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
-<td class="rcpagelink"><a href="/site/sidemenu/default">site/sidemenu/default</a></td>
+<td class="rcicon1"><a href="../site/sidemenu/default%3Faction=diff"><img alt="[DIFF]" height="11" src="../htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15"></a></td>
+<td class="rcpagelink"><a href="../site/sidemenu/default">site/sidemenu/default</a></td>
 <td class="rctime">21:56</td>
-<td class="rcicon2"><a href="/site/sidemenu/default?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rcicon2"><a href="../site/sidemenu/default%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
 <td class="rceditor"><span title="??? @ dhcp0404.gradacc.ox.ac.uk[129.67.89.148]">dhcp0404</span></td>
 <td class="rccomment"></td>
 </tr>
 <tr class="rcdaybreak"><td colspan="6"><strong>2006-05-19</strong></td></tr>
 <tr>
-<td class="rcicon1"><a href="/GNU/Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%9F%E6%88%90%E6%A0%91?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
-<td class="rcpagelink"><a href="/GNU/Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%9F%E6%88%90%E6%A0%91">GNU/Linux 发行版生成树</a></td>
+<td class="rcicon1"><a href="../GNU/Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%9F%E6%88%90%E6%A0%91%3Faction=diff"><img alt="[DIFF]" height="11" src="../htdocs/modern/img/moin-diff.png" title="[DIFF]" width="15"></a></td>
+<td class="rcpagelink"><a href="../GNU/Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%9F%E6%88%90%E6%A0%91">GNU/Linux 发行版生成树</a></td>
 <td class="rctime">22:21</td>
-<td class="rcicon2"><a href="/GNU/Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%9F%E6%88%90%E6%A0%91?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
-<td class="rceditor"><span title="Lightning @ 61.171.70.41[61.171.70.41]"><a class="nonexistent" href="/Lightning" title="Lightning @ 61.171.70.41[61.171.70.41]">Lightning</a></span></td>
+<td class="rcicon2"><a href="../GNU/Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%9F%E6%88%90%E6%A0%91%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
+<td class="rceditor"><span title="Lightning @ 61.171.70.41[61.171.70.41]"><a class="nonexistent" href="../Lightning" title="Lightning @ 61.171.70.41[61.171.70.41]">Lightning</a></span></td>
 <td class="rccomment">Upload of attachment 'gnulinuxtree.png'.</td>
 </tr>
 <tr class="rcdaybreak"><td colspan="6"><strong>2006-06-13</strong></td></tr>
 <tr>
 <td class="rcicon1"></td>
-<td class="rcpagelink"><a href="/%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95">活动记录</a></td>
+<td class="rcpagelink"><a href="../%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95">活动记录</a></td>
 <td class="rctime">21:20</td>
-<td class="rcicon2"><a href="/%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95?action=info"><img alt="Info" height="11" src="/htdocs/modern/img/moin-info.png" title="Info" width="12" /></a></td>
-<td class="rceditor"><span title="Lightning @ 61.171.72.24[61.171.72.24]"><a class="nonexistent" href="/Lightning" title="Lightning @ 61.171.72.24[61.171.72.24]">Lightning</a></span></td>
+<td class="rcicon2"><a href="../%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95%3Faction=info"><img alt="Info" height="11" src="../htdocs/modern/img/moin-info.png" title="Info" width="12"></a></td>
+<td class="rceditor"><span title="Lightning @ 61.171.72.24[61.171.72.24]"><a class="nonexistent" href="../Lightning" title="Lightning @ 61.171.72.24[61.171.72.24]">Lightning</a></span></td>
 <td class="rccomment"></td>
 </tr>
 </table>
 </div>
- <span class="anchor" id="line-11"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">AbandonedPages  (last modified 2006-06-30 07:21:45)</p>
+ <span class="anchor" id="line-11"></span><span class="anchor" id="bottom"></span>
+</div>
+<p id="pageinfo" class="info" lang="en" dir="ltr">AbandonedPages  (last modified 2006-06-30 07:21:45)</p>
 
 <div id="pagebottom"></div>
 </div>
 
 
 <div id="footer">
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/AbandonedPages?action=info">Info</a></li><li><a href="/AbandonedPages?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../AbandonedPages%3Faction=info">Info</a></li>
+<li><a href="../AbandonedPages%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -332,14 +344,16 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 <ul id="credits">
-<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li>
+<li><a href="http://www.python.org/">Python Powered</a></li>
+<li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
 </ul>
 
 
 </div>
 </body>
 </html>
-

@@ -5,7 +5,7 @@
 <meta name="robots" content="index,nofollow">
 
 <title>HelpOnUserPreferences - Geekbone.Org</title>
-<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+<script type="text/javascript" src="../htdocs/common/js/common.js"></script>
 
 <script type="text/javascript">
 <!--// common functions
@@ -76,38 +76,34 @@ function actionsMenuInit(title) {
 </script>
 
 
-<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="/Geekbone">
-<link rel="Alternate" title="Wiki Markup" href="/HelpOnUserPreferences?action=raw">
-<link rel="Alternate" media="print" title="Print View" href="/HelpOnUserPreferences?action=print">
-<link rel="Search" href="/FindPage">
-<link rel="Index" href="/TitleIndex">
-<link rel="Glossary" href="/WordIndex">
-<link rel="Help" href="/HelpOnFormatting">
+<link rel="Start" href="../Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="../HelpOnUserPreferences%3Faction=raw">
+<link rel="Alternate" media="print" title="Print View" href="../HelpOnUserPreferences%3Faction=print">
+<link rel="Search" href="../FindPage">
+<link rel="Index" href="../TitleIndex">
+<link rel="Glossary" href="../WordIndex">
+<link rel="Help" href="../HelpOnFormatting">
 </head>
 
-<body  lang="en" dir="ltr">
+<body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../Geekbone">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="context" value="180">
 <label for="searchinput">Search:</label>
-<input id="searchinput" type="text" name="value" value="" size="20"
-    onfocus="searchFocus(this)" onblur="searchBlur(this)"
-    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
-<input id="titlesearch" name="titlesearch" type="submit"
-    value="Titles" alt="Search Titles">
-<input id="fullsearch" name="fullsearch" type="submit"
-    value="Text" alt="Search Full Text">
+<input id="searchinput" type="text" name="value" value="" size="20" onfocus="searchFocus(this)" onblur="searchBlur(this)" onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit" value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit" value="Text" alt="Search Full Text">
 </div>
 </form>
 <script type="text/javascript">
@@ -120,29 +116,36 @@ searchBlur(e);
 //-->
 </script>
 
-<ul id="username"><li><a href="/HelpOnUserPreferences?action=login" id="login">Login</a></li></ul>
+<ul id="username"><li><a href="../HelpOnUserPreferences%3Faction=login" id="login">Login</a></li></ul>
 <div id="locationline">
 
 
 <ul id="pagelocation">
-<li><a class="backlink" title="Click to do a full-text search for this title" href="/HelpOnUserPreferences?action=fullsearch&amp;value=linkto%3A%22HelpOnUserPreferences%22&amp;context=180">HelpOnUserPreferences</a></li>
+<li><a class="backlink" title="Click to do a full-text search for this title" href="../HelpOnUserPreferences%3Faction=fullsearch%26value=linkto%3A%22HelpOnUserPreferences%22%26context=180">HelpOnUserPreferences</a></li>
 </ul>
 
 </div>
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/HelpOnUserPreferences">HelpOnUserPreferences</a></li>
+<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
+<li class="current"><a href=".">HelpOnUserPreferences</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
 
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnUserPreferences?action=info">Info</a></li><li><a href="/HelpOnUserPreferences?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../HelpOnUserPreferences%3Faction=info">Info</a></li>
+<li><a href="../HelpOnUserPreferences%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -173,27 +176,87 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 </div>
 
 <div id="page" lang="en" dir="ltr">
-<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
-<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line862">You may self-register and establish your preferences by clicking on the "<a href="/UserPreferences">UserPreferences</a>" (or "Login") link at the top of every page (exact naming and location depends on the theme).  If you have registered and are logged in, your name will be displayed. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line862">The various fields in User<tt class="backtick"></tt>Preferences are described below: <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><ul><li><p class="line891"><strong>Name</strong>: Either your real name or an alias. Best is to use <a href="/WikiName">WikiName</a> format. <span class="anchor" id="line-14"></span><ul><li><p class="line862">If ACLs are enabled, it is <strong>required</strong> to be a <em>unique</em> name. <span class="anchor" id="line-15"></span></li></ul></li><li><p class="line891"><strong>Alias-Name</strong>: If your login name (see above) is cryptic due to technical reasons, you can give your real name here. It will be only used for display purposes. <span class="anchor" id="line-16"></span></li><li><p class="line891"><strong>Password</strong>: Something you can remember but is very hard for friends and family to guess. <span class="anchor" id="line-17"></span></li><li><p class="line891"><strong>Password repeat</strong>: if you initially set or later change your password, repeat it here to avoid typos. <span class="anchor" id="line-18"></span></li><li><p class="line891"><strong>Email</strong>: Your email address, this is required if you wish to subscribe to wiki pages or wish to have a forgotten login data mailed to you. <span class="anchor" id="line-19"></span><ul><li>If ACLs are enabled, the email address is required to be unique and valid. <span class="anchor" id="line-20"></span></li></ul></li><li><p class="line891"><strong>User CSS URL</strong>: If you want to override some of the wiki system's css, put your own CSS here (UTF-8 or ASCII). <span class="anchor" id="line-21"></span></li><li><p class="line891"><strong>Editor size</strong>: <img alt="&lt;!&gt;" height="15" src="/htdocs/modern/img/attention.png" title="&lt;!&gt;" width="15" /> This controls the size of the text area when you edit a page. Adjust this to suit the size of your monitor and your personal preferences. <span class="anchor" id="line-22"></span></li><li><p class="line891"><strong>Preferred theme</strong>: choose a theme to change colours, icons and layout of the wiki <span class="anchor" id="line-23"></span></li><li><p class="line891"><strong>Editor Preference</strong>: the editor you prefer, either "text" or "gui" <span class="anchor" id="line-24"></span></li><li><p class="line891"><strong>Editor shown on UI</strong>: which editor(s) are shown on the user interface, either free choice or the one preferred. <span class="anchor" id="line-25"></span></li><li><p class="line891"><strong>Time zone</strong>: ... <span class="anchor" id="line-26"></span><ul><li><p class="line891"><strong>Your time is</strong>: If the correct time is not displayed, use the drop down box and select the correct time. <span class="anchor" id="line-27"></span></li><li><p class="line891"><strong>Server time is</strong>: Displays the server time. <span class="anchor" id="line-28"></span></li></ul></li><li><p class="line891"><strong>Date format</strong>: The default of year-month-day is least confusing for international use. <span class="anchor" id="line-29"></span></li><li><p class="line891"><strong>Preferred language</strong>: The default is taken from your browser setting. It is advisable to set this to a specific language anyway, since then you get notification mails in your native tongue, too. <span class="anchor" id="line-30"></span></li><li><p class="line891"><strong>General options</strong>: ... <span class="anchor" id="line-31"></span><ul><li><p class="line891"><strong>Add spaces to displayed wiki names</strong>: If checked, makes <strong>Wiki<tt class="backtick"></tt>Names</strong> look like <strong>Wiki Names</strong>. <span class="anchor" id="line-32"></span></li><li><p class="line891"><strong>Disable this account forever</strong>: If checked, you can't login again with this account. Think first. <img alt=":)" height="15" src="/htdocs/modern/img/smile.png" title=":)" width="15" /> <span class="anchor" id="line-33"></span></li><li><p class="line891"><strong>Open editor on double click</strong>: Handy if you edit a lot of pages. <span class="anchor" id="line-34"></span></li><li><p class="line891"><strong>Publish my email (not my wiki homepage) in author info</strong>: in case you have no wiki home page. <span class="anchor" id="line-35"></span></li><li><p class="line891"><strong>Jump to last visited page instead of frontpage</strong>: When you point your browser at the wiki's base URL (i.e. the one not mentioning a specific page), you will see the last page visited. This can be useful if you are frequently reading or editing a single page. <span class="anchor" id="line-36"></span></li><li><p class="line891"><strong>Remember login information</strong>: When you set this, the cookie won't expire at midnight. <span class="anchor" id="line-37"></span></li><li><p class="line891"><strong>Show fancy diffs</strong>: Makes diffs more readable. <span class="anchor" id="line-38"></span></li><li><p class="line891"><strong>Show icon toolbar</strong>: Provides a row of icon links in the upper right corner. <span class="anchor" id="line-39"></span></li><li><p class="line891"><strong>Show page trail</strong>: Lists the last five pages visited at the top of the page, so you can jump back several pages easily. <span class="anchor" id="line-40"></span></li><li><p class="line891"><strong>Show question mark for non-existing pagelinks</strong>: Display a highlighted <strong>?</strong> in front of a non-existant page instead of a color-coded page name. <span class="anchor" id="line-41"></span></li><li><p class="line891"><strong>Show top/bottom links in headings</strong>: If checked, every title bar will have an up and down arrow to navigate to top or bottom of page. <span class="anchor" id="line-42"></span></li><li><p class="line891"><strong>Subscribe to trivial changes</strong>: If checked, you will be notified even if editor said it was a trivial change. <span class="anchor" id="line-43"></span></li></ul></li><li><p class="line891"><strong>Quick links</strong>: Overrides the standard choices in the gray navigation bar at the top of the page.  Enter one Wiki page name per line. You may also add free-form links, i.e. entries of the form <tt class="backtick">[url&nbsp;linktext]</tt> just like in wiki pages. <span class="anchor" id="line-44"></span></li><li><p class="line891"><strong>Subscribed wiki pages (one regex per line)</strong>: Enter <strong><tt class="backtick">.*</tt></strong> to receive an email when any page in this Wiki changes (<em>not recommended</em> for busy wikis), or enter the names of any individual pages, one per line.  If you are familiar with <strong>regular expressions</strong>, you may enter a regex expression to match the pages names of interest (.* matches all page names). With the <strong>Show icon toolbar</strong> option checked, subscription to individual pages is made easy by clicking the envelope icon when viewing a page of interest. <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line891"><img alt="/!\" height="15" src="/htdocs/modern/img/alert.png" title="/!\" width="15" /> This is an optional feature that only works when email support has enabled for this wiki, see <a href="/HelpOnConfiguration/EmailSupport">HelpOnConfiguration/EmailSupport</a> for details. <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></li></ul><p class="line867">
+<div dir="ltr" id="content" lang="en">
+<span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line862">You may self-register and establish your preferences by clicking on the "<a href="../UserPreferences">UserPreferences</a>" (or "Login") link at the top of every page (exact naming and location depends on the theme).  If you have registered and are logged in, your name will be displayed. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span></p>
+<p class="line862">The various fields in User<tt class="backtick"></tt>Preferences are described below: <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span></p>
+<ul>
+<li>
+<p class="line891"><strong>Name</strong>: Either your real name or an alias. Best is to use <a href="../WikiName">WikiName</a> format. <span class="anchor" id="line-14"></span></p>
+<ul><li><p class="line862">If ACLs are enabled, it is <strong>required</strong> to be a <em>unique</em> name. <span class="anchor" id="line-15"></span></p></li></ul>
+</li>
+<li><p class="line891"><strong>Alias-Name</strong>: If your login name (see above) is cryptic due to technical reasons, you can give your real name here. It will be only used for display purposes. <span class="anchor" id="line-16"></span></p></li>
+<li><p class="line891"><strong>Password</strong>: Something you can remember but is very hard for friends and family to guess. <span class="anchor" id="line-17"></span></p></li>
+<li><p class="line891"><strong>Password repeat</strong>: if you initially set or later change your password, repeat it here to avoid typos. <span class="anchor" id="line-18"></span></p></li>
+<li>
+<p class="line891"><strong>Email</strong>: Your email address, this is required if you wish to subscribe to wiki pages or wish to have a forgotten login data mailed to you. <span class="anchor" id="line-19"></span></p>
+<ul><li>If ACLs are enabled, the email address is required to be unique and valid. <span class="anchor" id="line-20"></span>
+</li></ul>
+</li>
+<li><p class="line891"><strong>User CSS URL</strong>: If you want to override some of the wiki system's css, put your own CSS here (UTF-8 or ASCII). <span class="anchor" id="line-21"></span></p></li>
+<li><p class="line891"><strong>Editor size</strong>: <img alt="&lt;!&gt;" height="15" src="../htdocs/modern/img/attention.png" title="&lt;!&gt;" width="15"> This controls the size of the text area when you edit a page. Adjust this to suit the size of your monitor and your personal preferences. <span class="anchor" id="line-22"></span></p></li>
+<li><p class="line891"><strong>Preferred theme</strong>: choose a theme to change colours, icons and layout of the wiki <span class="anchor" id="line-23"></span></p></li>
+<li><p class="line891"><strong>Editor Preference</strong>: the editor you prefer, either "text" or "gui" <span class="anchor" id="line-24"></span></p></li>
+<li><p class="line891"><strong>Editor shown on UI</strong>: which editor(s) are shown on the user interface, either free choice or the one preferred. <span class="anchor" id="line-25"></span></p></li>
+<li>
+<p class="line891"><strong>Time zone</strong>: ... <span class="anchor" id="line-26"></span></p>
+<ul>
+<li><p class="line891"><strong>Your time is</strong>: If the correct time is not displayed, use the drop down box and select the correct time. <span class="anchor" id="line-27"></span></p></li>
+<li><p class="line891"><strong>Server time is</strong>: Displays the server time. <span class="anchor" id="line-28"></span></p></li>
+</ul>
+</li>
+<li><p class="line891"><strong>Date format</strong>: The default of year-month-day is least confusing for international use. <span class="anchor" id="line-29"></span></p></li>
+<li><p class="line891"><strong>Preferred language</strong>: The default is taken from your browser setting. It is advisable to set this to a specific language anyway, since then you get notification mails in your native tongue, too. <span class="anchor" id="line-30"></span></p></li>
+<li>
+<p class="line891"><strong>General options</strong>: ... <span class="anchor" id="line-31"></span></p>
+<ul>
+<li><p class="line891"><strong>Add spaces to displayed wiki names</strong>: If checked, makes <strong>Wiki<tt class="backtick"></tt>Names</strong> look like <strong>Wiki Names</strong>. <span class="anchor" id="line-32"></span></p></li>
+<li><p class="line891"><strong>Disable this account forever</strong>: If checked, you can't login again with this account. Think first. <img alt=":)" height="15" src="../htdocs/modern/img/smile.png" title=":)" width="15"> <span class="anchor" id="line-33"></span></p></li>
+<li><p class="line891"><strong>Open editor on double click</strong>: Handy if you edit a lot of pages. <span class="anchor" id="line-34"></span></p></li>
+<li><p class="line891"><strong>Publish my email (not my wiki homepage) in author info</strong>: in case you have no wiki home page. <span class="anchor" id="line-35"></span></p></li>
+<li><p class="line891"><strong>Jump to last visited page instead of frontpage</strong>: When you point your browser at the wiki's base URL (i.e. the one not mentioning a specific page), you will see the last page visited. This can be useful if you are frequently reading or editing a single page. <span class="anchor" id="line-36"></span></p></li>
+<li><p class="line891"><strong>Remember login information</strong>: When you set this, the cookie won't expire at midnight. <span class="anchor" id="line-37"></span></p></li>
+<li><p class="line891"><strong>Show fancy diffs</strong>: Makes diffs more readable. <span class="anchor" id="line-38"></span></p></li>
+<li><p class="line891"><strong>Show icon toolbar</strong>: Provides a row of icon links in the upper right corner. <span class="anchor" id="line-39"></span></p></li>
+<li><p class="line891"><strong>Show page trail</strong>: Lists the last five pages visited at the top of the page, so you can jump back several pages easily. <span class="anchor" id="line-40"></span></p></li>
+<li><p class="line891"><strong>Show question mark for non-existing pagelinks</strong>: Display a highlighted <strong>?</strong> in front of a non-existant page instead of a color-coded page name. <span class="anchor" id="line-41"></span></p></li>
+<li><p class="line891"><strong>Show top/bottom links in headings</strong>: If checked, every title bar will have an up and down arrow to navigate to top or bottom of page. <span class="anchor" id="line-42"></span></p></li>
+<li><p class="line891"><strong>Subscribe to trivial changes</strong>: If checked, you will be notified even if editor said it was a trivial change. <span class="anchor" id="line-43"></span></p></li>
+</ul>
+</li>
+<li><p class="line891"><strong>Quick links</strong>: Overrides the standard choices in the gray navigation bar at the top of the page.  Enter one Wiki page name per line. You may also add free-form links, i.e. entries of the form <tt class="backtick">[url linktext]</tt> just like in wiki pages. <span class="anchor" id="line-44"></span></p></li>
+<li>
+<p class="line891"><strong>Subscribed wiki pages (one regex per line)</strong>: Enter <strong><tt class="backtick">.*</tt></strong> to receive an email when any page in this Wiki changes (<em>not recommended</em> for busy wikis), or enter the names of any individual pages, one per line.  If you are familiar with <strong>regular expressions</strong>, you may enter a regex expression to match the pages names of interest (.* matches all page names). With the <strong>Show icon toolbar</strong> option checked, subscription to individual pages is made easy by clicking the envelope icon when viewing a page of interest. <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span></p>
+<p class="line891"><img alt="/!\" height="15" src="../htdocs/modern/img/alert.png" title="/!\" width="15"> This is an optional feature that only works when email support has enabled for this wiki, see <a href="../HelpOnConfiguration/EmailSupport">HelpOnConfiguration/EmailSupport</a> for details. <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></p>
+</li>
+</ul>
+<p class="line867">
+</p>
 <h2 id="head-6c0fa3e8bc42726ea5848336ca27041e09e617fb">Customization of user preferences</h2>
-<span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line862">You can predefine, disable or remove several options on the <a href="/UserPreferences">UserPreferences</a> page, see <a href="/HelpOnConfiguration/UserPreferences">HelpOnConfiguration/UserPreferences</a>. <span class="anchor" id="line-52"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">HelpOnUserPreferences  (last modified 2006-06-30 07:21:42)</p>
+<span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line862">You can predefine, disable or remove several options on the <a href="../UserPreferences">UserPreferences</a> page, see <a href="../HelpOnConfiguration/UserPreferences">HelpOnConfiguration/UserPreferences</a>. <span class="anchor" id="line-52"></span><span class="anchor" id="bottom"></span></p>
+</div>
+<p id="pageinfo" class="info" lang="en" dir="ltr">HelpOnUserPreferences  (last modified 2006-06-30 07:21:42)</p>
 
 <div id="pagebottom"></div>
 </div>
 
 
 <div id="footer">
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnUserPreferences?action=info">Info</a></li><li><a href="/HelpOnUserPreferences?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../HelpOnUserPreferences%3Faction=info">Info</a></li>
+<li><a href="../HelpOnUserPreferences%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -224,14 +287,16 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 <ul id="credits">
-<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li>
+<li><a href="http://www.python.org/">Python Powered</a></li>
+<li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
 </ul>
 
 
 </div>
 </body>
 </html>
-

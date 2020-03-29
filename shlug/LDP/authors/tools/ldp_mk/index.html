@@ -1,4 +1,5 @@
-#!/usr/bin/perl
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>#!/usr/bin/perl
 #
 # ldp_mk - create all output forms needed for the LDP from SGML/XML file
 # Copyright (C) 2002-2000  - Greg Ferguson (gferg@metalab.unc.edu)
@@ -27,7 +28,7 @@
 #
 
 if($ARGV[0] eq '') {
-   &usage();
+   &amp;usage();
    exit(0);
 }
 
@@ -76,7 +77,7 @@ if( $fname =~ /\.[\w]+ml$/ ) {
 }
 if( !(-e "$fname") ) {
       print "\nldp_mk: ERROR - cannot find/read $fname\n";
-      &usage();
+      &amp;usage();
       exit(0);
 }
 
@@ -94,7 +95,7 @@ $db_style = "$_toolroot/dsssl/docbook/html/docbook.dsl";
 #
 open(FP_IN, "head -100 $fname | grep -i '\!doctype' |") || 
                die "\nldp_mk: ERROR - cannot determine DTD for $fname\n";
-$s = <FP_IN>;
+$s = <fp_in>;
 close(FP_IN);
 
 if( $s eq '' ) {
@@ -143,7 +144,7 @@ if( $s =~ /linuxdoc/i ) {
         $ENV{'SGML_CATALOG_FILES'} = $s;
     }
 
-    if( !(-d "$fname_wo_ext") && $ldpwn == 0 ) {
+    if( !(-d "$fname_wo_ext") &amp;&amp; $ldpwn == 0 ) {
           mkdir("$fname_wo_ext", 0755);
     }
 
@@ -158,7 +159,7 @@ if( $s =~ /linuxdoc/i ) {
 
 # create the index...
 #
-if( $linuxdoc == 0 && $create_index == 1 ) {
+if( $linuxdoc == 0 &amp;&amp; $create_index == 1 ) {
 
     print "\nldp_mk: creating index from $fname...\n";
 
@@ -188,17 +189,17 @@ if( $linuxdoc == 1 ) {
        "jade -t sgml -i html -d $style $dcl $fname; " .
        "mv -f \*.htm\* $fname_wo_ext/;" .
        "jade -t sgml -i html -V nochunks " .
-                  "-d $style $dcl $fname > 00_${fname_wo_ext}.html";
+                  "-d $style $dcl $fname &gt; 00_${fname_wo_ext}.html";
 
     if( $ldpwn == 1 ) {
-        $cmd = "jade -t sgml -i html -d $style $dcl $fname > 00_${fname_wo_ext}.html ";
+        $cmd = "jade -t sgml -i html -d $style $dcl $fname &gt; 00_${fname_wo_ext}.html ";
     }
 }
 
 system($cmd);
-if( ($linuxdoc == 1 && !(-e "$fname_wo_ext.html"))
+if( ($linuxdoc == 1 &amp;&amp; !(-e "$fname_wo_ext.html"))
     ||
-    ($linuxdoc == 0 && !(-e "00_${fname_wo_ext}.html")) ) {
+    ($linuxdoc == 0 &amp;&amp; !(-e "00_${fname_wo_ext}.html")) ) {
    print "\nldp_mk: WARNING - could not create HTML: $fname_wo_ext\n";
 }
 
@@ -219,8 +220,8 @@ if( $linuxdoc == 1 ) {
 } else {
 
     $s = '';
-    open(F_IN, "+< 00_${fname_wo_ext}.html");
-    while(<F_IN>) {
+    open(F_IN, "+&lt; 00_${fname_wo_ext}.html");
+    while(<f_in>) {
           if( $_ =~ /^WIDTH=\"\d\"/ ) {
               next;
           }
@@ -233,8 +234,8 @@ if( $linuxdoc == 1 ) {
 
     # fix to place URLs in-line for text variant
     #
-    open(F_OUT, "> TXT_${fname_wo_ext}.html");
-    $s =~ s/<A\s*HREF=\"(.*?)\"\s*TARGET=\"(.*?)\"\s*>(.*?)<\/A\s*>/<TT>[$1]<\/TT>\ $3/gm;
+    open(F_OUT, "&gt; TXT_${fname_wo_ext}.html");
+    $s =~ s/<a>(.*?)/<tt>[$1]\ $3/gm;
     print F_OUT $s;
     close(F_OUT);
     
@@ -252,7 +253,7 @@ if( $linuxdoc == 1 ) {
         $cmd = "lynx -dump ";
     }
 
-    $cmd .= "TXT_${fname_wo_ext}.html > $fname_wo_ext.txt;" .
+    $cmd .= "TXT_${fname_wo_ext}.html &gt; $fname_wo_ext.txt;" .
             "rm -f TXT_${fname_wo_ext}.html";
 }
 
@@ -267,22 +268,22 @@ if( -e "$fname_wo_ext.txt" ) {
     @flines = ();
 
     open(CPIPE, "pwd |");
-    $s = <CPIPE>; chop($s);
+    $s = <cpipe>; chop($s);
     my($pat) = 'file://localhost' . $s . '/';
     $pat =~ s/\+/\\+/g;
     my($pat2) = $fname_wo_ext;
     $pat2 =~ s/\+/\\+/g;
     close(CPIPE);
 
-    open(HFILE, "+< $fname_wo_ext.txt") || 
+    open(HFILE, "+&lt; $fname_wo_ext.txt") || 
                            die "\nldp_mk: cannot open: $fname_wo_ext.txt";
-    while(<HFILE>) {
+    while(<hfile>) {
            if (length($_) == 1) {
                $count++;
            } else {
                $count = 0;
            }
-           if ($count <= $def_blanks) {
+           if ($count &lt;= $def_blanks) {
                $_ =~ s/$pat//g;
                $_ =~ s/00_$pat2/$pat2/g;
                push(@flines, $_);
@@ -305,131 +306,14 @@ if ($ldpwn == 1) {
 
     # create rss feed
     #
-    open(NFILE, "+< ${fname_wo_ext}.html") || 
+    open(NFILE, "+&lt; ${fname_wo_ext}.html") || 
                            die "ldp_mk: cannot open ${fname_wo_ext}.html $!\n";
-    @flines = <NFILE>;
-    for ($i=0; $i < (@flines + 0); $i++) {
+    @flines = <nfile>;
+    for ($i=0; $i &lt; (@flines + 0); $i++) {
 
-        if ($flines[$i] =~ /<LI/i) {
-
-            $flines[$i] =~ s/<LI/<LI><span class=\"rss:item\"/;
-            if ($flines[($i+1)] =~ /^><p/i) { 
-                $i++;
-                $flines[$i] = '';
-            }
-
-        } elsif ($flines[$i] =~ /^><\/li/i) {
-
-            $flines[$i] = "</span></li\n";
-            if ($flines[($i-1)] =~ /<\/p/i) { 
-                $flines[($i-1)] =~ s/<\/p//i;
-            }
-        }
-        $flines[$i] =~ s/$PAT_STR/$CHG_STR/g;
-    }
-
-    seek(NFILE,0,0);
-    print NFILE @flines;
-    truncate(NFILE, tell(NFILE));
-    close(NFILE);
-
-    $cmd = "$_toolroot/tidy/bin/tidy -ascii -c -wrap 200 -f /dev/null " .
-           "-m ${fname_wo_ext}.html";
-    system($cmd); 
-
-    exit;
-}
-
-
-# create PDF/PS versions
-#
-# Note that we use the single-page HTML variant
-#
-print "\nldp_mk: creating PDF/PS from $fname...\n";
-
-my($print_str) = '';
-
-if( $linuxdoc == 1 ) {
-
-    # patch the linuxdoc-source single HTML file
-    #
-    system("$_toolroot/sgml_ld_1html $fname");
-    $print_str = "00_${fname_wo_ext}.html";
-
-    $cmd = "$_toolroot/htmldoc/bin/htmldoc --size universal -t pdf " .
-           "--firstpage p1 -f $fname_wo_ext.pdf $print_str; " .
-           "$_toolroot/htmldoc/bin/htmldoc --size universal -t ps  " .
-           "--firstpage p1 -f $fname_wo_ext.ps  $print_str";
-
-    if( -e "00_$fname_wo_ext.html" ) {
-        system($cmd);
-    }
-
-} elsif( -e "00_$fname_wo_ext.html" ) {
-
-    # create new files from DocBook-source single HTML file to use for print
-    #
-    $cmd="$_toolroot/ldp_print/ldp_print --toolroot ${_toolroot}/htmldoc/bin " .
-         "--postscript 00_${fname_wo_ext}.html";
-    system($cmd);
-    system("mv -f 00_${fname_wo_ext}.pdf ${fname_wo_ext}.pdf");
-    system("mv -f 00_${fname_wo_ext}.ps  ${fname_wo_ext}.ps");
-}
-
-if( !(-e "$fname_wo_ext.pdf") ) {
-      print "\nldp_mk: WARNING - could not create $fname_wo_ext.pdf\n";
-}
-if( !(-e "$fname_wo_ext.ps") ) {
-      print "\nldp_mk: WARNING - could not create $fname_wo_ext.ps..trying pdf2ps\n";
-      if( -e "${fname_wo_ext}.pdf" ) {
-          system("pdf2ps ${fname_wo_ext}.pdf ${fname_wo_ext}.ps");
-      }
-}
-if( -e "$fname_wo_ext.ps" ){
-      $cmd = "gzip -f $fname_wo_ext.ps";
-      system($cmd);
-}
-
-
-#
-# perform the packaging steps
-#
-
-print "\nldp_mk: creating HTML package...\n";
-
-if( $linuxdoc == 1 ) {
-    $cmd = "tar -cvf $fname_wo_ext-html.tar $fname_wo_ext\*.html; " .
-           "gzip -f $fname_wo_ext-html.tar";
-} else {
-    $cmd = "tar -cvf $fname_wo_ext-html.tar $fname_wo_ext/\*; " .
-           "gzip -f $fname_wo_ext-html.tar";
-}
-system($cmd);
-
-if( !(-e "$fname_wo_ext-html.tar.gz") ) {
-   print "\nldp_mk: WARNING - could not create $fname_wo_ext-html.tar.gz\n";
-}
-
-
-print "\nldp_mk: creating SGML package...\n";
-
-$cmd = "cp $fname ldp_mk_tmp; gzip -f ldp_mk_tmp; " .
-       "mv -f ldp_mk_tmp.gz $fname_wo_ext." . lc($dtd) . ".gz";
-system($cmd);
-
-
-# if LinuxDoc, create DocBook SGML...
-#
-if( $linuxdoc == 1 ) {
-
-    print "\nldp_mk: creating DocBook from LinuxDoc...\n";
-
-    $ENV{'SGML_CATALOG_FILES'} =
-           "$_toolroot/dtd/docbook.cat:$_toolroot/$_jade/dsssl/catalog";
-
-    $cmd = "sgmlnorm $_toolroot/ld2db/docbook.dcl $fname > EX_$fname ;" .
+        if ($flines[$i] =~ /<li s><span class='\"rss:item\"/;' if><p elsif></p></span></li> EX_$fname ;" .
            "jade -t sgml -c $_toolroot/ld2db/catalog " .
-                 "-d $_toolroot/ld2db/ld2db.dsl#db EX_$fname > DB_$fname ;" .
+                 "-d $_toolroot/ld2db/ld2db.dsl#db EX_$fname &gt; DB_$fname ;" .
            "rm -f EX_$fname";
     system($cmd);
 
@@ -467,3 +351,4 @@ sub usage {
         "       <txt_filter> - one of the following: lynx, w3m, html2text\n";
 }
 
+</txt_filter></stylesheet></file></txt_filter></stylesheet></nfile></hfile></cpipe></tt></a></f_in></fp_in></txt_filter></stylesheet></file></txt_filter></stylesheet></p></body></html>

@@ -5,7 +5,7 @@
 <meta name="robots" content="index,nofollow">
 
 <title>HelpContents - ShangHai Linux User Group</title>
-<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+<script type="text/javascript" src="../htdocs/common/js/common.js"></script>
 
 <script type="text/javascript">
 <!--// common functions
@@ -76,22 +76,22 @@ function actionsMenuInit(title) {
 </script>
 
 
-<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/rightsidebar/css/common.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/rightsidebar/css/screen.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/rightsidebar/css/print.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/rightsidebar/css/projection.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../htdocs/rightsidebar/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../htdocs/rightsidebar/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../htdocs/rightsidebar/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/rightsidebar/css/projection.css">
 
 
-<link rel="Start" href="/Geekbone">
-<link rel="Alternate" title="Wiki Markup" href="/HelpContents?action=raw">
-<link rel="Alternate" media="print" title="Print View" href="/HelpContents?action=print">
-<link rel="Search" href="/FindPage">
-<link rel="Index" href="/TitleIndex">
-<link rel="Glossary" href="/WordIndex">
-<link rel="Help" href="/HelpOnFormatting">
+<link rel="Start" href="../Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="../HelpContents%3Faction=raw">
+<link rel="Alternate" media="print" title="Print View" href="../HelpContents%3Faction=print">
+<link rel="Search" href="../FindPage">
+<link rel="Index" href="../TitleIndex">
+<link rel="Glossary" href="../WordIndex">
+<link rel="Help" href="../HelpOnFormatting">
 </head>
 
-<body  lang="en" dir="ltr">
+<body lang="en" dir="ltr">
 
 <div id="header">
 
@@ -100,13 +100,9 @@ function actionsMenuInit(title) {
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="context" value="180">
 <label for="searchinput">Search:</label>
-<input id="searchinput" type="text" name="value" value="" size="20"
-    onfocus="searchFocus(this)" onblur="searchBlur(this)"
-    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
-<input id="titlesearch" name="titlesearch" type="submit"
-    value="Titles" alt="Search Titles">
-<input id="fullsearch" name="fullsearch" type="submit"
-    value="Text" alt="Search Full Text">
+<input id="searchinput" type="text" name="value" value="" size="20" onfocus="searchFocus(this)" onblur="searchBlur(this)" onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit" value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit" value="Text" alt="Search Full Text">
 </div>
 </form>
 <script type="text/javascript">
@@ -119,12 +115,12 @@ searchBlur(e);
 //-->
 </script>
 
-<div id="logo"><a href="/Geekbone">ShangHai Linux User Group</a></div>
+<div id="logo"><a href="../Geekbone">ShangHai Linux User Group</a></div>
 <div id="locationline">
 
 
 <ul id="pagelocation">
-<li><a class="backlink" title="Click to do a full-text search for this title" href="/HelpContents?action=fullsearch&amp;value=linkto%3A%22HelpContents%22&amp;context=180">HelpContents</a></li>
+<li><a class="backlink" title="Click to do a full-text search for this title" href="../HelpContents%3Faction=fullsearch%26value=linkto%3A%22HelpContents%22%26context=180">HelpContents</a></li>
 </ul>
 
 </div>
@@ -136,18 +132,24 @@ searchBlur(e);
 <h1>Wiki</h1>
 
 <ul id="navibar">
-<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink current"><a href="/HelpContents">HelpContents</a></li>
+<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage">FindPage</a></li>
+<li class="wikilink current"><a href=".">HelpContents</a></li>
 </ul>
 
 </div>
 <div class="sidepanel">
 <h1>Page</h1>
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpContents?action=info">Info</a></li><li><a href="/HelpContents?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../HelpContents%3Faction=info">Info</a></li>
+<li><a href="../HelpContents%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -178,18 +180,47 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 </div>
 <div class="sidepanel">
 <h1>User</h1>
-<ul id="username"><li><a href="/HelpContents?action=login" id="login">Login</a></li></ul>
+<ul id="username"><li><a href="../HelpContents%3Faction=login" id="login">Login</a></li></ul>
 </div>
 </div>
 
 <div id="page" lang="en" dir="ltr">
-<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
-<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line874">Here is a tour of the most important help pages: <span class="anchor" id="line-10"></span><ul><li><p class="line891"><a href="/HelpForBeginners">HelpForBeginners</a> - if you are new to wikis <span class="anchor" id="line-11"></span></li><li><p class="line891"><a href="/HelpOnNavigation">HelpOnNavigation</a> - explains the navigational elements on a page <span class="anchor" id="line-12"></span></li><li><p class="line891"><a href="/HelpOnSearching">HelpOnSearching</a> - explains the search functions <span class="anchor" id="line-13"></span></li><li><p class="line891"><a href="/HelpOnPageCreation">HelpOnPageCreation</a> - how to create a new page <span class="anchor" id="line-14"></span></li><li><p class="line891"><a href="/HelpOnTemplates">HelpOnTemplates</a> - how to use page templates <span class="anchor" id="line-15"></span></li><li><p class="line891"><a href="/HelpOnUserPreferences">HelpOnUserPreferences</a> - how to make yourself known to the wiki, and adapt default behaviour to your taste <span class="anchor" id="line-16"></span></li><li><p class="line891"><a href="/HelpOnEditing">HelpOnEditing</a> - how to edit a page <span class="anchor" id="line-17"></span></li><li><p class="line891"><a href="/HelpOnActions">HelpOnActions</a> - tools that work on pages or the whole site <span class="anchor" id="line-18"></span></li><li><p class="line891"><a href="/HelpMiscellaneous">HelpMiscellaneous</a> - more details, and a FAQ section <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span></li></ul><p class="line867"><img alt="(!)" height="15" src="/htdocs/rightsidebar/img/idea.png" title="(!)" width="15" /> If you like something for a presentation, look at <a href="/WikiCourse">WikiCourse</a>. <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p class="line874">These pages contain information only important to wiki administrators and developers: <span class="anchor" id="line-23"></span><ul><li><p class="line891"><a href="/HelpOnAdministration">HelpOnAdministration</a> - how to maintain a <a href="/MoinMoin">MoinMoin</a> wiki <span class="anchor" id="line-24"></span></li><li><p class="line891"><a href="/HelpOnInstalling">HelpOnInstalling</a> - how to install a <a href="/MoinMoin">MoinMoin</a> wiki <span class="anchor" id="line-25"></span></li><li><p class="line891"><a href="/HelpForDevelopers">HelpForDevelopers</a> - how to add your own features by changing the <a href="/MoinMoin">MoinMoin</a> code <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span></li></ul><p class="line874">If you don't find what you're looking for in the above, try these: <span class="anchor" id="line-28"></span><ul><li><p class="line891"><a href="/HelpIndex">HelpIndex</a> - An automatically generated index of all help pages as a flat list. <span class="anchor" id="line-29"></span></li><li><p class="line891"><a href="/HelpMiscellaneous/FrequentlyAskedQuestions">HelpMiscellaneous/FrequentlyAskedQuestions</a> - answers to frequently asked questions. <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span></li></ul><p class="line862">If you find any errors on the help pages, describe them on <a class="interwiki" href="http://moinmoin.wikiwikiweb.de/HelpErrata" title="MoinMoin">HelpErrata</a>.  <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><p class="line867"><em>[Please do not edit or create help pages in other wikis than Moin<strong></strong>Master (see <a class="interwiki" href="http://moinmaster.wikiwikiweb.de/HelpContents" title="MoinMaster">HelpContents</a>), because the pages from Moin<strong></strong>Master will overwrite any other changes on wiki engine upgrades. Please follow the established structure of help pages if you want to change pages in Moin<strong></strong>Master. Before doing any major or widespread changes please discuss that on the mailing list or Moin<strong></strong>Moin wiki.]</em> <span class="anchor" id="line-34"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">HelpContents  (last modified 2006-06-30 07:21:45)</p>
+<div dir="ltr" id="content" lang="en">
+<span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line874">Here is a tour of the most important help pages: <span class="anchor" id="line-10"></span></p>
+<ul>
+<li><p class="line891"><a href="../HelpForBeginners">HelpForBeginners</a> - if you are new to wikis <span class="anchor" id="line-11"></span></p></li>
+<li><p class="line891"><a href="../HelpOnNavigation">HelpOnNavigation</a> - explains the navigational elements on a page <span class="anchor" id="line-12"></span></p></li>
+<li><p class="line891"><a href="../HelpOnSearching">HelpOnSearching</a> - explains the search functions <span class="anchor" id="line-13"></span></p></li>
+<li><p class="line891"><a href="../HelpOnPageCreation">HelpOnPageCreation</a> - how to create a new page <span class="anchor" id="line-14"></span></p></li>
+<li><p class="line891"><a href="../HelpOnTemplates">HelpOnTemplates</a> - how to use page templates <span class="anchor" id="line-15"></span></p></li>
+<li><p class="line891"><a href="../HelpOnUserPreferences">HelpOnUserPreferences</a> - how to make yourself known to the wiki, and adapt default behaviour to your taste <span class="anchor" id="line-16"></span></p></li>
+<li><p class="line891"><a href="../HelpOnEditing">HelpOnEditing</a> - how to edit a page <span class="anchor" id="line-17"></span></p></li>
+<li><p class="line891"><a href="../HelpOnActions">HelpOnActions</a> - tools that work on pages or the whole site <span class="anchor" id="line-18"></span></p></li>
+<li><p class="line891"><a href="../HelpMiscellaneous">HelpMiscellaneous</a> - more details, and a FAQ section <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span></p></li>
+</ul>
+<p class="line867"><img alt="(!)" height="15" src="../htdocs/rightsidebar/img/idea.png" title="(!)" width="15"> If you like something for a presentation, look at <a href="../WikiCourse">WikiCourse</a>. <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span></p>
+<p class="line874">These pages contain information only important to wiki administrators and developers: <span class="anchor" id="line-23"></span></p>
+<ul>
+<li><p class="line891"><a href="../HelpOnAdministration">HelpOnAdministration</a> - how to maintain a <a href="../MoinMoin">MoinMoin</a> wiki <span class="anchor" id="line-24"></span></p></li>
+<li><p class="line891"><a href="../HelpOnInstalling">HelpOnInstalling</a> - how to install a <a href="../MoinMoin">MoinMoin</a> wiki <span class="anchor" id="line-25"></span></p></li>
+<li><p class="line891"><a href="../HelpForDevelopers">HelpForDevelopers</a> - how to add your own features by changing the <a href="../MoinMoin">MoinMoin</a> code <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span></p></li>
+</ul>
+<p class="line874">If you don't find what you're looking for in the above, try these: <span class="anchor" id="line-28"></span></p>
+<ul>
+<li><p class="line891"><a href="../HelpIndex">HelpIndex</a> - An automatically generated index of all help pages as a flat list. <span class="anchor" id="line-29"></span></p></li>
+<li><p class="line891"><a href="../HelpMiscellaneous/FrequentlyAskedQuestions">HelpMiscellaneous/FrequentlyAskedQuestions</a> - answers to frequently asked questions. <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span></p></li>
+</ul>
+<p class="line862">If you find any errors on the help pages, describe them on <a class="interwiki" href="http://moinmoin.wikiwikiweb.de/HelpErrata" title="MoinMoin">HelpErrata</a>.  <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span></p>
+<p class="line867"><em>[Please do not edit or create help pages in other wikis than Moin<strong></strong>Master (see <a class="interwiki" href="http://moinmaster.wikiwikiweb.de/HelpContents" title="MoinMaster">HelpContents</a>), because the pages from Moin<strong></strong>Master will overwrite any other changes on wiki engine upgrades. Please follow the established structure of help pages if you want to change pages in Moin<strong></strong>Master. Before doing any major or widespread changes please discuss that on the mailing list or Moin<strong></strong>Moin wiki.]</em> <span class="anchor" id="line-34"></span><span class="anchor" id="bottom"></span></p>
+</div>
+<p id="pageinfo" class="info" lang="en" dir="ltr">HelpContents  (last modified 2006-06-30 07:21:45)</p>
 
 <div id="pagebottom"></div>
 </div>
@@ -197,11 +228,12 @@ actionsMenuInit('More Actions:');
 
 <div id="footer">
 <ul id="credits">
-<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li>
+<li><a href="http://www.python.org/">Python Powered</a></li>
+<li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
 </ul>
 
 
 </div>
 </body>
 </html>
-

@@ -1,254 +1,99 @@
-<HTML
-><HEAD
-><TITLE
->Linux From Scratch</TITLE
-><META
-NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.7"><LINK
-REL="NEXT"
-TITLE="Preface"
-HREF="preface/preface.html"></HEAD
-><BODY
-CLASS="book"
-BGCOLOR="#FFFFFF"
-TEXT="#000000"
-LINK="#0000FF"
-VLINK="#840084"
-ALINK="#0000FF"
-><DIV
-CLASS="BOOK"
-><A
-NAME="AEN1"
-></A
-><DIV
-CLASS="TITLEPAGE"
-><H1
-CLASS="title"
-><A
-NAME="AEN2"
-></A
->Linux From Scratch</H1
-><H2
-CLASS="subtitle"
->Version 5.0</H2
-><H3
-CLASS="author"
-><A
-NAME="AEN6"
-></A
->Gerard Beekmans</H3
-><P
-CLASS="copyright"
-><A
-HREF="ln14.html"
->Copyright</A
-> &copy; 1999-2003 Gerard Beekmans</P
-><DIV
-><DIV
-CLASS="abstract"
-><A
-NAME="AEN12"
-></A
-><P
-></P
-><P
->This book describes the process of creating a Linux system from
-scratch, using nothing but the sources of the required software.</P
-><P
-></P
-></DIV
-></DIV
-><HR></DIV
-><H1
-><A
-NAME="AEN26"
-></A
->Dedication</H1
-><P
->This book is dedicated to my loving and supportive wife
-<EM
->Beverly Beekmans</EM
->.</P
-><DIV
-CLASS="TOC"
-><DL
-><DT
-><B
->Table of Contents</B
-></DT
-><DT
-><A
-HREF="preface/preface.html"
->Preface</A
-></DT
-><DD
-><DL
-><DT
->1. <A
-HREF="preface/foreword.html"
->Foreword</A
-></DT
-><DT
->2. <A
-HREF="preface/audience.html"
->Audience</A
-></DT
-><DT
->3. <A
-HREF="preface/prerequisites.html"
->Prerequisites</A
-></DT
-><DT
->4. <A
-HREF="preface/organization.html"
->Structure</A
-></DT
-></DL
-></DD
-><DT
->I. <A
-HREF="part1.html"
->Part I - Introduction</A
-></DT
-><DD
-><DL
-><DT
->1. <A
-HREF="chapter01/chapter01.html"
->Introduction</A
-></DT
-><DT
->2. <A
-HREF="chapter02/chapter02.html"
->Important information</A
-></DT
-></DL
-></DD
-><DT
->II. <A
-HREF="part2.html"
->Part II - Preparing for the build</A
-></DT
-><DD
-><DL
-><DT
->3. <A
-HREF="chapter03/chapter03.html"
->Preparing a new partition</A
-></DT
-><DT
->4. <A
-HREF="chapter04/chapter04.html"
->The materials: packages and patches</A
-></DT
-><DT
->5. <A
-HREF="chapter05/chapter05.html"
->Constructing a temporary system</A
-></DT
-></DL
-></DD
-><DT
->III. <A
-HREF="part3.html"
->Part III - Building the LFS system</A
-></DT
-><DD
-><DL
-><DT
->6. <A
-HREF="chapter06/chapter06.html"
->Installing basic system software</A
-></DT
-><DT
->7. <A
-HREF="chapter07/chapter07.html"
->Setting up system boot scripts</A
-></DT
-><DT
->8. <A
-HREF="chapter08/chapter08.html"
->Making the LFS system bootable</A
-></DT
-><DT
->9. <A
-HREF="chapter09/chapter09.html"
->The End</A
-></DT
-></DL
-></DD
-><DT
->IV. <A
-HREF="part4.html"
->Part IV - Appendices</A
-></DT
-><DD
-><DL
-><DT
->A. <A
-HREF="appendixa/appendixa.html"
->Package descriptions and dependencies</A
-></DT
-><DT
->B. <A
-HREF="appendixb/appendixb.html"
->Index of programs and library files</A
-></DT
-></DL
-></DD
-></DL
-></DIV
-></DIV
-><DIV
-CLASS="NAVFOOTER"
-><HR
-ALIGN="LEFT"
-WIDTH="100%"><TABLE
-SUMMARY="Footer navigation table"
-WIDTH="100%"
-BORDER="0"
-CELLPADDING="0"
-CELLSPACING="0"
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
-><A
-HREF="preface/preface.html"
-ACCESSKEY="N"
->Next</A
-></TD
-></TR
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
->Preface</TD
-></TR
-></TABLE
-></DIV
-></BODY
-></HTML
->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Linux From Scratch</title>
+<meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.7">
+<link rel="NEXT" title="Preface" href="preface/preface.html">
+</head>
+<body class="book" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="BOOK">
+<a name="AEN1"></a><div class="TITLEPAGE">
+<h1 class="title">
+<a name="AEN2"></a>Linux From Scratch</h1>
+<h2 class="subtitle">Version 5.0</h2>
+<h3 class="author">
+<a name="AEN6"></a>Gerard Beekmans</h3>
+<p class="copyright"><a href="ln14.html">Copyright</a> © 1999-2003 Gerard Beekmans</p>
+<div><div class="abstract">
+<a name="AEN12"></a><p></p>
+<p>This book describes the process of creating a Linux system from
+scratch, using nothing but the sources of the required software.</p>
+<p></p>
+</div></div>
+<hr>
+</div>
+<h1>
+<a name="AEN26"></a>Dedication</h1>
+<p>This book is dedicated to my loving and supportive wife
+<em>Beverly Beekmans</em>.</p>
+<div class="TOC"><dl>
+<dt><b>Table of Contents</b></dt>
+<dt><a href="preface/preface.html">Preface</a></dt>
+<dd><dl>
+<dt>1. <a href="preface/foreword.html">Foreword</a>
+</dt>
+<dt>2. <a href="preface/audience.html">Audience</a>
+</dt>
+<dt>3. <a href="preface/prerequisites.html">Prerequisites</a>
+</dt>
+<dt>4. <a href="preface/organization.html">Structure</a>
+</dt>
+</dl></dd>
+<dt>I. <a href="part1.html">Part I - Introduction</a>
+</dt>
+<dd><dl>
+<dt>1. <a href="chapter01/chapter01.html">Introduction</a>
+</dt>
+<dt>2. <a href="chapter02/chapter02.html">Important information</a>
+</dt>
+</dl></dd>
+<dt>II. <a href="part2.html">Part II - Preparing for the build</a>
+</dt>
+<dd><dl>
+<dt>3. <a href="chapter03/chapter03.html">Preparing a new partition</a>
+</dt>
+<dt>4. <a href="chapter04/chapter04.html">The materials: packages and patches</a>
+</dt>
+<dt>5. <a href="chapter05/chapter05.html">Constructing a temporary system</a>
+</dt>
+</dl></dd>
+<dt>III. <a href="part3.html">Part III - Building the LFS system</a>
+</dt>
+<dd><dl>
+<dt>6. <a href="chapter06/chapter06.html">Installing basic system software</a>
+</dt>
+<dt>7. <a href="chapter07/chapter07.html">Setting up system boot scripts</a>
+</dt>
+<dt>8. <a href="chapter08/chapter08.html">Making the LFS system bootable</a>
+</dt>
+<dt>9. <a href="chapter09/chapter09.html">The End</a>
+</dt>
+</dl></dd>
+<dt>IV. <a href="part4.html">Part IV - Appendices</a>
+</dt>
+<dd><dl>
+<dt>A. <a href="appendixa/appendixa.html">Package descriptions and dependencies</a>
+</dt>
+<dt>B. <a href="appendixb/appendixb.html">Index of programs and library files</a>
+</dt>
+</dl></dd>
+</dl></div>
+</div>
+<div class="NAVFOOTER">
+<hr align="LEFT" width="100%">
+<table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="33%" align="left" valign="top"> </td>
+<td width="34%" align="center" valign="top"> </td>
+<td width="33%" align="right" valign="top"><a href="preface/preface.html" accesskey="N">Next</a></td>
+</tr>
+<tr>
+<td width="33%" align="left" valign="top"> </td>
+<td width="34%" align="center" valign="top"> </td>
+<td width="33%" align="right" valign="top">Preface</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

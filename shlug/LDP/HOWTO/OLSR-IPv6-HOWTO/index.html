@@ -1,445 +1,167 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML
-><HEAD
-><TITLE
->Linux Optimized Link State Routing Protocol (OLSR) IPv6
-    HOWTO</TITLE
-><META
-NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.7"><LINK
-REL="NEXT"
-TITLE="Introduction"
-HREF="intro.html"></HEAD
-><BODY
-CLASS="article"
-BGCOLOR="#FFFFFF"
-TEXT="#000000"
-LINK="#0000FF"
-VLINK="#840084"
-ALINK="#0000FF"
-><DIV
-CLASS="ARTICLE"
-><DIV
-CLASS="TITLEPAGE"
-><H1
-CLASS="title"
-><A
-NAME="AEN2"
-></A
->Linux Optimized Link State Routing Protocol (OLSR) IPv6
-    HOWTO</H1
-><H3
-CLASS="author"
-><A
-NAME="AEN5"
->Lars Strand</A
-></H3
-><DIV
-CLASS="affiliation"
-><DIV
-CLASS="address"
-><P
-CLASS="address"
-><TT
-CLASS="email"
->&#60;<A
-HREF="mailto:lars (at) unik no"
->lars (at) unik no</A
->&#62;</TT
-></P
-></DIV
-></DIV
-><P
-CLASS="pubdate"
->2004-04-23<BR></P
-><DIV
-CLASS="revhistory"
-><TABLE
-WIDTH="100%"
-BORDER="0"
-><TR
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
-COLSPAN="3"
-><B
->Revision History</B
-></TH
-></TR
-><TR
-><TD
-ALIGN="LEFT"
->Revision 1.0</TD
-><TD
-ALIGN="LEFT"
->2004-04-23</TD
-><TD
-ALIGN="LEFT"
->Revised by: EJH</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
-COLSPAN="3"
->Final review complete. Document published to the LDP
-	  collection.</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
->Revision 0.6</TD
-><TD
-ALIGN="LEFT"
->2004-04-19</TD
-><TD
-ALIGN="LEFT"
->Revised by: LKS</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
-COLSPAN="3"
->Thanks to Thomas Zimmerman &#60;thomas (at) zimres
-	  net&#62; for a language review! Updated to latest version number and
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Linux Optimized Link State Routing Protocol (OLSR) IPv6
+    HOWTO</title>
+<meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.7">
+<link rel="NEXT" title="Introduction" href="intro.html">
+</head>
+<body class="article" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="ARTICLE">
+<div class="TITLEPAGE">
+<h1 class="title">
+<a name="AEN2"></a>Linux Optimized Link State Routing Protocol (OLSR) IPv6
+    HOWTO</h1>
+<h3 class="author"><a name="AEN5">Lars Strand</a></h3>
+<div class="affiliation"><div class="address"><p class="address"><tt class="email">&lt;<a href="mailto:lars%20(at)%20unik%20no">lars (at) unik no</a>&gt;</tt></p></div></div>
+<p class="pubdate">2004-04-23<br></p>
+<div class="revhistory"><table width="100%" border="0">
+<tr><th align="LEFT" valign="TOP" colspan="3"><b>Revision History</b></th></tr>
+<tr>
+<td align="LEFT">Revision 1.0</td>
+<td align="LEFT">2004-04-23</td>
+<td align="LEFT">Revised by: EJH</td>
+</tr>
+<tr><td align="LEFT" colspan="3">Final review complete. Document published to the LDP
+	  collection.</td></tr>
+<tr>
+<td align="LEFT">Revision 0.6</td>
+<td align="LEFT">2004-04-19</td>
+<td align="LEFT">Revised by: LKS</td>
+</tr>
+<tr><td align="LEFT" colspan="3">Thanks to Thomas Zimmerman &lt;thomas (at) zimres
+	  net&gt; for a language review! Updated to latest version number and
 	  added a section on plugin-support in OLSRd. Changed lisence
-	  back to <A
-HREF="http://www.gnu.org/copyleft/fdl.html"
-TARGET="_top"
->GFDL</A
-></TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
->Revision 0.5</TD
-><TD
-ALIGN="LEFT"
->2004-03-08</TD
-><TD
-ALIGN="LEFT"
->Revised by: LKS</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
-COLSPAN="3"
->An almost complete rewrite. Adding OLSRd (old
+	  back to <a href="http://www.gnu.org/copyleft/fdl.html" target="_top">GFDL</a>
+</td></tr>
+<tr>
+<td align="LEFT">Revision 0.5</td>
+<td align="LEFT">2004-03-08</td>
+<td align="LEFT">Revised by: LKS</td>
+</tr>
+<tr><td align="LEFT" colspan="3">An almost complete rewrite. Adding OLSRd (old
           uOLSR), updated to RFC3626. Removed NROLSR and
           CRCOLSR. Converted to XML Docbook. Changed the license from
-          <A
-HREF="http://www.gnu.org/copyleft/fdl.html"
-TARGET="_top"
-> GFDL
-          </A
-> to <A
-HREF="http://www.opencontent.org/openpub/"
-TARGET="_top"
-> OPL </A
-> due
-          to some GFDL <A
-HREF="http://people.debian.org/~srivasta/Position_Statement.xhtml"
-TARGET="_top"
->&#13;          problems.</A
-></TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
->Revision 0.3</TD
-><TD
-ALIGN="LEFT"
->2003-08-05</TD
-><TD
-ALIGN="LEFT"
->Revised by: LKS</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
-COLSPAN="3"
->Initial release.</TD
-></TR
-></TABLE
-></DIV
-><DIV
-><DIV
-CLASS="abstract"
-><A
-NAME="AEN45"
-></A
-><P
-></P
-><P
->&#13;        This document describes the software and procedures to set up
-        and use <A
-HREF="http://www.ietf.org/rfc/rfc3626"
-TARGET="_top"
->Optimized
-        Link State Routing Protocol (OLSR)</A
-> with IPv6 for
+          <a href="http://www.gnu.org/copyleft/fdl.html" target="_top"> GFDL
+          </a> to <a href="http://www.opencontent.org/openpub/" target="_top"> OPL </a> due
+          to some GFDL <a href="http://people.debian.org/~srivasta/Position_Statement.xhtml" target="_top">          problems.</a>
+</td></tr>
+<tr>
+<td align="LEFT">Revision 0.3</td>
+<td align="LEFT">2003-08-05</td>
+<td align="LEFT">Revised by: LKS</td>
+</tr>
+<tr><td align="LEFT" colspan="3">Initial release.</td></tr>
+</table></div>
+<div><div class="abstract">
+<a name="AEN45"></a><p></p>
+<p>        This document describes the software and procedures to set up
+        and use <a href="http://www.ietf.org/rfc/rfc3626" target="_top">Optimized
+        Link State Routing Protocol (OLSR)</a> with IPv6 for
         Linux. OLSR is used as a routing protocol for 
-        Mobile Ad-Hoc Networks (<A
-HREF="http://www.ietf.org/rfc/rfc2501.txt"
-TARGET="_top"
->MANET</A
->) (also
-        called <SPAN
-CLASS="QUOTE"
->"spontaneous network"</SPAN
->).
-	</P
-><P
-></P
-></DIV
-></DIV
-><HR></DIV
-><DIV
-CLASS="TOC"
-><DL
-><DT
-><B
->Table of Contents</B
-></DT
-><DT
->1. <A
-HREF="intro.html"
->Introduction</A
-></DT
-><DD
-><DL
-><DT
->1.1. <A
-HREF="intro.html#WhyAdHoc"
->Why Ad-Hoc network?</A
-></DT
-><DT
->1.2. <A
-HREF="intro.html#WhatMANET"
->What is a MANET?</A
-></DT
-><DT
->1.3. <A
-HREF="intro.html#WhatOLSR"
->What is Optimized Link State Routing (OLSR)?</A
-></DT
-><DT
->1.4. <A
-HREF="intro.html#HowOLSR"
->How does OLSR work?</A
-></DT
-><DT
->1.5. <A
-HREF="intro.html#IBSS"
->What about IBSS (IEEE ad-hoc mode)?</A
-></DT
-></DL
-></DD
-><DT
->2. <A
-HREF="ipv6.html"
->IPv6</A
-></DT
-><DT
->3. <A
-HREF="olsrlinux.html"
->OLSR for Linux</A
-></DT
-><DD
-><DL
-><DT
->3.1. <A
-HREF="olsrlinux.html#installing"
->Installing OLSRd</A
-></DT
-><DT
->3.2. <A
-HREF="olsrlinux.html#using"
->Using OLSRd</A
-></DT
-><DT
->3.3. <A
-HREF="olsrlinux.html#hna"
->What about HNA messages?</A
-></DT
-><DT
->3.4. <A
-HREF="olsrlinux.html#plugins"
->Plugin support</A
-></DT
-><DT
->3.5. <A
-HREF="olsrlinux.html#gui"
->Optional GUI</A
-></DT
-><DT
->3.6. <A
-HREF="olsrlinux.html#other"
->Other OLSR implementations</A
-></DT
-></DL
-></DD
-><DT
->4. <A
-HREF="faq.html"
->FAQ</A
-></DT
-><DT
->5. <A
-HREF="resources.html"
->Useful Resources</A
-></DT
-><DT
->6. <A
-HREF="copyack.html"
->Copyright, acknowledgments and miscellaneous</A
-></DT
-><DD
-><DL
-><DT
->6.1. <A
-HREF="copyack.html#copyright"
->Copyright and License</A
-></DT
-><DT
->6.2. <A
-HREF="copyack.html#produced"
->How this document was produced</A
-></DT
-><DT
->6.3. <A
-HREF="copyack.html#feedback"
->Feedback</A
-></DT
-><DT
->6.4. <A
-HREF="copyack.html#ack"
->Acknowledgments</A
-></DT
-></DL
-></DD
-><DT
->A. <A
-HREF="gfdl.html"
->GNU Free Documentation License</A
-></DT
-><DD
-><DL
-><DT
->A.1. <A
-HREF="gfdl-0.html"
->PREAMBLE</A
-></DT
-><DT
->A.2. <A
-HREF="gfdl-1.html"
->APPLICABILITY AND DEFINITIONS</A
-></DT
-><DT
->A.3. <A
-HREF="gfdl-2.html"
->VERBATIM COPYING</A
-></DT
-><DT
->A.4. <A
-HREF="gfdl-3.html"
->COPYING IN QUANTITY</A
-></DT
-><DT
->A.5. <A
-HREF="gfdl-4.html"
->MODIFICATIONS</A
-></DT
-><DT
->A.6. <A
-HREF="gfdl-5.html"
->COMBINING DOCUMENTS</A
-></DT
-><DT
->A.7. <A
-HREF="gfdl-6.html"
->COLLECTIONS OF DOCUMENTS</A
-></DT
-><DT
->A.8. <A
-HREF="gfdl-7.html"
->AGGREGATION WITH INDEPENDENT WORKS</A
-></DT
-><DT
->A.9. <A
-HREF="gfdl-8.html"
->TRANSLATION</A
-></DT
-><DT
->A.10. <A
-HREF="gfdl-9.html"
->TERMINATION</A
-></DT
-><DT
->A.11. <A
-HREF="gfdl-10.html"
->FUTURE REVISIONS OF THIS LICENSE</A
-></DT
-><DT
->A.12. <A
-HREF="gfdl-addendum.html"
->ADDENDUM: How to use this License for
-  your documents</A
-></DT
-></DL
-></DD
-></DL
-></DIV
-></DIV
-><DIV
-CLASS="NAVFOOTER"
-><HR
-ALIGN="LEFT"
-WIDTH="100%"><TABLE
-SUMMARY="Footer navigation table"
-WIDTH="100%"
-BORDER="0"
-CELLPADDING="0"
-CELLSPACING="0"
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
-><A
-HREF="intro.html"
-ACCESSKEY="N"
->Next</A
-></TD
-></TR
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
->Introduction</TD
-></TR
-></TABLE
-></DIV
-></BODY
-></HTML
->
+        Mobile Ad-Hoc Networks (<a href="http://www.ietf.org/rfc/rfc2501.txt" target="_top">MANET</a>) (also
+        called <span class="QUOTE">"spontaneous network"</span>).
+	</p>
+<p></p>
+</div></div>
+<hr>
+</div>
+<div class="TOC"><dl>
+<dt><b>Table of Contents</b></dt>
+<dt>1. <a href="intro.html">Introduction</a>
+</dt>
+<dd><dl>
+<dt>1.1. <a href="intro.html#WhyAdHoc">Why Ad-Hoc network?</a>
+</dt>
+<dt>1.2. <a href="intro.html#WhatMANET">What is a MANET?</a>
+</dt>
+<dt>1.3. <a href="intro.html#WhatOLSR">What is Optimized Link State Routing (OLSR)?</a>
+</dt>
+<dt>1.4. <a href="intro.html#HowOLSR">How does OLSR work?</a>
+</dt>
+<dt>1.5. <a href="intro.html#IBSS">What about IBSS (IEEE ad-hoc mode)?</a>
+</dt>
+</dl></dd>
+<dt>2. <a href="ipv6.html">IPv6</a>
+</dt>
+<dt>3. <a href="olsrlinux.html">OLSR for Linux</a>
+</dt>
+<dd><dl>
+<dt>3.1. <a href="olsrlinux.html#installing">Installing OLSRd</a>
+</dt>
+<dt>3.2. <a href="olsrlinux.html#using">Using OLSRd</a>
+</dt>
+<dt>3.3. <a href="olsrlinux.html#hna">What about HNA messages?</a>
+</dt>
+<dt>3.4. <a href="olsrlinux.html#plugins">Plugin support</a>
+</dt>
+<dt>3.5. <a href="olsrlinux.html#gui">Optional GUI</a>
+</dt>
+<dt>3.6. <a href="olsrlinux.html#other">Other OLSR implementations</a>
+</dt>
+</dl></dd>
+<dt>4. <a href="faq.html">FAQ</a>
+</dt>
+<dt>5. <a href="resources.html">Useful Resources</a>
+</dt>
+<dt>6. <a href="copyack.html">Copyright, acknowledgments and miscellaneous</a>
+</dt>
+<dd><dl>
+<dt>6.1. <a href="copyack.html#copyright">Copyright and License</a>
+</dt>
+<dt>6.2. <a href="copyack.html#produced">How this document was produced</a>
+</dt>
+<dt>6.3. <a href="copyack.html#feedback">Feedback</a>
+</dt>
+<dt>6.4. <a href="copyack.html#ack">Acknowledgments</a>
+</dt>
+</dl></dd>
+<dt>A. <a href="gfdl.html">GNU Free Documentation License</a>
+</dt>
+<dd><dl>
+<dt>A.1. <a href="gfdl-0.html">PREAMBLE</a>
+</dt>
+<dt>A.2. <a href="gfdl-1.html">APPLICABILITY AND DEFINITIONS</a>
+</dt>
+<dt>A.3. <a href="gfdl-2.html">VERBATIM COPYING</a>
+</dt>
+<dt>A.4. <a href="gfdl-3.html">COPYING IN QUANTITY</a>
+</dt>
+<dt>A.5. <a href="gfdl-4.html">MODIFICATIONS</a>
+</dt>
+<dt>A.6. <a href="gfdl-5.html">COMBINING DOCUMENTS</a>
+</dt>
+<dt>A.7. <a href="gfdl-6.html">COLLECTIONS OF DOCUMENTS</a>
+</dt>
+<dt>A.8. <a href="gfdl-7.html">AGGREGATION WITH INDEPENDENT WORKS</a>
+</dt>
+<dt>A.9. <a href="gfdl-8.html">TRANSLATION</a>
+</dt>
+<dt>A.10. <a href="gfdl-9.html">TERMINATION</a>
+</dt>
+<dt>A.11. <a href="gfdl-10.html">FUTURE REVISIONS OF THIS LICENSE</a>
+</dt>
+<dt>A.12. <a href="gfdl-addendum.html">ADDENDUM: How to use this License for
+  your documents</a>
+</dt>
+</dl></dd>
+</dl></div>
+</div>
+<div class="NAVFOOTER">
+<hr align="LEFT" width="100%">
+<table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="33%" align="left" valign="top"> </td>
+<td width="34%" align="center" valign="top"> </td>
+<td width="33%" align="right" valign="top"><a href="intro.html" accesskey="N">Next</a></td>
+</tr>
+<tr>
+<td width="33%" align="left" valign="top"> </td>
+<td width="34%" align="center" valign="top"> </td>
+<td width="33%" align="right" valign="top">Introduction</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

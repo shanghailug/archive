@@ -1,209 +1,60 @@
-<HTML
-><HEAD
-><TITLE
->Maintaining a permanent connection to the net with pppd.</TITLE
-><META
-NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.52"><LINK
-REL="HOME"
-TITLE="Linux PPP HOWTO"
-HREF="index.html"><LINK
-REL="UP"
-TITLE="Overview of what has to be done to get PPP working as a client"
-HREF="c463.html"><LINK
-REL="PREVIOUS"
-TITLE="Problems with standard IP services on a Dynamic IP number PPP link"
-HREF="x577.html"><LINK
-REL="NEXT"
-TITLE="Configuring your Linux Kernel"
-HREF="kernel-configuration.html"></HEAD
-><BODY
-CLASS="SECT1"
-BGCOLOR="#FFFFFF"
-TEXT="#000000"
-LINK="#0000FF"
-VLINK="#840084"
-ALINK="#0000FF"
-><DIV
-CLASS="NAVHEADER"
-><TABLE
-WIDTH="100%"
-BORDER="0"
-CELLPADDING="0"
-CELLSPACING="0"
-><TR
-><TH
-COLSPAN="3"
-ALIGN="center"
-><A
-HREF="http://www.linuxports.com/howto/ppp"
-TARGET="_top"
->Linux PPP HOWTO</A
-></TH
-></TR
-><TR
-><TD
-WIDTH="10%"
-ALIGN="left"
-VALIGN="bottom"
-><A
-HREF="x577.html"
->Prev</A
-></TD
-><TD
-WIDTH="80%"
-ALIGN="center"
-VALIGN="bottom"
->Chapter 9. Overview of what has to be done to get PPP working as a client</TD
-><TD
-WIDTH="10%"
-ALIGN="right"
-VALIGN="bottom"
-><A
-HREF="kernel-configuration.html"
->Next</A
-></TD
-></TR
-></TABLE
-><HR
-ALIGN="LEFT"
-WIDTH="100%"></DIV
-><DIV
-CLASS="SECT1"
-><H1
-CLASS="SECT1"
-><A
-NAME="AEN582"
->9.15. Maintaining a permanent connection to the net with <I
-CLASS="EMPHASIS"
->pppd</I
->.</A
-></H1
-><P
->If you are fortunate enough to have a semi permanent connection to the net and
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Maintaining a permanent connection to the net with pppd.</title>
+<meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.52">
+<link rel="HOME" title="Linux PPP HOWTO" href="index.html">
+<link rel="UP" title="Overview of what has to be done to get PPP working as a client" href="c463.html">
+<link rel="PREVIOUS" title="Problems with standard IP services on a Dynamic IP number PPP link" href="x577.html">
+<link rel="NEXT" title="Configuring your Linux Kernel" href="kernel-configuration.html">
+</head>
+<body class="SECT1" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="NAVHEADER">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><th colspan="3" align="center"><a href="http://www.linuxports.com/howto/ppp" target="_top">Linux PPP HOWTO</a></th></tr>
+<tr>
+<td width="10%" align="left" valign="bottom"><a href="x577.html">Prev</a></td>
+<td width="80%" align="center" valign="bottom">Chapter 9. Overview of what has to be done to get PPP working as a client</td>
+<td width="10%" align="right" valign="bottom"><a href="kernel-configuration.html">Next</a></td>
+</tr>
+</table>
+<hr align="LEFT" width="100%">
+</div>
+<div class="SECT1">
+<h1 class="SECT1"><a name="AEN582">9.15. Maintaining a permanent connection to the net with <i class="EMPHASIS">pppd</i>.</a></h1>
+<p>If you are fortunate enough to have a semi permanent connection to the net and
 would like to have your machine automatically redial your PPP connection if it
-is lost then here is a simple trick to do so.</P
-><P
->Configure PPP such that it can be started by the <TT
-CLASS="LITERAL"
->root</TT
-> user by issuing the
+is lost then here is a simple trick to do so.</p>
+<p>Configure PPP such that it can be started by the <tt class="LITERAL">root</tt> user by issuing the
 command:
 
-<TABLE
-BORDER="0"
-BGCOLOR="#E0E0E0"
-WIDTH="100%"
-><TR
-><TD
-><PRE
-CLASS="SCREEN"
-># pppd</PRE
-></TD
-></TR
-></TABLE
->
+</p>
+<table border="0" bgcolor="#E0E0E0" width="100%"><tr><td><pre class="SCREEN"># pppd</pre></td></tr></table>
 
-<I
-CLASS="EMPHASIS"
->Be sure</I
-> that you have the `<TT
-CLASS="LITERAL"
->-detach</TT
->' option configured in your
-<TT
-CLASS="LITERAL"
->/etc/ppp/options</TT
-> file. Then, insert the following line into your
-<TT
-CLASS="LITERAL"
->/etc/inittab</TT
-> file, down with the <I
-CLASS="EMPHASIS"
->getty</I
-> definitions:
+<i class="EMPHASIS">Be sure</i> that you have the `<tt class="LITERAL">-detach</tt>' option configured in your
+<tt class="LITERAL">/etc/ppp/options</tt> file. Then, insert the following line into your
+<tt class="LITERAL">/etc/inittab</tt> file, down with the <i class="EMPHASIS">getty</i> definitions:
 
-<TABLE
-BORDER="0"
-BGCOLOR="#E0E0E0"
-WIDTH="100%"
-><TR
-><TD
-><PRE
-CLASS="SCREEN"
->pd:23:respawn:/usr/sbin/pppd</PRE
-></TD
-></TR
-></TABLE
->
+<table border="0" bgcolor="#E0E0E0" width="100%"><tr><td><pre class="SCREEN">pd:23:respawn:/usr/sbin/pppd</pre></td></tr></table>
 
-This will cause the <I
-CLASS="EMPHASIS"
->init</I
-> program to spawn and monitor the
-<I
-CLASS="EMPHASIS"
->pppd</I
->
-program and automatically restart it if it dies.</P
-></DIV
-><DIV
-CLASS="NAVFOOTER"
-><HR
-ALIGN="LEFT"
-WIDTH="100%"><TABLE
-WIDTH="100%"
-BORDER="0"
-CELLPADDING="0"
-CELLSPACING="0"
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
-><A
-HREF="x577.html"
->Prev</A
-></TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
-><A
-HREF="index.html"
->Home</A
-></TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
-><A
-HREF="kernel-configuration.html"
->Next</A
-></TD
-></TR
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->Problems with standard IP services on a Dynamic IP number PPP link</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
-><A
-HREF="c463.html"
->Up</A
-></TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
->Configuring your Linux Kernel</TD
-></TR
-></TABLE
-></DIV
-></BODY
-></HTML
->
+This will cause the <i class="EMPHASIS">init</i> program to spawn and monitor the
+<i class="EMPHASIS">pppd</i>
+program and automatically restart it if it dies.</div>
+<div class="NAVFOOTER">
+<hr align="LEFT" width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="33%" align="left" valign="top"><a href="x577.html">Prev</a></td>
+<td width="34%" align="center" valign="top"><a href="index.html">Home</a></td>
+<td width="33%" align="right" valign="top"><a href="kernel-configuration.html">Next</a></td>
+</tr>
+<tr>
+<td width="33%" align="left" valign="top">Problems with standard IP services on a Dynamic IP number PPP link</td>
+<td width="34%" align="center" valign="top"><a href="c463.html">Up</a></td>
+<td width="33%" align="right" valign="top">Configuring your Linux Kernel</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

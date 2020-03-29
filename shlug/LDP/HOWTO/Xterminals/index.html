@@ -1,359 +1,131 @@
-<HTML
-><HEAD
-><TITLE
->Connecting X Terminals to Linux Mini-HOWTO</TITLE
-><META
-NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.7"><LINK
-REL="NEXT"
-TITLE="Copyright"
-HREF="copyright.html"></HEAD
-><BODY
-CLASS="ARTICLE"
-BGCOLOR="#FFFFFF"
-TEXT="#000000"
-LINK="#0000FF"
-VLINK="#840084"
-ALINK="#0000FF"
-><DIV
-CLASS="ARTICLE"
-><DIV
-CLASS="TITLEPAGE"
-><H1
-CLASS="TITLE"
-><A
-NAME="AEN2"
-></A
->Connecting X Terminals to Linux Mini-HOWTO</H1
-><H3
-CLASS="AUTHOR"
-><A
-NAME="AEN4"
->Salvador J. Peralta</A
-></H3
-><DIV
-CLASS="AFFILIATION"
-><DIV
-CLASS="ADDRESS"
-><P
-CLASS="ADDRESS"
->				<TT
-CLASS="EMAIL"
->&#60;<A
-HREF="mailto:speralta@willamette dot edu"
->speralta@willamette dot edu</A
->&#62;</TT
-><br>
-			</P
-></DIV
-></DIV
-><DIV
-CLASS="REVHISTORY"
-><TABLE
-WIDTH="100%"
-BORDER="0"
-><TR
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
-COLSPAN="3"
-><B
->Revision History</B
-></TH
-></TR
-><TR
-><TD
-ALIGN="LEFT"
->Revision 1.2 release</TD
-><TD
-ALIGN="LEFT"
->2003-05-20</TD
-><TD
-ALIGN="LEFT"
->Revised by: sjp</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
-COLSPAN="3"
->Added more information on XFS and XDM configuration.</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
->Revision 1.0 release</TD
-><TD
-ALIGN="LEFT"
->2002-12-21</TD
-><TD
-ALIGN="LEFT"
->Revised by: sjp</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
-COLSPAN="3"
->First official release.  Removed old revision logs.</TD
-></TR
-></TABLE
-></DIV
-><DIV
-><DIV
-CLASS="ABSTRACT"
-><A
-NAME="AEN22"
-></A
-><P
-></P
-><P
->This Mini-HOWTO describes how to connect X Terminals with a Linux host using nfs, xfs, xdm and xdmcp.  Additionally, the document discusses configuration recommendations to optimize Linux for use as a host system on a network of thin clients.  The most current version can be obtained <A
-HREF="http://www.willamette.edu/~speralta/tldp/xterm"
-TARGET="_top"
->here</A
->.</P
-><P
-></P
-></DIV
-></DIV
-><HR></DIV
-><DIV
-CLASS="TOC"
-><DL
-><DT
-><B
->Table of Contents</B
-></DT
-><DT
->1. <A
-HREF="copyright.html"
->Copyright</A
-></DT
-><DT
->2. <A
-HREF="background.html"
->Introduction</A
-></DT
-><DD
-><DL
-><DT
->2.1. <A
-HREF="background.html#XFREE86"
->What is XFree86</A
-></DT
-><DT
->2.2. <A
-HREF="background.html#AEN36"
->What is an X Terminal?</A
-></DT
-><DT
->2.3. <A
-HREF="background.html#INFRASTRUCTURE"
->Infrastructure Overview</A
-></DT
-></DL
-></DD
-><DT
->3. <A
-HREF="section2.html"
->Host Environment</A
-></DT
-><DD
-><DL
-><DT
->3.1. <A
-HREF="section2.html#HARDWARE"
->Hardware</A
-></DT
-><DT
->3.2. <A
-HREF="section2.html#SOFTWARE"
->Software</A
-></DT
-></DL
-></DD
-><DT
->4. <A
-HREF="configuration.html"
->Basic Host Configuration</A
-></DT
-><DD
-><DL
-><DT
->4.1. <A
-HREF="configuration.html#NFS"
->Configuring NFS</A
-></DT
-><DT
->4.2. <A
-HREF="configuration.html#XDM"
->Configuring XDM</A
-></DT
-><DT
->4.3. <A
-HREF="configuration.html#XACCESS"
->Configuring Xaccess</A
-></DT
-><DT
->4.4. <A
-HREF="configuration.html#HOST"
->Configuring Host Access</A
-></DT
-><DT
->4.5. <A
-HREF="configuration.html#XFS"
->Configuring the X Font Server</A
-></DT
-><DT
->4.6. <A
-HREF="configuration.html#XSESSION"
->Configuring the X Session</A
-></DT
-></DL
-></DD
-><DT
->5. <A
-HREF="advanced.html"
->Advanced Host Configuration</A
-></DT
-><DD
-><DL
-><DT
->5.1. <A
-HREF="advanced.html#LIMITSCONF"
->Setting User and Group Limits</A
-></DT
-><DT
->5.2. <A
-HREF="advanced.html#MORELIMITS"
->More Limits</A
-></DT
-></DL
-></DD
-><DT
->6. <A
-HREF="client.html"
->Client Configuration</A
-></DT
-><DD
-><DL
-><DT
->6.1. <A
-HREF="client.html#BOOT"
->The Boot Process</A
-></DT
-></DL
-></DD
-><DT
->7. <A
-HREF="info.html"
->Additional Resources</A
-></DT
-><DD
-><DL
-><DT
->7.1. <A
-HREF="info.html#LINUXDOCS"
->Linux Howto's</A
-></DT
-><DT
->7.2. <A
-HREF="info.html#MANPAGES"
->Man Pages</A
-></DT
-><DT
->7.3. <A
-HREF="info.html#GUIDES"
->Linux Guides</A
-></DT
-><DT
->7.4. <A
-HREF="info.html#AEN141"
->Books</A
-></DT
-></DL
-></DD
-><DT
->8. <A
-HREF="errata.html"
->Errata</A
-></DT
-><DD
-><DL
-><DT
->8.1. <A
-HREF="errata.html#VERSION"
->System Versions</A
-></DT
-><DT
->8.2. <A
-HREF="errata.html#DISCLAIMER"
->Disclaimer</A
-></DT
-><DT
->8.3. <A
-HREF="errata.html#FEEDBACK"
->Feedback</A
-></DT
-><DT
->8.4. <A
-HREF="errata.html#CREDITS"
->Credits</A
-></DT
-></DL
-></DD
-></DL
-></DIV
-></DIV
-><DIV
-CLASS="NAVFOOTER"
-><HR
-ALIGN="LEFT"
-WIDTH="100%"><TABLE
-SUMMARY="Footer navigation table"
-WIDTH="100%"
-BORDER="0"
-CELLPADDING="0"
-CELLSPACING="0"
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
-><A
-HREF="copyright.html"
-ACCESSKEY="N"
->Next</A
-></TD
-></TR
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
->Copyright</TD
-></TR
-></TABLE
-></DIV
-></BODY
-></HTML
->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Connecting X Terminals to Linux Mini-HOWTO</title>
+<meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.7">
+<link rel="NEXT" title="Copyright" href="copyright.html">
+</head>
+<body class="ARTICLE" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="ARTICLE">
+<div class="TITLEPAGE">
+<h1 class="TITLE">
+<a name="AEN2"></a>Connecting X Terminals to Linux Mini-HOWTO</h1>
+<h3 class="AUTHOR"><a name="AEN4">Salvador J. Peralta</a></h3>
+<div class="AFFILIATION"><div class="ADDRESS"><p class="ADDRESS">				<tt class="EMAIL">&lt;<a href="mailto:speralta@willamette%20dot%20edu">speralta@willamette dot edu</a>&gt;</tt><br>
+			</p></div></div>
+<div class="REVHISTORY"><table width="100%" border="0">
+<tr><th align="LEFT" valign="TOP" colspan="3"><b>Revision History</b></th></tr>
+<tr>
+<td align="LEFT">Revision 1.2 release</td>
+<td align="LEFT">2003-05-20</td>
+<td align="LEFT">Revised by: sjp</td>
+</tr>
+<tr><td align="LEFT" colspan="3">Added more information on XFS and XDM configuration.</td></tr>
+<tr>
+<td align="LEFT">Revision 1.0 release</td>
+<td align="LEFT">2002-12-21</td>
+<td align="LEFT">Revised by: sjp</td>
+</tr>
+<tr><td align="LEFT" colspan="3">First official release.  Removed old revision logs.</td></tr>
+</table></div>
+<div><div class="ABSTRACT">
+<a name="AEN22"></a><p></p>
+<p>This Mini-HOWTO describes how to connect X Terminals with a Linux host using nfs, xfs, xdm and xdmcp.  Additionally, the document discusses configuration recommendations to optimize Linux for use as a host system on a network of thin clients.  The most current version can be obtained <a href="http://www.willamette.edu/~speralta/tldp/xterm" target="_top">here</a>.</p>
+<p></p>
+</div></div>
+<hr>
+</div>
+<div class="TOC"><dl>
+<dt><b>Table of Contents</b></dt>
+<dt>1. <a href="copyright.html">Copyright</a>
+</dt>
+<dt>2. <a href="background.html">Introduction</a>
+</dt>
+<dd><dl>
+<dt>2.1. <a href="background.html#XFREE86">What is XFree86</a>
+</dt>
+<dt>2.2. <a href="background.html#AEN36">What is an X Terminal?</a>
+</dt>
+<dt>2.3. <a href="background.html#INFRASTRUCTURE">Infrastructure Overview</a>
+</dt>
+</dl></dd>
+<dt>3. <a href="section2.html">Host Environment</a>
+</dt>
+<dd><dl>
+<dt>3.1. <a href="section2.html#HARDWARE">Hardware</a>
+</dt>
+<dt>3.2. <a href="section2.html#SOFTWARE">Software</a>
+</dt>
+</dl></dd>
+<dt>4. <a href="configuration.html">Basic Host Configuration</a>
+</dt>
+<dd><dl>
+<dt>4.1. <a href="configuration.html#NFS">Configuring NFS</a>
+</dt>
+<dt>4.2. <a href="configuration.html#XDM">Configuring XDM</a>
+</dt>
+<dt>4.3. <a href="configuration.html#XACCESS">Configuring Xaccess</a>
+</dt>
+<dt>4.4. <a href="configuration.html#HOST">Configuring Host Access</a>
+</dt>
+<dt>4.5. <a href="configuration.html#XFS">Configuring the X Font Server</a>
+</dt>
+<dt>4.6. <a href="configuration.html#XSESSION">Configuring the X Session</a>
+</dt>
+</dl></dd>
+<dt>5. <a href="advanced.html">Advanced Host Configuration</a>
+</dt>
+<dd><dl>
+<dt>5.1. <a href="advanced.html#LIMITSCONF">Setting User and Group Limits</a>
+</dt>
+<dt>5.2. <a href="advanced.html#MORELIMITS">More Limits</a>
+</dt>
+</dl></dd>
+<dt>6. <a href="client.html">Client Configuration</a>
+</dt>
+<dd><dl><dt>6.1. <a href="client.html#BOOT">The Boot Process</a>
+</dt></dl></dd>
+<dt>7. <a href="info.html">Additional Resources</a>
+</dt>
+<dd><dl>
+<dt>7.1. <a href="info.html#LINUXDOCS">Linux Howto's</a>
+</dt>
+<dt>7.2. <a href="info.html#MANPAGES">Man Pages</a>
+</dt>
+<dt>7.3. <a href="info.html#GUIDES">Linux Guides</a>
+</dt>
+<dt>7.4. <a href="info.html#AEN141">Books</a>
+</dt>
+</dl></dd>
+<dt>8. <a href="errata.html">Errata</a>
+</dt>
+<dd><dl>
+<dt>8.1. <a href="errata.html#VERSION">System Versions</a>
+</dt>
+<dt>8.2. <a href="errata.html#DISCLAIMER">Disclaimer</a>
+</dt>
+<dt>8.3. <a href="errata.html#FEEDBACK">Feedback</a>
+</dt>
+<dt>8.4. <a href="errata.html#CREDITS">Credits</a>
+</dt>
+</dl></dd>
+</dl></div>
+</div>
+<div class="NAVFOOTER">
+<hr align="LEFT" width="100%">
+<table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="33%" align="left" valign="top"> </td>
+<td width="34%" align="center" valign="top"> </td>
+<td width="33%" align="right" valign="top"><a href="copyright.html" accesskey="N">Next</a></td>
+</tr>
+<tr>
+<td width="33%" align="left" valign="top"> </td>
+<td width="34%" align="center" valign="top"> </td>
+<td width="33%" align="right" valign="top">Copyright</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

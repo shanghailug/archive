@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>/*
+ 
+Correctly handle PNG transparency in Win IE 5.5 &amp; 6.
+http://homepage.ntlworld.com/bobosola. Updated 18-Jan-2006.
+
+Use in </p> with DEFER keyword wrapped in conditional comments:
+<!--[if lt IE 7]>
+<script defer type="text/javascript" src="pngfix.js"></script>
+<![endif]-->
+
+*/
+
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+
+if ((version &gt;= 5.5) &amp;&amp; (document.body.filters)) 
+{
+   for(var i=0; i<document.images.length i var img="document.images[i]" imgname="img.src.toUpperCase()" if imgname.length imgid="(img.id)" img.id : imgclass="(img.className)" img.classname imgtitle="(img.title)" img.title img.alt imgstyle="display:inline-block;" img.style.csstext strnewhtml="&lt;span " style='\""' img.width height: img.height img.src sizingmethod="scale">" 
+         img.outerHTML = strNewHTML
+         i = i-1
+      }
+   }
+}
+</document.images.length>
+</body></html>

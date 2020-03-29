@@ -5,7 +5,7 @@
 <meta name="robots" content="index,nofollow">
 
 <title>HelpOnPageCreation - Geekbone.Org</title>
-<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+<script type="text/javascript" src="../htdocs/common/js/common.js"></script>
 
 <script type="text/javascript">
 <!--// common functions
@@ -76,38 +76,34 @@ function actionsMenuInit(title) {
 </script>
 
 
-<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
-<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="/Geekbone">
-<link rel="Alternate" title="Wiki Markup" href="/HelpOnPageCreation?action=raw">
-<link rel="Alternate" media="print" title="Print View" href="/HelpOnPageCreation?action=print">
-<link rel="Search" href="/FindPage">
-<link rel="Index" href="/TitleIndex">
-<link rel="Glossary" href="/WordIndex">
-<link rel="Help" href="/HelpOnFormatting">
+<link rel="Start" href="../Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="../HelpOnPageCreation%3Faction=raw">
+<link rel="Alternate" media="print" title="Print View" href="../HelpOnPageCreation%3Faction=print">
+<link rel="Search" href="../FindPage">
+<link rel="Index" href="../TitleIndex">
+<link rel="Glossary" href="../WordIndex">
+<link rel="Help" href="../HelpOnFormatting">
 </head>
 
-<body  lang="en" dir="ltr">
+<body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../Geekbone">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="context" value="180">
 <label for="searchinput">Search:</label>
-<input id="searchinput" type="text" name="value" value="" size="20"
-    onfocus="searchFocus(this)" onblur="searchBlur(this)"
-    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
-<input id="titlesearch" name="titlesearch" type="submit"
-    value="Titles" alt="Search Titles">
-<input id="fullsearch" name="fullsearch" type="submit"
-    value="Text" alt="Search Full Text">
+<input id="searchinput" type="text" name="value" value="" size="20" onfocus="searchFocus(this)" onblur="searchBlur(this)" onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit" value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit" value="Text" alt="Search Full Text">
 </div>
 </form>
 <script type="text/javascript">
@@ -120,29 +116,36 @@ searchBlur(e);
 //-->
 </script>
 
-<ul id="username"><li><a href="/HelpOnPageCreation?action=login" id="login">Login</a></li></ul>
+<ul id="username"><li><a href="../HelpOnPageCreation%3Faction=login" id="login">Login</a></li></ul>
 <div id="locationline">
 
 
 <ul id="pagelocation">
-<li><a class="backlink" title="Click to do a full-text search for this title" href="/HelpOnPageCreation?action=fullsearch&amp;value=linkto%3A%22HelpOnPageCreation%22&amp;context=180">HelpOnPageCreation</a></li>
+<li><a class="backlink" title="Click to do a full-text search for this title" href="../HelpOnPageCreation%3Faction=fullsearch%26value=linkto%3A%22HelpOnPageCreation%22%26context=180">HelpOnPageCreation</a></li>
 </ul>
 
 </div>
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/HelpOnPageCreation">HelpOnPageCreation</a></li>
+<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
+<li class="current"><a href=".">HelpOnPageCreation</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
 
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnPageCreation?action=info">Info</a></li><li><a href="/HelpOnPageCreation?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../HelpOnPageCreation%3Faction=info">Info</a></li>
+<li><a href="../HelpOnPageCreation%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -173,54 +176,122 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 </div>
 
 <div id="page" lang="en" dir="ltr">
-<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<div dir="ltr" id="content" lang="en">
+<span class="anchor" id="top"></span>
 <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867">
+</p>
 <h1 id="head-14a542e64719dfb58bee1e1e876c44b9faea4313">Creating a new page</h1>
-<span class="anchor" id="line-10"></span><p class="line867"><span class="anchor" id="line-11"></span><p class="line867"><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line862">You create a new page by visiting the page. If the page does not exists, Moin<tt class="backtick"></tt>Moin will suggest to create it. There are several ways to create a new page: <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line867">
+<span class="anchor" id="line-10"></span><p class="line867"><span class="anchor" id="line-11"></span></p>
+<p class="line867"><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span></p>
+<p class="line862">You create a new page by visiting the page. If the page does not exists, Moin<tt class="backtick"></tt>Moin will suggest to create it. There are several ways to create a new page: <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span></p>
+<p class="line867">
+</p>
 <h2 id="head-e9b1acb8e862de98339a0b6b6c3b931ad33f6dd4">By Adding a link on another page</h2>
-<span class="anchor" id="line-16"></span><ol type="1"><li>Edit another page <span class="anchor" id="line-17"></span></li><li><p class="line862">Add a link to the new page, either as a <a href="/WikiName">WikiName</a> or as <tt class="backtick">["Name&nbsp;With&nbsp;Spaces"]</tt> <span class="anchor" id="line-18"></span></li><li>Save the page and click the new link <span class="anchor" id="line-19"></span></li><li>Click one of the template names <span class="anchor" id="line-20"></span></li><li>Edit your new page and save it <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span></li></ol><p class="line862">For more information on linking to other pages, see <a href="/HelpOnLinking">HelpOnLinking</a>. <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line867">
+<span class="anchor" id="line-16"></span><ol type="1">
+<li>Edit another page <span class="anchor" id="line-17"></span>
+</li>
+<li><p class="line862">Add a link to the new page, either as a <a href="../WikiName">WikiName</a> or as <tt class="backtick">["Name With Spaces"]</tt> <span class="anchor" id="line-18"></span></p></li>
+<li>Save the page and click the new link <span class="anchor" id="line-19"></span>
+</li>
+<li>Click one of the template names <span class="anchor" id="line-20"></span>
+</li>
+<li>Edit your new page and save it <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span>
+</li>
+</ol>
+<p class="line862">For more information on linking to other pages, see <a href="../HelpOnLinking">HelpOnLinking</a>. <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span></p>
+<p class="line867">
+</p>
 <h2 id="head-e3592471d5c27aab1c2ab6d6f69b426d3b39b0f7">By visiting the page</h2>
-<span class="anchor" id="line-25"></span><p class="line867"><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><ol type="1"><li><p class="line862">Enter the address of the new page, e.g <tt class="backtick">http://example.com/wiki/MyNewPage</tt> in the browser location box and press Enter <span class="anchor" id="line-28"></span></li><li>Click one of the template names <span class="anchor" id="line-29"></span></li><li>Edit your new page and save it <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><p class="line891"><img alt="(!)" height="15" src="/htdocs/modern/img/idea.png" title="(!)" width="15" /> Might not work on all browsers if the page name contains non ASCII characters. <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span></li></ol><p class="line867">
+<span class="anchor" id="line-25"></span><p class="line867"><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span></p>
+<ol type="1">
+<li><p class="line862">Enter the address of the new page, e.g <tt class="backtick">http://example.com/wiki/MyNewPage</tt> in the browser location box and press Enter <span class="anchor" id="line-28"></span></p></li>
+<li>Click one of the template names <span class="anchor" id="line-29"></span>
+</li>
+<li>Edit your new page and save it <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><p class="line891"><img alt="(!)" height="15" src="../htdocs/modern/img/idea.png" title="(!)" width="15"> Might not work on all browsers if the page name contains non ASCII characters. <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span></p>
+</li>
+</ol>
+<p class="line867">
+</p>
 <h2 id="head-611c203c8a945b26f9206a23bf783d4b54e37353">By using the NewPage macro</h2>
-<span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><p class="line862">If the current page uses the <tt class="backtick">NewPage</tt> macro: <span class="anchor" id="line-36"></span><ol type="1"><li><p class="line862">Enter the page name in the text box and click "Create New Page" <span class="anchor" id="line-37"></span></li><li>Edit your page and save it <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span></li></ol><p class="line874">Example: <span class="anchor" id="line-40"></span><ul><li style="list-style-type:none"><form class="macro" method="get" action=""><div>
+<span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><p class="line862">If the current page uses the <tt class="backtick">NewPage</tt> macro: <span class="anchor" id="line-36"></span></p>
+<ol type="1">
+<li><p class="line862">Enter the page name in the text box and click "Create New Page" <span class="anchor" id="line-37"></span></p></li>
+<li>Edit your page and save it <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span>
+</li>
+</ol>
+<p class="line874">Example: <span class="anchor" id="line-40"></span></p>
+<ul><li style="list-style-type:none">
+<form class="macro" method="get" action=""><div>
 <input type="hidden" name="action" value="newpage">
 <input type="hidden" name="parent" value="">
 <input type="hidden" name="template" value="HelpTemplate">
 <input type="hidden" name="nametemplate" value="%s">
 <input type="text" name="pagename" size="30">
 <input type="submit" value="Create New Page">
-</div></form> <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span></li></ul><p class="line862">The <tt class="backtick">NewPage</tt> macro make it easy to create new pages in one step, using certain template or automatically creating a sub page. For more help on <tt class="backtick">NewPage</tt> macro, see <a href="/HelpOnMacros">HelpOnMacros</a>. <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line867">
+</div></form> <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span>
+</li></ul>
+<p class="line862">The <tt class="backtick">NewPage</tt> macro make it easy to create new pages in one step, using certain template or automatically creating a sub page. For more help on <tt class="backtick">NewPage</tt> macro, see <a href="../HelpOnMacros">HelpOnMacros</a>. <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span></p>
+<p class="line867">
+</p>
 <h2 id="head-3ef550be8dc02623f4cc0f44ab043a93dbb855ae">By using the GoTo macro</h2>
-<span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line862">If the current page uses the <tt class="backtick">GoTo</tt> macro: <span class="anchor" id="line-47"></span><ol type="1"><li><p class="line862">Enter the page name in the text box and click "Go To Page" <span class="anchor" id="line-48"></span></li><li>Click "Create new page" <span class="anchor" id="line-49"></span></li><li>Edit your page and save it <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span></li></ol><p class="line874">Example: <span class="anchor" id="line-52"></span><ul><li style="list-style-type:none"><form method="get" action="">
+<span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line862">If the current page uses the <tt class="backtick">GoTo</tt> macro: <span class="anchor" id="line-47"></span></p>
+<ol type="1">
+<li><p class="line862">Enter the page name in the text box and click "Go To Page" <span class="anchor" id="line-48"></span></p></li>
+<li>Click "Create new page" <span class="anchor" id="line-49"></span>
+</li>
+<li>Edit your page and save it <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span>
+</li>
+</ol>
+<p class="line874">Example: <span class="anchor" id="line-52"></span></p>
+<ul><li style="list-style-type:none">
+<form method="get" action="">
 <div>
 <input type="hidden" name="action" value="goto">
 <input type="text" name="target" size="30">
 <input type="submit" value="Go To Page">
 </div>
-</form> <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span></li></ul><p class="line867">
+</form> <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span>
+</li></ul>
+<p class="line867">
+</p>
 <h1 id="head-c0187e7da44644d31e166438448e55cddbf52c82">Creating and using template pages</h1>
-<span class="anchor" id="line-55"></span><p class="line867"><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><p class="line862">See <a href="/HelpOnTemplates">HelpOnTemplates</a>. <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><p class="line867"><span class="anchor" id="variablesubstitution"></span> <span class="anchor" id="line-60"></span>
+<span class="anchor" id="line-55"></span><p class="line867"><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span></p>
+<p class="line862">See <a href="../HelpOnTemplates">HelpOnTemplates</a>. <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span></p>
+<p class="line867"><span class="anchor" id="variablesubstitution"></span> <span class="anchor" id="line-60"></span>
+</p>
 <h1 id="head-4d9d43087c89096849fd038855ebc947a5dfce9f">Setting Variables</h1>
-<span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><p class="line862">See <a href="/HelpOnVariables">HelpOnVariables</a> <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><p class="line867">
+<span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><p class="line862">See <a href="../HelpOnVariables">HelpOnVariables</a> <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span></p>
+<p class="line867">
+</p>
 <h1 id="head-71421871c71434b7b946216b769cb02c0945dc78">Editor backup</h1>
-<span class="anchor" id="line-65"></span><p class="line867"><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><p class="line862">If you have a homepage (a page with the same name as your user name), each time you save or preview a page, a backup of the text is saved as <tt class="backtick">UserName/MoinEditorBackup</tt>. If your browser crashed when editing a page and you did a preview, you can get the text from the backup. Use preview often! <span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><p class="line867"><span class="anchor" id="line-70"></span><ul><li style="list-style-type:none"><p class="line891"><img alt="(!)" height="15" src="/htdocs/modern/img/idea.png" title="(!)" width="15" /> If sub pages are disabled, the backup is saved as <tt class="backtick">UserNameMoinEditorBackup</tt> <span class="anchor" id="line-71"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">HelpOnPageCreation  (last modified 2006-06-30 07:21:42)</p>
+<span class="anchor" id="line-65"></span><p class="line867"><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span></p>
+<p class="line862">If you have a homepage (a page with the same name as your user name), each time you save or preview a page, a backup of the text is saved as <tt class="backtick">UserName/MoinEditorBackup</tt>. If your browser crashed when editing a page and you did a preview, you can get the text from the backup. Use preview often! <span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span></p>
+<p class="line867"><span class="anchor" id="line-70"></span></p>
+<ul><li style="list-style-type:none"><p class="line891"><img alt="(!)" height="15" src="../htdocs/modern/img/idea.png" title="(!)" width="15"> If sub pages are disabled, the backup is saved as <tt class="backtick">UserNameMoinEditorBackup</tt> <span class="anchor" id="line-71"></span></p></li></ul>
+<span class="anchor" id="bottom"></span>
+</div>
+<p id="pageinfo" class="info" lang="en" dir="ltr">HelpOnPageCreation  (last modified 2006-06-30 07:21:42)</p>
 
 <div id="pagebottom"></div>
 </div>
 
 
 <div id="footer">
-<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnPageCreation?action=info">Info</a></li><li><a href="/HelpOnPageCreation?action=AttachFile">Attachments</a></li><li>
+<ul class="editbar">
+<li><span class="disabled">Immutable Page</span></li>
+<li><a href="../HelpOnPageCreation%3Faction=info">Info</a></li>
+<li><a href="../HelpOnPageCreation%3Faction=AttachFile">Attachments</a></li>
+<li>
 <form class="actionsmenu" method="get" action="">
 <div>
     <label>More Actions:</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
                       (this.options[this.selectedIndex].disabled == false)) {
                 this.form.submit();
             }
@@ -251,14 +322,16 @@ actionsMenuInit('More Actions:');
 //-->
 </script>
 </form>
-</li></ul>
+</li>
+</ul>
 
 <ul id="credits">
-<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li>
+<li><a href="http://www.python.org/">Python Powered</a></li>
+<li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
 </ul>
 
 
 </div>
 </body>
 </html>
-

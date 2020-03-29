@@ -1,229 +1,80 @@
-<HTML
-><HEAD
-><TITLE
->Enabling Process Accounting on Linux HOWTO</TITLE
-><META
-NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.60"><LINK
-REL="NEXT"
-TITLE="Preamble"
-HREF="preamble.html"></HEAD
-><BODY
-CLASS="ARTICLE"
-BGCOLOR="#FFFFFF"
-TEXT="#000000"
-LINK="#0000FF"
-VLINK="#840084"
-ALINK="#0000FF"
-><DIV
-CLASS="ARTICLE"
-><DIV
-CLASS="TITLEPAGE"
-><H1
-CLASS="TITLE"
-><A
-NAME="AEN2"
->Enabling Process Accounting on Linux HOWTO</A
-></H1
-><H3
-CLASS="AUTHOR"
-><A
-NAME="AEN4"
->Albert M.C. Tam</A
-></H3
-><DIV
-CLASS="AFFILIATION"
-><DIV
-CLASS="ADDRESS"
-><P
-CLASS="ADDRESS"
->bertie@scn.org</P
-></DIV
-></DIV
-><P
-CLASS="OTHERCREDIT"
-><B
->Kristin Thomas - </B
-><SPAN
-CLASS="CONTRIB"
->Converted document from HTML to DocBook v4.1 (SGML)</SPAN
-></P
-><P
-CLASS="PUBDATE"
->2001-02-09<BR></P
-><DIV
-CLASS="REVHISTORY"
-><TABLE
-WIDTH="100%"
-BORDER="0"
-><TR
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
-COLSPAN="3"
-><B
->Revision History</B
-></TH
-></TR
-><TR
-><TD
-ALIGN="LEFT"
->Revision 1.1</TD
-><TD
-ALIGN="LEFT"
->2001-02-09</TD
-><TD
-ALIGN="LEFT"
->Revised by: KET</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
-COLSPAN="3"
-></TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
->Revision 1.0</TD
-><TD
-ALIGN="LEFT"
->1997-08-08</TD
-><TD
-ALIGN="LEFT"
->Revised by: AMCT</TD
-></TR
-><TR
-><TD
-ALIGN="LEFT"
-COLSPAN="3"
-></TD
-></TR
-></TABLE
-></DIV
-><DIV
-><DIV
-CLASS="ABSTRACT"
-><A
-NAME="AEN10"
-></A
-><P
-></P
-><P
->Describes the basics of enabling process accounting on
-				Linux.</P
-><P
-></P
-></DIV
-></DIV
-><HR></DIV
-><DIV
-CLASS="TOC"
-><DL
-><DT
-><B
->Table of Contents</B
-></DT
-><DT
->1. <A
-HREF="preamble.html"
->Preamble</A
-></DT
-><DT
->2. <A
-HREF="introduction.html"
->Introduction</A
-></DT
-><DT
->3. <A
-HREF="pa.html"
->What is process accounting?</A
-></DT
-><DT
->4. <A
-HREF="currentstatus.html"
->Current Status of Process Accounting under Linux</A
-></DT
-><DT
->5. <A
-HREF="requirements.html"
->Requirements for Process Accounting on Linux</A
-></DT
-><DD
-><DL
-><DT
->5.1. <A
-HREF="requirements.html#KERNEL"
->Kernel</A
-></DT
-><DT
->5.2. <A
-HREF="requirements.html#PASOFTWARE"
->Process Accounting Software</A
-></DT
-></DL
-></DD
-><DT
->6. <A
-HREF="pasetup.html"
->Process Accounting Setup on Linux</A
-></DT
-><DT
->7. <A
-HREF="misccommands.html"
->Miscellaneous Process Accounting Commands</A
-></DT
-></DL
-></DIV
-></DIV
-><DIV
-CLASS="NAVFOOTER"
-><HR
-ALIGN="LEFT"
-WIDTH="100%"><TABLE
-WIDTH="100%"
-BORDER="0"
-CELLPADDING="0"
-CELLSPACING="0"
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
-><A
-HREF="preamble.html"
->Next</A
-></TD
-></TR
-><TR
-><TD
-WIDTH="33%"
-ALIGN="left"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="34%"
-ALIGN="center"
-VALIGN="top"
->&nbsp;</TD
-><TD
-WIDTH="33%"
-ALIGN="right"
-VALIGN="top"
->Preamble</TD
-></TR
-></TABLE
-></DIV
-></BODY
-></HTML
->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Enabling Process Accounting on Linux HOWTO</title>
+<meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.60">
+<link rel="NEXT" title="Preamble" href="preamble.html">
+</head>
+<body class="ARTICLE" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="ARTICLE">
+<div class="TITLEPAGE">
+<h1 class="TITLE"><a name="AEN2">Enabling Process Accounting on Linux HOWTO</a></h1>
+<h3 class="AUTHOR"><a name="AEN4">Albert M.C. Tam</a></h3>
+<div class="AFFILIATION"><div class="ADDRESS"><p class="ADDRESS">bertie@scn.org</p></div></div>
+<p class="OTHERCREDIT"><b>Kristin Thomas - </b><span class="CONTRIB">Converted document from HTML to DocBook v4.1 (SGML)</span></p>
+<p class="PUBDATE">2001-02-09<br></p>
+<div class="REVHISTORY"><table width="100%" border="0">
+<tr><th align="LEFT" valign="TOP" colspan="3"><b>Revision History</b></th></tr>
+<tr>
+<td align="LEFT">Revision 1.1</td>
+<td align="LEFT">2001-02-09</td>
+<td align="LEFT">Revised by: KET</td>
+</tr>
+<tr><td align="LEFT" colspan="3"></td></tr>
+<tr>
+<td align="LEFT">Revision 1.0</td>
+<td align="LEFT">1997-08-08</td>
+<td align="LEFT">Revised by: AMCT</td>
+</tr>
+<tr><td align="LEFT" colspan="3"></td></tr>
+</table></div>
+<div><div class="ABSTRACT">
+<a name="AEN10"></a><p></p>
+<p>Describes the basics of enabling process accounting on
+				Linux.</p>
+<p></p>
+</div></div>
+<hr>
+</div>
+<div class="TOC"><dl>
+<dt><b>Table of Contents</b></dt>
+<dt>1. <a href="preamble.html">Preamble</a>
+</dt>
+<dt>2. <a href="introduction.html">Introduction</a>
+</dt>
+<dt>3. <a href="pa.html">What is process accounting?</a>
+</dt>
+<dt>4. <a href="currentstatus.html">Current Status of Process Accounting under Linux</a>
+</dt>
+<dt>5. <a href="requirements.html">Requirements for Process Accounting on Linux</a>
+</dt>
+<dd><dl>
+<dt>5.1. <a href="requirements.html#KERNEL">Kernel</a>
+</dt>
+<dt>5.2. <a href="requirements.html#PASOFTWARE">Process Accounting Software</a>
+</dt>
+</dl></dd>
+<dt>6. <a href="pasetup.html">Process Accounting Setup on Linux</a>
+</dt>
+<dt>7. <a href="misccommands.html">Miscellaneous Process Accounting Commands</a>
+</dt>
+</dl></div>
+</div>
+<div class="NAVFOOTER">
+<hr align="LEFT" width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="33%" align="left" valign="top"> </td>
+<td width="34%" align="center" valign="top"> </td>
+<td width="33%" align="right" valign="top"><a href="preamble.html">Next</a></td>
+</tr>
+<tr>
+<td width="33%" align="left" valign="top"> </td>
+<td width="34%" align="center" valign="top"> </td>
+<td width="33%" align="right" valign="top">Preamble</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
