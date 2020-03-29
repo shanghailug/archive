@@ -1,0 +1,32 @@
+关于geekbone服务器的管理方案（草案）
+
+日期：2003-3-2
+作者：Lightning
+修订：gEEk
+
+
+1. 人员
+   a. 管理员
+   geekbone服务器(以下简称tux)管理员名单: Chaos, JaCkZ, gEEk, Lightning, Mada, wuming
+   日常服务器的维护现由如下常务系统管理员负责:Chaos, gEEk, Jackz
+   常务系统管理员需负责tux的基本系统日常维护与安全管理，并且唯一负责对各项服务的开启/关闭等事务，对重要的事务，请均以
+   适当形式做日志记录及通告。(如发信至roots mailling)
+   所有管理员均有权及义务参与到geekbone.org相关事务中。 
+
+  b. 例外情况 
+  若现任的系统管理员因无法执行管理tux的任务或人手不足时，可从现有shell帐号用户中挑选出新的常务系统管理员成员以一起参与
+  到系统的日常管理事务中，但事先需在roots maillist中发出通知信通告全体管理员员，并得到2/3的现任系统管理员的确认。
+
+2. 帐号管理
+  a. shell account
+     任何一位管理员为一位新成员增号shell帐号前，请先在 roots maillist <rootlist@geekbone.org> 中发信做简单介绍，并得到至少2位
+  管理员的认同，方可为该人开设shell帐号。作了认同行为的所有shell帐号成员应在roots maillist中回应一封认可信，供系统管
+  理员判断情况。
+
+  b. non-shell account (ftp, mail, etc)
+    非shell account的开设无须经过2位以上的管理员认同，只需做适当形式的日志记录即可。
+
+3. 服务管理
+  任何人员要开设新的服务，或建议开设任何服务只需向任一位系统管理员提出以irc交谈或email递送的形式的申请，经系统
+  管理员同意后，即应可开通。
+  
