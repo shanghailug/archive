@@ -1,0 +1,12 @@
+#
+# Replace /etc/apt/sources.list with this file will change apt source to GeekBone Debian Mirror
+#
+deb ftp://mirrors.geekbone.org/debian stable main non-free contrib
+deb-src ftp://mirrors.geekbone.org/debian stable main non-free contrib
+deb ftp://mirrors.geekbone.org/debian-non-US stable/non-US main contrib non-free
+deb-src ftp://mirrors.geekbone.org/debian-non-US stable/non-US main contrib non-free
+deb ftp://mirrors.geekbone.org/debian proposed-updates main contrib non-free
+deb-src ftp://mirrors.geekbone.org/debian proposed-updates main contrib non-free
+deb ftp://mirrors.geekbone.org/debian-non-US proposed-updates/non-US main contrib non-free
+deb-src ftp://mirrors.geekbone.org/debian-non-US proposed-updates/non-US main contrib non-free
+deb ftp://mirrors.geekbone.org/debian-security woody/updates main contrib non-free 

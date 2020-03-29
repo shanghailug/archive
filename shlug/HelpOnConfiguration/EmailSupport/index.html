@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>HelpOnConfiguration/EmailSupport - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/HelpOnConfiguration/EmailSupport?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/HelpOnConfiguration/EmailSupport?action=print">
+<link rel="Up" href="/HelpOnConfiguration">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/HelpOnConfiguration/EmailSupport?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a href="/HelpOnConfiguration">HelpOnConfiguration</a></li><li><a class="backlink" title="Click to do a full-text search for this title" href="/HelpOnConfiguration/EmailSupport?action=fullsearch&amp;value=linkto%3A%22HelpOnConfiguration/EmailSupport%22&amp;context=180">EmailSupport</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/HelpOnConfiguration/EmailSupport">EmailSupport</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnConfiguration/EmailSupport?action=info">Info</a></li><li><a href="/HelpOnConfiguration/EmailSupport?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li><a href="#head-2abe27b068afff7d1248c3ffdc8920076ce7c07f">E-Mail Configuration</a><ol><li><a href="#head-153175076e8f24d471bcc980bebeb3da54a85875">Outgoing mails</a></li><li><a href="#head-c8e7589fc896596e1d9cf17522ca4a32c9e71a71">Incoming Mails (1.6 only)</a></li></ol><li><a href="#head-a8fe14ab0e43c1a891ff0fb7bef0e0f63d56dffa">E-Mail Features</a><ol><li><a href="#head-af01f3e2f44dcb56855265e9acb167c078f5ce6c">Sending Login Data</a></li><li><a href="#head-0b5d2f980bbfac9ea21fdb5342c543bd1100809f">Change Notification</a></li><li><a href="#head-2868f4588890f9ba2e07626b1698a91a37933c89">Receiving mails (1.6 only)</a><ol><li><a href="#head-4f82d68e7b9aba5fb268b962db6d828664455a0d">From</a></li><li><a href="#head-1c2e7f21ad93247013ceca56b0ddc290e67bb135">To</a></li><li><a href="#head-18b5033ef39c0160fae264f06a0790238de0c8a7">Subject</a></li><li><a href="#head-9f02beb2b9e306892e62037228459b48af75d5b2">Mail body</a></li><li><a href="#head-6dd275a841a3c0bb7f5e95a1728019b6122aed3c">Generated content</a></li><li><a href="#head-b6be4e0254e0ee4d040d00e62a01068585d7557b">Pagename generation</a></li></ol></li></ol></li></ol></div> <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867">
+<h1 id="head-2abe27b068afff7d1248c3ffdc8920076ce7c07f">E-Mail Configuration</h1>
+<span class="anchor" id="line-12"></span><p class="line862">See also <a href="/HelpOnConfiguration">HelpOnConfiguration</a>. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><p class="line867">
+<h2 id="head-153175076e8f24d471bcc980bebeb3da54a85875">Outgoing mails</h2>
+<span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line862">In order to enable support for outgoing mails, you must specify the <tt class="backtick">From:</tt> address with "<tt class="backtick">mail_from</tt>".  Furthermore, you must enable a transport, either by SMTP (use "<tt class="backtick">mail_smarthost</tt>" to enable it) or by sendmail (use "<tt class="backtick">mail_sendmail</tt>" to enable it). If you use "<tt class="backtick">mail_smarthost</tt>" and the server requires authentication, then set "<tt class="backtick">mail_login</tt>", too.  <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><dl><dt>mail_from</dt><dd><p class="line862">This value is used for the "<tt class="backtick">From:</tt>" and "<tt class="backtick">To:</tt>" headers in the emails sent (the "<tt class="backtick">To:</tt>" has email address privacy reasons, email is not really sent to this address, but we don't want to disclose any real recipient address). <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span></dd><dt>mail_smarthost</dt><dd><p class="line862">This is the IP or domain name of an FOLDOC:SMTP enabled server. On a Unix host, you can try to use <tt class="backtick">localhost</tt>; on a Windows machine this will normally be a machine in your LAN or some host of your ISP. <span class="anchor" id="line-21"></span></dd><dt>mail_login</dt><dd><p class="line862">This is only needed when you use <tt class="backtick">mail_smarthost</tt> and a server that requires SMTP AUTH to send mail; in that case, set this to the username and password separated by a space, i.e. <tt class="backtick">"user&nbsp;pwd"</tt>. <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span></dd><dt>mail_sendmail</dt><dd>This is a local command to run to send a message.  If set to e.g. '/usr/sbin/sendmail -t -i', use this sendmail command to send mail.  This is only useful on machines that have a mail transport agent installed. <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span></dd></dl><p class="line867">
+<h2 id="head-c8e7589fc896596e1d9cf17522ca4a32c9e71a71">Incoming Mails (1.6 only)</h2>
+<span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line862">If you want to import mails to your <a href="/MoinMoin">MoinMoin</a> wiki, i.e. allow it to receive and store the mails, you have to setup a few things. <span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><p class="line862">First you have to setup your mail server to pipe every new mail into <a href="/MoinMoin">MoinMoin</a>. The command  is <tt class="backtick">moin&nbsp;xmlrpc&nbsp;mailimport</tt>. Note that you can use the parameter <tt class="backtick">--config&nbsp;/path/to/dir</tt> to supply the path to a directory with a suitable <a href="/MoinMoin">MoinMoin</a> configuration file. Then you have ensure that there is a file called <tt class="backtick">mailimportconf.py</tt> in that directory. It has to look like this (there is a sample file shipped in <tt class="backtick">wiki/config</tt>): <span class="anchor" id="line-30"></span><pre># This secret has to be known by the wiki server
+<span class="anchor" id="line-31"></span>mailimport_secret = u"foo"
+<span class="anchor" id="line-32"></span>
+<span class="anchor" id="line-33"></span># The target URL
+<span class="anchor" id="line-34"></span>mailimport_url = u"http://localhost:81/?action=xmlrpc2"
+<span class="anchor" id="line-35"></span></pre><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line862">The secret is used to let the script authenticate itself at the wiki. The URL consists of the regular wiki URL and <tt class="backtick">?action=xmlrpc2</tt>. <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><p class="line874">Now you can configure the wiki. There are the following configuration options: <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><dl><dt>mail_import_subpage_template</dt><dd>This is the template for the pagename generated by the mail import code. See below for supported placeholders. <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span></dd><dt>mail_import_wiki_address</dt><dd><p class="line862">The e-mail address of the e-mails that should go into the wiki. <a href="/MoinMoin">MoinMoin</a> searches for this address to know the target pagename, it should match the address that is known to the mail server. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></dd><dt>mail_import_secret</dt><dd><p class="line862">The secret that matches the <tt class="backtick">mailimportconf.py</tt> configuration file. See above. <span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span></dd></dl><p class="line874">After you have configured the settings explained above, you should be able sending yourself mails. The actual usage is explained below. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><p class="line867">
+<h1 id="head-a8fe14ab0e43c1a891ff0fb7bef0e0f63d56dffa">E-Mail Features</h1>
+<span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line867"><a href="/MoinMoin">MoinMoin</a> currently offers two email-based services, which are explained in the following sections. <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line867">
+<h2 id="head-af01f3e2f44dcb56855265e9acb167c078f5ce6c">Sending Login Data</h2>
+<span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><p class="line862">If emailing is available, the <a href="/UserPreferences">UserPreferences</a> dialog is expanded with a field "Your email address" and a button " Mail me my account data ". The user can enter the email address he provided at registration and then gets an email containing all necessary data to re-login, after clicking the button. <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><p class="line867">
+<h2 id="head-0b5d2f980bbfac9ea21fdb5342c543bd1100809f">Change Notification</h2>
+<span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><p class="line862">Any user can subscribe to changes of wiki pages by either clicking on the envelope icon <img alt="Subscribe" height="10" src="/htdocs/modern/img/moin-subscribe.png" title="Subscribe" width="14" />, or by adding a regex to the "Subscribed wiki pages" field of his <a href="/UserPreferences">UserPreferences</a>. The system then sends, whenever a page is changed and the author doesn't uncheck the "Send mail notification" checkbox, an email with the author, a link to the page, and the diff of the change. The author does not get notified of his own changes. <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><p class="line867">
+<h2 id="head-2868f4588890f9ba2e07626b1698a91a37933c89">Receiving mails (1.6 only)</h2>
+<span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><p class="line867"><a href="/MoinMoin">MoinMoin</a> is able to receive mails. Mainly, you need to know what the e-mail address of the wiki is and send a mail to it. If you supply the target pagename before the wiki address (typing <tt class="backtick">MyWikiPage&nbsp;&lt;wiki@example.com&gt;</tt> for example), you will get your mail into the wiki quite easily. There are a few rules for your mail: <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><p class="line867">
+<h3 id="head-4f82d68e7b9aba5fb268b962db6d828664455a0d">From</h3>
+<span class="anchor" id="line-66"></span><p class="line874">We check the From: header if it is from a valid wiki user. Of course this is no real security, but maybe better than nothing. <span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><p class="line867">
+<h3 id="head-1c2e7f21ad93247013ceca56b0ddc290e67bb135">To</h3>
+<span class="anchor" id="line-69"></span><p class="line862">To: is (as usual) made of 2 parts, like <tt class="backtick">TEMPLATE&nbsp;&lt;wiki@example.org&gt;</tt>. We use the "realname" part to make up the target page name template (can contain special chars, blanks etc.) and the email address part to get it to the right destination. The simplest form of a target page name template is just a pagename like <a href="/WikiSandBox">WikiSandBox</a>. <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><p class="line874">See the example for the 2 different modes of operation. <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><p class="line867">
+<h3 id="head-18b5033ef39c0160fae264f06a0790238de0c8a7">Subject</h3>
+<span class="anchor" id="line-74"></span><p class="line862">If <tt class="backtick">To:</tt> has no target TEMPLATE, we use this field to extract target page <tt class="backtick">[TEMPLATE]</tt>. <span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><p class="line874">E.g.: <span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><pre>Subject: bla bla bla [PageName/$date]
+<span class="anchor" id="line-79"></span></pre><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><p class="line867">
+<h3 id="head-9f02beb2b9e306892e62037228459b48af75d5b2">Mail body</h3>
+<span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><p class="line862">The new page content is made from old page content (if any) plus the content of the email appended at the end. Page content will never get overwritten. Mails that are sent as <tt class="backtick">alternative</tt> are shown with their HTML body on the page which is processed by a HTML parser. <span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><p class="line874">E-Mail attachments will get put into page attachments under the page where the content will be put. Attachments will never get overwritten. The attachments will be linked from the content page (e.g. from a list of attachments at the end). <span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><p class="line867">
+<h3 id="head-6dd275a841a3c0bb7f5e95a1728019b6122aed3c">Generated content</h3>
+<span class="anchor" id="line-88"></span><p class="line862">If requested by a leading <tt class="backtick">+</tt>-sign (e.g. <tt class="backtick">+&nbsp;PageName/</tt>), <a href="/MoinMoin">MoinMoin</a> adds a table item to the parent page listing details about the e-mail. <span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><p class="line867">
+<h3 id="head-b6be4e0254e0ee4d040d00e62a01068585d7557b">Pagename generation</h3>
+<span class="anchor" id="line-91"></span><p class="line862">The placeholders <tt class="backtick">$from</tt> (containing the name of the sender), <tt class="backtick">$date</tt> (the date) and <tt class="backtick">$subject</tt> (subject line) are supported. <span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><p class="line874">The pagename is generated like explained below: <span class="anchor" id="line-94"></span><ol type="1"><li>Check if the wiki is in one of the address fields, get the pagename template from there if possible. <span class="anchor" id="line-95"></span></li><li>If there is no pagename template yet, look at the subject (explained above). <span class="anchor" id="line-96"></span></li><li><p class="line862">If the pagename ends with a slash, append the configuration setting <tt class="backtick">email_subpage_template</tt> (see above) to the pagename. <span class="anchor" id="line-97"></span></li><li>Expand the pagename template to get the actual pagename. <span class="anchor" id="line-98"></span></li></ol><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">HelpOnConfiguration/EmailSupport  (last modified 2006-06-30 07:21:42)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnConfiguration/EmailSupport?action=info">Info</a></li><li><a href="/HelpOnConfiguration/EmailSupport?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

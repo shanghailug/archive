@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>http://www.geekbone.org/docs/ircseminar/20040525.txt</title>
+</head>
+<body style="white-space: nowrap; font-size: 14px;">
+<pre>
+[21:09] * Lightning|Zzzz sets mode: +m
+[21:09] &lt;Lightning|Zzzz&gt; yule请吧
+[21:09] &lt;YuleShow&gt; ok
+[21:09] &lt;YuleShow&gt; HTML
+[21:10] &lt;YuleShow&gt; HTML是一个纯文本文档，以ASCII码的形式存在
+[21:10] &lt;YuleShow&gt; 一个HTML文档，以&lt;HTML&gt;开始，以&lt;/HTML&gt;结束
+[21:11] &lt;Lightning|Zzzz&gt; 要提问的话，请直接点yuleshow的小窗，yuleshow +voice
+[21:11] &lt;YuleShow&gt; 按照约定，解析器（ie, mozilla都是解析器）对&lt;/html&gt;以后的东西不作解析，但各个浏览器的功能不一样，有很大差别
+[21:12] &lt;YuleShow&gt; 一个HTML文档分为两个部分，HEAD和BODY
+[21:13] &lt;YuleShow&gt; 分别以&lt;HEAD&gt;&lt;/HEAD&gt;和&lt;BODY&gt;&lt;/BODY&gt;表示
+[21:14] &lt;YuleShow&gt; 所以，一个最简单的HTML，按约定应该表示成&lt;HTML&gt;&lt;HEAD&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;/BODY&gt;&lt;/HTML&gt;
+[21:16] &lt;YuleShow&gt; Brahman[zhangw_dot_net提醒：最简单的HTML可以省略HEAD部分
+[21:16] &lt;YuleShow&gt; 但常规来说，分为HEAD和BODY两部分
+[21:16] &lt;YuleShow&gt; HEAD里除了TITLE，其它基本全是不可显示部分
+[21:17] &lt;YuleShow&gt; BODY里除了脚本，其它还有许多不可显示的部分
+[21:17] &lt;YuleShow&gt; 先说HTML的TAG约定
+[21:17] &lt;YuleShow&gt; HTML要求TAG用&lt;&gt;符号包含
+[21:19] &lt;YuleShow&gt; 为了保持良好的风格，我建议如果使用&lt;&gt;的话，请以&lt;/&gt;结束，就象循环配套一样，一一对应
+[21:20] &lt;YuleShow&gt; 面且请以&lt;1&gt;&lt;2&gt;&lt;3&gt;&lt;/3&gt;&lt;/2&gt;&lt;/1&gt;的方式QIAN套
+[21:20] &lt;YuleShow&gt; 而不是&lt;1&gt;&lt;2&gt;&lt;/1&gt;&lt;/2&gt;&lt;3&gt;&lt;/3&gt;的方式
+[21:22] &lt;YuleShow&gt; 另外，有些象换行，横线之类的标记，建议使用&lt;BR /&gt;和&lt;HR /&gt;
+[21:22] &lt;YuleShow&gt; 这样的话，更符合SGML标准
+[21:22] &lt;YuleShow&gt; 也为将本的兼容性打好基础
+[21:23] &lt;YuleShow&gt; 这些TAG，我们通常称之为元素
+[21:23] &lt;YuleShow&gt; 我们回过头来讲
+[21:23] &lt;YuleShow&gt; &lt;HEAD&gt;里最重要，也最显性的一个元素是&lt;TITLE&gt;
+[21:23] &lt;YuleShow&gt; 这个TITLE
+[21:24] &lt;YuleShow&gt; 是显示在浏览器的标题栏里的
+[21:24] &lt;YuleShow&gt; 格式为&lt;Title&gt;title&lt;/Title&gt;
+[21:25] &lt;YuleShow&gt; 全套的格式为&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;Hello world!&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;/BODY&gt;&lt;/HEAD&gt;
+[21:26] &lt;YuleShow&gt; 如果大家有兴趣，可以把这句话拷贝下来，存成一个HTML文件（后缀，可以使用.html, 
+  .htm两种最常见的，其它的后缀视浏览器而定）
+[21:27] &lt;YuleShow&gt; 谢谢BRAHMAN,所有的TAG为了可读性的原因，推荐使用大写，虽然，大小写是无关的
+[21:28] &lt;YuleShow&gt; 纠正，刚才写错了&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;Hello world!&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;/BODY&gt;&lt;/HTML&gt;才是正错的
+[21:28] &lt;YuleShow&gt; 使用的TITLE，每篇HTML都可以有不同的标题，不会发生untitled document之类的糗事了
+[21:29] * zzzzzzzZ has joined #unix
+[21:30] &lt;YuleShow&gt; 而且许多搜索引擎的机器人，会自动解读&lt;TITLE&gt;&lt;/TITLE&gt;里的文本，把这些文本作为关键词考虑，使用TITLE元素，可以
+  增加你的网页被用户搜索到的可能
+[21:31] &lt;YuleShow&gt; 说到机器人，必须说到另一个元素，叫做META
+[21:31] &lt;YuleShow&gt; 许多朋友都不知道
+[21:32] &lt;YuleShow&gt; 或者知道了不会使用，那可全是GUI的错
+[21:33] &lt;YuleShow&gt; &lt;META&gt;是一个带有属性的元素，其中最关键的是关键词和语言两种属性
+[21:33] &lt;YuleShow&gt; 先说KEYWORD
+[21:34] &lt;YuleShow&gt; 格式是&lt;meta name=&quot;keywords&quot; content=&quot;keyword1, keyword2, keyworkd3&quot;&gt;
+[21:35] &lt;YuleShow&gt; 这些keyword1，2，3，是给搜索引擎的机器人看的，以后用户输入这些关键词的时候，你的网页就会被搜索到
+[21:35] &lt;YuleShow&gt; 不过，这些都是早期的搜索引擎机器人了
+[21:36] &lt;YuleShow&gt; 现在的GOOLE，可以分列下划线连接的文件名作为关键词，并且有全文字词出现频率的关键词引擎
+[21:36] &lt;YuleShow&gt; 还有一个很重要的META，是语言码
+[21:37] &lt;YuleShow&gt; 格式为&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=XXXXXXX&quot;&gt;
+[21:37] &lt;YuleShow&gt; 其中XXXXXX部分，表示语言代码，简体汉字可以是gb2312
+[21:37] &lt;YuleShow&gt; 繁体中文可以是big5
+[21:38] &lt;YuleShow&gt; 当然，最时兴的要算UTF-8了
+[21:38] &lt;YuleShow&gt; 所以这句也可以是&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+[21:41] &lt;YuleShow&gt; 在HEAD部分里，还有description, base, link, refresh之类的元素
+[21:41] &lt;YuleShow&gt; 这回就不说了
+[21:41] &lt;YuleShow&gt; 值得提一下的是&lt;SCRIPT&gt;元素
+[21:42] &lt;YuleShow&gt; 那是用来存放脚本的元素，当然也可以指向到外部的链接，建议放在&lt;HEAD&gt;里，因为&lt;HEAD&gt;较先被调入
+[21:43] &lt;YuleShow&gt; 至于脚本的写法，不在本课的范围之内，就不说了
+[21:43] &lt;YuleShow&gt; 讲到现在，总结一下
+[21:44] &lt;YuleShow&gt; 一个一般的HTML
+[21:44] &lt;YuleShow&gt; 或者说中文页面
+[21:45] &lt;YuleShow&gt; 基本上是这样的，&lt;HTML&gt;&lt;BODY&gt;&lt;meta name=&quot;keywords&quot; content=&quot;keyword1, keyword2, keyworkd3&quot;&gt;&lt;meta 
+  http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot;&gt;&lt;TITLE&gt;hello word&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;/BODY&gt;&lt;/HTML&gt;
+[21:46] * jam`as400 has joined #unix
+[21:46] &lt;YuleShow&gt; 有没有问题？
+[21:51] &lt;YuleShow&gt; 我们继续
+[21:51] &lt;YuleShow&gt; 接着说&lt;BODY&gt;元素
+[21:51] &lt;YuleShow&gt; BODY是指用户看到的部分，但BODY分为可视元素和不可视元素
+[21:52] &lt;YuleShow&gt; 先说可视元素
+[21:53] &lt;YuleShow&gt; 最简单的是标题，沿用的highlight的意思，此元素使用&lt;h1&gt;&lt;h2&gt;直到&lt;h6&gt;来表示可以分为六级的六个highlight
+[21:55] &lt;YuleShow&gt; 根据习惯，浏览器会依级别把H1到H6渲染成不同字体（由大到小）的显示方式，并且以独立行显示
+[21:56] &lt;YuleShow&gt; highlight的格式为&lt;h1&gt;this is a subtitle&lt;/h1&gt;
+[21:57] &lt;YuleShow&gt; 各种浏览器会highlight的渲染表现各不相同，但基本是以比较显眼的方式出现
+[21:59] &lt;YuleShow&gt; 然后是&lt;P&gt;元素，
+[21:59] &lt;YuleShow&gt; P元素可以成对出现，也可以单独出现，单独出现时表现为一个空的段落　
+[21:59] &lt;YuleShow&gt; P元素是由英文的paragraph而来
+[22:00] &lt;YuleShow&gt; 而空的段落也使得P可以做为一个空元素出现
+[22:03] &lt;YuleShow&gt; br是break的意思，表示一个换行
+[22:03] &lt;YuleShow&gt; 如果说这些都是视觉上的要求
+[22:04] &lt;YuleShow&gt; 那么关键的a元素来了
+[22:05] &lt;YuleShow&gt; a是一个有属性的元素
+[22:05] &lt;YuleShow&gt; 最重要的是，它可以建立LINK
+[22:06] &lt;YuleShow&gt; LINK是一个网页的生命，如果没有LINK，互联网就没法互联
+[22:07] &lt;YuleShow&gt; LINK的格式是&lt;A HREF=&quot;path&quot;&gt;content&lt;/A&gt;
+[22:08] &lt;YuleShow&gt; 这里的content，就是你mouse点上去会变成手的东西，也是缺省有下划线的东西，这个content可以是文本，图片，甚至是fl
+  ash的动画
+[22:09] &lt;YuleShow&gt; 而path呢，则很有讲究了
+[22:10] &lt;YuleShow&gt; 一种是绝对路径，如果你有张图在/home/www/website/mypictures/thispicture.jpg
+[22:10] &lt;YuleShow&gt; 而你的web根目录在/home/www/website
+[22:10] &lt;YuleShow&gt; 那么这张JPG
+[22:11] &lt;YuleShow&gt; 的绝对路径就是/mypictures/thispicture.jpg
+[22:11] &lt;YuleShow&gt; 同时，还有个相对路径的概念
+[22:11] &lt;YuleShow&gt; 如果你的HTML文件在/home/www/website/myhtml/thishtml.html
+[22:13] &lt;YuleShow&gt; 那么这张图片相对于这个HTML文件的路径就在../mypictures/thispicture.jpg
+[22:13] &lt;YuleShow&gt; 绝对路径和相对各有好处，绝对路径可以保证路径的正确性和可读性
+[22:14] &lt;YuleShow&gt; 而相对路径可以使路径层次简化，如果有二三十级的目录结构，相对路径可以大大减少路径的繁琐程度
+[22:15] &lt;YuleShow&gt; 今天最后再讲一个如何在网上显示图片　
+[22:15] &lt;YuleShow&gt; 图片使用的是img元素
+[22:16] &lt;YuleShow&gt; 格式为&lt;img src=&quot;path&quot;&gt;
+[22:16] &lt;YuleShow&gt; 规范一点可以写成&lt;img src=&quot;path&quot; /&gt;
+[22:16] &lt;YuleShow&gt; 我们称img是不成对，或者自成对元素
+[22:17] &lt;YuleShow&gt; 这里的path也同样符合前面说到的绝对路径和相对路径的概念
+[22:18] &lt;YuleShow&gt; 今天就说到这里，下回我们来说form，就是表单的写法
+[22:19] &lt;YuleShow&gt; 补充一句，minus网友提醒，按规范
+[22:19] &lt;YuleShow&gt; img元素有个alt属性
+[22:20] &lt;YuleShow&gt; 格式为&lt;img src=&quot;path&quot; alt=&quot;description&quot; width=&quot;size&quot; length=&quot;size&quot; /&gt;
+[22:20] &lt;YuleShow&gt; 这里的alt是alternative的意思
+[22:21] &lt;YuleShow&gt; 用于网带极慢或是图片调不出来时的提醒作用
+[22:21] &lt;YuleShow&gt; 错了，是height,不是legnth
+[22:22] &lt;YuleShow&gt; 今天说到这里，谢谢Brahman, InitX, pAtrick和minus的提醒和纠正
+</pre>
+<p><a href="/docs/viewtxt.php?file=ircseminar%2F20040525.txt&type=txt">Text Version</a></p>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>2005年夏季技术交流会 - ShangHai Linux User Group</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/rightsidebar/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/rightsidebar/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/rightsidebar/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/rightsidebar/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<div id="logo"><a href="/Geekbone">ShangHai Linux User Group</a></div>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A?action=fullsearch&amp;value=linkto%3A%222005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A%22&amp;context=180">2005年夏季技术交流会</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A">2005年夏季技术交流会</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A?action=info">Info</a></li><li><a href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A?action=login" id="login">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h3 id="head-cfcace129041289a5418345814795cb791ca40d4">一. 目的</h3>
+<span class="anchor" id="line-2"></span><ul><li style="list-style-type:none">交流技术 <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span></li></ul><p class="line867">
+<h3 id="head-6b1e54a77e7bef6cfea31175389e31aff34b08ef">二. 时间</h3>
+<span class="anchor" id="line-5"></span><ul><li style="list-style-type:none">2005年9月17日 13：00--17：00 <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span></li></ul><p class="line867">
+<h3 id="head-48175a3993c30799a69e5847e85d99d7ba9235ef">三. 地点</h3>
+<span class="anchor" id="line-8"></span><ul><li style="list-style-type:none">上海市卢湾区南昌路47号上海科学会堂一号楼1203室 <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span>联系电话：13701609862 公交926,42,920,911,986,36可达。 <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span>地铁一号线黄陂路站从一号口出站，向重庆中路方向走，经雁荡路走到南昌路右转。 <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></li></ul><p class="line867">
+<h3 id="head-e616cbf2ae57f75ed11ee8d5f64ac6b3f939c732">四. 主题</h3>
+<span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><ol type="1"><li>Garyshi主讲的GFS(Global File System) <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span>全局文件系统(GFS)是一种能使集群中的服务器直接访问位于同一存储设备上的同一文件系统的技术。由于其能极大降低集群的管理复杂性，并具有优越的性能和扩展性，在企业应用中有着广泛的前景。 <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><ol type="1"><li>基本概念 <span class="anchor" id="line-21"></span><ul><li>系统结构组成 <span class="anchor" id="line-22"></span></li><li>和NFS的区别 <span class="anchor" id="line-23"></span></li><li>性能扩展性 <span class="anchor" id="line-24"></span></li></ul></li><li>搭建和使用 <span class="anchor" id="line-25"></span><ul><li>软硬件需求 <span class="anchor" id="line-26"></span></li><li>可能的配置方式 <span class="anchor" id="line-27"></span></li><li>软件安装和配置 <span class="anchor" id="line-28"></span></li><li>管理工具和问题解决 <span class="anchor" id="line-29"></span></li></ul></li><li>实现技术 <span class="anchor" id="line-30"></span><ul><li>Red Hat对称集群架构(SCA) <span class="anchor" id="line-31"></span></li><li>分布式锁管理(DLM) <span class="anchor" id="line-32"></span></li></ul></li><li>其它相关的技术和产品 <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span></li></ol></li><li class="gap"><p class="line862">Posix主讲的 "Open<tt class="backtick"></tt>Source 与企业IT监管“ <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><p class="line862">介绍使用Open<tt class="backtick"></tt>Source软件实现企业IT管理的几大目标 <span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><ol type="1"><li>资产管理及发掘 <span class="anchor" id="line-39"></span></li><li>产能管理和预备 <span class="anchor" id="line-40"></span></li><li>配置及变更管理 <span class="anchor" id="line-41"></span></li><li>身份认证 <span class="anchor" id="line-42"></span></li><li>突发事件及问题管理 <span class="anchor" id="line-43"></span></li><li>基础构件及应用管理 <span class="anchor" id="line-44"></span></li><li>服务冲突及行为管理 <span class="anchor" id="line-45"></span></li><li>服务等级管理SLA <span class="anchor" id="line-46"></span></li></ol><p class="line862">对Open<tt class="backtick"></tt>Source软件与商业软件在企业IT管理领域的各自优劣面进行了比较分析。 <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span></li><li class="gap">Chaos主讲的 “使用Linux进行高性能计算” <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span>介绍Linux的高性能计算集群的搭建，了解构建集群的核心要素和主要方法，初步 了解对集群性能评价的依据，并对影响性能的因素进行简单讨论。 <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><ol type="1"><li>Beowulf, 定义，起源 <span class="anchor" id="line-53"></span></li><li>软件构成 <span class="anchor" id="line-54"></span><ol type="A"><li>Linux <span class="anchor" id="line-55"></span></li><li>MPI Library <span class="anchor" id="line-56"></span></li><li>科学计算核心软件库 <span class="anchor" id="line-57"></span></li><li>资源监控 <span class="anchor" id="line-58"></span></li><li>性能监控 <span class="anchor" id="line-59"></span></li></ol></li><li>硬件构成 <span class="anchor" id="line-60"></span><ol type="A"><li>计算结点的内存，CPU <span class="anchor" id="line-61"></span></li><li>网络 <span class="anchor" id="line-62"></span></li></ol></li><li>性能评价的依据 <span class="anchor" id="line-63"></span><ol type="A"><li>并行计算的原理 <span class="anchor" id="line-64"></span></li><li>影响性能的因素 <span class="anchor" id="line-65"></span></li></ol></li><li>对集群性能的检测 <span class="anchor" id="line-66"></span><ol type="A"><li>网络带宽和延迟 <span class="anchor" id="line-67"></span></li><li>HPL <span class="anchor" id="line-68"></span></li></ol></ol></ol><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">2005年夏季技术交流会  (last edited 2005-09-07 02:21:53 by <span title="Jamguo @ 60.63.156.168[60.63.156.168]"><a class="nonexistent" href="/Jamguo" title="Jamguo @ 60.63.156.168[60.63.156.168]">Jamguo</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

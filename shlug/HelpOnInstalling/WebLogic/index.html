@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>HelpOnInstalling/WebLogic - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/HelpOnInstalling/WebLogic?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/HelpOnInstalling/WebLogic?action=print">
+<link rel="Up" href="/HelpOnInstalling">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/HelpOnInstalling/WebLogic?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a href="/HelpOnInstalling">HelpOnInstalling</a></li><li><a class="backlink" title="Click to do a full-text search for this title" href="/HelpOnInstalling/WebLogic?action=fullsearch&amp;value=linkto%3A%22HelpOnInstalling/WebLogic%22&amp;context=180">WebLogic</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/HelpOnInstalling/WebLogic">HelpOnInstalling/WebLogic</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnInstalling/WebLogic?action=info">Info</a></li><li><a href="/HelpOnInstalling/WebLogic?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867">
+<h2 id="head-b9276a71fb049293bb632cfaf2d0624941c7ec02">Set up MoinMoin on Weblogic</h2>
+<span class="anchor" id="line-10"></span><p class="line862">Although this setup is tested and verified on Weblogic server 8.1 on Windows, it should be easily duplicated for other Weblogic versions on other platforms such as Unix. You will to do the following to enable <a href="/MoinMoin">MoinMoin</a> on Weblogic server: <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><ol type="1"><li>Download and install win32con module if you don't have that yet <span class="anchor" id="line-13"></span></li><li><p class="line862">Follow the steps outlined in <a href="/HelpOnInstalling/BasicInstallation">HelpOnInstalling/BasicInstallation</a> <span class="anchor" id="line-14"></span></li><li>Enable CGI servlet in Weblogic <span class="anchor" id="line-15"></span></li><li>Add wiki webapp for shared wiki resources <span class="anchor" id="line-16"></span></li><li>Add mywiki webapp <span class="anchor" id="line-17"></span></li><li>Fix application context issue <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span></li></ol><p class="line867">
+<h3 id="head-d7296e0f4c24906697f5f257f6fb7c4ecdf77671">config.xml for step 4 and step 5</h3>
+<span class="anchor" id="line-20"></span><p class="line867"><span class="anchor" id="line-21"></span><pre>    &lt;Application Deployed="true" Name="wiki"
+<span class="anchor" id="line-22"></span>        Path="d:\Python23\share\moin" StagedTargets="YourServer" TwoPhase="false"&gt;
+<span class="anchor" id="line-23"></span>        &lt;WebAppComponent Name="wiki" Targets="YourServer" URI="htdocs"/&gt;
+<span class="anchor" id="line-24"></span>    &lt;/Application&gt;
+<span class="anchor" id="line-25"></span>    &lt;Application Deployed="true" Name="mywiki" Path=".\applications"
+<span class="anchor" id="line-26"></span>        StagingMode="nostage" TwoPhase="true"&gt;
+<span class="anchor" id="line-27"></span>        &lt;WebAppComponent Name="mywiki" Targets="YourServer" URI="mywiki"/&gt;
+<span class="anchor" id="line-28"></span>    &lt;/Application&gt;
+<span class="anchor" id="line-29"></span>
+<span class="anchor" id="line-30"></span></pre><p class="line874"> <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line867">
+<h3 id="head-d7fe47442890bfab9b2d1b84efdf9f2ecb2523d1">web.xml for step 5</h3>
+<span class="anchor" id="line-33"></span><p class="line867"><span class="anchor" id="line-34"></span><pre>&lt;servlet&gt; 
+<span class="anchor" id="line-35"></span> &lt;servlet-name&gt;CGIServlet&lt;/servlet-name&gt; 
+<span class="anchor" id="line-36"></span> &lt;servlet-class&gt;weblogic.servlet.CGIServlet&lt;/servlet-class&gt; 
+<span class="anchor" id="line-37"></span> &lt;init-param&gt;  
+<span class="anchor" id="line-38"></span>  &lt;param-name&gt;cgiDir&lt;/param-name&gt;  
+<span class="anchor" id="line-39"></span>  &lt;param-value&gt;d:\moin\mywiki&lt;/param-value&gt; 
+<span class="anchor" id="line-40"></span> &lt;/init-param&gt;
+<span class="anchor" id="line-41"></span> &lt;init-param&gt;   
+<span class="anchor" id="line-42"></span>  &lt;param-name&gt;*.cgi&lt;/param-name&gt;   
+<span class="anchor" id="line-43"></span>  &lt;param-value&gt;d:\Python23\python.exe&lt;/param-value&gt;  
+<span class="anchor" id="line-44"></span> &lt;/init-param&gt;
+<span class="anchor" id="line-45"></span>&lt;/servlet&gt;
+<span class="anchor" id="line-46"></span>
+<span class="anchor" id="line-47"></span>&lt;servlet-mapping&gt;   
+<span class="anchor" id="line-48"></span> &lt;servlet-name&gt;CGIServlet&lt;/servlet-name&gt;   
+<span class="anchor" id="line-49"></span> &lt;url-pattern&gt;cgi/*&lt;/url-pattern&gt;
+<span class="anchor" id="line-50"></span>&lt;/servlet-mapping&gt;
+<span class="anchor" id="line-51"></span></pre><p class="line874"> <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line867">
+<h3 id="head-9830d557f31b7ed0497effe25b3da96823c1af3d">fix for application context issue</h3>
+<span class="anchor" id="line-54"></span><p class="line862">In the file <tt>moin.cgi</tt> there is a line reading <tt>request&nbsp;=&nbsp;RequestCGI()</tt>. You have to add <tt>properties&nbsp;=&nbsp;{'script_name':&nbsp;"/mywiki"&nbsp;+&nbsp;os.environ['SCRIPT_NAME']}&nbsp;</tt> in the parenthesis. This will let <a href="/MoinMoin">MoinMoin</a> generate correct URLs. <span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><p class="line862">You shall be able to access your <a href="/MoinMoin">MoinMoin</a> front page at <a class="http" href="http://localhost/mywiki/cgi/moin.cgi">http://localhost/mywiki/cgi/moin.cgi</a> after you have completed the setup steps above <span class="anchor" id="line-57"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">HelpOnInstalling/WebLogic  (last modified 2006-06-30 07:21:42)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnInstalling/WebLogic?action=info">Info</a></li><li><a href="/HelpOnInstalling/WebLogic?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

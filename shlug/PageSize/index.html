@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>PageSize - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/PageSize?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/PageSize?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/PageSize?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/PageSize?action=fullsearch&amp;value=linkto%3A%22PageSize%22&amp;context=180">PageSize</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/PageSize">PageSize</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/PageSize?action=info">Info</a></li><li><a href="/PageSize?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><p class="line867"><div class="message">Charts are not available!</div> <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line874">List of all pages, sorted by their size: <span class="anchor" id="line-11"></span><ol><li><tt>&nbsp;65274 </tt><a generated="1" href="/BadContent">BadContent</a></li><li><tt>&nbsp;28072 </tt><a generated="1" href="/WhyWikiWorks">WhyWikiWorks</a></li><li><tt>&nbsp;23638 </tt><a generated="1" href="/HelpOnConfiguration">HelpOnConfiguration</a></li><li><tt>&nbsp;15997 </tt><a generated="1" href="/HelpOnInstalling/ApacheOnLinux">HelpOnInstalling/ApacheOnLinux</a></li><li><tt>&nbsp;15177 </tt><a generated="1" href="/HelpOnAccessControlLists">HelpOnAccessControlLists</a></li><li><tt>&nbsp;14702 </tt><a generated="1" href="/HelpMiscellaneous/FrequentlyAskedQuestions">HelpMiscellaneous/FrequentlyAskedQuestions</a></li><li><tt>&nbsp;14168 </tt><a generated="1" href="/Geekbone">Geekbone</a></li><li><tt>&nbsp;13837 </tt><a generated="1" href="/HelpOnUpdating">HelpOnUpdating</a></li><li><tt>&nbsp;13626 </tt><a generated="1" href="/HelpOnInstalling/ApacheOnLinuxFtp">HelpOnInstalling/ApacheOnLinuxFtp</a></li><li><tt>&nbsp;12944 </tt><a generated="1" href="/HelpOnInstalling/ApacheOnWin32">HelpOnInstalling/ApacheOnWin32</a></li><li><tt>&nbsp;11563 </tt><a generated="1" href="/%E4%B8%AD%E5%9B%BDLinux%E6%97%A9%E6%9C%9F%E5%8E%86%E5%8F%B2%E7%9A%84%E5%9B%9E%E7%9C%B8">中国Linux早期历史的回眸</a></li><li><tt>&nbsp;11556 </tt><a generated="1" href="/HelpOnMacros">HelpOnMacros</a></li><li><tt>&nbsp;11517 </tt><a generated="1" href="/HelpOnParsers/ReStructuredText/RstPrimer">HelpOnParsers/ReStructuredText/RstPrimer</a></li><li><tt>&nbsp;11292 </tt><a generated="1" href="/HelpOnInstalling/InternetInformationServer">HelpOnInstalling/InternetInformationServer</a></li><li><tt>&nbsp;&nbsp;9866 </tt><a generated="1" href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0">Wind的RedHat9学习日记</a></li><li><tt>&nbsp;&nbsp;9720 </tt><a generated="1" href="/HelpOnInstalling/BasicInstallation">HelpOnInstalling/BasicInstallation</a></li><li><tt>&nbsp;&nbsp;9541 </tt><a generated="1" href="/HelpOnInstalling/ApacheWithModPython">HelpOnInstalling/ApacheWithModPython</a></li><li><tt>&nbsp;&nbsp;9351 </tt><a generated="1" href="/HelpOnInstalling/WikiInstanceCreation">HelpOnInstalling/WikiInstanceCreation</a></li><li><tt>&nbsp;&nbsp;8671 </tt><a generated="1" href="/HelpOnInstalling/FastCgi">HelpOnInstalling/FastCgi</a></li><li><tt>&nbsp;&nbsp;8546 </tt><a generated="1" href="/2004.05.25_yuleshow%E7%9A%84html%E8%AE%B2%E5%BA%A7log">2004.05.25 yuleshow的html讲座log</a></li><li><tt>&nbsp;&nbsp;7879 </tt><a generated="1" href="/HelpOnAuthentication">HelpOnAuthentication</a></li><li><tt>&nbsp;&nbsp;7862 </tt><a generated="1" href="/SyntaxReference">SyntaxReference</a></li><li><tt>&nbsp;&nbsp;7395 </tt><a generated="1" href="/HelpOnInstalling/StandaloneServer">HelpOnInstalling/StandaloneServer</a></li><li><tt>&nbsp;&nbsp;7308 </tt><a generated="1" href="/HelpMiscellaneous">HelpMiscellaneous</a></li><li><tt>&nbsp;&nbsp;7002 </tt><a generated="1" href="/HelpOnParsers/ReStructuredText">HelpOnParsers/ReStructuredText</a></li><li><tt>&nbsp;&nbsp;6971 </tt><a generated="1" href="/HelpOnTables">HelpOnTables</a></li><li><tt>&nbsp;&nbsp;6832 </tt><a generated="1" href="/HelpOnLinking">HelpOnLinking</a></li><li><tt>&nbsp;&nbsp;6801 </tt><a generated="1" href="/HelpOnActions">HelpOnActions</a></li><li><tt>&nbsp;&nbsp;6789 </tt><a generated="1" href="/HelpOnLanguages">HelpOnLanguages</a></li><li><tt>&nbsp;&nbsp;6587 </tt><a generated="1" href="/HelpOnActions/AttachFile">HelpOnActions/AttachFile</a></li><li><tt>&nbsp;&nbsp;6562 </tt><a generated="1" href="/HelpOnConfiguration/EmailSupport">HelpOnConfiguration/EmailSupport</a></li><li><tt>&nbsp;&nbsp;5940 </tt><a generated="1" href="/LocalSpellingWords">LocalSpellingWords</a></li><li><tt>&nbsp;&nbsp;5881 </tt><a generated="1" href="/HelpOnParsers">HelpOnParsers</a></li><li><tt>&nbsp;&nbsp;5616 </tt><a generated="1" href="/HelpOnInstalling">HelpOnInstalling</a></li><li><tt>&nbsp;&nbsp;5576 </tt><a generated="1" href="/HelpOnInstalling/TroubleShooting">HelpOnInstalling/TroubleShooting</a></li><li><tt>&nbsp;&nbsp;5438 </tt><a generated="1" href="/HelpOnUserPreferences">HelpOnUserPreferences</a></li><li><tt>&nbsp;&nbsp;5254 </tt><a generated="1" href="/HelpOnConfiguration/FileAttachments">HelpOnConfiguration/FileAttachments</a></li><li><tt>&nbsp;&nbsp;5098 </tt><a generated="1" href="/HelpOnInstalling/ApacheOnMacOsx">HelpOnInstalling/ApacheOnMacOsx</a></li><li><tt>&nbsp;&nbsp;5018 </tt><a generated="1" href="/HelpOnInstalling/MinimalWiki">HelpOnInstalling/MinimalWiki</a></li><li><tt>&nbsp;&nbsp;4900 </tt><a generated="1" href="/MoinMoin/InstallDocs">MoinMoin/InstallDocs</a></li><li><tt>&nbsp;&nbsp;4859 </tt><a generated="1" href="/SystemPagesInEnglishGroup">SystemPagesInEnglishGroup</a></li><li><tt>&nbsp;&nbsp;4838 </tt><a generated="1" href="/HelpOnPackageInstaller">HelpOnPackageInstaller</a></li><li><tt>&nbsp;&nbsp;4716 </tt><a generated="1" href="/HelpOnThemes">HelpOnThemes</a></li><li><tt>&nbsp;&nbsp;4689 </tt><a generated="1" href="/HelpOnConfiguration/IntegratingWithApache">HelpOnConfiguration/IntegratingWithApache</a></li><li><tt>&nbsp;&nbsp;4479 </tt><a generated="1" href="/unix%E7%A4%BC%E8%8A%82%E8%81%8A%E5%A4%A9%E6%83%AF%E4%BE%8B%E5%8F%82%E8%80%83%E9%9B%86">unix礼节聊天惯例参考集</a></li><li><tt>&nbsp;&nbsp;4369 </tt><a generated="1" href="/HelpOnNavigation">HelpOnNavigation</a></li><li><tt>&nbsp;&nbsp;4324 </tt><a generated="1" href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8">GeekBone专项基金的收支明细表</a></li><li><tt>&nbsp;&nbsp;4304 </tt><a generated="1" href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8">6月15日 Novell 高级工程师刘俊贤 irc nickname:AvengerMojo 访谈：SUSE 桌面应用</a></li><li><tt>&nbsp;&nbsp;4111 </tt><a generated="1" href="/HelpOnEditLocks">HelpOnEditLocks</a></li><li><tt>&nbsp;&nbsp;4083 </tt><a generated="1" href="/HelpOnProcessingInstructions">HelpOnProcessingInstructions</a></li><li><tt>&nbsp;&nbsp;3906 </tt><a generated="1" href="/HelpOnXmlPages">HelpOnXmlPages</a></li><li><tt>&nbsp;&nbsp;3818 </tt><a generated="1" href="/HelpOnMacros/MailTo">HelpOnMacros/MailTo</a></li><li><tt>&nbsp;&nbsp;3752 </tt><a generated="1" href="/IRC_%E9%81%93%E5%BE%B7">IRC 道德</a></li><li><tt>&nbsp;&nbsp;3710 </tt><a generated="1" href="/HelpOnLists">HelpOnLists</a></li><li><tt>&nbsp;&nbsp;3456 </tt><a generated="1" href="/HelpOnInstalling/TwistedWeb">HelpOnInstalling/TwistedWeb</a></li><li><tt>&nbsp;&nbsp;3406 </tt><a generated="1" href="/HelpOnAutoAdmin">HelpOnAutoAdmin</a></li><li><tt>&nbsp;&nbsp;3333 </tt><a generated="1" href="/HelpOnFormatting">HelpOnFormatting</a></li><li><tt>&nbsp;&nbsp;3252 </tt><a generated="1" href="/HelpOnConfiguration/ApacheVoodoo">HelpOnConfiguration/ApacheVoodoo</a></li><li><tt>&nbsp;&nbsp;3053 </tt><a generated="1" href="/HelpOnVariables">HelpOnVariables</a></li><li><tt>&nbsp;&nbsp;3002 </tt><a generated="1" href="/HelpOnMacros/Include">HelpOnMacros/Include</a></li><li><tt>&nbsp;&nbsp;2983 </tt><a generated="1" href="/MoinMoin">MoinMoin</a></li><li><tt>&nbsp;&nbsp;2891 </tt><a generated="1" href="/HelpOnGraphicalEditor">HelpOnGraphicalEditor</a></li><li><tt>&nbsp;&nbsp;2864 </tt><a generated="1" href="/HelpOnConfiguration/CascadingStyleSheets">HelpOnConfiguration/CascadingStyleSheets</a></li><li><tt>&nbsp;&nbsp;2825 </tt><a generated="1" href="/MoinMoin/TextFormatting">MoinMoin/TextFormatting</a></li><li><tt>&nbsp;&nbsp;2740 </tt><a generated="1" href="/HelpOnSpellCheck">HelpOnSpellCheck</a></li><li><tt>&nbsp;&nbsp;2504 </tt><a generated="1" href="/HelpOnPageCreation">HelpOnPageCreation</a></li><li><tt>&nbsp;&nbsp;2496 </tt><a generated="1" href="/HelpOnConfiguration/SurgeProtection">HelpOnConfiguration/SurgeProtection</a></li><li><tt>&nbsp;&nbsp;2466 </tt><a generated="1" href="/HelpOnSearching">HelpOnSearching</a></li><li><tt>&nbsp;&nbsp;2423 </tt><a generated="1" href="/DesktopEdition/HowToConfigure">DesktopEdition/HowToConfigure</a></li><li><tt>&nbsp;&nbsp;2297 </tt><a generated="1" href="/HelpOnInstalling/WebLogic">HelpOnInstalling/WebLogic</a></li><li><tt>&nbsp;&nbsp;2201 </tt><a generated="1" href="/HelpForBeginners">HelpForBeginners</a></li><li><tt>&nbsp;&nbsp;2168 </tt><a generated="1" href="/2005%E5%B9%B4%E5%A4%8F%E5%AD%A3%E6%8A%80%E6%9C%AF%E4%BA%A4%E6%B5%81%E4%BC%9A">2005年夏季技术交流会</a></li><li><tt>&nbsp;&nbsp;2160 </tt><a generated="1" href="/HelpOnUserHandling">HelpOnUserHandling</a></li><li><tt>&nbsp;&nbsp;2151 </tt><a generated="1" href="/site/sidemenu">site/sidemenu</a></li><li><tt>&nbsp;&nbsp;2120 </tt><a generated="1" href="/HelpOnConfiguration/SecurityPolicy">HelpOnConfiguration/SecurityPolicy</a></li><li><tt>&nbsp;&nbsp;2027 </tt><a generated="1" href="/HelpOnEditing/SubPages">HelpOnEditing/SubPages</a></li><li><tt>&nbsp;&nbsp;2025 </tt><a generated="1" href="/HelpOnMacros/MonthCalendar">HelpOnMacros/MonthCalendar</a></li><li><tt>&nbsp;&nbsp;1973 </tt><a generated="1" href="/HelpContents">HelpContents</a></li><li><tt>&nbsp;&nbsp;1944 </tt><a generated="1" href="/IrcLogs/2005-09-05">IrcLogs/2005-09-05</a></li><li><tt>&nbsp;&nbsp;1846 </tt><a generated="1" href="/WikiName">WikiName</a></li><li><tt>&nbsp;&nbsp;1758 </tt><a generated="1" href="/HelpOnEditing">HelpOnEditing</a></li><li><tt>&nbsp;&nbsp;1671 </tt><a generated="1" href="/SystemPagesGroup">SystemPagesGroup</a></li><li><tt>&nbsp;&nbsp;1652 </tt><a generated="1" href="/UserPreferences">UserPreferences</a></li><li><tt>&nbsp;&nbsp;1645 </tt><a generated="1" href="/HelpOnMacros/ImageLink">HelpOnMacros/ImageLink</a></li><li><tt>&nbsp;&nbsp;1597 </tt><a generated="1" href="/HelpOnSlideShows">HelpOnSlideShows</a></li><li><tt>&nbsp;&nbsp;1536 </tt><a generated="1" href="/HelpOnUpdatingPython">HelpOnUpdatingPython</a></li><li><tt>&nbsp;&nbsp;1524 </tt><a generated="1" href="/HelpOnCategories">HelpOnCategories</a></li><li><tt>&nbsp;&nbsp;1499 </tt><a generated="1" href="/WikiWikiWeb">WikiWikiWeb</a></li><li><tt>&nbsp;&nbsp;1467 </tt><a generated="1" href="/HelpMiscellaneous/ExperimentalFeatures">HelpMiscellaneous/ExperimentalFeatures</a></li><li><tt>&nbsp;&nbsp;1443 </tt><a generated="1" href="/HelpOnPageDeletion">HelpOnPageDeletion</a></li><li><tt>&nbsp;&nbsp;1428 </tt><a generated="1" href="/HelpOnSkins">HelpOnSkins</a></li><li><tt>&nbsp;&nbsp;1424 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/100_Text_markup">WikiCourse/BasicIntroduction/100 Text markup</a></li><li><tt>&nbsp;&nbsp;1383 </tt><a generated="1" href="/GeekBone%E7%9A%84%E8%B5%B7%E6%BA%90">GeekBone的起源</a></li><li><tt>&nbsp;&nbsp;1342 </tt><a generated="1" href="/InterWiki">InterWiki</a></li><li><tt>&nbsp;&nbsp;1334 </tt><a generated="1" href="/WikiSandBox">WikiSandBox</a></li><li><tt>&nbsp;&nbsp;1311 </tt><a generated="1" href="/FrontPage">FrontPage</a></li><li><tt>&nbsp;&nbsp;1310 </tt><a generated="1" href="/HelpOnHeadlines">HelpOnHeadlines</a></li><li><tt>&nbsp;&nbsp;1261 </tt><a generated="1" href="/WikiCourse/BasicIntroductionHandOut">WikiCourse/BasicIntroductionHandOut</a></li><li><tt>&nbsp;&nbsp;1234 </tt><a generated="1" href="/HelpForDevelopers">HelpForDevelopers</a></li><li><tt>&nbsp;&nbsp;1227 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/000_What_is_a_Wiki%3F">WikiCourse/BasicIntroduction/000 What is a Wiki?</a></li><li><tt>&nbsp;&nbsp;1205 </tt><a generated="1" href="/Tux%E5%B9%B4%E5%BF%97">Tux年志</a></li><li><tt>&nbsp;&nbsp;1137 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/110_Headlines_and_Paragraphs">WikiCourse/BasicIntroduction/110 Headlines and Paragraphs</a></li><li><tt>&nbsp;&nbsp;1134 </tt><a generated="1" href="/MissingHomePage">MissingHomePage</a></li><li><tt>&nbsp;&nbsp;1130 </tt><a generated="1" href="/HelpOnTemplates">HelpOnTemplates</a></li><li><tt>&nbsp;&nbsp;1128 </tt><a generated="1" href="/HelpOnAdministration">HelpOnAdministration</a></li><li><tt>&nbsp;&nbsp;1117 </tt><a generated="1" href="/FortuneCookies">FortuneCookies</a></li><li><tt>&nbsp;&nbsp;1090 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/200_Wikiquette">WikiCourse/BasicIntroduction/200 Wikiquette</a></li><li><tt>&nbsp;&nbsp;1086 </tt><a generated="1" href="/RecentChanges">RecentChanges</a></li><li><tt>&nbsp;&nbsp;1072 </tt><a generated="1" href="/HelpOnInstalling/AolServer">HelpOnInstalling/AolServer</a></li><li><tt>&nbsp;&nbsp;1036 </tt><a generated="1" href="/FindPage">FindPage</a></li><li><tt>&nbsp;&nbsp;1035 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/091_Tips_on_the_Editor">WikiCourse/BasicIntroduction/091 Tips on the Editor</a></li><li><tt>&nbsp;&nbsp;1033 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/191_Creating_new_Pages">WikiCourse/BasicIntroduction/191 Creating new Pages</a></li><li><tt>&nbsp;&nbsp;1032 </tt><a generated="1" href="/CategoryCategory">CategoryCategory</a></li><li><tt>&nbsp;&nbsp;1017 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/090_The_Editor">WikiCourse/BasicIntroduction/090 The Editor</a></li><li><tt>&nbsp;&nbsp;&nbsp;997 </tt><a generated="1" href="/SystemPagesSetup">SystemPagesSetup</a></li><li><tt>&nbsp;&nbsp;&nbsp;988 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/050_First_Steps">WikiCourse/BasicIntroduction/050 First Steps</a></li><li><tt>&nbsp;&nbsp;&nbsp;965 </tt><a generated="1" href="/HelpOnConfiguration/UserPreferences">HelpOnConfiguration/UserPreferences</a></li><li><tt>&nbsp;&nbsp;&nbsp;964 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/060_How_do_I_navigate%3F">WikiCourse/BasicIntroduction/060 How do I navigate?</a></li><li><tt>&nbsp;&nbsp;&nbsp;918 </tt><a generated="1" href="/HelpOnSlideShows/100_Creating_the_slides">HelpOnSlideShows/100 Creating the slides</a></li><li><tt>&nbsp;&nbsp;&nbsp;913 </tt><a generated="1" href="/WikiHomePage">WikiHomePage</a></li><li><tt>&nbsp;&nbsp;&nbsp;911 </tt><a generated="1" href="/SiteNavigation">SiteNavigation</a></li><li><tt>&nbsp;&nbsp;&nbsp;906 </tt><a generated="1" href="/HelpOnSlideShows/900_Last_but_not_least%3A_Running_your_presentation.">HelpOnSlideShows/900 Last but not least: Running your presentation.</a></li><li><tt>&nbsp;&nbsp;&nbsp;901 </tt><a generated="1" href="/HelpOnRules">HelpOnRules</a></li><li><tt>&nbsp;&nbsp;&nbsp;894 </tt><a generated="1" href="/XsltVersion">XsltVersion</a></li><li><tt>&nbsp;&nbsp;&nbsp;859 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/180_Macros">WikiCourse/BasicIntroduction/180 Macros</a></li><li><tt>&nbsp;&nbsp;&nbsp;851 </tt><a generated="1" href="/HelpOnSuperUser">HelpOnSuperUser</a></li><li><tt>&nbsp;&nbsp;&nbsp;825 </tt><a generated="1" href="/WikiCourse/BasicIntroduction">WikiCourse/BasicIntroduction</a></li><li><tt>&nbsp;&nbsp;&nbsp;807 </tt><a generated="1" href="/HelpOnSlideShows/000_Introduction">HelpOnSlideShows/000 Introduction</a></li><li><tt>&nbsp;&nbsp;&nbsp;803 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/195_Actions">WikiCourse/BasicIntroduction/195 Actions</a></li><li><tt>&nbsp;&nbsp;&nbsp;788 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/210_Organisation_and_Structure">WikiCourse/BasicIntroduction/210 Organisation and Structure</a></li><li><tt>&nbsp;&nbsp;&nbsp;769 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/150_Tables">WikiCourse/BasicIntroduction/150 Tables</a></li><li><tt>&nbsp;&nbsp;&nbsp;687 </tt><a generated="1" href="/MissingPage">MissingPage</a></li><li><tt>&nbsp;&nbsp;&nbsp;675 </tt><a generated="1" href="/WikiCourse">WikiCourse</a></li><li><tt>&nbsp;&nbsp;&nbsp;672 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/900_Exercises">WikiCourse/BasicIntroduction/900 Exercises</a></li><li><tt>&nbsp;&nbsp;&nbsp;653 </tt><a generated="1" href="/WikiCourse/BasicIntroduction/130_Lists">WikiCourse/BasicIntroduction/130 Lists</a></li><li><tt>&nbsp;&nbsp;&nbsp;593 </tt><a generated="1" href="/SlideShowHandOutTemplate">SlideShowHandOutTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;548 </tt><a generated="1" href="/HelpOnSmileys">HelpOnSmileys</a></li><li><tt>&nbsp;&nbsp;&nbsp;538 </tt><a generated="1" href="/DesktopEdition">DesktopEdition</a></li><li><tt>&nbsp;&nbsp;&nbsp;486 </tt><a generated="1" href="/CategoryTemplate">CategoryTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;479 </tt><a generated="1" href="/TitleIndex">TitleIndex</a></li><li><tt>&nbsp;&nbsp;&nbsp;461 </tt><a generated="1" href="/SlideShowTemplate">SlideShowTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;454 </tt><a generated="1" href="/PageHits">PageHits</a></li><li><tt>&nbsp;&nbsp;&nbsp;453 </tt><a generated="1" href="/WordIndex">WordIndex</a></li><li><tt>&nbsp;&nbsp;&nbsp;445 </tt><a generated="1" href="/EditedSystemPages">EditedSystemPages</a></li><li><tt>&nbsp;&nbsp;&nbsp;443 </tt><a generated="1" href="/CategoryHomepage">CategoryHomepage</a></li><li><tt>&nbsp;&nbsp;&nbsp;439 </tt><a generated="1" href="/AutoAdminGroup">AutoAdminGroup</a></li><li><tt>&nbsp;&nbsp;&nbsp;437 </tt><a generated="1" href="/HelpOnProcessors">HelpOnProcessors</a></li><li><tt>&nbsp;&nbsp;&nbsp;429 </tt><a generated="1" href="/AbandonedPages">AbandonedPages</a></li><li><tt>&nbsp;&nbsp;&nbsp;419 </tt><a generated="1" href="/%E8%AE%B2%E5%8F%91%E8%A1%8C%E7%89%88%E6%97%B6%E7%9A%84%E8%8C%83%E5%9B%B4%E6%8F%90%E8%A6%81">讲发行版时的范围提要</a></li><li><tt>&nbsp;&nbsp;&nbsp;401 </tt><a generated="1" href="/HelpIndex">HelpIndex</a></li><li><tt>&nbsp;&nbsp;&nbsp;387 </tt><a generated="1" href="/WantedPages">WantedPages</a></li><li><tt>&nbsp;&nbsp;&nbsp;380 </tt><a generated="1" href="/HelpTemplate">HelpTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;375 </tt><a generated="1" href="/EventStats">EventStats</a></li><li><tt>&nbsp;&nbsp;&nbsp;371 </tt><a generated="1" href="/%E9%87%87%E7%94%A8%E9%BE%99%E8%8A%AF2E%E8%8A%AF%E7%89%87%E7%9A%84%E7%A6%8F%E7%8F%91%E8%BF%B7%E4%BD%A0%E7%94%B5%E8%84%91%E7%9A%84%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%99">采用龙芯2E芯片的福珑迷你电脑的主板特写</a></li><li><tt>&nbsp;&nbsp;&nbsp;366 </tt><a generated="1" href="/PageSize">PageSize</a></li><li><tt>&nbsp;&nbsp;&nbsp;357 </tt><a generated="1" href="/RandomPage">RandomPage</a></li><li><tt>&nbsp;&nbsp;&nbsp;348 </tt><a generated="1" href="/site/sidemenu/default">site/sidemenu/default</a></li><li><tt>&nbsp;&nbsp;&nbsp;343 </tt><a generated="1" href="/OrphanedPages">OrphanedPages</a></li><li><tt>&nbsp;&nbsp;&nbsp;323 </tt><a generated="1" href="/SlideTemplate">SlideTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;310 </tt><a generated="1" href="/EventStats/UserAgents">EventStats/UserAgents</a></li><li><tt>&nbsp;&nbsp;&nbsp;309 </tt><a generated="1" href="/EventStats/HitCounts">EventStats/HitCounts</a></li><li><tt>&nbsp;&nbsp;&nbsp;298 </tt><a generated="1" href="/SystemInfo">SystemInfo</a></li><li><tt>&nbsp;&nbsp;&nbsp;277 </tt><a generated="1" href="/%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95">活动记录</a></li><li><tt>&nbsp;&nbsp;&nbsp;160 </tt><a generated="1" href="/%E9%BE%99%E8%8A%AF%E5%8F%B0%E5%BC%8F%E6%9C%BA%E7%85%A7%E7%89%87">龙芯台式机照片</a></li><li><tt>&nbsp;&nbsp;&nbsp;150 </tt><a generated="1" href="/HomepageTemplate">HomepageTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;116 </tt><a generated="1" href="/2006%E5%B9%B4%E5%B9%B4%E4%BC%9A%E6%88%90%E5%8A%9F%E4%B8%BE%E5%8A%9E">2006年年会成功举办</a></li><li><tt>&nbsp;&nbsp;&nbsp;&nbsp;74 </tt><a generated="1" href="/AdminGroup">AdminGroup</a></li><li><tt>&nbsp;&nbsp;&nbsp;&nbsp;64 </tt><a generated="1" href="/%E7%94%B1%E5%A7%9A%E9%A3%9E%E6%8B%8D%E6%91%84%E7%9A%84%E7%8E%B0%E5%9C%BA%E7%85%A7%E7%89%87">由姚飞拍摄的现场照片</a></li><li><tt>&nbsp;&nbsp;&nbsp;&nbsp;53 </tt><a generated="1" href="/%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%993">主板特写3</a></li><li><tt>&nbsp;&nbsp;&nbsp;&nbsp;53 </tt><a generated="1" href="/%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%991">主板特写1</a></li><li><tt>&nbsp;&nbsp;&nbsp;&nbsp;53 </tt><a generated="1" href="/%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%992">主板特写2</a></li><li><tt>&nbsp;&nbsp;&nbsp;&nbsp;50 </tt><a generated="1" href="/MoinPagesEditorGroup">MoinPagesEditorGroup</a></li><li><tt>&nbsp;&nbsp;&nbsp;&nbsp;47 </tt><a generated="1" href="/IrcLogs">IrcLogs</a></li><li><tt>&nbsp;&nbsp;&nbsp;&nbsp;29 </tt><a generated="1" href="/LocalBadContent">LocalBadContent</a></li><li><tt>&nbsp;&nbsp;&nbsp;&nbsp;29 </tt><a generated="1" href="/GNU/Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E7%94%9F%E6%88%90%E6%A0%91">GNU/Linux 发行版生成树</a></li></ol> <span class="anchor" id="line-12"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">PageSize  (last modified 2006-06-30 07:21:43)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/PageSize?action=info">Info</a></li><li><a href="/PageSize?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

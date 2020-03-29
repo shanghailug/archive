@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>IRC 道德 - ShangHai Linux User Group</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/rightsidebar/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/rightsidebar/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/rightsidebar/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/rightsidebar/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/IRC_%E9%81%93%E5%BE%B7?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/IRC_%E9%81%93%E5%BE%B7?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<div id="logo"><a href="/Geekbone">ShangHai Linux User Group</a></div>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/IRC_%E9%81%93%E5%BE%B7?action=fullsearch&amp;value=linkto%3A%22IRC+%E9%81%93%E5%BE%B7%22&amp;context=180">IRC 道德</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/IRC_%E9%81%93%E5%BE%B7">IRC 道德</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/IRC_%E9%81%93%E5%BE%B7?action=info">Info</a></li><li><a href="/IRC_%E9%81%93%E5%BE%B7?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="/IRC_%E9%81%93%E5%BE%B7?action=login" id="login">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">IRC（Internet Relay Chat，一种准实时聊天协议）目前是世界上使用最广泛的聊天用协议，为了保证聊天自然有序正常的发展，我们提倡IRC道德原则。 <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">所谓道德原则，既是大家公认的、但不是必须遵守的公理规则。（在某些管理十分严厉的IRC 频道，大多数道德原则就像法规一样，被克尽职守的OP严格的强制执行）因此，我们还是提倡您遵循IRC的道德原则。 <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">这些行为是道德的： <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><ol type="1"><li><p class="line862">不同的地方聊不同的但是相宜的内容。<br />
+众所周知，一个IRC的服务器上可以划分许多频道，除了综合频道外，大多数频道都有其讨论的主要范围，这个范围一般可以从该频道的名称中得到：如 #unix，一般是讨论*nix 类的计算机问题；#sjtu 显然是交大的校友会；爱好文学的朋友可以考虑考虑#literature,#rongshu之类；如果您想找男/女朋友#love 也许是一个不错的选择。另外，您也可以从该频道的主题（topic）和欢迎辞（onjoin）中得知这个频道当前的热点话题。在不同的地方应该聊合适的内容。 <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span></li><li class="gap"><p class="line862">言语文雅，举止文明。<br />
+虽然在网络上大多数情况下没人知道您是谁，（如果对面是电信的admin，那您想掩藏的机会都没有）但是文雅的言语和文明的举止依然是受人欢迎的。对于大多数人来说，聊天是一种固定的习惯，如果您谈吐得当，那么您将和他们有许多共同语言，同时，大家都享受到了聊天的乐趣。 <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span></li><li class="gap"><p class="line862">不提不合理的要求。<br />
+这些要求包括要帽子等等。对于人气比较低，或者管理比较混乱的频道，发帽子是一个抬升人气的一个常用的手段，但是作为OP的权限万一被滥用，将是IRC 聊天频道的灾难。因此大部分情况下，管理正常的和秩序井然的IRC频道往往不发帽子，设置连戴帽子的OP都没有。因为作为OP，都认识帽子的作用力，即使为了防止误操作引起的混乱，他们也不长时间带帽子。 <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span></li><li class="gap"><p class="line862">不大声喧哗。<br />
+虽然IRC使用的是文字的聊天方式，但是您仍然可以大声喧哗。比如：用与众不同的彩色字，用特别的前缀符号，贴文字图，大字符等等。虽然一般来说用什么颜色是您的自由，可是大多数情况下，我们不建议您用彩色字，对于多数的计算机工作者，他们由于长时间面对显示器，彩色字的辨认可能对他们的视力造成进一步的伤害。因此，对于许多计算机技术类频道，彩色字甚至白底黑字都是禁止的。特别的前后缀符号可能引起诵读障碍，文字图，大字符显然会造成其他人的视觉混乱。事实上，这并不是摆酷的合理方式。 <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span></li><li class="gap"><p class="line862">不过度重复和频繁出入某一频道。<br />
+在大多数情况下，其实重复不是必须的，那么请节约您和大家的字节流量。过多的重复将被认为是flood或者恶意刷屏，这将对其他人的正常聊天造成极大的妨碍。频繁出入一个频道和一个客人频繁出入主人的家一样，是不礼貌的，而且，该行为同样构成刷屏。如果是您的聊天设备或者通讯线路问题的话，请您先搞定这些设备，否则对于阁下和其他正常聊天的人来说，都是一件非常恼火的事情。 <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span></li><li class="gap"><p class="line862">不做无意义的广告。<br />
+精彩的电视剧里面插播的广告令您恼火么？同理。 <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span></li></ol><p class="line874">下面的情况是绝对不道德的。 <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><ol type="1"><li>公开实施对他人谩骂、侮辱、人身攻击等。 <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span></li><li class="gap">恶意刷屏和flood。 <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span></li><li class="gap">乱开他人的小窗，并对之非礼。 <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span></li><li class="gap">通过非法途径对他人实施攻击，如nuke等。 <span class="anchor" id="line-28"></span></li></ol><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">IRC 道德  (last edited 2005-09-01 00:16:16 by <span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

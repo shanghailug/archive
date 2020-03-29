@@ -1,0 +1,461 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>HelpOnParsers - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/HelpOnParsers?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/HelpOnParsers?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/HelpOnParsers?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/HelpOnParsers?action=fullsearch&amp;value=linkto%3A%22HelpOnParsers%22&amp;context=180">HelpOnParsers</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/HelpOnParsers">HelpOnParsers</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnParsers?action=info">Info</a></li><li><a href="/HelpOnParsers?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li><a href="#head-5b3d946c931911de16a868ceb5a042347e610706">Parsers</a><ol><li><a href="#head-a5dc54c62208871d6f3776dd13e73d987dcec824">ParserBase</a><ol><li><a href="#head-e17c9e128a986f732bc4bc47a16e1c1e23025c9e">cplusplus</a></li><li><a href="#head-6d4eec6b7223c46f753efe0c5ce3fc9fd718337e">java</a></li><li><a href="#head-9f13fe6f4f08a6560bb8f513ca3d63e468af50b9">pascal</a></li></ol><li><a href="#head-474af3fad5bebb871cd2f1bbdf3d88955696e628">python</a></li><li><a href="#head-fa530727328a53e7ef156119ed30489a62abc02f">IRC</a></li><li><a href="#head-3f3fb0f66200688a41639605c3238f6acf3ee8b1">CSV</a></li><li><a href="#head-bb5650b9444e8535ed5cdf7b3a52a6dd1241811c">reStructuredText</a></li><li><a href="#head-0c084875e8c8ba3b308fed63eb6bcae0f6de55c5">XML/XSLT/DocBook</a></li></ol></li></ol></div> <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line867">
+<h1 id="head-5b3d946c931911de16a868ceb5a042347e610706">Parsers</h1>
+<span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line862">Parsers go through the contents of a page to create a sequence of formatter calls which in sequence create some readable output. <a href="/MoinMoin">MoinMoin</a> will choose the parser for a page using different techniques: FORMAT Processing Instruction (see <a href="/HelpOnProcessingInstructions">HelpOnProcessingInstructions</a>) and code display regions (see <a href="/HelpOnFormatting">HelpOnFormatting</a>). <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><p class="line862">A <tt class="backtick">#FORMAT</tt> pi can be used to tell <a href="/MoinMoin">MoinMoin</a> which parser to use for the whole page content. By default this is the <em>wiki</em> parser. Example: <pre>#FORMAT cplusplus 
+<span class="anchor" id="line-15"></span>... some C++ source ...
+<span class="anchor" id="line-16"></span></pre><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line862">With the use of code display regions, a parser can be applied to only a part of a page (this was a processor region in earlier versions of Moin). You specify which parser to call by using a bang path-like construct in the first line. A bang path is a concept known from Unix command line scripts, where they serve the exact same purpose: the first line tells the shell what program to start to process the remaining lines of the script. Example: <span class="anchor" id="line-19"></span><pre>{ { {#!CSV
+<span class="anchor" id="line-20"></span>a,b,c
+<span class="anchor" id="line-21"></span>d,e,f
+<span class="anchor" id="line-22"></span>} } }
+<span class="anchor" id="line-23"></span></pre><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><p class="line862">For more information on the possible markup, see <a href="/HelpOnEditing">HelpOnEditing</a>.  <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line867">
+<h2 id="head-a5dc54c62208871d6f3776dd13e73d987dcec824">ParserBase</h2>
+<span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><p class="line867">ParserBase is a parser utility class used to produce colorized source displays. It is easily extended. The HTML Formatter will render such code displays with switchable linenumbers, if the browser supports DOM and JavaScript. <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><p class="line862">A ParserBase colorization parser understands the following arguments to a <tt class="backtick">#FORMAT</tt> pi or a hashbang line. Just add those arguments after the name of the parser (<tt class="backtick">#FORMAT&nbsp;python&nbsp;start=10&nbsp;step=10&nbsp;numbering=on</tt> or <tt class="backtick">#!python&nbsp;numbering=off</tt>). <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><dl><dt>numbering</dt><dd>if line numbering should be added. defaults to 'on'. possible values: 'on', 'off' (no linenumbers, but javascript to add them), 'disable' (no line numbers at all) <span class="anchor" id="line-34"></span></dd><dt>start</dt><dd>where to start with numbering. defaults to 1 <span class="anchor" id="line-35"></span></dd><dt>step</dt><dd>increment to the linenumber. defaults to 1 <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span></dd></dl><p class="line867"><a href="/MoinMoin">MoinMoin</a> comes with a few examples from which you can go on: <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><p class="line867">
+<h3 id="head-e17c9e128a986f732bc4bc47a16e1c1e23025c9e">cplusplus</h3>
+<span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><p class="line867"><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c))
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        s.className = 'LineNumber'
+        s.appendChild(document.createTextNode(nformat(n,4,' ')));
+        n += nstep;
+        if (l.childNodes.length)
+          l.insertBefore(s, l.firstChild)
+        else
+          l.appendChild(s)
+      }
+      l = l.nextSibling;
+    }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c))
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-c8af74bda6d0a6dcf4fe60216e146c7945313d11_000\', 1, 1);" \
+                class="codenumbers">切换行号显示<\/a>');
+</script>
+<pre dir="ltr" id="CA-c8af74bda6d0a6dcf4fe60216e146c7945313d11_000" lang="en"><span class="line"><span class="LineNumber">   1 </span><span class="ResWord">int</span> <span class="ID">main</span><span class="SPChar">(</span><span class="ResWord">int</span> <span class="ID">argc</span><span class="SPChar">,</span> <span class="ResWord">char</span> <span class="SPChar">*</span><span class="SPChar">*</span><span class="ID">argv</span><span class="SPChar">)</span> <span class="SPChar">{</span></span>
+<span class="line"><span class="LineNumber">   2 </span>  <span class="ResWord">return</span> <span class="Number">0</span><span class="SPChar">;</span></span>
+<span class="line"><span class="LineNumber">   3 </span><span class="SPChar">}</span></span>
+</pre></div><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><p class="line867">
+<h3 id="head-6d4eec6b7223c46f753efe0c5ce3fc9fd718337e">java</h3>
+<span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><p class="line867"><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-a1e49b2b9c45fe86836287323d723b12278329b6_001\', 1, 1);" \
+                class="codenumbers">切换行号显示<\/a>');
+</script>
+<pre dir="ltr" id="CA-a1e49b2b9c45fe86836287323d723b12278329b6_001" lang="en"><span class="line"><span class="LineNumber">   1 </span><span class="ResWord">import</span> <span class="ID">java</span><span class="SPChar">.</span><span class="ID">util</span><span class="SPChar">.</span><span class="ID">Date</span><span class="SPChar">;</span></span>
+<span class="line"><span class="LineNumber">   2 </span><span class="ResWord">import</span> <span class="ID">java</span><span class="SPChar">.</span><span class="ID">util</span><span class="SPChar">.</span><span class="ID">Calendar</span><span class="SPChar">;</span></span>
+<span class="line"><span class="LineNumber">   3 </span></span>
+<span class="line"><span class="LineNumber">   4 </span><span class="ResWord">public</span> <span class="ResWord">class</span> <span class="ID">IntDate</span></span>
+<span class="line"><span class="LineNumber">   5 </span><span class="SPChar">{</span></span>
+<span class="line"><span class="LineNumber">   6 </span>  <span class="ResWord">public</span> <span class="ResWord">static</span> <span class="ID">Date</span> <span class="ID">getDate</span><span class="SPChar">(</span><span class="ID">String</span> <span class="ID">year</span><span class="SPChar">,</span> <span class="ID">String</span> <span class="ID">month</span><span class="SPChar">,</span> <span class="ID">String</span> <span class="ID">day</span><span class="SPChar">)</span></span>
+<span class="line"><span class="LineNumber">   7 </span>    <span class="SPChar">{</span></span>
+<span class="line"><span class="LineNumber">   8 </span>      <span class="Comment">// Date(int, int, int) has been deprecated, so use Calendar to</span></span>
+<span class="line"><span class="LineNumber">   9 </span>      <span class="Comment">// set the year, month, and day.</span></span>
+<span class="line"><span class="LineNumber">  10 </span>      <span class="ID">Calendar</span> <span class="ID">c</span> <span class="SPChar">=</span> <span class="ID">Calendar</span><span class="SPChar">.</span><span class="ID">getInstance</span><span class="SPChar">(</span><span class="SPChar">)</span><span class="SPChar">;</span></span>
+<span class="line"><span class="LineNumber">  11 </span>      <span class="Comment">// Convert each argument to int.</span></span>
+<span class="line"><span class="LineNumber">  12 </span>      <span class="ID">c</span><span class="SPChar">.</span><span class="ID">set</span><span class="SPChar">(</span><span class="ID">Integer</span><span class="SPChar">.</span><span class="ID">parseInt</span><span class="SPChar">(</span><span class="ID">year</span><span class="SPChar">)</span><span class="SPChar">,</span><span class="ID">Integer</span><span class="SPChar">.</span><span class="ID">parseInt</span><span class="SPChar">(</span><span class="ID">month</span><span class="SPChar">)</span><span class="SPChar">,</span><span class="ID">Integer</span><span class="SPChar">.</span><span class="ID">parseInt</span><span class="SPChar">(</span><span class="ID">day</span><span class="SPChar">)</span><span class="SPChar">)</span><span class="SPChar">;</span></span>
+<span class="line"><span class="LineNumber">  13 </span>      <span class="ResWord">return</span> <span class="ID">c</span><span class="SPChar">.</span><span class="ID">getTime</span><span class="SPChar">(</span><span class="SPChar">)</span><span class="SPChar">;</span></span>
+<span class="line"><span class="LineNumber">  14 </span>    <span class="SPChar">}</span></span>
+<span class="line"><span class="LineNumber">  15 </span><span class="SPChar">}</span></span>
+</pre></div><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><p class="line867">
+<h3 id="head-9f13fe6f4f08a6560bb8f513ca3d63e468af50b9">pascal</h3>
+<span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><p class="line867"><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-5b038b58a5d96f18c97739a9b1eb0c7177181e06_002\', 1, 1);" \
+                class="codenumbers">切换行号显示<\/a>');
+</script>
+<pre dir="ltr" id="CA-5b038b58a5d96f18c97739a9b1eb0c7177181e06_002" lang="en"><span class="line"><span class="LineNumber">   1 </span><span class="ResWord">function</span> <span class="ID">TRegEx</span><span class="SPChar">.</span><span class="ID">Match</span><span class="SPChar">(</span><span class="ResWord">const</span> <span class="ID">s</span><span class="SPChar">:</span><span class="ID">string</span><span class="SPChar">)</span><span class="SPChar">:</span><span class="ResWord">boolean</span><span class="SPChar">;</span></span>
+<span class="line"><span class="LineNumber">   2 </span><span class="ResWord">var</span></span>
+<span class="line"><span class="LineNumber">   3 </span>    <span class="ID">l</span><span class="SPChar">,</span><span class="ID">i</span> <span class="SPChar">:</span> <span class="ResWord">integer</span><span class="SPChar">;</span></span>
+<span class="line"><span class="LineNumber">   4 </span><span class="ResWord">begin</span></span>
+<span class="line"><span class="LineNumber">   5 </span>    <span class="ID">result</span> <span class="SPChar">:</span><span class="SPChar">=</span> <span class="ID">MatchPos</span><span class="SPChar">(</span><span class="ID">s</span><span class="SPChar">,</span><span class="ID">l</span><span class="SPChar">,</span><span class="ID">i</span><span class="SPChar">)</span><span class="SPChar">;</span></span>
+<span class="line"><span class="LineNumber">   6 </span><span class="ResWord">end</span><span class="SPChar">;</span></span>
+</pre></div><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><p class="line867">
+<h2 id="head-474af3fad5bebb871cd2f1bbdf3d88955696e628">python</h2>
+<span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><p class="line862">Colorizes python code. It is not derived from Parser<tt class="backtick"></tt>Basem, but it allows the same arguments as the ParserBase parsers. <span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><p class="line867"><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-78c687fbb04d58d5ee5c7f64fd6654a3595f0c88_003\', 1, 1);" \
+                class="codenumbers">切换行号显示<\/a>');
+</script>
+<pre dir="ltr" id="CA-78c687fbb04d58d5ee5c7f64fd6654a3595f0c88_003" lang="en"><span class="line"><span class="LineNumber">   1 </span><span class="ResWord">def</span> <span class="ID">hello</span><span class="Operator">(</span><span class="Operator">)</span><span class="Operator">:</span></span>
+<span class="line"><span class="LineNumber">   2 </span>    <span class="ResWord">print</span> <span class="String">"Hello World!"</span><span class="Text"></span></span>
+</pre></div><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><p class="line867">
+<h2 id="head-fa530727328a53e7ef156119ed30489a62abc02f">IRC</h2>
+<span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><p class="line874">Puts an IRC log into a table. <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><p class="line867"><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><div><table><tbody><tr>  <td>23:18</td>
+  <td>     jroes</td>
+  <td>ah</td>
+</tr>
+<tr>  <td>23:19</td>
+  <td>     jroes</td>
+  <td>hm, i like the way {{{ works, but i was hoping the lines would wrap</td>
+</tr>
+<tr>  <td>23:36</td>
+  <td> ThomasWal</td>
+  <td>you could also write a parser or processor</td>
+</tr>
+<tr>  <td>23:38</td>
+  <td>     jroes</td>
+  <td>i could?</td>
+</tr>
+<tr>  <td>23:38</td>
+  <td>     jroes</td>
+  <td>would that require modification on the moin end though?</td>
+</tr>
+<tr>  <td>23:38</td>
+  <td>     jroes</td>
+  <td>i cant change the wiki myself :x</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><p class="line867"><span class="anchor" id="csvparser"></span> <span class="anchor" id="line-102"></span>
+<h2 id="head-3f3fb0f66200688a41639605c3238f6acf3ee8b1">CSV</h2>
+<span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line862">The CSV parser works on so-called <em>comma separated values</em>, though the comma is now usually a semicolon.  <span class="anchor" id="line-105"></span>The first line is considered to contain column titles that are rendered in <strong>bold</strong>, so when you don't want table headers, leave the first line empty. <span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><p class="line862">The bang path can contain "<tt class="backtick">-</tt><em>index</em>" arguments, to hide certain columns from the output; column indices are counted starting from 1. <span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><p class="line862">Any other argument is treated as the seperator. This allows you to use e.g. commas (<tt class="backtick">,</tt>) instead of semicolons (<tt class="backtick">;</tt>). If you do not supply a separator, <tt class="backtick">;</tt> will be used. See the examples below. <span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><ul><li style="list-style-type:none"><p class="line891"><img alt="/!\" height="15" src="/htdocs/modern/img/alert.png" title="/!\" width="15" /> The current code contains a <em>very</em> simple CSV parser. <span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span></li></ul><p class="line867">MoinMoin 1.3 - clipping of the patch history: <span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><div><table><tbody><tr>  <td>patch-366</td>
+  <td>make _normalize_text public method</td>
+  <td>Nir Soffer</td>
+</tr>
+<tr>  <td>patch-367</td>
+  <td>fixed failing test wikiutil: good system page names</td>
+  <td>Nir Soffer</td>
+</tr>
+<tr>  <td>patch-368</td>
+  <td>Fixed DeprecationWarning in RandomPage.py and an unused import in twistedmoin.py</td>
+  <td>Alexander Schremmer</td>
+</tr>
+<tr>  <td>patch-369</td>
+  <td>remove duplicate code in formatter.base</td>
+  <td>Thomas Waldmann</td>
+</tr>
+<tr>  <td>patch-370</td>
+  <td>fixed long int in mig3</td>
+  <td>Thomas Waldmann</td>
+</tr>
+<tr>  <td>patch-371</td>
+  <td>fixed unicode error on eventlog</td>
+  <td>Nir Soffer</td>
+</tr>
+<tr>  <td>patch-372</td>
+  <td>fixed util.web.makeQueryString and Page.url</td>
+  <td>Nir Soffer</td>
+</tr>
+<tr>  <td>patch-373</td>
+  <td>fixed again non ascii http_referer</td>
+  <td>Nir Soffer</td>
+</tr>
+<tr>  <td>patch-374</td>
+  <td>CSV.py supports different separators now</td>
+  <td>Alexander Schremmer</td>
+</tr>
+<tr>  <td>patch-375</td>
+  <td>improved searchform behavior on Mozilla/Firefox</td>
+  <td>Nir Soffer</td>
+</tr>
+<tr>  <td>patch-376</td>
+  <td>More correct script for actions menu init</td>
+  <td>Nir Soffer</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-127"></span><p class="line867"><a href="/MoinMoin">MoinMoin</a> Version History: <span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><div><table><tbody><tr>  <td><strong>Version</strong></td>
+  <td><strong>Date</strong></td>
+</tr>
+<tr>  <td>0.11</td>
+  <td>2002-03-11</td>
+</tr>
+<tr>  <td>0.10</td>
+  <td>2001-10-28</td>
+</tr>
+<tr>  <td>0.9</td>
+  <td>2001-05-07</td>
+</tr>
+<tr>  <td>0.8</td>
+  <td>2001-01-23</td>
+</tr>
+<tr>  <td>0.7</td>
+  <td>2000-12-06</td>
+</tr>
+<tr>  <td>0.6</td>
+  <td>2000-12-04</td>
+</tr>
+<tr>  <td>0.5</td>
+  <td>2000-11-17</td>
+</tr>
+<tr>  <td>0.4</td>
+  <td>2000-11-01</td>
+</tr>
+<tr>  <td>0.3</td>
+  <td>2000-10-25</td>
+</tr>
+<tr>  <td>0.2</td>
+  <td>2000-08-26</td>
+</tr>
+<tr>  <td>0.1</td>
+  <td>2000-07-29</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><p class="line867">
+<h2 id="head-bb5650b9444e8535ed5cdf7b3a52a6dd1241811c">reStructuredText</h2>
+<span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><p class="line862">See <a href="/HelpOnParsers/ReStructuredText">/ReStructuredText</a> <span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><p class="line867">
+<h2 id="head-0c084875e8c8ba3b308fed63eb6bcae0f6de55c5">XML/XSLT/DocBook</h2>
+<span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><p class="line862">See <a href="/HelpOnXmlPages">HelpOnXmlPages</a>. <span class="anchor" id="line-149"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">HelpOnParsers  (last modified 2006-06-30 07:21:43)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnParsers?action=info">Info</a></li><li><a href="/HelpOnParsers?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

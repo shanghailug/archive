@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,follow">
+
+<title>RecentChanges - ShangHai Linux User Group</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/rightsidebar/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/rightsidebar/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/rightsidebar/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/rightsidebar/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/RecentChanges?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/RecentChanges?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<div id="logo"><a href="/Geekbone">ShangHai Linux User Group</a></div>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/RecentChanges?action=fullsearch&amp;value=linkto%3A%22RecentChanges%22&amp;context=180">RecentChanges</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink current"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/RecentChanges?action=info">Info</a></li><li><a href="/RecentChanges?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="/RecentChanges?action=login" id="login">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><div><table style="width: 100%;  background: #E6EAF0;  font-size: 0.85em;"><tbody><tr>  <td><p class="line862"> <div dir="ltr" id="RandomQuote_FortuneCookies" lang="en"><span class="anchor" id="top_RandomQuote_FortuneCookies"></span>
+<span class="anchor" id="line-1"></span><p class="line862">Hint: you can add your favorite pages to your navibar. See your Quicklinks list in <a href="/UserPreferences">UserPreferences</a>. <span class="anchor" id="bottom_RandomQuote_FortuneCookies"></span></div></td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867"><div class="recentchanges" lang="en" dir="ltr">
+<div>
+<p></p>
+</div>
+<table>
+<tr class="rcdaybreak"><td colspan="6"><strong>2008-03-05</strong></td></tr>
+<tr>
+<td class="rcicon1"><a href="/Geekbone?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/rightsidebar/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
+<td class="rcpagelink"><a href="/Geekbone">Geekbone</a></td>
+<td class="rctime">11:21</td>
+<td class="rcicon2"><a href="/Geekbone?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 48.199.171.61.broad.xw.sh.dynamic.163data.com.cn[61.171.199.48]"><a href="/Lightning" title="Lightning @ 48.199.171.61.broad.xw.sh.dynamic.163data.com.cn[61.171.199.48]">Lightning</a></span>&nbsp;[1-6]</td>
+<td class="rccomment"><tt>#04</tt>&nbsp;Upload of attachment '45_7.png'.</td>
+</tr>
+<tr>
+<td class="rcicon1"><a href="/BadContent?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/rightsidebar/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
+<td class="rcpagelink"><a href="/BadContent">BadContent</a></td>
+<td class="rctime">11:21</td>
+<td class="rcicon2"><a href="/BadContent?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="??? @ Antispam subsystem[]">Antispam subsystem</span>&nbsp;[1-2]</td>
+<td class="rccomment"></td>
+</tr>
+<tr class="rcdaybreak"><td colspan="6"><strong>2007-12-18</strong></td></tr>
+<tr>
+<td class="rcicon1"><a href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/rightsidebar/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
+<td class="rcpagelink"><a href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8">Geek Bone专项基金的收支明细表</a></td>
+<td class="rctime">04:54</td>
+<td class="rcicon2"><a href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 177.240.35.58.broad.xw.sh.dynamic.163data.com.cn[58.35.240.177]"><a href="/Lightning" title="Lightning @ 177.240.35.58.broad.xw.sh.dynamic.163data.com.cn[58.35.240.177]">Lightning</a></span></td>
+<td class="rccomment"></td>
+</tr>
+<tr class="rcdaybreak"><td colspan="6"><strong>2007-10-17</strong></td></tr>
+<tr>
+<td class="rcicon1"></td>
+<td class="rcpagelink"><a href="/Lightning">Lightning</a></td>
+<td class="rctime">16:06</td>
+<td class="rcicon2"><a href="/Lightning?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 7.129.79.124.broad.xw.sh.dynamic.163data.com.cn[124.79.129.7]"><a href="/Lightning" title="Lightning @ 7.129.79.124.broad.xw.sh.dynamic.163data.com.cn[124.79.129.7]">Lightning</a></span>&nbsp;[1-4]</td>
+<td class="rccomment"></td>
+</tr>
+<tr>
+<td class="rcicon1"><a href="/%E7%BB%99irc.pchome.net%E7%9A%84%E7%BA%AA%E5%BF%B5?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/rightsidebar/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
+<td class="rcpagelink"><a href="/%E7%BB%99irc.pchome.net%E7%9A%84%E7%BA%AA%E5%BF%B5">给irc.pchome.net的纪念</a></td>
+<td class="rctime">14:23</td>
+<td class="rcicon2"><a href="/%E7%BB%99irc.pchome.net%E7%9A%84%E7%BA%AA%E5%BF%B5?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 7.129.79.124.broad.xw.sh.dynamic.163data.com.cn[124.79.129.7]"><a href="/Lightning" title="Lightning @ 7.129.79.124.broad.xw.sh.dynamic.163data.com.cn[124.79.129.7]">Lightning</a></span></td>
+<td class="rccomment"></td>
+</tr>
+<tr class="rcdaybreak"><td colspan="6"><strong>2007-10-16</strong></td></tr>
+<tr>
+<td class="rcicon1"></td>
+<td class="rcpagelink"><a href="/Shanghai_Linux_User_Group_%E5%9B%9E%E9%A1%BE">Shanghai Linux User Group 回顾</a></td>
+<td class="rctime">15:52</td>
+<td class="rcicon2"><a href="/Shanghai_Linux_User_Group_%E5%9B%9E%E9%A1%BE?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 7.129.79.124.broad.xw.sh.dynamic.163data.com.cn[124.79.129.7]"><a href="/Lightning" title="Lightning @ 7.129.79.124.broad.xw.sh.dynamic.163data.com.cn[124.79.129.7]">Lightning</a></span></td>
+<td class="rccomment"></td>
+</tr>
+<tr class="rcdaybreak"><td colspan="6"><strong>2007-06-19</strong></td></tr>
+<tr>
+<td class="rcicon1"></td>
+<td class="rcpagelink"><a href="/%E5%AE%A3%E4%BC%A0%E6%B5%B7%E6%8A%A5">宣传海报</a></td>
+<td class="rctime">14:48</td>
+<td class="rcicon2"><a href="/%E5%AE%A3%E4%BC%A0%E6%B5%B7%E6%8A%A5?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 139.207.171.61.broad.xw.sh.dynamic.163data.com.cn[61.171.207.139]"><a href="/Lightning" title="Lightning @ 139.207.171.61.broad.xw.sh.dynamic.163data.com.cn[61.171.207.139]">Lightning</a></span>&nbsp;[1-5]</td>
+<td class="rccomment"><tt>#04</tt>&nbsp;Upload of attachment 'mark-in-china.jpg'.</td>
+</tr>
+<tr>
+<td class="rcicon1"><img alt="[DELETED]" height="12" src="/htdocs/rightsidebar/img/moin-deleted.png" title="[DELETED]" width="60" /></td>
+<td class="rcpagelink"><a class="nonexistent" href="/%E6%AD%A3%E5%BC%8F%E5%AE%A3%E4%BC%A0%E9%A1%B5%E9%9D%A2">正式宣传页面</a></td>
+<td class="rctime">14:31</td>
+<td class="rcicon2"><a href="/%E6%AD%A3%E5%BC%8F%E5%AE%A3%E4%BC%A0%E9%A1%B5%E9%9D%A2?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 139.207.171.61.broad.xw.sh.dynamic.163data.com.cn[61.171.207.139]"><a href="/Lightning" title="Lightning @ 139.207.171.61.broad.xw.sh.dynamic.163data.com.cn[61.171.207.139]">Lightning</a></span>&nbsp;[1-2]</td>
+<td class="rccomment"><tt>#01</tt>&nbsp;Upload of attachment 'mark-in-china_new.j pg'.</td>
+</tr>
+<tr class="rcdaybreak"><td colspan="6"><strong>2007-02-12</strong></td></tr>
+<tr>
+<td class="rcicon1"></td>
+<td class="rcpagelink"><a href="/%E9%87%87%E7%94%A8%E9%BE%99%E8%8A%AF2E%E8%8A%AF%E7%89%87%E7%9A%84%E7%A6%8F%E7%8F%91%E8%BF%B7%E4%BD%A0%E7%94%B5%E8%84%91%E7%9A%84%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%99">采用龙芯2 E芯片的福珑迷你电脑的主板特写</a></td>
+<td class="rctime">03:08</td>
+<td class="rcicon2"><a href="/%E9%87%87%E7%94%A8%E9%BE%99%E8%8A%AF2E%E8%8A%AF%E7%89%87%E7%9A%84%E7%A6%8F%E7%8F%91%E8%BF%B7%E4%BD%A0%E7%94%B5%E8%84%91%E7%9A%84%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%99?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 61.171.64.17[61.171.64.17]"><a href="/Lightning" title="Lightning @ 61.171.64.17[61.171.64.17]">Lightning</a></span>&nbsp;[1-7]</td>
+<td class="rccomment"><tt>#01</tt>&nbsp;Upload of attachment 'shlug2007annual_loo ngson_mainboard_3_sm all.jpg'.<br><tt>#02</tt>&nbsp;Upload of attachment 'shlug2007annual_loo ngson_mainboard_2_sm all.jpg'.<br><tt>#04</tt>&nbsp;Upload of attachment 'shlug2007annual_loo ngson_mainboard_1_sm all.jpg'.</td>
+</tr>
+<tr>
+<td class="rcicon1"></td>
+<td class="rcpagelink"><a href="/%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%991">主板特写1</a></td>
+<td class="rctime">02:55</td>
+<td class="rcicon2"><a href="/%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%991?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 61.171.64.17[61.171.64.17]"><a href="/Lightning" title="Lightning @ 61.171.64.17[61.171.64.17]">Lightning</a></span>&nbsp;[1-3]</td>
+<td class="rccomment"><tt>#02</tt>&nbsp;Upload of attachment 'shlug2007annual_loo ngson_mainboard_1.jp g'.</td>
+</tr>
+<tr>
+<td class="rcicon1"></td>
+<td class="rcpagelink"><a href="/%E7%94%B1%E5%A7%9A%E9%A3%9E%E6%8B%8D%E6%91%84%E7%9A%84%E7%8E%B0%E5%9C%BA%E7%85%A7%E7%89%87">由姚飞拍摄的现场照片</a></td>
+<td class="rctime">02:49</td>
+<td class="rcicon2"><a href="/%E7%94%B1%E5%A7%9A%E9%A3%9E%E6%8B%8D%E6%91%84%E7%9A%84%E7%8E%B0%E5%9C%BA%E7%85%A7%E7%89%87?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 61.171.64.17[61.171.64.17]"><a href="/Lightning" title="Lightning @ 61.171.64.17[61.171.64.17]">Lightning</a></span>&nbsp;[1-2]</td>
+<td class="rccomment"></td>
+</tr>
+<tr>
+<td class="rcicon1"></td>
+<td class="rcpagelink"><a href="/%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%993">主板特写3</a></td>
+<td class="rctime">02:43</td>
+<td class="rcicon2"><a href="/%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%993?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 61.171.64.17[61.171.64.17]"><a href="/Lightning" title="Lightning @ 61.171.64.17[61.171.64.17]">Lightning</a></span>&nbsp;[1-2]</td>
+<td class="rccomment"><tt>#01</tt>&nbsp;Upload of attachment 'shlug2007annual_loo ngson_mainboard_3.jp g'.</td>
+</tr>
+<tr>
+<td class="rcicon1"></td>
+<td class="rcpagelink"><a href="/%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%992">主板特写2</a></td>
+<td class="rctime">02:37</td>
+<td class="rcicon2"><a href="/%E4%B8%BB%E6%9D%BF%E7%89%B9%E5%86%992?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="Lightning @ 61.171.64.17[61.171.64.17]"><a href="/Lightning" title="Lightning @ 61.171.64.17[61.171.64.17]">Lightning</a></span>&nbsp;[1-2]</td>
+<td class="rccomment"><tt>#01</tt>&nbsp;Upload of attachment 'shlug2007annual_loo ngson_mainboard_2.jp g'.</td>
+</tr>
+<tr class="rcdaybreak"><td colspan="6"><strong>2006-09-19</strong></td></tr>
+<tr>
+<td class="rcicon1"><a href="/%E9%BE%99%E8%8A%AF%E5%8F%B0%E5%BC%8F%E6%9C%BA%E7%85%A7%E7%89%87?action=diff"><img alt="[DIFF]" height="11" src="/htdocs/rightsidebar/img/moin-diff.png" title="[DIFF]" width="15" /></a></td>
+<td class="rcpagelink"><a href="/%E9%BE%99%E8%8A%AF%E5%8F%B0%E5%BC%8F%E6%9C%BA%E7%85%A7%E7%89%87">龙芯台式机照片</a></td>
+<td class="rctime">00:01</td>
+<td class="rcicon2"><a href="/%E9%BE%99%E8%8A%AF%E5%8F%B0%E5%BC%8F%E6%9C%BA%E7%85%A7%E7%89%87?action=info"><img alt="Info" height="11" src="/htdocs/rightsidebar/img/moin-info.png" title="Info" width="12" /></a></td>
+<td class="rceditor"><span title="PatrickLi @ 61.165.145.74[61.165.145.74]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ 61.165.145.74[61.165.145.74]">PatrickLi</a></span></td>
+<td class="rccomment"></td>
+</tr>
+</table>
+</div>
+ <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line867"><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><div><table><tbody><tr>  <td style="text-align: center"><p class="line862"> <img alt="[DIFF]" height="11" src="/htdocs/rightsidebar/img/moin-diff.png" title="[DIFF]" width="15" /> </td>
+  <td><p class="line862"> marks older pages that have at least one backup version stored (click for an author diff)</td>
+</tr>
+<tr>  <td style="text-align: center"><span class="anchor" id="line-16"></span><p class="line862"> <img alt="[UPDATED]" height="12" src="/htdocs/rightsidebar/img/moin-updated.png" title="[UPDATED]" width="60" /> </td>
+  <td><p class="line862"> marks pages edited since you set your bookmark (click for a bookmark diff)</td>
+</tr>
+<tr>  <td style="text-align: center"><span class="anchor" id="line-17"></span><p class="line862"> <img alt="[NEW]" height="12" src="/htdocs/rightsidebar/img/moin-new.png" title="[NEW]" width="31" /> </td>
+  <td><p class="line862"> marks pages created since you set your bookmark, and were not edited after creation</td>
+</tr>
+<tr>  <td style="text-align: center"><span class="anchor" id="line-18"></span><p class="line862"> <img alt="[DELETED]" height="12" src="/htdocs/rightsidebar/img/moin-deleted.png" title="[DELETED]" width="60" /> </td>
+  <td><p class="line862"> marks page deletions</td>
+</tr>
+<tr>  <td style="text-align: center"><span class="anchor" id="line-19"></span><p class="line862"> <img alt="/!\" height="15" src="/htdocs/rightsidebar/img/alert.png" title="/!\" width="15" /> </td>
+  <td><p class="line862"> An editing conflict happened, please resolve it by merging both versions of the problematic paragraphs together. </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-20"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-21"></span>This page contains a list of recent changes in this wiki. <span class="anchor" id="line-22"></span>More system information on <a href="/SystemInfo">SystemInfo</a>. <span class="anchor" id="line-23"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">RecentChanges  (last modified 2006-06-30 07:21:42)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

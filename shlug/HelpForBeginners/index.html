@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>HelpForBeginners - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/HelpForBeginners?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/HelpForBeginners?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/HelpForBeginners?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/HelpForBeginners?action=fullsearch&amp;value=linkto%3A%22HelpForBeginners%22&amp;context=180">HelpForBeginners</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/HelpForBeginners">HelpForBeginners</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpForBeginners?action=info">Info</a></li><li><a href="/HelpForBeginners?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line862">A <a href="/WikiWikiWeb">WikiWikiWeb</a> is a collaborative hypertext environment, with an emphasis on easy access to and modification of information.  <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line874">You can edit any page by pressing the "edit" link. <span class="anchor" id="line-12"></span>Depending on the selected user interface theme you will find this at the top, in the sidebar area <span class="anchor" id="line-13"></span>or at the bottom of the page. <span class="anchor" id="line-14"></span>Capitalized words joined together form a <a href="/WikiName">WikiName</a>, which hyperlinks to another page.  The highlighted title searches for all pages that link to the current page.  Pages which do not yet exist are linked with a question mark (or a different rendering in bold red): just follow the link and you can add a definition.  That is also the way to create a new page: add a new <a href="/WikiName">WikiName</a> to an existing page, save your modification, click on your new link and create the page (more details on <a href="/HelpOnPageCreation">HelpOnPageCreation</a>). <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line862">You are encouraged to edit the <a href="/WikiSandBox">WikiSandBox</a> whichever way you like. Please restrain yourself from editing other pages until you feel at home with the ways a wiki works. <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line862">To learn more about what a <a class="interwiki" href="http://c2.com/cgi/wiki?WikiWikiWeb" title="Wiki">WikiWikiWeb</a> is, read about <a class="interwiki" href="http://c2.com/cgi/wiki?WhyWikiWorks" title="Wiki">WhyWikiWorks</a> and the <a class="interwiki" href="http://c2.com/cgi/wiki?WikiNature" title="Wiki">WikiNature</a>. Also, consult the <a class="interwiki" href="http://c2.com/cgi/wiki?WikiWikiWebFaq" title="Wiki">WikiWikiWebFaq</a> and <a class="interwiki" href="http://c2.com/cgi/wiki?OneMinuteWiki" title="Wiki">OneMinuteWiki</a>.  <span class="anchor" id="line-19"></span>This wiki is also part of the <a href="/InterWiki">InterWiki</a> space, which means you can easily refer to a wealth of information available through other public wiki sites. <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><p class="line874">Good starting points to explore a wiki are <span class="anchor" id="line-22"></span><ul><li><p class="line891"><a href="/RecentChanges">RecentChanges</a>: see where people are currently working <span class="anchor" id="line-23"></span></li><li><p class="line891"><a href="/FindPage">FindPage</a>: search or browse the database in various ways <span class="anchor" id="line-24"></span></li><li><p class="line891"><a href="/TitleIndex">TitleIndex</a>: a list of all pages in the wiki <span class="anchor" id="line-25"></span></li><li><p class="line891"><a href="/WordIndex">WordIndex</a>: a list of all words that are part of page title (thus, a list of the concepts in a wiki) <span class="anchor" id="line-26"></span></li><li><p class="line891"><a href="/SiteNavigation">SiteNavigation</a>: a page leading to the different indexing schemes of the wiki <span class="anchor" id="line-27"></span></li><li><p class="line891"><a href="/WikiSandBox">WikiSandBox</a>: feel free to change this page and experiment with editing <span class="anchor" id="line-28"></span></li><li><p class="line891"><a href="/HelpOnEditing">HelpOnEditing</a>: the starting point to learn everything about wiki markup <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span></li></ul><p class="line862">For more help, see the <a href="/HelpContents">HelpContents</a> and the <a href="/HelpIndex">HelpIndex</a> pages. <span class="anchor" id="line-31"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">HelpForBeginners  (last modified 2006-06-30 07:21:45)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpForBeginners?action=info">Info</a></li><li><a href="/HelpForBeginners?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,476 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>HelpOnActions - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/HelpOnActions?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/HelpOnActions?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/HelpOnActions?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/HelpOnActions?action=fullsearch&amp;value=linkto%3A%22HelpOnActions%22&amp;context=180">HelpOnActions</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/HelpOnActions">HelpOnActions</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnActions?action=info">Info</a></li><li><a href="/HelpOnActions?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><p class="line867">
+<h2 id="head-d264c69b60f04d6e302f2ed3a2f2affa13526dda">Actions</h2>
+<span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line862">Actions are tools that work on a page or the whole wiki, but unlike macros do not add <em>to</em> the page content when viewing a page, but work <em>on</em> that page content. They either produce some output based on page contents (navigational actions like searching) or implement functions that are not related to viewing a page (like deleting or renaming a page). <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line862">There is a set of system-defined actions, which includes page editing; you can extend the set of known actions by your own ones. See <a href="/HelpForDevelopers">HelpForDevelopers</a> for more on that. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><p class="line874">The following actions are added to the list of user-defined extension actions at the bottom of each page (or in the "More actions" menu). This happens to any mixed-case extension, for other actions (all lower-case) see the list further down this page. Some of these action might not be available for your wiki site. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><div><table style="width: 100%"><tbody><tr>  <td><p class="line891"><strong>Action</strong></td>
+  <td><p class="line891"><strong>Description</strong></td>
+  <td><p class="line891"><strong>Remark</strong></td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-17"></span><p class="line891"><tt class="backtick">AttachFile</tt>     </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-18"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> attach files to a page, see <a href="/HelpOnActions/AttachFile">/AttachFile</a> for more details. </td>
+  <td><p class="line862"> This action is not granted if you are not logged in. </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-19"></span><p class="line891"><tt class="backtick">DeletePage</tt>     </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-20"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> Delete a page, after you confirmed it; deletion means a final backup copy is created and only then the page is deleted, i.e. you can <em>revive</em> the page later on (as long as the backups are not physically deleted). </td>
+  <td><p class="line862"> This action is not granted if you are not logged in. </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-21"></span><p class="line891"><tt class="backtick">RenamePage</tt>     </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-22"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> Rename a page, after you confirmed it. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-23"></span><p class="line891"><tt class="backtick">LikePages</tt>     </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-24"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> list pages whose title starts or ends with the same <a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?WikiWord" title="MeatBall">WikiWord</a> as the current page title.</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-25"></span><p class="line891"><tt class="backtick">LocalSiteMap</tt>     </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-26"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> show nearby links of the current page, i.e. list all referred-to pages, and in turn their references, to a certain limited depth. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-27"></span><p class="line891"><tt class="backtick">SpellCheck</tt>     </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-28"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862">call the spell checker for the current page; see <a href="/HelpOnSpellCheck">HelpOnSpellCheck</a> for more. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-29"></span><p class="line891"><tt class="backtick">SubscribeUser</tt>     </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-30"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> Administrators can use it to subscribe other users to pages </td>
+  <td><p class="line862"> </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line862">The following is a list of <em>internal</em> actions that are used to implement the various icons and links at the top and bottom of pages, or supplement certain macros. <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><div><table style="width: 100%"><tbody><tr>  <td><p class="line891"><strong>Action</strong></td>
+  <td><p class="line891"><strong>Description</strong></td>
+  <td><p class="line891"><strong>Remark</strong></td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-35"></span><p class="line891"><tt class="backtick">titleindex</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-36"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> Implements the listing of all page names as text (append <tt class="backtick">?action=titleindex</tt> to your wiki address) or XML (<tt class="backtick">?action=titleindex&amp;mimetype=text/xml</tt>); the main use of this action is to enable <a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?MetaWiki" title="MeatBall">MetaWiki</a>.</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-37"></span><p class="line891"><tt class="backtick">fullsearch</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-38"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> this action is triggered by clicking on the "Search Text" button of the <tt class="backtick">FullSearch</tt> macro (<tt class="backtick">?action=fullsearch&amp;value=HelpOnActions</tt>).</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-39"></span><p class="line891"><tt class="backtick">titlesearch</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-40"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> this action is triggered by clicking on the "Search Titles" button of the <tt class="backtick">TitleSearch</tt> macro (<tt class="backtick">?action=titlesearch&amp;value=HelpOnActions</tt>).</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-41"></span><p class="line891"><tt class="backtick">inlinesearch</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-42"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> this implements the inline search for the form fields at the bottom of each page (note that this uses POST requests, so you won't normally see this action in URLs).</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-43"></span><p class="line891"><tt class="backtick">highlight</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-44"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> highlight the search word when you click on a link in a search result list.</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-45"></span><p class="line891"><tt class="backtick">diff</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-46"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> display differences between page revisions.</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-47"></span><p class="line891"><tt class="backtick">info</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-48"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> show meta-data on a page.</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-49"></span><p class="line891"><tt class="backtick">recall</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-50"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> display an older revision of a page.</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-51"></span><p class="line891"><tt class="backtick">show</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-52"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> display a page (the default action).</td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-53"></span><p class="line891"><tt class="backtick">refresh</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-54"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> refresh the cached version of a page (currently only used on XSLT-formatted pages). </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-55"></span><p class="line891"><tt class="backtick">print</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-56"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> show the print-view of a page, which omits the navigational items from the display view. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-57"></span><p class="line891"><tt class="backtick">edit</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-58"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> edit this page. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-59"></span><p class="line891"><tt class="backtick">savepage</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-60"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> save this page (do not ever use this manually). </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-61"></span><p class="line891"><tt class="backtick">subscribe</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-62"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> subscribe to a page. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-63"></span><p class="line891"><tt class="backtick">userform</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-64"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> save user preferences. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-65"></span><p class="line891"><tt class="backtick">bookmark</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-66"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> set bookmark for <a href="/RecentChanges">RecentChanges</a>. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-67"></span><p class="line891"><tt class="backtick">raw</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-68"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> send the raw wiki markup as text/plain (e.g. for backup purposes via wget); <tt class="backtick">SystemInfo?action=raw</tt> will show the markup of <a href="/SystemInfo">SystemInfo</a>. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-69"></span><p class="line891"><tt class="backtick">format</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-70"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> emit specially formatted views of a page. Parameter <tt class="backtick">mimetype</tt> specifies the wanted mime-type. </td>
+  <td style="width: 20%"><p class="line862">You can generate <strong><a class="nonexistent" href="/DocBook">DocBook</a></strong> markup from your pages by appending <tt class="backtick">?action=format&amp;mimetype=xml/docbook</tt> to the address. Note that you need to install PyXML to use it. </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-71"></span><p class="line891"><tt class="backtick">rss_rc</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-72"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> generate a RSS feed of <a href="/RecentChanges">RecentChanges</a>. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-73"></span><p class="line891"><tt class="backtick">chart</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-74"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> display charts. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-75"></span><p class="line891"><tt class="backtick">export</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-76"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> export the wiki content. </td>
+  <td><p class="line862"> <em>[experimental]</em>  </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-77"></span><p class="line891"><tt class="backtick">content</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-78"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> for transclusion into static web pages, this action emits the pure page content, without any &lt;html&gt;, &lt;head&gt;, or &lt;body&gt; tags. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-79"></span><p class="line891"><tt class="backtick">links</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-80"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> generates a list of all pages and the links on them, just like <a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?LinkDatabase" title="MeatBall">LinkDatabase</a>. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-81"></span><p class="line891"><tt class="backtick">sitemap</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-82"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> generates a Google XML sitemap, see <a class="http" href="http://www.google.com/webmasters/sitemaps/docs/en/protocol.html">Sitemap protocol</a></td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-83"></span><p class="line891"><tt class="backtick">xmlrpc</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-84"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> Wiki XML-RPC interface, see <a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?XmlRpcToWiki" title="MeatBall">XmlRpcToWiki</a>. </td>
+  <td><p class="line862"> </td>
+</tr>
+<tr>  <td colspan="3"><span class="anchor" id="line-85"></span><p class="line891"><tt class="backtick">revert</tt>    </td>
+</tr>
+<tr>  <td style="width: 5%"><span class="anchor" id="line-86"></span><br />
+</td>
+  <td style="margin: 10px; ; width: 75%; vertical-align: top"><p class="line862"> revert to an older version of the page. </td>
+  <td><p class="line862"> </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-87"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">HelpOnActions  (last modified 2006-06-30 07:21:42)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnActions?action=info">Info</a></li><li><a href="/HelpOnActions?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

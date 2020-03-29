@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>Wind的RedHat9学习日记 - ShangHai Linux User Group</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/rightsidebar/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/rightsidebar/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/rightsidebar/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/rightsidebar/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<div id="logo"><a href="/Geekbone">ShangHai Linux User Group</a></div>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0?action=fullsearch&amp;value=linkto%3A%22Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%22&amp;context=180">Wind的RedHat9学习日记</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0">Wind的RedHat9学习日记</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0?action=info">Info</a></li><li><a href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="/Wind%E7%9A%84RedHat9%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0?action=login" id="login">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">From Windows Desktop To X User. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">毫无疑问,我曾经是一名Windows的拥护者.但是当Windows的缔造者微软公司的钱袋日渐丰满之时,忘记了哪些令他们致富的用户的需要,越来越多的是织造出更多只能让他们自己赢利的商业垃圾. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">不难想像,很多和我一样的朋友看到了Linux系统,并且尝试用自己的电脑知识去驾驭这套操作系统.可是严谨的运作方法和无数文档让我们产生了一些畏惧.这一次在朋友们的帮助下,我下定决心来重新尝试让自己在Linux的X平台下完成自给平日作的一系列工作. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line874">下面将会用日记的形式来添加我每日的所得和经验. <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line874">也许你是一位值得尊敬的”大牛”,那么请你去继续批判GTK+Manual的不足而不是在这里嘲笑我展示给和我一样新接触Linux用户的一些心得.希望大家和我能够一同进步,互补不足.(作者注:通过观看本文导致你的各项技能应用水平下降和各种智力缺陷作者不负担任何法律和人道主义责任.) <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867">
+<h2 id="head-79c44f62688fb924948cffeb84c9c210d492677f">第一日...引子</h2>
+<span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line862">这是我安装Linux后的第三天,前两日我在专心阅读Red<tt class="backtick"></tt>Hat 9(Standard)的文档光盘中的一些应用文档,其中包括了&lt;&lt;Red<tt class="backtick"></tt>Hat Linux 入门指南&gt;&gt;. &lt;&lt;Red<tt class="backtick"></tt>Hat Linux 定制指南&gt;&gt;以及十分重要的&lt;&lt;Red<tt class="backtick"></tt>Hat Linux 安装指南&gt;&gt;. <span class="anchor" id="line-14"></span>其中第三本我要说明一下,如果你是Red<tt class="backtick"></tt>Hat的注册用户(你的Red<tt class="backtick"></tt>Hat Linux产品拥有一张红色注册卡,上面有一串应用于rhn.redhat.com登记用的号码.)那么你手头的Red<tt class="backtick"></tt>Hat红皮书上的内容就是它的纸制读本. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line862">我顺利的安装好了Red<tt class="backtick"></tt>Hat 9,实际上我们要注意其中几点. <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line867">
+<h3 id="head-4be825bf59f8199170da90a7145cb19f98ddf303">一:</h3>
+<span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line874">分区一定要选择正确.如果你拥有一个10GB的空闲分区或硬盘,我的建议和我一样进行分区. <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p class="line874">第一个分区是100MB,加载点为/BOOT.这个分区我理解到是用来储存我们的启动文件等等的分区.虽然我不确定,但是我人为Grub或Lilo等引导文件都是储存在这里的.这样单独分出来也是有益处的. <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line874">第二个分区是/(理解为主分区或者是根,作者注)容量应该占用7GB,这个分区是用来储存我们的Linux系统以及你选择安装的软件包以及即将安装的一些程序.今后每次重新安装系统的时候都会格式化这个分区. <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line874">第三个分区是/HOME,这个分区是储存我们的用户私人文档用的.在控制台(Console)下目录为/HOME/(你的用户名).如果将我们的文档,音频,视频,软件安装包都储存在这里,并且下次重新安装系统的时候选择不格式化这个分区并且依然加载为/HOME,那么这些资料就全都不会丢失,我们也不必去进行对我们来说有些难度的备份工作. <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><p class="line874">第四个分区也是我们要配置的最后一个分区是一个SWAP分区,这不同于我们上面建立的ext3分区,这个分区的用途是当我们在X下面运行游戏,浏览视频或者编译文件的时候,我们的物理内存占用光了,这时候Linux就会把物理内存中调用不频繁的内容转移到这个分区.这和我们Windows下的硬盘上建立的缓存文件是一个性质.只是Linux用一个分区的形式来建立它,并且比Windows下的缓存效率更高一些而已. <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line874">最后我要说的两点大家要牢记,首先我们的前三个分区都要使用ext3分区格式,因为这样作可以让我们这些新手在不干净的重启或关机(Unclean Shutdown) 后不用等待漫长的Scan文件系统过程.有过经验的朋友应该知道当你系统文件增加后那是一段很难熬的过程. <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line874">另外如果你硬盘有重要数据的时候千万不要在选择分区方法的时候选择自动分区,这将让你的资料化为乌有.(我的600GB卡通和OST就是这样消失的,现在还在掉眼泪...) <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><p class="line867">
+<h3 id="head-a73084857a26aa9eedc30e19b926ee346a7bd17c">二:</h3>
+<span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><p class="line874">选择组件的时候不要选择过多无用的服务器组件,如果你安装了很多不熟悉的服务程序除了会让你的系统资源消耗变大之外更可能让你的系统处于十分不安全的状态.(要知道一些东西放在我们新手的手里是很危险的). <span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><p class="line862">此外我建议大家使用Red<tt class="backtick"></tt>Hat默认的Gnome来作为X方案,至少我没有去选择KDE,而且现在的感觉非常好. <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><p class="line874">唉呀,差点忘记了.如果你有必用的Windows程序需要2个系统的话记的先安装Windows,而且记的Linux的几个分区要在 Windows分区前面.2个系统共享文档的话也很简单,只要把你的fat32分区用来当做文档贮存分区(ntfs没实验过,不果只是读取应该不是问题.).然后再创建Liunx分区的时候加载你的Fat32分区就可以了,加载位置需要我们手动输入,我加载的位置是/mnt/windows <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><p class="line867">
+<h3 id="head-7eddf81cfd2d7ec930b235cf6eaa9d8801e1eb00">三:</h3>
+<span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line874">系统安装完毕了,现在系统默认进入的应该就是美丽的X-Windows了.系统开始运行后会让我们创建一个root(根用户)外的帐号来进行日常操作.不要以为这很麻烦,这是十分有益处的. <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line874">作为我们新手来说如果使用root帐号操作,会因为权限过高而在误操作的情况下破坏我们的系统.而且不同于Windows,Linux的帐号切换其实说明白了就是权限切换,X下面会跳出一个窗口要求我们输入root帐号密码.控制台里面我们可以输入命令”su”+回车键接着输入密码变成 root用户. <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><p class="line874">第一次进入X我又碰到了一些问题,经过我哥哥的点播已经找到了解决办法. <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><p class="line874">下面是解决方法: <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><ul><li style="list-style-type:none">Nvidia Geforce4 Ti显卡的驱动问题: <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><p class="line862">Nvidia Geforce 4 Ti显卡是我使用的显示卡,Red<tt class="backtick"></tt>Hat 9 只提供了通用驱动的支持,为了开启3D加速功能我们必需去Nvidia的网站(www.nvidia.com)来下载商业驱动程序(作者注:商业软件不同于其他Linux软件,可能是免费/收费并且不公开源代码). <span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span>在nvidia网站上我找到了适合我的ia32 Linux驱动 - NVIDIA-Linux-x86-1.0-4363.run. <span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span>下载到我们的机器然后开启一个控制台,执行下面的系列操作. <span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><pre>[wind@localhost wind]$ su
+<span class="anchor" id="line-61"></span>Password:
+<span class="anchor" id="line-62"></span>[root@localhost wind]# cd /etc
+<span class="anchor" id="line-63"></span>[root@localhost etc]# vi inittab
+<span class="anchor" id="line-64"></span></pre><span class="anchor" id="line-65"></span>我们进入的文件是用来修改启动方式的,由于我们桌面用户默认是进入X-win,而在X-win下是无法升级显示驱动的.所以我们在inittab文件中找到这行... <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><pre>id:5:initdefault:
+<span class="anchor" id="line-68"></span></pre><span class="anchor" id="line-69"></span>按下“Insert”键，将5删除，换成3。（根据文件上面的说明# 3 - Full multiuser mode #4 - unused #5 – X11，我们得知的3为Console模式登录,5为X-win登录.） 接着按下“ESC”键，依此输入“:”、“wq”、“回车键”退出编辑器。 <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span>重新启动系统，用root用户登录。将驱动程序复制到/root下。方法是进入我们刚刚下载的驱动程序所在的目录输入 <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><pre>cp NVIDIA-Linux-x86-1.0-4363.run /root “回车键”
+<span class="anchor" id="line-75"></span></pre><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span>我们接着转到root目录，方法上面说过是 cd /root，输入 <span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><pre>bash NVIDIA-Linux-x86-1.0-4363.run “回车键”
+<span class="anchor" id="line-81"></span></pre><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span>一路Accept下去就可以完成安装了。 <span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><p class="line862">如果你用的不是<a class="nonexistent" href="/RedHat">RedHat</a> 9.0可能你的内核会不被兼容，这里我就不多介绍了，因为作为新手的我也没有使用过你的内核版本。 最后输入”startx”进入X,发现并没有开启3D加速,我们的3D游戏还是很慢.看来刚才的程序没有效果... <span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span>好好回想一下,刚才好像有个说明呢...在这个说明文件里...看到了...我们按照下面进行一下设置: <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span>打开console后按照下面操作. <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><pre>[wind@localhost wind]$ su ---&gt;取得root用户权限
+<span class="anchor" id="line-93"></span>Password:
+<span class="anchor" id="line-94"></span>[root@localhost wind]# cd .. ----&gt;退出一层目录(或者直接输入cd /直接转到根目录)
+<span class="anchor" id="line-95"></span>[root@localhost home]# cd .. ----&gt;退出一层目录
+<span class="anchor" id="line-96"></span>[root@localhost /]# cd etc ----&gt;进入etc目录(或者直接输入cd etc/X11)
+<span class="anchor" id="line-97"></span>[root@localhost etc]# cd X11/ ----&gt;进入X11目录
+<span class="anchor" id="line-98"></span>[root@localhost X11]# vi XF86Config ----&gt;编辑XF86Config文件
+<span class="anchor" id="line-99"></span></pre><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span>关于如何编辑和保存文件上面我们介绍过了,这里就不重复了. <span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><p class="line862">我们要找到<tt>Driver&nbsp;"nv"</tt>这一行,修改成<tt>Driver&nbsp;"nvidia"</tt>并且在<tt>"Module"&nbsp;Section</tt>这区代码里面添加<tt>Load&nbsp;"glx"</tt>(如果有了就不用添加了).还是这个区域最后监查一下是否有<tt>Load&nbsp;"dri"</tt>和<tt>Load&nbsp;"Glcore"</tt>}这两行代码,如果有的话删除掉. 最后一部,我没有根据和原由的决定跑到这个文件的最后一段<tt>Section&nbsp;"dri"</tt>,从<tt>Section&nbsp;"dri"</tt>开始到End<tt class="backtick"></tt>Section全部删除掉.因为我想之前Load里面已经不调用了,那么这段代码也就是形同摆设. <span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><p class="line862">如果你不放心的话,可以用在编辑之前用<tt>cp&nbsp;XF86Config&nbsp;XF86Config.bak</tt>来复制一个备份. <span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span></li></ul><p class="line874">到这里我今天的任务就算完成了,顺利的进入X并且可以进行3D程序了. <span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><p class="line874">下一集...DSL Go!! Mozilla! Online! <span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><p class="line874">教你如何配置网络并且有相关设置哦! <span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><p class="line874">本集总结要点1 2 3: <span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><ol type="1"><li>命令su后输入密码,你不会看到密码,因为这是Linux对密码的保护功能之一,不要担心,继续输入就好了. <span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span></li><li class="gap">命令 vi 是用来编辑文件用的,按Insert键可以对非只读文件进行编辑.ESC键可以取消编辑状态, :调出输入功能.wq是write+quit功能.就是存盘并且退出.如果我们只是想对编辑后的文件进行储存或者不储存经过编辑后的内容直接退出就相应去掉代表存盘的w或代表退出的q.vi的其他功能还需要大家自给通过man命令来学习. <span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span></li><li class="gap">多多使用man命令来学习每个命令的使用方法,多多查看文档和说明,除了能够详悉了解使用方法外还可以避免一些低级的错误发生.记的作为一个新手很多东西不明白不是错误,但是碰到问题就去直接问别人是不对的,要自己多多研究,否则从别人那里直接拿来的东西是记不住的.多多利用手里的man命令和说明文件, 仔细的阅读和细心的实践才能促进我们的进步. <span class="anchor" id="line-122"></span></li></ol><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">Wind的RedHat9学习日记  (last edited 2005-09-01 01:13:23 by <span title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ leibniz.catalyst.net.nz[202.78.240.7]">PatrickLi</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! 1.5 - Open Source Content Management" -->
+<rss version="2.0">
+	<channel>
+		<title>欢迎来到上海Linux User Group</title>
+		<description>Shanghai Linux User Group</description>
+		<link>http://shlug.org/index.php?option=com_content&amp;view=frontpage</link>
+		<lastBuildDate>Tue, 24 Mar 2009 06:49:39 +0000</lastBuildDate>
+		<generator>Joomla! 1.5 - Open Source Content Management</generator>
+		<language>en-gb</language>
+		<item>
+			<title>邮件列表</title>
+			<link>http://shlug.org/index.php?option=com_content&amp;view=article&amp;id=52:2009-02-12-14-50-06</link>
+			<description><![CDATA[{iframe width="100%" height="800px" }http://groups.google.com/group/shlug/topics?gvc=2{/iframe}]]></description>
+			<category>frontpage</category>
+			<pubDate>Thu, 12 Feb 2009 14:49:34 +0000</pubDate>
+		</item>
+		<item>
+			<title>上海Linux用户群介绍</title>
+			<link>http://shlug.org/index.php?option=com_content&amp;view=article&amp;id=1:linux&amp;catid=1:shlug&amp;Itemid=50</link>
+			<description><![CDATA[<p><img src="http://shlug.org/images/stories/logo.png" border="0" />Shanghai Linux User Group (SHLUG) 建立于1997年，是一个在上海地区专注于GNU/Linux及自由/开源软件交流活动的社区。Geekbone是我们的另一个NickName，我们的社区的起源出自一次#unix频道上的闲聊，2000年wuming和chacha首先为这个社区起了这个名字，并贡献了网上空间。shlug是一个以交流技术为主要特点的社区。而诞生它的irc频道#unix则是上海地区老字号的在线技术交流频道 irc.pchome.net. shlug的网站仅仅提供最新的活动消息和debian mirror下载，并不存在交流功能。平日主要的在线交流场所是在irc频道和Google Group的邮件列表. 具体请参见http://groups.google.com/group/shlug)</p><p>   联系我们最佳方式是： webmaster@shlug.org / shlug@googlegroups.com</p>]]></description>
+			<category>frontpage</category>
+			<pubDate>Thu, 12 Oct 2006 10:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>在线交流渠道</title>
+			<link>http://shlug.org/index.php?option=com_content&amp;view=article&amp;id=46:2008-03-23-04-57-07&amp;catid=35:2008-03-23-04-50-30&amp;Itemid=54</link>
+			<description><![CDATA[<p>SHLUG目前提供在线交流方式有邮件列表和IRC实时在线交谈两种方式。</p><p>一. 邮件列表 </p><p>    （1）订阅方法：<br />        登录 http://groups.google.com/group/shlug，以自已的gmail帐号登入后加入googlegroup    或者    发送一封含任意主题和内容的电子邮件至shlug-subscribe@googlegroups.com即可，将subscribe改成unsubscribe则退订。</p><p>    （2）该group的范围包括</p><ol><li>与shlug活动相关的讲座主题的征集，活动的时间和地点的通知。</li><li> 与geekbone mirror相关的询问和建议。</li><li> 与shlug有关的其它各类正式消息的发布。 </li></ol><p>    （3） 邮件列表的在线阅读和发信地址：<a class="http" href="http://groups.google.com/group/shlug">http://groups.google.com/group/shlug</a> </p><p>二. IRC在线交流</p><p>    服务器地址: irc.freenode.net</p><p>    交流频道: #shlug </p>]]></description>
+			<category>frontpage</category>
+			<pubDate>Sun, 23 Mar 2008 04:51:18 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

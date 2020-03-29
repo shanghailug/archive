@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>unix礼节聊天惯例参考集 - ShangHai Linux User Group</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/rightsidebar/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/rightsidebar/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/rightsidebar/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/rightsidebar/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/unix%E7%A4%BC%E8%8A%82%E8%81%8A%E5%A4%A9%E6%83%AF%E4%BE%8B%E5%8F%82%E8%80%83%E9%9B%86?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/unix%E7%A4%BC%E8%8A%82%E8%81%8A%E5%A4%A9%E6%83%AF%E4%BE%8B%E5%8F%82%E8%80%83%E9%9B%86?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<div id="logo"><a href="/Geekbone">ShangHai Linux User Group</a></div>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/unix%E7%A4%BC%E8%8A%82%E8%81%8A%E5%A4%A9%E6%83%AF%E4%BE%8B%E5%8F%82%E8%80%83%E9%9B%86?action=fullsearch&amp;value=linkto%3A%22unix%E7%A4%BC%E8%8A%82%E8%81%8A%E5%A4%A9%E6%83%AF%E4%BE%8B%E5%8F%82%E8%80%83%E9%9B%86%22&amp;context=180">unix礼节聊天惯例参考集</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/unix%E7%A4%BC%E8%8A%82%E8%81%8A%E5%A4%A9%E6%83%AF%E4%BE%8B%E5%8F%82%E8%80%83%E9%9B%86">unix礼节聊天惯例参考集</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/unix%E7%A4%BC%E8%8A%82%E8%81%8A%E5%A4%A9%E6%83%AF%E4%BE%8B%E5%8F%82%E8%80%83%E9%9B%86?action=info">Info</a></li><li><a href="/unix%E7%A4%BC%E8%8A%82%E8%81%8A%E5%A4%A9%E6%83%AF%E4%BE%8B%E5%8F%82%E8%80%83%E9%9B%86?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="/unix%E7%A4%BC%E8%8A%82%E8%81%8A%E5%A4%A9%E6%83%AF%E4%BE%8B%E5%8F%82%E8%80%83%E9%9B%86?action=login" id="login">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-4"></span><p class="line874">#unix 礼节·聊天惯例参考集 <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line862">#Unix 频道是一个在网络上具有很久历史的IRC频道,自从97年SEE(Pchome的前身)推出IRC聊天服务以来便一直存在着,其中曾经有一段时间它的名字改成为#Linux,不过因为#Unix这个名字代表的范围更为广泛,因此最终以#Unix命名,直到现在。#Unix频道是一个有着丰富历史传统的频道,在这里曾经发生过许许多多值到记载入中国软件史,中国网络史的人与事,比如Net<tt class="backtick"></tt>Ants就是从这个频道的技术交流中,由Daemon9(洪以容)写成的;中国Linux史上第一家Linux User Group(SLUG)也从此处诞生。长期以来积淀的网络文化底蕴使#Unix频道一直以来都重视网络环境的建设,希望能保持自开创以来便形成的重视技术,尊重网友,健康交谈的优秀传统。现在的#Unix频道是由OP(频道管理员)加上www.geekbone.org而构成的一个网络社区,它与其它频道不同的地方在于,这是一个偏重于讨论Unix类软件技术的频道,同时有时也适量讨论其它OS平台技术的交谈频道。同时,在话题健康的情况下,也可以进行其它各种话题的探讨。为了达到建立一个友好轻松的网络交流环境的最终目标。#unix 地管理相当严厉，在IRC道德中很多的道德原则，在这里是被强制执行的。如果您是第1次来#unix，请参考下述基本原则和常规惯例（惯例的形成不是一个短暂的过程,长期以来的网络交流活动,使得这里的朋友们慢慢地养成了一些交谈的习惯,能保留下来的那些习惯就成了惯例,并得尊重与维护）。 <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><ol type="1"><li>问候方式：进来#unix以后,若想与所有的人打招呼,我们经常用 hi all。当然您也可以向某人单独问好，如果您觉得依然不能表达您的感情，可以适当地加一些浪线。但是注意别太多了,否则就有flood的嫌疑了。如果您觉得浪线依然不能表达您的情感，那么请私下解决吧。 <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span></li><li class="gap">离开方式: 当您因故离开聊天而且出于礼节想作道别时,可以用bye all向所有的朋友告别，当然您也可以向某人单独说再见，原则同上。 <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span></li><li class="gap"><p class="line862">不要使用机器人（bot）在进入#unix 之前，建议您打/remote off，退出#Unix后如需要恢复Bot,则可键入/remote on。<br />
+(注意:Bot在#Unix中是不可以使用的,因为Bot中的彩字功能会干扰聊天窗口里的整洁,并且很多Bot程序具有安全方面的隐患,若要强调某些词语,可以适当地用一种色彩修饰,这种彩字的用法是可以被大家接受的)。随便说一句，大多数的bot，我们已经禁止其入内。 <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></li><li class="gap">不要在#Unix中设置各种自动广告小窗。除非您想支付我们广告费用。 <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span></li><li class="gap">不要用彩色字，不要用任何标新立异的方式来表现您自己。在3中我们已经说过：彩字功能会干扰聊天窗口里的整洁。 <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span></li><li class="gap">对他人的尊重,也是对自已的尊重,在聊天时,不要随意出口伤人。 <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span></li><li class="gap">仍何话语最多只能重复三次,否则将被认为是FLOOD。 <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span></li><li class="gap">不要提不合理的要求，如帽子等。我们是绝对不会给的。 <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span></li><li class="gap">当需要提出技术问题时,最好能直接点出问题,不要问:"这里有没有高手"等。 <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span></li><li class="gap">当在大窗里提出问题后,没有人回答,则不要再在短时期内再问,这里不是公司的技术支持中心,任何人都没有义务回答问题。解决问题仍要靠自已。 <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span></li><li class="gap">不要试图在#unix 泡MM，除非你锈逗到期望您能够找到一个美丽温热大方体贴的女性极客的地步。 <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span></li><li class="gap">不要指令他人为您做什么，没有人有这个义务。同样的，这也不是您的权力。 <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span></li><li class="gap">您可以在#unix聊任何有意义的话题，但是下列问题例外：如宣扬迷信，政治敏感问题，其他伤害民族情感和民族团结的话题，等等。为调节聊天气氛可以适当地开一些玩笑进行调剂，但是请掌握分寸，不要过火。过度了就是浆糊和没水准的表现了。 <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span></li><li class="gap">当有人破坏这里的秩序时，应给他相应的提醒，若不听，应向在场的OP通报，由OP对其进行处理。 <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span></li><li class="gap">#unix频道中不充对于任何人以任何现由进行slap，对于slap的行为，一律kick。 <span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span></li></ol><p class="line874">如果您要提问，或者咨询 请先看我们的FAQ。 <span class="anchor" id="line-39"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">unix礼节聊天惯例参考集  (last edited 2006-09-18 22:25:13 by <span title="Lightning @ 61.171.64.156[61.171.64.156]"><a href="/Lightning" title="Lightning @ 61.171.64.156[61.171.64.156]">Lightning</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

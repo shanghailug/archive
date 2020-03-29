@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>6月15日 Novell 高级工程师刘俊贤 irc nickname:AvengerMojo 访谈：SUSE 桌面应用 - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8?action=fullsearch&amp;value=linkto%3A%226%E6%9C%8815%E6%97%A5+Novell+%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4+irc+nickname%3AAvengerMojo+%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE+%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%22&amp;context=180">6月15日 Novell 高级工程师刘俊贤 irc nickname:AvengerMojo 访谈：SUSE 桌面应用</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8">6月15日 Novel...谈：SUSE 桌面应用</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8?action=info">Info</a></li><li><a href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><span class="anchor" id="line-2"></span><pre>
+<span class="anchor" id="line-3"></span>时间：2006年6月15日（星期四）14:00～15:00 
+<span class="anchor" id="line-4"></span>
+<span class="anchor" id="line-5"></span>嘉宾 
+<span class="anchor" id="line-6"></span>
+<span class="anchor" id="line-7"></span>Novell Linux R&amp;D高级工程师：刘俊贤先生
+<span class="anchor" id="line-8"></span>
+<span class="anchor" id="line-9"></span>简介：Alex Lau 刘俊贤，网名AvengerMoJo,笔名复仇公子。现任北京Novell Linux R&amp;D高级工程师从事openSUSE的开发与推广，曾任香港即时科研有限公司应用软件R&amp;D技术总监，2003年开始在国内多个重点城市建立及培训Linux有关课程，包括信息产业部的1+1+1项目课程研发和课本书写，与此同时他亦曾在北大、复旦和西交大学讲授Linux有关课程，除教学外他在北京建立了一个针对嵌入式Linux和多媒体应用的工作坊。Alex毕业于美国北德州大学计算机软件工程系，曾担任职美国北电网络（Nortel Network）从事软件分析和开发等工作，并热衷开放源码社区的活动。
+<span class="anchor" id="line-10"></span>
+<span class="anchor" id="line-11"></span>Novell 高级工程师访谈全程实录：SUSE 桌面应用 
+<span class="anchor" id="line-12"></span>
+<span class="anchor" id="line-13"></span>分类实录： 
+<span class="anchor" id="line-14"></span>· 采访实录：Novell SUSE Linux 新版本新特性
+<span class="anchor" id="line-15"></span>  SUSE Linux 的最大桌面功能可能就是那个三维桌面。就是把一般桌面的功能用三维的空间来显示出来，就是在一个工作环境里有多个桌面，这样可以把你不同的工作分配到不同的桌面上。比如第一个桌面是放浏览器的，第二个桌面是放E-mail的，第三个可以用来玩游戏的等，这个主要是针对可用性和灵活度。
+<span class="anchor" id="line-16"></span>· 采访实录：SUSE Linux 桌面应用软件使用与安装
+<span class="anchor" id="line-17"></span>  在Linux上的软件也不少。现在我们桌面的用户量是推广到开发商用不用开发平台的主要原因，但是如果没有游戏，我们的软件也很难推广。比方说，最近一直在玩的一个游戏网络上面的虚拟游戏SecondLife，是一个三维的，Linux的发行是免费的，那个东西是非常好的一个例子。
+<span class="anchor" id="line-18"></span>· 采访实录：Linux硬件驱动兼容问题如何解决
+<span class="anchor" id="line-19"></span>  这个跟市场没有很大的关系。对于硬件厂商来说，他卖硬件出去是需要软件来支持的，但是当我们的软件市场率要低的话，他开发的成本不合算，这样很多厂商不愿意去开发Linux的驱动，但是大型厂商对于Linux支持是非常强的，尤其是最近ATI对我们的支持也非常强。
+<span class="anchor" id="line-20"></span>· 采访实录：SUSE Linux 特色管理工具YaST
+<span class="anchor" id="line-21"></span>  SYaST是另外一个系统工具。很多人认为它是软件管理工具，YaST是SUSELinux里面核心的管理工具，我们有一套开源的工具开发出来。比如安装SUSE的时候，也是它（YaST）来管理，比方说配置显示器、无线网卡、硬盘的分区、安全协议、用户等所有东西都在YaST里面有一个统一界面来作为一个系统的完整管理。
+<span class="anchor" id="line-22"></span>· 采访实录：对中文字体及中文输入法的支持
+<span class="anchor" id="line-23"></span>  Sidney Pinney：敏捷方法要真正的把它实施起来细节还是有很多的，有很多地方需要注意，有很多地方容易犯错误，确实有人自己实践慢慢摸索，这是一种方法，但是是一种比较痛苦的方法。
+<span class="anchor" id="line-24"></span>· 采访实录：SUSE Linux 桌面搜索及安全技术
+<span class="anchor" id="line-25"></span>  传统的桌面搜索主要以文件名为主，但是对于文件内容来讲可以说是一种新的方向，现在它的语法分析和内容分析相对来说会比较复杂。因为Google是一个公开的搜索引擎，这方面是比较敏感的。我们的Linux上，隐私性这方面可能比较重要一点。
+<span class="anchor" id="line-26"></span>· 采访实录：大型企业整体向Linux平台迁移
+<span class="anchor" id="line-27"></span>  比方说AppArmor的工作站，更大和复杂的是一个 工具可以跨平台的做出环境的支持。有问题存在是为了帮助大家提供解决方案，但是很难说我创造出一个解决方案出来解决所有人的问题，所以很多时候要跟用户直接的交流和磨合，去提供给他更适合他的环境。银行、金融、跟电信业等我们都有一些案例，包括去替掉Unix等终端环境。 
+<span class="anchor" id="line-28"></span>· 采访实录：与开源社区合作与发展状况
+<span class="anchor" id="line-29"></span>  才子英：现在大部分外包企业都希望得到CMM认证，面对这样的国情，ThoughtWorks如何打开中国的市场呢？ Martin Fowler：CMM认证对那些对软件没有了解的一个客户要购买软件的时候，这个认证会对他起到一个参考作用。
+<span class="anchor" id="line-30"></span>
+<span class="anchor" id="line-31"></span></pre><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><p class="line867"><a class="http" href="http://linux.ccidnet.com/pub/html/tech/NOVELL/index.htm">全文链接</a> <span class="anchor" id="line-34"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">6月15日 Novell 高级工程师刘俊贤 irc nickname:AvengerMojo 访谈：SUSE 桌面应用  (last edited 2006-06-16 01:17:04 by <span title="Lightning @ 61.171.68.31[61.171.68.31]"><a class="nonexistent" href="/Lightning" title="Lightning @ 61.171.68.31[61.171.68.31]">Lightning</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8?action=info">Info</a></li><li><a href="/6%E6%9C%8815%E6%97%A5_Novell_%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%98%E4%BF%8A%E8%B4%A4_irc_nickname%3AAvengerMojo_%E8%AE%BF%E8%B0%88%EF%BC%9ASUSE_%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>WikiWikiWeb - ShangHai Linux User Group</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/rightsidebar/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/rightsidebar/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/rightsidebar/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/rightsidebar/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/WikiWikiWeb?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/WikiWikiWeb?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<div id="logo"><a href="/Geekbone">ShangHai Linux User Group</a></div>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/WikiWikiWeb?action=fullsearch&amp;value=linkto%3A%22WikiWikiWeb%22&amp;context=180">WikiWikiWeb</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/WikiWikiWeb">WikiWikiWeb</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/WikiWikiWeb?action=info">Info</a></li><li><a href="/WikiWikiWeb?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="/WikiWikiWeb?action=login" id="login">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><p class="line862">The <a class="interwiki" href="http://c2.com/cgi/wiki?FrontPage" title="Wiki">first ever wiki site</a> was founded 1995-03-25 as an automated supplement to the <a class="interwiki" href="http://c2.com/cgi/wiki?PortlandPatternRepository" title="Wiki">PortlandPatternRepository</a> (see <a class="interwiki" href="http://c2.com/cgi/wiki?History" title="Wiki">History</a>). The site was immediately popular within the pattern community, largely due to the newness of the internet and a good slate of <a class="interwiki" href="http://c2.com/cgi/wiki?InvitedAuthors" title="Wiki">InvitedAuthors</a>. The site was, and remains, dedicated to <a class="interwiki" href="http://c2.com/cgi/wiki?PeopleProjectsAndPatterns" title="Wiki">PeopleProjectsAndPatterns</a>.  <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line867"><a class="interwiki" href="http://c2.com/cgi/wiki?WardCunningham" title="Wiki">WardCunningham</a> created the site and his WikiWikiWeb machinery that operates it. He chose wiki-wiki as an alliterative substitute for quick and thereby avoided naming this site quick-web. An early page, <a class="interwiki" href="http://c2.com/cgi/wiki?WikiWikiHyperCard" title="Wiki">WikiWikiHyperCard</a>, traces wiki ideas back to a <a class="interwiki" href="http://c2.com/cgi/wiki?HyperCard" title="Wiki">HyperCard</a> stack he wrote in the late 80's.  <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line862">The term <em>wiki</em> that is used to refer to other similar groups of modifiable web pages, like this here, came from that original wiki. Regarding the creation of the word "wiki", see Ward Cunningham's <a class="http" href="http://c2.com/doc/etymology.html">Correspondence on the Etymology of Wiki</a>. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><p class="line874">See also one of these links: <span class="anchor" id="line-15"></span><ul><li><p class="line891"><a class="http" href="http://www.c2.com/cgi/wiki">http://www.c2.com/cgi/wiki</a> or <a class="interwiki" href="http://c2.com/cgi/wiki?FrontPage" title="Wiki">FrontPage</a> <span class="anchor" id="line-16"></span></li><li><p class="line862">get some answers on the <a class="interwiki" href="http://c2.com/cgi/wiki?WikiWikiWebFaq" title="Wiki">WikiWikiWebFaq</a> <span class="anchor" id="line-17"></span></li><li><p class="line862">get to know more about the <a class="interwiki" href="http://c2.com/cgi/wiki?WikiHistory" title="Wiki">WikiHistory</a> <span class="anchor" id="line-18"></span></li><li><p class="line891"><a class="http" href="http://www.artima.com/intv/wiki.html">Ward Cunningham Interview</a> <span class="anchor" id="line-19"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">WikiWikiWeb  (last modified 2006-06-30 07:21:42)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

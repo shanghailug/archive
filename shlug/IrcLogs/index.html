@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>IrcLogs - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/IrcLogs?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/IrcLogs?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/IrcLogs?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/IrcLogs?action=fullsearch&amp;value=linkto%3A%22IrcLogs%22&amp;context=180">IrcLogs</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/IrcLogs">IrcLogs</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/IrcLogs?action=info">Info</a></li><li><a href="/IrcLogs?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><script language="JavaScript" type="text/javascript" src="/htdocs/common/js/infobox.js"></script>
+<div id="infodiv" style="position:absolute; visibility:hidden; z-index:20; top:-999em; left:0px;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+
+// -->
+</script>
+<table border="2" cellspacing="2" cellpadding="2">
+ <tr>
+  <th colspan="7" class="cal-header">
+   <a class="cal-link" href="/IrcLogs?calparms=IrcLogs,2007,3,0,-12,">&lt;&lt;</a>&nbsp;<a class="cal-link" href="/IrcLogs?calparms=IrcLogs,2007,3,0,-1,">&lt;</a>&nbsp;<b>&nbsp;2007&nbsp;/&nbsp;3</b>&nbsp;<a class="cal-link" href="/IrcLogs?calparms=IrcLogs,2007,3,0,1,">&gt;</a>
+&nbsp;<a class="cal-link" href="/IrcLogs?calparms=IrcLogs,2007,3,0,12,">&gt;&gt;</a>
+  </th>
+ </tr>
+ <tr>
+  <td class="cal-workday" width="14%">Mon</td>
+  <td class="cal-workday" width="14%">Tue</td>
+  <td class="cal-workday" width="14%">Wed</td>
+  <td class="cal-workday" width="14%">Thu</td>
+  <td class="cal-workday" width="14%">Fri</td>
+  <td class="cal-weekend" width="14%">Sat</td>
+  <td class="cal-weekend" width="14%">Sun</td>
+ </tr>
+ <tr>
+  <td class="cal-invalidday">&nbsp;</td>
+  <td class="cal-invalidday">&nbsp;</td>
+  <td class="cal-invalidday">&nbsp;</td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-01">1</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-02">2</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-weekend" href="/IrcLogs/2007-03-03">3</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-weekend" href="/IrcLogs/2007-03-04">4</a></td>
+ </tr>
+ <tr>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-05">5</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-06">6</a></td>
+  <td style="background-color:#fefefe" class="cal-today"><b><a class="cal-emptyday" href="/IrcLogs/2007-03-07">7</a></b></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-08">8</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-09">9</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-weekend" href="/IrcLogs/2007-03-10">10</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-weekend" href="/IrcLogs/2007-03-11">11</a></td>
+ </tr>
+ <tr>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-12">12</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-13">13</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-14">14</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-15">15</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-16">16</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-weekend" href="/IrcLogs/2007-03-17">17</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-weekend" href="/IrcLogs/2007-03-18">18</a></td>
+ </tr>
+ <tr>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-19">19</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-20">20</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-21">21</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-22">22</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-23">23</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-weekend" href="/IrcLogs/2007-03-24">24</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-weekend" href="/IrcLogs/2007-03-25">25</a></td>
+ </tr>
+ <tr>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-26">26</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-27">27</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-28">28</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-29">29</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-emptyday" href="/IrcLogs/2007-03-30">30</a></td>
+  <td style="background-color:#fefefe" class="cal-nottoday"><a class="cal-weekend" href="/IrcLogs/2007-03-31">31</a></td>
+  <td class="cal-invalidday">&nbsp;</td>
+ </tr>
+</table>
+
+ <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><table class="navigation"><tr><td><a href="/IrcLogs/2005-09-05">/2005-09-05</a> &nbsp; </td></tr></table> <span class="anchor" id="line-4"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">IrcLogs  (last edited 2005-09-05 09:38:02 by <span title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]">PatrickLi</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/IrcLogs?action=info">Info</a></li><li><a href="/IrcLogs?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

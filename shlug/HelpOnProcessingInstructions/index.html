@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>HelpOnProcessingInstructions - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/HelpOnProcessingInstructions?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/HelpOnProcessingInstructions?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/HelpOnProcessingInstructions?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/HelpOnProcessingInstructions?action=fullsearch&amp;value=linkto%3A%22HelpOnProcessingInstructions%22&amp;context=180">HelpOnProcessingInstructions</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/HelpOnProcessingInstructions">HelpOnProce...nstructions</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnProcessingInstructions?action=info">Info</a></li><li><a href="/HelpOnProcessingInstructions?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><a href="/MoinMoin">MoinMoin</a> processing instructions have the same semantics as in XML: they control the paths taken when processing a page. Processing instructions are lines that start with a "<tt>#</tt>" character followed by a keyword and optionally some arguments; the keyword is always handled case-insensitive. Two consecutive hash marks at the start of a line are a comment that won't appear in the processed page. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line874">All PIs must appear at the very start of a page. An exception are comment PIs, those may appear anywhere within a  page using "wiki" format, but not in pages using other formats. <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line862">For more information on the possible markup, see <a href="/HelpOnEditing">HelpOnEditing</a>.  <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line862">Processing instructions MoinMoin knows of: <span class="anchor" id="line-16"></span><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li><a href="#head-6514c6c8adbbb6fedadeba58827c1ebea3691f78">## comment</a></li><li><a href="#head-0b611da565d0c15d32176823e3db8bc2593f52c6">#format</a></li><li><a href="#head-90fe7c2176c1dfa6f2de86245c9d7dde868dc64c">#redirect</a></li><li><a href="#head-77779d0457975febddcf5e54b51284109e97ef3b">#refresh</a></li><li><a href="#head-960b14e3643a3ae86600578a317ef2c67273a973">#pragma</a><ol><li><a href="#head-e0bd6e9906556340f2ae97ac1236c9e098367a2e">section-numbers</a></li><li><a href="#head-80980ec08de06df98270f20188db04c6eade7779">keywords</a></li><li><a href="#head-3516c9452a1b5071e7914d5b67c5009023b6c13c">description</a></li><li><a href="#head-a9035315f36292d506faffad642c4b1463a0601f">deprecated</a></li></ol><li><a href="#head-6a41577e570ae4c04017661296526c7f8789cc76">#language</a></li></ol></div> <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line867">
+<h1 id="head-6514c6c8adbbb6fedadeba58827c1ebea3691f78">## comment</h1>
+<span class="anchor" id="line-19"></span><p class="line867"><span class="anchor" id="line-20"></span><pre>## a comment, any text here is ignored
+<span class="anchor" id="line-21"></span></pre><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line867">
+<h1 id="head-0b611da565d0c15d32176823e3db8bc2593f52c6">#format</h1>
+<span class="anchor" id="line-24"></span><p class="line874">Defines the input format for this page.  <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><pre>#FORMAT format-specifier optional-arguments
+<span class="anchor" id="line-27"></span></pre><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><p class="line874">format-specifier can be: <span class="anchor" id="line-30"></span><ul><li><p class="line891"><strong>wiki</strong>: default <a href="/MoinMoin">MoinMoin</a> wiki markup <span class="anchor" id="line-31"></span></li><li><p class="line891"><strong>plain</strong>: normal plain text <span class="anchor" id="line-32"></span></li><li><p class="line891"><strong>python</strong>: colored Python code <span class="anchor" id="line-33"></span></li><li><p class="line862">Any other installed parser name. See <a href="/HelpOnParsers">HelpOnParsers</a> for additional parsers available and <a class="interwiki" href="http://moinmoin.wikiwikiweb.de/ParserMarket" title="MoinMoin">ParserMarket</a> for user provided parsers. <span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span></li></ul><p class="line874">Some parsers can accept optional arguments. Check the documentation of the parser for the possible options. <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line867">
+<h1 id="head-90fe7c2176c1dfa6f2de86245c9d7dde868dc64c">#redirect</h1>
+<span class="anchor" id="line-38"></span><p class="line862">Redirect to a different page (see <a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?PageRedirect" title="MeatBall">PageRedirect</a><strong></strong>) <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><pre>#REDIRECT pagename
+<span class="anchor" id="line-41"></span></pre><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><p class="line867">
+<h1 id="head-77779d0457975febddcf5e54b51284109e97ef3b">#refresh</h1>
+<span class="anchor" id="line-44"></span><p class="line874">Redirect to a different page (or an external URL or just refresh the same page, if left out) <span class="anchor" id="line-45"></span><ul><li><p class="line862">Needs to be enabled in the server configuration, see <a href="/HelpOnConfiguration">HelpOnConfiguration</a> <span class="anchor" id="line-46"></span></li></ul><p class="line867"><span class="anchor" id="line-47"></span><pre>#REFRESH delay target
+<span class="anchor" id="line-48"></span></pre><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><p class="line874">target can be either a page name, or a fully qualified url. Here are two examples: <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><pre>#refresh 0 FrontPage
+<span class="anchor" id="line-53"></span>#refresh 5 http://example.com/
+<span class="anchor" id="line-54"></span></pre><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><p class="line867">
+<h1 id="head-960b14e3643a3ae86600578a317ef2c67273a973">#pragma</h1>
+<span class="anchor" id="line-57"></span><p class="line874">Sets processing modes for this page: <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><pre>#PRAGMA mode arguments
+<span class="anchor" id="line-60"></span></pre><p class="line874"> <span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><p class="line874">Mode names are not case-sensitive.  <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><p class="line867">MoinMoin knows few pragmas, and you may add more and use them for your own themes or macros. Here are the known pragmas: <span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><p class="line867">
+<h2 id="head-e0bd6e9906556340f2ae97ac1236c9e098367a2e">section-numbers</h2>
+<span class="anchor" id="line-67"></span><p class="line874">Switches automatic numbering of section headers. <span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><pre>#pragma section-numbers off
+<span class="anchor" id="line-70"></span></pre><span class="anchor" id="line-71"></span><p class="line867"><tt class="backtick">off</tt> or <tt class="backtick">0</tt> disable numbering, <tt class="backtick">on</tt> or <tt class="backtick">1</tt> enables numbering. The default mode is set by the <tt class="backtick">show_section_numbers</tt> config option. <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><p class="line874">When enabling numbering, its possible to use specific heading level: <span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><pre>#pragma section-numbers 2
+<span class="anchor" id="line-76"></span></pre><span class="anchor" id="line-77"></span><p class="line874">Only displays section numbers for headings of level 2 and up (similarly for 3 to 6). <span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><p class="line867">
+<h2 id="head-80980ec08de06df98270f20188db04c6eade7779">keywords</h2>
+<span class="anchor" id="line-80"></span><p class="line862">adds a <tt class="backtick">&lt;meta&gt;</tt> tag with keywords which tells search engines what you can find on the particular page. <span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><pre>#pragma keywords Cars, Vehicles, Foo
+<span class="anchor" id="line-83"></span></pre><p class="line874"> <span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><p class="line867">
+<h2 id="head-3516c9452a1b5071e7914d5b67c5009023b6c13c">description</h2>
+<span class="anchor" id="line-86"></span><p class="line862">adds a <tt class="backtick">&lt;meta&gt;</tt> tag which contains the description of the particular page. <span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><pre>#pragma description This page is about cars.
+<span class="anchor" id="line-89"></span></pre><p class="line874"> <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><p class="line867">
+<h2 id="head-a9035315f36292d506faffad642c4b1463a0601f">deprecated</h2>
+<span class="anchor" id="line-92"></span><p class="line874">Mark this page as deprecated. <span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><pre>#DEPRECATED
+<span class="anchor" id="line-95"></span></pre><span class="anchor" id="line-96"></span><p class="line874">Further changes to the page will create no backup versions and displaying it will show the current contents (usually the reason why this page is deprecated) plus the last backup. This effectively freezes the last version of the page, makes it unavailable for searches (no hits on stale content), but keeps that content available for viewing. <span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><ul><li><p class="line862">Removing the PI from the page will store <strong>no</strong> backup of the deprecation warning. <span class="anchor" id="line-99"></span></li><li><p class="line862">In comparison to <tt class="backtick">#REDIRECT</tt> this PI gives the ability to give the user a reason why this page is no longer of use and why they should go to a new one, while <tt class="backtick">#REDIRECT</tt> will throw them to the new page without any reason. <span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span></li></ul><p class="line867">
+<h1 id="head-6a41577e570ae4c04017661296526c7f8789cc76">#language</h1>
+<span class="anchor" id="line-102"></span><p class="line874">Set page language and direction. <span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><pre>#language language-name
+<span class="anchor" id="line-105"></span></pre><span class="anchor" id="line-106"></span><p class="line862">Set page language and direction. Language name is the iso-639-1 code. <a href="/MoinMoin">MoinMoin</a> ignore languages that does not have a translation file in <tt class="backtick">MoinMoin/i18n/</tt>. See also <a href="/HelpOnLanguages">HelpOnLanguages</a>. <span class="anchor" id="line-107"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">HelpOnProcessingInstructions  (last modified 2006-06-30 07:21:42)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/HelpOnProcessingInstructions?action=info">Info</a></li><li><a href="/HelpOnProcessingInstructions?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

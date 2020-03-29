@@ -1,0 +1,78 @@
+TABLE {
+	FONT-SIZE: 10.5pt; FONT-FAMILY: "Times New Roman", "Georgia", "Times", "Serif"
+}
+TH {
+	FONT-SIZE: 10.5pt; FONT-FAMILY: "Times New Roman", "Georgia", "Times", "Serif"
+}
+TD {
+	FONT-SIZE: 10.5pt; FONT-FAMILY: "Times New Roman", "Georgia", "Times", "Serif"
+}
+P {
+	FONT-SIZE: 10.5pt; FONT-FAMILY: "Times New Roman", "Georgia", "Times", "Serif"
+}
+LI {
+	FONT-SIZE: 10.5pt; FONT-FAMILY: "Times New Roman", "Georgia", "Times", "Serif"
+}
+lu {
+	FONT-SIZE: 10.5pt; FONT-FAMILY: "Times New Roman", "Georgia", "Times", "Serif"
+}
+INPUT {
+	FONT-SIZE: 10.5pt; FONT-FAMILY: "Times New Roman", "Georgia", "Times", "Serif"
+}
+TEXTAREA {
+	FONT-SIZE: 10.5pt; FONT-FAMILY: "Times New Roman", "Georgia", "Times", "Serif"
+}
+SELECT {
+	FONT-SIZE: 10.5pt; FONT-FAMILY: "Times New Roman", "Georgia", "Times", "Serif"
+}
+TABLE {
+	LINE-HEIGHT: 150%
+}
+TH {
+	LINE-HEIGHT: 150%
+}
+TD {
+	LINE-HEIGHT: 150%
+}
+P {
+	LINE-HEIGHT: 150%
+}
+LI {
+	LINE-HEIGHT: 150%
+}
+lu {
+	LINE-HEIGHT: 150%
+}
+P {
+	VERTICAL-ALIGN: middle
+}
+LI {
+	VERTICAL-ALIGN: middle
+}
+lu {
+	VERTICAL-ALIGN: middle
+}
+.p9 {
+	FONT-SIZE: 9pt
+}
+.p8 {
+	FONT-SIZE: 8pt
+}
+.p7 {
+	FONT-SIZE: 7pt
+}
+.head1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 20pt; FONT-FAMILY: "Times New Roman", "Georgia", "Times", "Serif"
+}
+A:active {
+	COLOR: #cc0000; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #003399; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #cc0000; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #003399; TEXT-DECORATION: none
+}

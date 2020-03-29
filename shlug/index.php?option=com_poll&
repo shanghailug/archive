@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Shanghai Linux LUG" />
+  <meta name="description" content="Shanghai Linux User Group" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title></title>
+  <link rel="stylesheet" href="/components/com_poll/assets/poll_bars.css" type="text/css" />
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+
+<link href="/templates/rt_bentobox_j15/css/splitmenu.css" rel="stylesheet" type="text/css" />
+<link href="/templates/rt_bentobox_j15/rokzoom/rokzoom.css" rel="stylesheet" type="text/css" />
+<link href="/templates/rt_bentobox_j15/css/template.css" rel="stylesheet" type="text/css" />
+<link href="/templates/rt_bentobox_j15/css/style1.css" rel="stylesheet" type="text/css" />
+<!--[if IE 7]>
+<link href="/templates/rt_bentobox_j15/css/template_ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link href="/templates/rt_bentobox_j15/css/template_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<script type="text/javascript" src="/templates/rt_bentobox_j15/rokzoom/rokzoom.js"></script>
+<script type="text/javascript">
+	window.addEvent('load', function() {
+		RokZoom.init({
+			imageDir: '/templates/rt_bentobox_j15/rokzoom/images/',
+			resizeFX: {
+				duration: 700,
+				transition: Fx.Transitions.Cubic.easeOut,
+				wait: true
+			},
+			opacityFX: {
+				duration: 500,
+				wait: false	
+			}
+		});
+	});
+</script>
+</head>
+<body id="page-bg" class="f-default style1 splitmenu">
+	<div id="wrapper">
+		<div id="mainbody">
+			<div class="shad-1">
+				<div class="shad-2">
+					<div class="shad-3">
+						<div id="header">
+							<div id="search">
+								<span class="searchtitle">Search</span>
+								<form action="index.php" method="post">
+								<div class="search">
+									<input type="text" onfocus="if(this.value=='search...') this.value='';" onblur="if(this.value=='') this.value='search...';" value="search..." size="20" class="inputbox" alt="Search" maxlength="20" id="mod_search_searchword" name="searchword">
+									<input type="hidden" value="search" name="task">
+									<input type="hidden" value="com_search" name="option">
+									<input type="hidden" value="1" name="Itemid">
+									</div>
+								</form>
+							</div>
+							<div id="access">
+								<div id="buttons">
+									<a href="/index.php?option=com_poll&amp;&amp;fontstyle=f-smaller" title="Decrease size" class="small"><span class="button">&nbsp;</span></a>
+			  					<a href="/index.php?option=com_poll&amp;&amp;fontstyle=f-default" title="Default size" class="default"><span class="button">&nbsp;</span></a>
+									<a href="/index.php?option=com_poll&amp;&amp;fontstyle=f-larger" title="Increase size" class="large"><span class="button">&nbsp;</span></a>
+								</div>
+							</div>
+							<div id="tabmenu">
+								<ul class="menu" />							</div>
+							<a href="/" class="nounder"><img src="/images/blank.png" border="0" alt="" id="logo" /></a>
+														<div id="nav-main" class="splitmenu2">
+								<ul class="menu" />							</div>
+														<div id="nav-sub">
+																																</div>
+						</div>
+					</div>
+					<div id="content-bg">
+						<div class="border-pad border-bottom">
+							<div id="showcase">
+								<div class="clr"></div>
+																																																<div class="usermodule" style="width:99%">
+									
+								</div>
+																								<div class="clr"></div>
+							</div>
+						</div>
+						<div id="middlecolumn" class="border-pad">
+														<div id="fakecolumn1" class="sc_1">
+								<div id="fakecolumn2">
+																		<div id="leftcolumn">
+										<div id="vert-menu">
+																					</div>
+												<div class="moduletable_menu">
+					<h3>信息直通车</h3>
+					<ul class="menu"><li class="item1"><a href="http://shlug.org/"><span>首页</span></a></li><li class="item50"><a href="/index.php?option=com_content&amp;view=category&amp;id=1&amp;Itemid=50"><span>听听我们的故事</span></a></li><li class="item54"><a href="/index.php?option=com_content&amp;view=section&amp;layout=blog&amp;id=5&amp;Itemid=54"><span>记事本</span></a></li><li class="item55"><a href="/index.php?option=com_content&amp;view=article&amp;id=47&amp;Itemid=55"><span>历次交流活动</span></a></li><li class="item56"><a href="/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=56"><span>shlug公共基金</span></a></li></ul>		</div>
+	
+									</div>
+																			<div id="align-padding">
+																																												<div id="componentcolumn" class="sc_0">
+												<div class="padding">
+																								
+																								
+
+<form action="index.php" method="post" name="poll" id="poll">
+<div class="componentheading">
+	</div>
+<div class="contentpane">
+	<label for="id">
+		Select Poll		<select name="id" id="id" class="inputbox" size="1" style="width:200px" onchange="if (this.options[selectedIndex].value != '') {document.location.href=this.options[selectedIndex].value}"><option value="" >Select a poll from the list</option><option value="/index.php?option=com_poll&amp;id=15:2009-02-08-01-40-11" >聚会时间的投票</option></select>	</label>
+</div>
+<div class="contentpane">
+<br />
+<table class="pollstableborder" cellspacing="0" cellpadding="0" border="0">
+<thead>
+	<tr>
+		<th colspan="3" class="sectiontableheader">
+			<img src="/components/com_poll/assets/poll.png" align="middle" border="0" width="12" height="14" alt="" />
+					</th>
+	</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<br />
+<table cellspacing="0" cellpadding="0" border="0">
+<tbody>
+	<tr>
+		<td class="smalldark">
+			Number of Voters		</td>
+		<td class="smalldark">
+			&nbsp;:&nbsp;
+					</td>
+	</tr>
+	<tr>
+		<td class="smalldark">
+			First Vote		</td>
+		<td class="smalldark">
+			&nbsp;:&nbsp;
+					</td>
+	</tr>
+	<tr>
+		<td class="smalldark">
+			Last Vote		</td>
+		<td class="smalldark">
+			&nbsp;:&nbsp;
+					</td>
+	</tr>
+</tbody>
+</table></div>
+</form>
+
+												</div>
+																							</div>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="clr"></div>
+															</div>
+							<div class="clr"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="bottom">
+				<div class="shad-1">
+					<div class="shad-2">
+						<a href="http://www.rockettheme.com" title="RocketTheme Joomla Templates Club" class="nounder"><img src="/images/blank.png" border="0" alt="" id="rocket" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>

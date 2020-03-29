@@ -1,0 +1,410 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>IrcLogs/2005-09-05 - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/IrcLogs/2005-09-05?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/IrcLogs/2005-09-05?action=print">
+<link rel="Up" href="/IrcLogs">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/IrcLogs/2005-09-05?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a href="/IrcLogs">IrcLogs</a></li><li><a class="backlink" title="Click to do a full-text search for this title" href="/IrcLogs/2005-09-05?action=fullsearch&amp;value=linkto%3A%22IrcLogs/2005-09-05%22&amp;context=180">2005-09-05</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/IrcLogs/2005-09-05">IrcLogs/2005-09-05</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/IrcLogs/2005-09-05?action=info">Info</a></li><li><a href="/IrcLogs/2005-09-05?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="head-7281e1982d9776a26125a6005c58d9dec2bec683">#_software</h1>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><div><table><tbody><tr>  <td>20:33</td>
+  <td>Update</td>
+  <td>问你话呢</td>
+</tr>
+<tr>  <td>20:33</td>
+  <td>Update</td>
+  <td>表装傻</td>
+</tr>
+<tr>  <td>20:34</td>
+  <td>gEEk</td>
+  <td>教主,你打我干吗?</td>
+</tr>
+<tr>  <td>20:34</td>
+  <td>Chaos`Eternal</td>
+  <td>主席，你打前教主干啥</td>
+</tr>
+<tr>  <td>20:34</td>
+  <td>STRONG</td>
+  <td>教主打你,需要问为什么吗?</td>
+</tr>
+<tr>  <td>20:34</td>
+  <td>Update</td>
+  <td>,,,</td>
+</tr>
+<tr>  <td>20:34</td>
+  <td>STRONG</td>
+  <td>-_-</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Chaos`Eternal</td>
+  <td>哦</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Update</td>
+  <td>tmd..</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Update</td>
+  <td>关我啥事啊</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Chaos`Eternal</td>
+  <td>主席打人， 也不要理由的</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Update</td>
+  <td>疯了疯了</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>STRONG</td>
+  <td>...</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Update</td>
+  <td>都tmd疯了</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Update</td>
+  <td>chaos, 17号那天, 你不讲课的时候</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Update</td>
+  <td>我和你对练kendo吧</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Chaos`Eternal</td>
+  <td>...</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Update</td>
+  <td>让id把护具借给你</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>gEEk</td>
+  <td>...</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Update</td>
+  <td>或者你不穿护具上?</td>
+</tr>
+<tr>  <td>20:35</td>
+  <td>Update</td>
+  <td>o..</td>
+</tr>
+<tr>  <td>20:36</td>
+  <td>Update</td>
+  <td>id的护具,,胖子穿比较合适</td>
+</tr>
+<tr>  <td>20:36</td>
+  <td>Update</td>
+  <td>对伐</td>
+</tr>
+<tr>  <td>20:36</td>
+  <td>Chaos`Eternal</td>
+  <td>。。。</td>
+</tr>
+<tr>  <td>20:36</td>
+  <td>Chaos`Eternal</td>
+  <td>穿不上了</td>
+</tr>
+<tr>  <td>20:36</td>
+  <td>Chaos`Eternal</td>
+  <td>庞梓现在比以前的J老板...还要....</td>
+</tr>
+<tr>  <td>20:36</td>
+  <td>pnt</td>
+  <td>:o</td>
+</tr>
+<tr>  <td>20:37</td>
+  <td>Update</td>
+  <td>没事, 只要脑袋进得去就成</td>
+</tr>
+<tr>  <td>20:37</td>
+  <td>Update</td>
+  <td>胸甲这种, 只是挂在胸口</td>
+</tr>
+<tr>  <td>20:38</td>
+  <td>gEEk</td>
+  <td>..</td>
+</tr>
+<tr>  <td>20:40</td>
+  <td>Lightning</td>
+  <td>表面上借kendo的友好切磋，然后暗地里不小心制造一起失手事故？</td>
+</tr>
+<tr>  <td>20:40</td>
+  <td>Chaos`Eternal</td>
+  <td>....</td>
+</tr>
+<tr>  <td>20:40</td>
+  <td>pAtrick</td>
+  <td>恩，这样比较像大款，容易吊马子</td>
+</tr>
+<tr>  <td>20:41</td>
+  <td>Update</td>
+  <td>en</td>
+</tr>
+<tr>  <td>20:41</td>
+  <td>Update</td>
+  <td>pa</td>
+</tr>
+<tr>  <td>20:41</td>
+  <td>Update</td>
+  <td>应该说更容易</td>
+</tr>
+<tr>  <td>20:41</td>
+  <td>Update</td>
+  <td>吊马子这种事, 对胖子来说, 本来就不难</td>
+</tr>
+<tr>  <td>20:42</td>
+  <td>Update</td>
+  <td>随便搞搞就n陪了</td>
+</tr>
+<tr>  <td>20:42</td>
+  <td>pAtrick</td>
+  <td>恩</td>
+</tr>
+<tr>  <td>20:42</td>
+  <td>Chaos`Eternal</td>
+  <td>庞梓本来就是大款</td>
+</tr>
+<tr>  <td>20:42</td>
+  <td>pAtrick</td>
+  <td>8p 9p的没点底子可不行</td>
+</tr>
+<tr>  <td>20:43</td>
+  <td>Lightning</td>
+  <td>卖西红柿喽，新鲜的西红柿，营养丰富，价格便宜！</td>
+</tr>
+<tr>  <td>20:43</td>
+  <td>gEEk</td>
+  <td>.......................</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-51"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">IrcLogs/2005-09-05  (last edited 2005-09-05 09:41:32 by <span title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]"><a class="nonexistent" href="/PatrickLi" title="PatrickLi @ 222-152-155-40.jetstream.xtra.co.nz[222.152.155.40]">PatrickLi</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/IrcLogs/2005-09-05?action=info">Info</a></li><li><a href="/IrcLogs/2005-09-05?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

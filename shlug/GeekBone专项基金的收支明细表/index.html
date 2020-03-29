@@ -1,0 +1,443 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>GeekBone专项基金的收支明细表 - ShangHai Linux User Group</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/rightsidebar/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/rightsidebar/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/rightsidebar/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/rightsidebar/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<div id="logo"><a href="/Geekbone">ShangHai Linux User Group</a></div>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8?action=fullsearch&amp;value=linkto%3A%22GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8%22&amp;context=180">GeekBone专项基金的收支明细表</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8">GeekBone专项基金的收支明细表</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8?action=info">Info</a></li><li><a href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="/GeekBone%E4%B8%93%E9%A1%B9%E5%9F%BA%E9%87%91%E7%9A%84%E6%94%B6%E6%94%AF%E6%98%8E%E7%BB%86%E8%A1%A8?action=login" id="login">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-2"></span><p class="line867"><a class="nonexistent" href="/GeekBone">GeekBone</a>专项基金: 招商银行帐号9555500210931746 开户人：沙李俊 查询密码:955550<br />
+ <span class="anchor" id="line-3"></span>Geekbone专项基金的设立是为了维持SHLUG(Geekbone)的服务器开支及各类活动开支，所有资金将用于SHLUG社区建设。<br />
+ <span class="anchor" id="line-4"></span>专项基金接受社会各界的长期捐助支持，并会及时将基金收支情况进行公布。 <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line862">目前，SHLUG(<a class="nonexistent" href="/GeekBone">GeekBone</a>)所能使用的的服务器共有两台。<br />
+ <span class="anchor" id="line-7"></span>代号为Tux的服务器是由社区成员共同集资购买，配置为单至强2.4Ghz,1G 内存, 320GB PATA硬盘X6 Raid5 的2U服务器。<br />
+ <span class="anchor" id="line-8"></span>代号为Apt的服务器由南京新华公司赞助使用权，配置为双至强2.4Ghz,1G 内存， 73GB SCSI硬盘x2。 <br />
+ <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><div><table><tbody><tr>  <td><p class="line862">日期         </td>
+  <td><p class="line862">支出         </td>
+  <td><p class="line862">存入      </td>
+  <td><p class="line862">余额        </td>
+  <td><p class="line862">交易类型      </td>
+  <td><p class="line862">备注</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-11"></span><p class="line862">2005-07-01  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">10.95     </td>
+  <td><p class="line862">89.43      </td>
+  <td><p class="line862">利息转帐      </td>
+  <td><p class="line862">利息转帐</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-12"></span><p class="line862">2005-07-01  </td>
+  <td><p class="line862">2.19        </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">87.24      </td>
+  <td><p class="line862">利息税        </td>
+  <td><p class="line862">利息税</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-13"></span><p class="line862">2005-07-25  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">1,500.00  </td>
+  <td><p class="line862">1,587.24   </td>
+  <td><p class="line862">现金         </td>
+  <td><p class="line862">Goofy的捐款</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-14"></span><p class="line862">2005-09-24  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">250.00    </td>
+  <td><p class="line862">1,837.24   </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐Lightning</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-15"></span><p class="line862">2005-12-21  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">5.21      </td>
+  <td><p class="line862">1,842.45   </td>
+  <td><p class="line862">利息转帐      </td>
+  <td><p class="line862">利息转帐</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-16"></span><p class="line862">2005-12-21  </td>
+  <td><p class="line862">1.04        </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">1,841.41   </td>
+  <td><p class="line862">利息税        </td>
+  <td><p class="line862">利息税</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-17"></span><p class="line862">2006-02-10  </td>
+  <td><p class="line862">400.00      </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">1,441.41   </td>
+  <td><p class="line862">银联ATM取款   </td>
+  <td><p class="line862">用于购买Dlink交换机一台 注1</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-18"></span><p class="line862">2006-02-10  </td>
+  <td><p class="line862">2.00        </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">1,439.41   </td>
+  <td><p class="line862">深银联手续费   </td>
+  <td><p class="line862">深银联手续费</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-19"></span><p class="line862">2006-03-21  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">3.00      </td>
+  <td><p class="line862">1,442.41   </td>
+  <td><p class="line862">利息转帐      </td>
+  <td><p class="line862">利息转帐</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-20"></span><p class="line862">2006-03-21  </td>
+  <td><p class="line862">0.60        </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">1,441.81   </td>
+  <td><p class="line862">利息税        </td>
+  <td><p class="line862">利息税</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-21"></span><p class="line862">2006-03-22  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">500.00    </td>
+  <td><p class="line862">1,941.81   </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐Chaos</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-22"></span><p class="line862">2006-03-24  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">2,000.00  </td>
+  <td><p class="line862">3,941.81   </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐Lightning</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-23"></span><p class="line862">2006-03-24  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">58.19     </td>
+  <td><p class="line862">4,000.00   </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐Update</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-24"></span><p class="line862">2006-05-16  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">1,000.00  </td>
+  <td><p class="line862">5,000.00   </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐Chaos 注2</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-25"></span><p class="line862">2006-05-17  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">168.01    </td>
+  <td><p class="line862">5,168.01   </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐Strong</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-26"></span><p class="line862">2006-05-17  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">90.02     </td>
+  <td><p class="line862">5,258.03   </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐Strong</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-27"></span><p class="line862">2006-05-17  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">25.00     </td>
+  <td><p class="line862">5,283.03   </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐Lightning Dlink交换机购机款的余额</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-28"></span><p class="line862">2006-05-18  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">500.00    </td>
+  <td><p class="line862">5,783.03   </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐CHIN</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-29"></span><p class="line862">2006-05-19  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">500.00    </td>
+  <td><p class="line862">6,283.03   </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐gEEk 注3</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-30"></span><p class="line862">2006-05-24  </td>
+  <td><p class="line862">5,000.00    </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">1,283.03   </td>
+  <td><p class="line862">银联ATM取款   </td>
+  <td><p class="line862">提取部分Tux的托管费</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-31"></span><p class="line862">2006-05-24  </td>
+  <td><p class="line862">1,000.00    </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">283.03     </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐沙李俊 注4</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-32"></span><p class="line862">2006-06-21  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">5.45      </td>
+  <td><p class="line862">288.48     </td>
+  <td><p class="line862">利息转帐      </td>
+  <td><p class="line862">利息转帐</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-33"></span><p class="line862">2006-06-21  </td>
+  <td><p class="line862">1.09        </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">287.39     </td>
+  <td><p class="line862">利息税       </td>
+  <td><p class="line862">利息税</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-34"></span><p class="line862">2006-07-04  </td>
+  <td><p class="line862">1.00        </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">286.39     </td>
+  <td><p class="line862">CU          </td>
+  <td><p class="line862">账户管理费</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-35"></span><p class="line862">2006-08-04  </td>
+  <td><p class="line862">1.00        </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">285.39     </td>
+  <td><p class="line862">CU          </td>
+  <td><p class="line862">账户管理费</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-36"></span><p class="line862">2006-08-17  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">600.00    </td>
+  <td><p class="line862">885.39     </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">自助转帐apache</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-37"></span><p class="line862">2006-09-11  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">500.00    </td>
+  <td><p class="line862">1385.39    </td>
+  <td><p class="line862">银行柜台存款   </td>
+  <td><p class="line862">银行柜台存款lyxmoo</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-38"></span><p class="line862">2007-05-19  </td>
+  <td><p class="line862">1,300.00    </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">81.24      </td>
+  <td><p class="line862">银联ATM取款   </td>
+  <td><p class="line862">提取购买硬盘的经费 注5</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-39"></span><p class="line862">2007-06-13  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">2700.00   </td>
+  <td><p class="line862">2780.24    </td>
+  <td><p class="line862">异地转帐      </td>
+  <td><p class="line862">常熟梦龙公司赞助费</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-40"></span><p class="line862">2007-06-14  </td>
+  <td><p class="line862">1,900.00    </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">880.24     </td>
+  <td><p class="line862">自助转帐      </td>
+  <td><p class="line862">Lightning取回预付的3500元硬盘费中的1900元</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-41"></span><p class="line862">2007-06-15  </td>
+  <td><p class="line862">800.00      </td>
+  <td><p class="line862">          </td>
+  <td><p class="line862">80.24      </td>
+  <td><p class="line862">银联ATM取款   </td>
+  <td><p class="line862">返还geek预付的电源费</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-42"></span><p class="line862">2007-12-17  </td>
+  <td><p class="line862">            </td>
+  <td><p class="line862">1,200.00  </td>
+  <td><p class="line862">1,281.78   </td>
+  <td><p class="line862">异地转本金    </td>
+  <td><p class="line862">Vern Sun 捐款</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line874">注1：在2月9日，Jackz告诉Lightning，有可能可以免费托管在Peter那里，但是Peter缺少一台机架式交换机，所以，可以让Geekbone帮Peter买一台机架式交换机以作酬谢。2月10日，Lightning在徐家汇太平洋一期三楼购买Dlink 16口交换机一台，价格为:375元，该机发票目前在Jackz处。购该机时提款400元，余额25元已归回基金帐户。由于后期托管到Peter处的计划失败，该台交换机目前暂存在Lightning处等待处理。 <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line874">注2：Chaos转帐的1000元人民币中的500元是属于gEEk的捐款。 <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><p class="line874">注3：gEEk自助转帐的500元人民币为Sophia的捐款。 <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><p class="line874">注4：受当日ATM取款最高5000元额度限制,Lightning先垫付了1000元，凑齐6000元托管费，该笔自肋转帐归还1000元给Lightning。 <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><p class="line874">注5：从2007-05-19开始，本表格只公布主动存入和取出的交易记录，不包含利息收入和利息税支出的记录,如果要查询精确到利息的进出记录，可直接登录招行网站查询。 <span class="anchor" id="line-53"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">GeekBone专项基金的收支明细表  (last edited 2007-12-18 04:54:16 by <span title="Lightning @ 177.240.35.58.broad.xw.sh.dynamic.163data.com.cn[58.35.240.177]"><a href="/Lightning" title="Lightning @ 177.240.35.58.broad.xw.sh.dynamic.163data.com.cn[58.35.240.177]">Lightning</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

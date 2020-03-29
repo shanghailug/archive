@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>InterWiki - Geekbone.Org</title>
+<script type="text/javascript" src="/htdocs/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/htdocs/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/htdocs/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/htdocs/modern/css/projection.css">
+
+
+<link rel="Start" href="/Geekbone">
+<link rel="Alternate" title="Wiki Markup" href="/InterWiki?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/InterWiki?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/Geekbone">Geekbone.Org</a></div>
+
+<form id="searchform" method="get" action="">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/InterWiki?action=login" id="login">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a class="backlink" title="Click to do a full-text search for this title" href="/InterWiki?action=fullsearch&amp;value=linkto%3A%22InterWiki%22&amp;context=180">InterWiki</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Geekbone">Geekbone</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/InterWiki">InterWiki</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/InterWiki?action=info">Info</a></li><li><a href="/InterWiki?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-8"></span><p class="line867">InterWiki links are a quick way to refer to information in other wikis, without having to remember <span class="anchor" id="line-9"></span>cryptic URLs. To write an InterWiki link, just use the InterWiki moniker of the foreign wiki,  <span class="anchor" id="line-10"></span>followed by a page name on that wiki.  <span class="anchor" id="line-11"></span>Of course, InterWiki links are not rendered differently when the remote page does not exist, and <span class="anchor" id="line-12"></span><a href="/MoinMoin">MoinMoin</a> cannot check whether you followed the rules for <a href="/WikiName">WikiName</a><tt class="backtick"></tt>s of the other wiki. <span class="anchor" id="line-13"></span>So double-check what you type. <span class="anchor" id="line-14"></span>See the <a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?InterWiki" title="MeatBall">InterWiki</a> page on <a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?MeatballWiki" title="MeatBall">MeatballWiki</a> for further details. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line862">List of valid InterWiki names this wiki knows of (the master copy of this list is at <a class="interwiki" href="http://moinmaster.wikiwikiweb.de/InterWikiMap" title="MoinMaster">InterWikiMap</a>): <span class="anchor" id="line-17"></span><dl><dt><tt><a href="http://ourpla.net/cgi/pikie?RecentChanges">AbbeNormal</a></tt></dt><dd><tt><a href="http://ourpla.net/cgi/pikie?">http://ourpla.net/cgi/pikie?</a></tt></dd><dt><tt><a href="http://www.acronymfinder.com/af-query.asp?String=exact&Acronym=RecentChanges">Acronym</a></tt></dt><dd><tt><a href="http://www.acronymfinder.com/af-query.asp?String=exact&Acronym=">http://www.acronymfinder.com/af-query.asp?String=exact&Acronym=</a></tt></dd><dt><tt><a href="http://www.advogato.org/RecentChanges">Advogato</a></tt></dt><dd><tt><a href="http://www.advogato.org/">http://www.advogato.org/</a></tt></dd><dt><tt><a href="http://www.seedwiki.com/page.cfm?wikiid=368&doc=RecentChanges">AnnotationWiki</a></tt></dt><dd><tt><a href="http://www.seedwiki.com/page.cfm?wikiid=368&doc=">http://www.seedwiki.com/page.cfm?wikiid=368&doc=</a></tt></dd><dt><tt><a href="http://intertwingly.net/wiki/pie/RecentChanges">AtomWiki</a></tt></dt><dd><tt><a href="http://intertwingly.net/wiki/pie/">http://intertwingly.net/wiki/pie/</a></tt></dd><dt><tt><a href="http://www.bcwireless.net/moin.cgi/RecentChanges">BcWireless</a></tt></dt><dd><tt><a href="http://www.bcwireless.net/moin.cgi/">http://www.bcwireless.net/moin.cgi/</a></tt></dd><dt><tt><a href="http://www.bamber.org/wiki/ow.asp?RecentChanges">BitTorrentFAQ</a></tt></dt><dd><tt><a href="http://www.bamber.org/wiki/ow.asp?">http://www.bamber.org/wiki/ow.asp?</a></tt></dd><dt><tt><a href="http://bookshelved.org/cgi-bin/wiki.pl?RecentChanges">BookShelved</a></tt></dt><dd><tt><a href="http://bookshelved.org/cgi-bin/wiki.pl?">http://bookshelved.org/cgi-bin/wiki.pl?</a></tt></dd><dt><tt><a href="http://wiki.buildingcontrols.de/CoMa.php?CoMa=RecentChanges">BuildingControlsWiki</a></tt></dt><dd><tt><a href="http://wiki.buildingcontrols.de/CoMa.php?CoMa=">http://wiki.buildingcontrols.de/CoMa.php?CoMa=</a></tt></dd><dt><tt><a href="http://c2.com/cgi/wiki?FindPage&value=RecentChanges">C2find</a></tt></dt><dd><tt><a href="http://c2.com/cgi/wiki?FindPage&value=">http://c2.com/cgi/wiki?FindPage&value=</a></tt></dd><dt><tt><a href="http://www.cakem.net/mywiki/RecentChanges">CAKE</a></tt></dt><dd><tt><a href="http://www.cakem.net/mywiki/">http://www.cakem.net/mywiki/</a></tt></dd><dt><tt><a href="http://search.cpan.org/perldoc?RecentChanges">CPAN</a></tt></dt><dd><tt><a href="http://search.cpan.org/perldoc?">http://search.cpan.org/perldoc?</a></tt></dd><dt><tt><a href="http://www.google.com/search?q=cache:RecentChanges">Cache</a></tt></dt><dd><tt><a href="http://www.google.com/search?q=cache:">http://www.google.com/search?q=cache:</a></tt></dd><dt><tt><a href="http://carpe.com/wiki/wiki.pl?RecentChanges">CarpeWiki</a></tt></dt><dd><tt><a href="http://carpe.com/wiki/wiki.pl?">http://carpe.com/wiki/wiki.pl?</a></tt></dd><dt><tt><a href="http://wiki.colinux.org/cgi-bin/RecentChanges">CoLinux</a></tt></dt><dd><tt><a href="http://wiki.colinux.org/cgi-bin/">http://wiki.colinux.org/cgi-bin/</a></tt></dd><dt><tt><a href="http://www.emacswiki.org/cgi-bin/community?RecentChanges">CommunityWiki</a></tt></dt><dd><tt><a href="http://www.emacswiki.org/cgi-bin/community?">http://www.emacswiki.org/cgi-bin/community?</a></tt></dd><dt><tt><a href="http://wiki.crao.net/index.php/RecentChanges">CraoWiki</a></tt></dt><dd><tt><a href="http://wiki.crao.net/index.php/">http://wiki.crao.net/index.php/</a></tt></dd><dt><tt><a href="http://www.ourpla.net/cgi-bin/wiki.pl?RecentChanges">CreationMatters</a></tt></dt><dd><tt><a href="http://www.ourpla.net/cgi-bin/wiki.pl?">http://www.ourpla.net/cgi-bin/wiki.pl?</a></tt></dd><dt><tt><a href="http://de.wikipedia.org/wiki/RecentChanges">DeWikiPedia</a></tt></dt><dd><tt><a href="http://de.wikipedia.org/wiki/">http://de.wikipedia.org/wiki/</a></tt></dd><dt><tt><a href="http://bugs.debian.org/RecentChanges">DebianBug</a></tt></dt><dd><tt><a href="http://bugs.debian.org/">http://bugs.debian.org/</a></tt></dd><dt><tt><a href="http://packages.debian.org/RecentChanges">DebianPackage</a></tt></dt><dd><tt><a href="http://packages.debian.org/">http://packages.debian.org/</a></tt></dd><dt><tt><a href="http://wiki.debianforum.de/RecentChanges">DebianforumDeWiki</a></tt></dt><dd><tt><a href="http://wiki.debianforum.de/">http://wiki.debianforum.de/</a></tt></dd><dt><tt><a href="http://www.dict.org/bin/Dict?Database=*&Form=Dict1&Strategy=*&Query=RecentChanges">Dictionary</a></tt></dt><dd><tt><a href="http://www.dict.org/bin/Dict?Database=*&Form=Dict1&Strategy=*&Query=">http://www.dict.org/bin/Dict?Database=*&Form=Dict1&Strategy=*&Query=</a></tt></dd><dt><tt><a href="http://www.disinfopedia.org/wiki.phtml?title=RecentChanges">Disinfopedia</a></tt></dt><dd><tt><a href="http://www.disinfopedia.org/wiki.phtml?title=">http://www.disinfopedia.org/wiki.phtml?title=</a></tt></dd><dt><tt><a href="http://docbook.org/wiki/moin.cgi/RecentChanges">DocBook</a></tt></dt><dd><tt><a href="http://docbook.org/wiki/moin.cgi/">http://docbook.org/wiki/moin.cgi/</a></tt></dd><dt><tt><a href="http://www.wikiservice.at/dse/wiki.cgi?RecentChanges">DseWiki</a></tt></dt><dd><tt><a href="http://www.wikiservice.at/dse/wiki.cgi?">http://www.wikiservice.at/dse/wiki.cgi?</a></tt></dd><dt><tt><a href="http://esw.w3.org/topic/RecentChanges">ESW</a></tt></dt><dd><tt><a href="http://esw.w3.org/topic/">http://esw.w3.org/topic/</a></tt></dd><dt><tt><a href="http://www.emacswiki.org/RecentChanges">EmacsWiki</a></tt></dt><dd><tt><a href="http://www.emacswiki.org/">http://www.emacswiki.org/</a></tt></dd><dt><tt><a href="http://www.foldoc.org/foldoc/foldoc.cgi?RecentChanges">Foldoc</a></tt></dt><dd><tt><a href="http://www.foldoc.org/foldoc/foldoc.cgi?">http://www.foldoc.org/foldoc/foldoc.cgi?</a></tt></dd><dt><tt><a href="http://fox.wikis.com/wc.dll?Wiki~RecentChanges">FoxWiki</a></tt></dt><dd><tt><a href="http://fox.wikis.com/wc.dll?Wiki~">http://fox.wikis.com/wc.dll?Wiki~</a></tt></dd><dt><tt><a href="http://www.wikiservice.at/fractal/wikidev.cgi?RecentChanges">FractalWiki</a></tt></dt><dd><tt><a href="http://www.wikiservice.at/fractal/wikidev.cgi?">http://www.wikiservice.at/fractal/wikidev.cgi?</a></tt></dd><dt><tt><a href="http://freshmeat.net/RecentChanges">FreshMeat</a></tt></dt><dd><tt><a href="http://freshmeat.net/">http://freshmeat.net/</a></tt></dd><dt><tt><a href="http://gentoo-wiki.com/RecentChanges">GentooLinux</a></tt></dt><dd><tt><a href="http://gentoo-wiki.com/">http://gentoo-wiki.com/</a></tt></dd><dt><tt><a href="http://www.google.com/search?q=RecentChanges">Google</a></tt></dt><dd><tt><a href="http://www.google.com/search?q=">http://www.google.com/search?q=</a></tt></dd><dt><tt><a href="http://groups.google.com/groups?q=RecentChanges">GoogleGroups</a></tt></dt><dd><tt><a href="http://groups.google.com/groups?q=">http://groups.google.com/groups?q=</a></tt></dd><dt><tt><a href="http://www.dairiki.org/HammondWiki/RecentChanges">HammondWiki</a></tt></dt><dd><tt><a href="http://www.dairiki.org/HammondWiki/">http://www.dairiki.org/HammondWiki/</a></tt></dd><dt><tt><a href="http://www.IAwiki.net/RecentChanges">IAWiki</a></tt></dt><dd><tt><a href="http://www.IAwiki.net/">http://www.IAwiki.net/</a></tt></dd><dt><tt><a href="http://us.imdb.com/Title?RecentChanges">IMDB</a></tt></dt><dd><tt><a href="http://us.imdb.com/Title?">http://us.imdb.com/Title?</a></tt></dd><dt><tt><a href="http://www.amazon.com/exec/obidos/ISBN=RecentChanges">ISBN</a></tt></dt><dd><tt><a href="http://www.amazon.com/exec/obidos/ISBN=">http://www.amazon.com/exec/obidos/ISBN=</a></tt></dd><dt><tt><a href="http://downlode.org/perl/jargon-redirect.cgi?term=RecentChanges">JargonFile</a></tt></dt><dd><tt><a href="http://downlode.org/perl/jargon-redirect.cgi?term=">http://downlode.org/perl/jargon-redirect.cgi?term=</a></tt></dd><dt><tt><a href="http://www.ecyrd.com/JSPWiki/Wiki.jsp?page=RecentChanges">JspWiki</a></tt></dt><dd><tt><a href="http://www.ecyrd.com/JSPWiki/Wiki.jsp?page=">http://www.ecyrd.com/JSPWiki/Wiki.jsp?page=</a></tt></dd><dt><tt><a href="http://jurawiki.de/RecentChanges">JuraWiki</a></tt></dt><dd><tt><a href="http://jurawiki.de/">http://jurawiki.de/</a></tt></dd><dt><tt><a href="http://wiki.kernelnewbies.org/RecentChanges">KernelNewbies</a></tt></dt><dd><tt><a href="http://wiki.kernelnewbies.org/">http://wiki.kernelnewbies.org/</a></tt></dd><dt><tt><a href="http://www2.iro.umontreal.ca/~paquetse/cgi-bin/wiki.cgi?RecentChanges">KnowHow</a></tt></dt><dd><tt><a href="http://www2.iro.umontreal.ca/~paquetse/cgi-bin/wiki.cgi?">http://www2.iro.umontreal.ca/~paquetse/cgi-bin/wiki.cgi?</a></tt></dd><dt><tt><a href="http://linux-mm.org/RecentChanges">LinuxMM</a></tt></dt><dd><tt><a href="http://linux-mm.org/">http://linux-mm.org/</a></tt></dd><dt><tt><a href="http://linux-net.osdl.org/index.php/RecentChanges">LinuxNet</a></tt></dt><dd><tt><a href="http://linux-net.osdl.org/index.php/">http://linux-net.osdl.org/index.php/</a></tt></dd><dt><tt><a href="http://linuxwiki.org/RecentChanges">LinuxWiki</a></tt></dt><dd><tt><a href="http://linuxwiki.org/">http://linuxwiki.org/</a></tt></dd><dt><tt><a href="http://livejournal.com/users/RecentChanges">LiveJournal</a></tt></dt><dd><tt><a href="http://livejournal.com/users/">http://livejournal.com/users/</a></tt></dd><dt><tt><a href="http://www.usemod.com/cgi-bin/mb.pl?action=login&p_userid=RecentChanges">Login</a></tt></dt><dd><tt><a href="http://www.usemod.com/cgi-bin/mb.pl?action=login&p_userid=">http://www.usemod.com/cgi-bin/mb.pl?action=login&p_userid=</a></tt></dd><dt><tt><a href="http://www.usemod.com/cgi-bin/mbtest.pl?RecentChanges">MbTest</a></tt></dt><dd><tt><a href="http://www.usemod.com/cgi-bin/mbtest.pl?">http://www.usemod.com/cgi-bin/mbtest.pl?</a></tt></dd><dt><tt><a href="http://www.usemod.com/cgi-bin/mb.pl?RecentChanges">MeatBall</a></tt></dt><dd><tt><a href="http://www.usemod.com/cgi-bin/mb.pl?">http://www.usemod.com/cgi-bin/mb.pl?</a></tt></dd><dt><tt><a href="http://sunir.org/apps/meta.pl?RecentChanges">MetaWiki</a></tt></dt><dd><tt><a href="http://sunir.org/apps/meta.pl?">http://sunir.org/apps/meta.pl?</a></tt></dd><dt><tt><a href="http://meta.wikipedia.org/wiki/RecentChanges">MetaWikiPedia</a></tt></dt><dd><tt><a href="http://meta.wikipedia.org/wiki/">http://meta.wikipedia.org/wiki/</a></tt></dd><dt><tt><a href="http://hg.thinkmo.de/moin/1.6?f=-1;file=RecentChanges">MoinCVS</a></tt></dt><dd><tt><a href="http://hg.thinkmo.de/moin/1.6?f=-1;file=">http://hg.thinkmo.de/moin/1.6?f=-1;file=</a></tt></dd><dt><tt><a href="http://hg.thinkmo.de/doc/moin/1.6/RecentChanges">MoinDoc</a></tt></dt><dd><tt><a href="http://hg.thinkmo.de/doc/moin/1.6/">http://hg.thinkmo.de/doc/moin/1.6/</a></tt></dd><dt><tt><a href="http://moinmaster.wikiwikiweb.de/RecentChanges">MoinMaster</a></tt></dt><dd><tt><a href="http://moinmaster.wikiwikiweb.de/">http://moinmaster.wikiwikiweb.de/</a></tt></dd><dt><tt><a href="http://moinmoin.wikiwikiweb.de/RecentChanges">MoinMoin</a></tt></dt><dd><tt><a href="http://moinmoin.wikiwikiweb.de/">http://moinmoin.wikiwikiweb.de/</a></tt></dd><dt><tt><a href="http://hg.thinkmo.de/moin/1.6?f=-1;file=RecentChanges">MoinSrc</a></tt></dt><dd><tt><a href="http://hg.thinkmo.de/moin/1.6?f=-1;file=">http://hg.thinkmo.de/moin/1.6?f=-1;file=</a></tt></dd><dt><tt><a href="http://groups.google.com/groups?as_umsgid=RecentChanges">MsgID</a></tt></dt><dd><tt><a href="http://groups.google.com/groups?as_umsgid=">http://groups.google.com/groups?as_umsgid=</a></tt></dd><dt><tt><a href="http://nematologists.org.au/nemwikiRecentChanges">NemWiki</a></tt></dt><dd><tt><a href="http://nematologists.org.au/nemwiki">http://nematologists.org.au/nemwiki</a></tt></dd><dt><tt><a href="http://opag.ca/wiki?RecentChanges">OPAG</a></tt></dt><dd><tt><a href="http://opag.ca/wiki?">http://opag.ca/wiki?</a></tt></dd><dt><tt><a href="http://ospedia.osdir.com/RecentChanges">OSPedia</a></tt></dt><dd><tt><a href="http://ospedia.osdir.com/">http://ospedia.osdir.com/</a></tt></dd><dt><tt><a href="http://www.oddmuse.org/RecentChanges">OddMuse</a></tt></dt><dd><tt><a href="http://www.oddmuse.org/">http://www.oddmuse.org/</a></tt></dd><dt><tt><a href="http://www2.iro.umontreal.ca/~paquetse/cgi-bin/om.cgi?RecentChanges">OpenMind</a></tt></dt><dd><tt><a href="http://www2.iro.umontreal.ca/~paquetse/cgi-bin/om.cgi?">http://www2.iro.umontreal.ca/~paquetse/cgi-bin/om.cgi?</a></tt></dd><dt><tt><a href="http://ooowiki.de/RecentChanges">OpenOfficeWiki</a></tt></dt><dd><tt><a href="http://ooowiki.de/">http://ooowiki.de/</a></tt></dd><dt><tt><a href="http://openwiki.com/ow.asp?RecentChanges">OpenWiki</a></tt></dt><dd><tt><a href="http://openwiki.com/ow.asp?">http://openwiki.com/ow.asp?</a></tt></dd><dt><tt><a href="http://www.easycomp.org/cgi-bin/OrgPatterns?RecentChanges">OrgPatterns</a></tt></dt><dd><tt><a href="http://www.easycomp.org/cgi-bin/OrgPatterns?">http://www.easycomp.org/cgi-bin/OrgPatterns?</a></tt></dd><dt><tt><a href="http://parawiki.plm.eecs.uni-kassel.de/RecentChanges">Parawiki</a></tt></dt><dd><tt><a href="http://parawiki.plm.eecs.uni-kassel.de/">http://parawiki.plm.eecs.uni-kassel.de/</a></tt></dd><dt><tt><a href="http://www.srcf.ucam.org/~cjp39/Peri/RecentChanges">PeriPeri</a></tt></dt><dd><tt><a href="http://www.srcf.ucam.org/~cjp39/Peri/">http://www.srcf.ucam.org/~cjp39/Peri/</a></tt></dd><dt><tt><a href="http://www.personaltelco.net/index.cgi/RecentChanges">PersonalTelco</a></tt></dt><dd><tt><a href="http://www.personaltelco.net/index.cgi/">http://www.personaltelco.net/index.cgi/</a></tt></dd><dt><tt><a href="http://phpwiki.sourceforge.net/phpwiki/index.php?RecentChanges">PhpWiki</a></tt></dt><dd><tt><a href="http://phpwiki.sourceforge.net/phpwiki/index.php?">http://phpwiki.sourceforge.net/phpwiki/index.php?</a></tt></dd><dt><tt><a href="http://pikie.darktech.org/cgi/pikie?RecentChanges">Pikie</a></tt></dt><dd><tt><a href="http://pikie.darktech.org/cgi/pikie?">http://pikie.darktech.org/cgi/pikie?</a></tt></dd><dt><tt><a href="http://www.postwiki.net/RecentChanges">PostWiki</a></tt></dt><dd><tt><a href="http://www.postwiki.net/">http://www.postwiki.net/</a></tt></dd><dt><tt><a href="http://pywebmail.sourceforge.net/cgi-bin/moin.cgi/RecentChanges">PyWebMail</a></tt></dt><dd><tt><a href="http://pywebmail.sourceforge.net/cgi-bin/moin.cgi/">http://pywebmail.sourceforge.net/cgi-bin/moin.cgi/</a></tt></dd><dt><tt><a href="http://www.voght.com/cgi-bin/pywiki?RecentChanges">PyWiki</a></tt></dt><dd><tt><a href="http://www.voght.com/cgi-bin/pywiki?">http://www.voght.com/cgi-bin/pywiki?</a></tt></dd><dt><tt><a href="http://www.python.org/cgi-bin/faqw.py?req=show&file=faqRecentChanges.htp">PythonFaq</a></tt></dt><dd><tt>http://www.python.org/cgi-bin/faqw.py?req=show&file=faq$PAGE.htp</tt></dd><dt><tt><a href="http://wiki.python.org/moin/RecentChanges">PythonInfo</a></tt></dt><dd><tt><a href="http://wiki.python.org/moin/">http://wiki.python.org/moin/</a></tt></dd><dt><tt><a href="http://www.pythonwiki.de/RecentChanges">PythonWiki</a></tt></dt><dd><tt><a href="http://www.pythonwiki.de/">http://www.pythonwiki.de/</a></tt></dd><dt><tt><a href="http://www.ietf.org/rfc/rfcRecentChanges">RFC</a></tt></dt><dd><tt><a href="http://www.ietf.org/rfc/rfc">http://www.ietf.org/rfc/rfc</a></tt></dd><dt><tt><a href="http://www.reformsociety.com/RecentChanges">ReformSociety</a></tt></dt><dd><tt><a href="http://www.reformsociety.com/">http://www.reformsociety.com/</a></tt></dd><dt><tt><a href="http://reseaucitoyen.be/?RecentChanges">ReseauCitoyen</a></tt></dt><dd><tt><a href="http://reseaucitoyen.be/?">http://reseaucitoyen.be/?</a></tt></dd><dt><tt><a href="http://sl4.org/wiki/RecentChanges">SL4Wiki</a></tt></dt><dd><tt><a href="http://sl4.org/wiki/">http://sl4.org/wiki/</a></tt></dd><dt><tt><a href="http://seattlewireless.net/?RecentChanges">SeattleWireless</a></tt></dt><dd><tt><a href="http://seattlewireless.net/?">http://seattlewireless.net/?</a></tt></dd><dt><tt><a href="/RecentChanges">Self</a></tt></dt><dd><tt><a href="/">/</a></tt></dd><dt><tt><a href="http://senseis.xmp.net/?RecentChanges">SenseisLibrary</a></tt></dt><dd><tt><a href="http://senseis.xmp.net/?">http://senseis.xmp.net/?</a></tt></dd><dt><tt><a href="http://www.solasi.org/moin.cgi?RecentChanges">SoLaSI</a></tt></dt><dd><tt><a href="http://www.solasi.org/moin.cgi?">http://www.solasi.org/moin.cgi?</a></tt></dd><dt><tt><a href="http://www.spack.org/index.cgi/RecentChanges">SpackOrg</a></tt></dt><dd><tt><a href="http://www.spack.org/index.cgi/">http://www.spack.org/index.cgi/</a></tt></dd><dt><tt><a href="http://spamikaze.org/RecentChanges">Spamikaze</a></tt></dt><dd><tt><a href="http://spamikaze.org/">http://spamikaze.org/</a></tt></dd><dt><tt><a href="http://ch.twi.tudelft.nl/~mostert/striki/teststriki.pl?RecentChanges">StrikiWiki</a></tt></dt><dd><tt><a href="http://ch.twi.tudelft.nl/~mostert/striki/teststriki.pl?">http://ch.twi.tudelft.nl/~mostert/striki/teststriki.pl?</a></tt></dd><dt><tt><a href="http://twiki.org/cgi-bin/view/RecentChanges">TWiki</a></tt></dt><dd><tt><a href="http://twiki.org/cgi-bin/view/">http://twiki.org/cgi-bin/view/</a></tt></dd><dt><tt><a href="http://tavi.sourceforge.net/RecentChanges">Tavi</a></tt></dt><dd><tt><a href="http://tavi.sourceforge.net/">http://tavi.sourceforge.net/</a></tt></dd><dt><tt><a href="http://www.thinkware.se/cgi-bin/thinki.cgi/RecentChanges">Thinki</a></tt></dt><dd><tt><a href="http://www.thinkware.se/cgi-bin/thinki.cgi/">http://www.thinkware.se/cgi-bin/thinki.cgi/</a></tt></dd><dt><tt><a href="http://www.nooranch.com/synaesmedia/wiki/wiki.cgi?RecentChanges">ThoughtStorms</a></tt></dt><dd><tt><a href="http://www.nooranch.com/synaesmedia/wiki/wiki.cgi?">http://www.nooranch.com/synaesmedia/wiki/wiki.cgi?</a></tt></dd><dt><tt><a href="http://doc.trustix.org/cgi-bin/trustixdoc.cgi?RecentChanges">TrustixWiki</a></tt></dt><dd><tt><a href="http://doc.trustix.org/cgi-bin/trustixdoc.cgi?">http://doc.trustix.org/cgi-bin/trustixdoc.cgi?</a></tt></dd><dt><tt><a href="https://wiki.ubuntu.com/RecentChanges">Ubuntu</a></tt></dt><dd><tt><a href="https://wiki.ubuntu.com/">https://wiki.ubuntu.com/</a></tt></dd><dt><tt><a href="http://wiki.beyondunreal.com/wiki/RecentChanges">Unreal</a></tt></dt><dd><tt><a href="http://wiki.beyondunreal.com/wiki/">http://wiki.beyondunreal.com/wiki/</a></tt></dd><dt><tt><a href="http://www.usemod.com/cgi-bin/wiki.pl?RecentChanges">UseMod</a></tt></dt><dd><tt><a href="http://www.usemod.com/cgi-bin/wiki.pl?">http://www.usemod.com/cgi-bin/wiki.pl?</a></tt></dd><dt><tt><a href="http://www.wlug.org.nz/RecentChanges">WLUG</a></tt></dt><dd><tt><a href="http://www.wlug.org.nz/">http://www.wlug.org.nz/</a></tt></dd><dt><tt><a href="http://www.myelin.co.nz/cgi-bin/wcswiki.pl?RecentChanges">WcsWiki</a></tt></dt><dd><tt><a href="http://www.myelin.co.nz/cgi-bin/wcswiki.pl?">http://www.myelin.co.nz/cgi-bin/wcswiki.pl?</a></tt></dd><dt><tt><a href="http://webseitz.fluxent.com/wiki/RecentChanges">WebSeitzWiki</a></tt></dt><dd><tt><a href="http://webseitz.fluxent.com/wiki/">http://webseitz.fluxent.com/wiki/</a></tt></dd><dt><tt><a href="http://clublet.com/c/c/why?RecentChanges">Why</a></tt></dt><dd><tt><a href="http://clublet.com/c/c/why?">http://clublet.com/c/c/why?</a></tt></dd><dt><tt><a href="http://c2.com/cgi/wiki?RecentChanges">Wiki</a></tt></dt><dd><tt><a href="http://c2.com/cgi/wiki?">http://c2.com/cgi/wiki?</a></tt></dd><dt><tt><a href="http://en.wikipedia.org/wiki/RecentChanges">WikiPedia</a></tt></dt><dd><tt><a href="http://en.wikipedia.org/wiki/">http://en.wikipedia.org/wiki/</a></tt></dd><dt><tt><a href="http://www.wikitravel.org/article/RecentChanges">WikiTravel</a></tt></dt><dd><tt><a href="http://www.wikitravel.org/article/">http://www.wikitravel.org/article/</a></tt></dd><dt><tt><a href="http://WikiWorld.com/wiki/index.php/RecentChanges">WikiWorld</a></tt></dt><dd><tt><a href="http://WikiWorld.com/wiki/index.php/">http://WikiWorld.com/wiki/index.php/</a></tt></dd><dt><tt><a href="http://www.wikiznanie.ru/wiki/wiki.phtml?title=RecentChanges">WikiZnanie</a></tt></dt><dd><tt><a href="http://www.wikiznanie.ru/wiki/wiki.phtml?title=">http://www.wikiznanie.ru/wiki/wiki.phtml?title=</a></tt></dd><dt><tt><a href="http://www.worldwidewiki.net/wiki/RecentChanges">WorldWideWiki</a></tt></dt><dd><tt><a href="http://www.worldwidewiki.net/wiki/">http://www.worldwidewiki.net/wiki/</a></tt></dd><dt><tt><a href="http://www.writehere.net/moin.cgi/RecentChanges">WriteHere</a></tt></dt><dd><tt><a href="http://www.writehere.net/moin.cgi/">http://www.writehere.net/moin.cgi/</a></tt></dd><dt><tt><a href="http://sknkwrks.dyndns.org:1957/writewiki/wiki.pl?RecentChanges">YpsiEyeball</a></tt></dt><dd><tt><a href="http://sknkwrks.dyndns.org:1957/writewiki/wiki.pl?">http://sknkwrks.dyndns.org:1957/writewiki/wiki.pl?</a></tt></dd><dt><tt><a href="http://www.zwiki.org/RecentChanges">ZWiki</a></tt></dt><dd><tt><a href="http://www.zwiki.org/">http://www.zwiki.org/</a></tt></dd><dt><tt><a href="http://www.bbc.co.uk/dna/h2g2/RecentChanges">h2g2</a></tt></dt><dd><tt><a href="http://www.bbc.co.uk/dna/h2g2/">http://www.bbc.co.uk/dna/h2g2/</a></tt></dd></dl> <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line867"><a href="/MoinMoin">MoinMoin</a> marks the InterWiki links in a way that works for the <a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?ColourBlind" title="MeatBall">ColourBlind</a> and also is <a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?LynxFriendly" title="MeatBall">LynxFriendly</a> by using a little icon with an ALT attribute. If you hover above the icon in a graphical browser, you'll see to which Wiki it refers. BTW, the reasoning behind the icon used is based on the idea that a <a class="interwiki" href="http://c2.com/cgi/wiki?WikiWikiWeb" title="Wiki">WikiWikiWeb</a> is created by a team effort of several people. <span class="anchor" id="line-20"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">InterWiki  (last modified 2006-06-30 07:21:45)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li><a href="/InterWiki?action=info">Info</a></li><li><a href="/InterWiki?action=AttachFile">Attachments</a></li><li>
+<form class="actionsmenu" method="get" action="">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="MyPages">My Pages</option>
+<option value="SubscribeUser">Subscribe User</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="Despam">Remove Spam</option>
+<option value="PackagePages">Package Pages</option>
+    </select>
+    <input type="submit" value="Do">
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmoin.wikiwikiweb.de/">MoinMoin Powered</a></li><li><a href="http://www.python.org/">Python Powered</a></li><li><a href="http://validator.w3.org/check?uri=referer">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

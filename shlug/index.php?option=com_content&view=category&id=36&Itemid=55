@@ -1,0 +1,240 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Shanghai Linux LUG" />
+  <meta name="description" content="Shanghai Linux User Group" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>活动记录</title>
+  <link href="/index.php?option=com_content&amp;view=category&amp;id=36&amp;Itemid=55&amp;format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="/index.php?option=com_content&amp;view=category&amp;id=36&amp;Itemid=55&amp;format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  <link href="/templates/ja_purity/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/caption.js"></script>
+
+
+<link rel="stylesheet" href="http://www.shlug.org/templates/system/css/system.css" type="text/css" />
+<link rel="stylesheet" href="http://www.shlug.org/templates/system/css/general.css" type="text/css" />
+<link rel="stylesheet" href="http://www.shlug.org/templates/ja_purity/css/template.css" type="text/css" />
+
+<script language="javascript" type="text/javascript" src="http://www.shlug.org/templates/ja_purity/js/ja.script.js"></script>
+
+<script language="javascript" type="text/javascript">
+var rightCollapseDefault='show';
+var excludeModules='38';
+</script>
+<script language="javascript" type="text/javascript" src="http://www.shlug.org/templates/ja_purity/js/ja.rightcol.js"></script>
+
+<link rel="stylesheet" href="http://www.shlug.org/templates/ja_purity/css/menu.css" type="text/css" />
+
+
+<link rel="stylesheet" href="http://www.shlug.org/templates/ja_purity/styles/background/lighter/style.css" type="text/css" />
+<link rel="stylesheet" href="http://www.shlug.org/templates/ja_purity/styles/elements/black/style.css" type="text/css" />
+
+<!--[if gte IE 7.0]>
+<style type="text/css">
+.clearfix {display: inline-block;}
+</style>
+<![endif]-->
+
+<style type="text/css">
+#ja-header,#ja-mainnav,#ja-container,#ja-botsl,#ja-footer {width: 97%;margin: 0 auto;}
+#ja-wrapper {min-width: 100%;}
+</style>
+</head>
+
+<body id="bd" class="fs3 Others" >
+<a name="Top" id="Top"></a>
+<ul class="accessibility">
+	<li><a href="#ja-content" title="转入内容">转入内容</a></li>
+	<li><a href="#ja-mainnav" title="转入主导航栏">转入主导航栏</a></li>
+	<li><a href="#ja-col1" title="转入第一栏">转入第一栏</a></li>
+	<li><a href="#ja-col2" title="转入第二栏">转入第二栏</a></li>
+</ul>
+
+<div id="ja-wrapper">
+
+<!-- BEGIN: HEADER -->
+<div id="ja-headerwrap">
+	<div id="ja-header" class="clearfix" style="background: url(http://www.shlug.org/templates/ja_purity/images/header/header3.jpg) no-repeat top right;">
+
+	<div class="ja-headermask">&nbsp;</div>
+
+			<h1 class="logo">
+			<a href="/index.php" title="Shanghai Linux User Group"><span>Shanghai Linux User Group</span></a>
+		</h1>
+	
+			<ul class="ja-usertools-font">
+	      <li><img style="cursor: pointer;" title="增大字号" src="http://www.shlug.org/templates/ja_purity/images/user-increase.png" alt="增大字号" id="ja-tool-increase" onclick="switchFontSize('ja_purity_ja_font','inc'); return false;" /></li>
+		  <li><img style="cursor: pointer;" title="缺省字号" src="http://www.shlug.org/templates/ja_purity/images/user-reset.png" alt="缺省字号" id="ja-tool-reset" onclick="switchFontSize('ja_purity_ja_font',3); return false;" /></li>
+		  <li><img style="cursor: pointer;" title="减小字号" src="http://www.shlug.org/templates/ja_purity/images/user-decrease.png" alt="减小字号" id="ja-tool-decrease" onclick="switchFontSize('ja_purity_ja_font','dec'); return false;" /></li>
+		</ul>
+		<script type="text/javascript">var CurrentFontSize=parseInt('3');</script>
+		
+	
+	</div>
+</div>
+<!-- END: HEADER -->
+
+<!-- BEGIN: MAIN NAVIGATION -->
+<!-- END: MAIN NAVIGATION -->
+
+<div id="ja-containerwrap-fr">
+<div id="ja-containerwrap2">
+	<div id="ja-container">
+	<div id="ja-container2" class="clearfix">
+
+		<div id="ja-mainbody-fr" class="clearfix">
+
+		<!-- BEGIN: CONTENT -->
+		<div id="ja-contentwrap">
+		<div id="ja-content">
+
+			
+
+						<div id="ja-pathway">
+				<span class="breadcrumbs pathway">
+<a href="http://www.shlug.org/" class="pathway">Home</a> <img src="/templates/ja_purity/images/arrow.png" alt=""  /> 历次活动</span>
+
+			</div>
+			
+			<div class="componentheading">
+	活动记录</div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="contentpane">
+<tr>
+	<td width="60%" valign="top" class="contentdescription" colspan="2">
+		</td>
+</tr>
+<tr>
+	<td>
+	<script language="javascript" type="text/javascript">
+
+	function tableOrdering( order, dir, task )
+	{
+		var form = document.adminForm;
+
+		form.filter_order.value 	= order;
+		form.filter_order_Dir.value	= dir;
+		document.adminForm.submit( task );
+	}
+</script>
+<form action="http://www.shlug.org/index.php?option=com_content&view=category&id=36&Itemid=55" method="post" name="adminForm">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td colspan="5">
+		<table>
+		<tr>
+					<td align="left" width="60%" nowrap="nowrap">
+				title Filter&nbsp;				<input type="text" name="filter" value="" class="inputbox" onchange="document.adminForm.submit();" />
+			</td>
+							<td align="right" width="40%" nowrap="nowrap">
+			&nbsp;&nbsp;&nbsp;显示数&nbsp;<select name="limit" id="limit" class="inputbox" size="1" onchange="this.form.submit()"><option value="5" >5</option><option value="10"  selected="selected">10</option><option value="15" >15</option><option value="20" >20</option><option value="25" >25</option><option value="30" >30</option><option value="50" >50</option><option value="100" >100</option><option value="0" >所有</option></select>			</td>
+				</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td class="sectiontableheader" align="right" width="5%">
+		#	</td>
+	 	<td class="sectiontableheader" width="45%">
+		<a href="javascript:tableOrdering('a.title','desc','');" title="点击以便按本栏进行排序">文章标题</a>	</td>
+				</tr>
+<tr class="sectiontableentry1" >
+	<td align="right">
+		1	</td>
+			<td>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=47:2008-03-23-05-23-24&amp;catid=36:2008-03-23-05-16-09&amp;Itemid=55">
+			历次活动</a>
+				</td>
+					</tr>
+<tr>
+	<td colspan="5">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center" colspan="4" class="sectiontablefooter">
+			</td>
+</tr>
+<tr>
+	<td colspan="5" align="right">
+			</td>
+</tr>
+</table>
+
+<input type="hidden" name="id" value="36" />
+<input type="hidden" name="sectionid" value="6" />
+<input type="hidden" name="task" value="category" />
+<input type="hidden" name="filter_order" value="" />
+<input type="hidden" name="filter_order_Dir" value="" />
+<input type="hidden" name="limitstart" value="0" />
+</form>
+
+		</td>
+</tr>
+</table>
+
+
+			
+		</div>
+		</div>
+		<!-- END: CONTENT -->
+
+				<!-- BEGIN: LEFT COLUMN -->
+		<div id="ja-col1">
+					<div class="moduletable_menu">
+					<h3>信息直通车</h3>
+					<ul class="menu"><li class="item1"><a href="http://www.shlug.org/"><span>首页</span></a></li><li class="item50"><a href="/index.php?option=com_content&amp;view=category&amp;id=1&amp;Itemid=50"><span>了解shlug</span></a></li><li class="item54"><a href="/index.php?option=com_content&amp;view=section&amp;layout=blog&amp;id=5&amp;Itemid=54"><span>记事本</span></a></li><li id="current" class="active item55"><a href="/index.php?option=com_content&amp;view=category&amp;id=36&amp;Itemid=55"><span>历次活动</span></a></li></ul>		</div>
+			<div class="moduletable">
+					<h3>shlug关注的项目</h3>
+					<ul class="menu"><li class="item66"><a href="/index.php?option=com_content&amp;view=article&amp;id=54&amp;Itemid=66"><span>1/10社区</span></a></li></ul>		</div>
+	
+		</div><br />
+		<!-- END: LEFT COLUMN -->
+		
+		</div>
+
+		
+	</div>
+	</div>
+</div>
+</div>
+
+
+<!-- BEGIN: FOOTER -->
+<div id="ja-footerwrap">
+<div id="ja-footer" class="clearfix">
+
+	<div id="ja-footnav">
+		
+	</div>
+
+	<div class="copyright">
+		<div>Copyright &#169; 2009 Shanghai Linux User Group. All Rights Reserved.</div>
+<div><a href="http://www.joomla.org">Joomla!</a>是遵循GNU通用公共授权（GPL）的自由软件</div>
+	</div>
+
+	<div class="ja-cert">
+		
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank" title="网站使用有效的CSS" style="text-decoration: none;">
+		<img src="http://www.shlug.org/templates/ja_purity/images/but-css.gif" border="none" alt="网站使用有效的CSS" />
+		</a>
+		<a href="http://validator.w3.org/check/referer" target="_blank" title="网站使用有效XHTML 1.0 Transitional" style="text-decoration: none;">
+		<img src="http://www.shlug.org/templates/ja_purity/images/but-xhtml10.gif" border="none" alt="网站使用有效XHTML 1.0 Transitional" />
+		</a>
+	</div>
+
+	<br />
+</div>
+</div>
+<!-- END: FOOTER -->
+
+</div>
+
+
+
+</body>
+
+</html>

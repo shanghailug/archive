@@ -1,0 +1,25 @@
+/*  
+styles to fix search input box issue in IE plus any additional IE fixes
+*/
+
+img,img.wp-caption { height:auto;  }
+
+.wp-caption {
+text-align: center;
+padding: 4px;
+margin: 10px;
+-moz-border-radius: 3px;
+-khtml-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+}
+
+p.wp-caption-text {
+font-size: 11px;
+text-align: center;
+padding: 0 4px 5px;
+margin: 0;
+}
+
+.wp-caption.aligncenter img { height:auto; }
+
