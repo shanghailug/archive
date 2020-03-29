@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>�ޱ����ĵ�</title>
+<title>无标题文档</title>
 </head>
 
 <body bgcolor="#330066">
-<font color="#FFFFFF" size="+2" face="����_GB2312">�ڴ�ӳ��<br>
-</font><font color="#000000" size="+2" face="����_GB2312">
+<font color="#FFFFFF" size="+2" face="楷体_GB2312">内存映像<br>
+</font><font color="#000000" size="+2" face="楷体_GB2312">
 <pre><font color="#FFFFFF">
-/------------\ �ڴ�͵�ַ 
+/------------\ 内存低地址 
 |            |
 | ... ...    |
 |            |
@@ -20,20 +20,20 @@
 | ... ...    |
 |            |
 |            |
-| buffer[255]|          function()��ջ֡ 
+| buffer[255]|          function()堆栈帧 
 |------------| <- ebp 
 | SFP        |
 |------------| <- ebp + 4
 | RET        |
 |------------|        ------------------
-| ... ...    |              main()��ջ֡
+| ... ...    |              main()堆栈帧
 |            |        ------------------
-\------------/ �ڴ�ߵ�ַ 
+\------------/ 内存高地址 
 
-���У�buffer��SFP��RET������д��Ϊ0x41414141
-��function()��������ʱ��������ͼ��ȡ���ص�ַ����һ��ָ�
-�ʹ��ڴ��ַ0x41414141����ȡ�������ַ�Ѿ��ڽ��̵ĵ�ַ�ռ�֮���ˣ�
-��˳����������Ķδ���
+其中，buffer、SFP、RET都被改写成为0x41414141
+当function()函数返回时，程序试图读取返回地址的下一个指令，
+就从内存地址0x41414141处读取，这个地址已经在进程的地址空间之外了，
+因此出现了上述的段错误。
 </font>
 </pre>
 <br>

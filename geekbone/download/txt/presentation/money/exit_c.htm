@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>ÎŞ±êÌâÎÄµµ</title>
+<title>æ— æ ‡é¢˜æ–‡æ¡£</title>
 </head>
 
 <body bgcolor="#330066">
-<p><font color="#FF99CC" size="+2"><strong><font color="#FFCCCC">exit.c</font></strong></font><font size="+2" face="¿¬Ìå_GB2312"><br>
-  </font><font size="+2" face="¿¬Ìå_GB2312"> <font color="#FFFFFF">------------------------------------------------------------------------------ 
+<p><font color="#FF99CC" size="+2"><strong><font color="#FFCCCC">exit.c</font></strong></font><font size="+2" face="æ¥·ä½“_GB2312"><br>
+  </font><font size="+2" face="æ¥·ä½“_GB2312"> <font color="#FFFFFF">------------------------------------------------------------------------------ 
   <br>
   #include &lt;unistd.h&gt;<br>
   void main() { <br>
@@ -16,14 +16,14 @@
   ------------------------------------------------------------------------------ 
   <br>
   gcc -o exit -static exit.c<br>
-  Í¨¹ıgdb·´»ã±à_exitµ÷ÓÃ£¬¹Û²ìµ½µ×·¢ÉúÁËÊ²Ã´£º<br>
+  é€šè¿‡gdbåæ±‡ç¼–_exitè°ƒç”¨ï¼Œè§‚å¯Ÿåˆ°åº•å‘ç”Ÿäº†ä»€ä¹ˆï¼š<br>
   ------------------------------------------------------------------------------ 
   <br>
   0x800034c &lt;_exit&gt;: pushl %ebp <br>
   0x800034d &lt;_exit+1&gt;: movl %esp,%ebp <br>
   0x800034f &lt;_exit+3&gt;: pushl %ebx <br>
-  0x8000350 &lt;_exit+4&gt;: movl $0x1,%eax 0x1·Åµ½¼Ä´æÆ÷EAX£¬0x1ÊÇÏµÍ³µ÷ÓÃ±íµÄË÷Òı£¬¾ÍÊÇexit<br>
-  0x8000355 &lt;_exit+9&gt;: movl 0x8(%ebp),%ebx ·ÅÖÃÍË³öÂë£¬·µ»Ø0, ÒÔ±íÊ¾Ã»ÓĞ´íÎó<br>
+  0x8000350 &lt;_exit+4&gt;: movl $0x1,%eax 0x1æ”¾åˆ°å¯„å­˜å™¨EAXï¼Œ0x1æ˜¯ç³»ç»Ÿè°ƒç”¨è¡¨çš„ç´¢å¼•ï¼Œå°±æ˜¯exit<br>
+  0x8000355 &lt;_exit+9&gt;: movl 0x8(%ebp),%ebx æ”¾ç½®é€€å‡ºç ï¼Œè¿”å›0, ä»¥è¡¨ç¤ºæ²¡æœ‰é”™è¯¯<br>
   0x8000358 &lt;_exit+12&gt;: int $0x80 <br>
   0x800035a &lt;_exit+14&gt;: movl 0xfffffffc(%ebp),%ebx <br>
   0x800035d &lt;_exit+17&gt;: movl %ebp,%esp <br>
