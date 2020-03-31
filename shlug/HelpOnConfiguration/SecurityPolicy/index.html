@@ -82,20 +82,20 @@ function actionsMenuInit(title) {
 <link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="../../Geekbone">
+<link rel="Start" href="../../Geekbone/">
 <link rel="Alternate" title="Wiki Markup" href="../SecurityPolicy%3Faction=raw">
 <link rel="Alternate" media="print" title="Print View" href="../SecurityPolicy%3Faction=print">
-<link rel="Up" href="..">
-<link rel="Search" href="../../FindPage">
-<link rel="Index" href="../../TitleIndex">
-<link rel="Glossary" href="../../WordIndex">
-<link rel="Help" href="../../HelpOnFormatting">
+<link rel="Up" href="../">
+<link rel="Search" href="../../FindPage/">
+<link rel="Index" href="../../TitleIndex/">
+<link rel="Glossary" href="../../WordIndex/">
+<link rel="Help" href="../../HelpOnFormatting/">
 </head>
 
 <body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="../../Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../../Geekbone/">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
@@ -122,7 +122,7 @@ searchBlur(e);
 
 
 <ul id="pagelocation">
-<li><a href="..">HelpOnConfiguration</a></li>
+<li><a href="../">HelpOnConfiguration</a></li>
 <li><a class="backlink" title="Click to do a full-text search for this title" href="../SecurityPolicy%3Faction=fullsearch%26value=linkto%3A%22HelpOnConfiguration/SecurityPolicy%22%26context=180">SecurityPolicy</a></li>
 </ul>
 
@@ -130,11 +130,11 @@ searchBlur(e);
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="../../Geekbone">Geekbone</a></li>
-<li class="wikilink"><a href="../../RecentChanges">RecentChanges</a></li>
-<li class="wikilink"><a href="../../FindPage">FindPage</a></li>
-<li class="wikilink"><a href="../../HelpContents">HelpContents</a></li>
-<li class="current"><a href=".">SecurityPolicy</a></li>
+<li class="wikilink"><a href="../../Geekbone/">Geekbone</a></li>
+<li class="wikilink"><a href="../../RecentChanges/">RecentChanges</a></li>
+<li class="wikilink"><a href="../../FindPage/">FindPage</a></li>
+<li class="wikilink"><a href="../../HelpContents/">HelpContents</a></li>
+<li class="current"><a href="./">SecurityPolicy</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
@@ -186,11 +186,11 @@ actionsMenuInit('More Actions:');
 <div id="page" lang="en" dir="ltr">
 <div dir="ltr" id="content" lang="en">
 <span class="anchor" id="top"></span>
-<span class="anchor" id="line-8"></span><p class="line867"><tt class="backtick">SecurityPolicy</tt> is a config option that allows wiki admins to dynamically enable or disable certain key actions in a <a href="../../MoinMoin">MoinMoin</a> wiki, most notably editing and deleting content. See also <a href="../../HelpOnAccessControlLists">HelpOnAccessControlLists</a> for an easier way. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span></p>
+<span class="anchor" id="line-8"></span><p class="line867"><tt class="backtick">SecurityPolicy</tt> is a config option that allows wiki admins to dynamically enable or disable certain key actions in a <a href="../../MoinMoin/">MoinMoin</a> wiki, most notably editing and deleting content. See also <a href="../../HelpOnAccessControlLists/">HelpOnAccessControlLists</a> for an easier way. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span></p>
 <p class="line867">
 </p>
 <h2 id="head-4ac2ff05755ab9015f5b9b337d9a6524439b6213">Mechanics</h2>
-<span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line862">Security restrictions in a <a href="../../MoinMoin">MoinMoin</a> wiki work by the interface defined in the <tt class="backtick">MoinMoin.security</tt> module. <span class="anchor" id="line-13"></span>The <tt class="backtick">Permissions</tt> class implements the basic interface for user permissions and system policy. If you want to define your own policy, inherit <span class="anchor" id="line-14"></span>from that base class, so that when new permissions are defined, you get the defaults. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span></p>
+<span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line862">Security restrictions in a <a href="../../MoinMoin/">MoinMoin</a> wiki work by the interface defined in the <tt class="backtick">MoinMoin.security</tt> module. <span class="anchor" id="line-13"></span>The <tt class="backtick">Permissions</tt> class implements the basic interface for user permissions and system policy. If you want to define your own policy, inherit <span class="anchor" id="line-14"></span>from that base class, so that when new permissions are defined, you get the defaults. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span></p>
 <p class="line862">Then either assign your new class to <tt class="backtick">Config.SecurityPolicy</tt> in <tt class="backtick">wikiconfig.py</tt> (and I mean the class, not an instance of it), or define your class as a member of <tt class="backtick">class Config</tt> in <tt class="backtick">wikiconfig.py</tt> and name it <tt class="backtick">SecurityPolicy</tt>. <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span></p>
 <p class="line867">
 </p>

@@ -82,19 +82,19 @@ function actionsMenuInit(title) {
 <link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="../Geekbone">
+<link rel="Start" href="../Geekbone/">
 <link rel="Alternate" title="Wiki Markup" href="../HelpOnThemes%3Faction=raw">
 <link rel="Alternate" media="print" title="Print View" href="../HelpOnThemes%3Faction=print">
-<link rel="Search" href="../FindPage">
-<link rel="Index" href="../TitleIndex">
-<link rel="Glossary" href="../WordIndex">
-<link rel="Help" href="../HelpOnFormatting">
+<link rel="Search" href="../FindPage/">
+<link rel="Index" href="../TitleIndex/">
+<link rel="Glossary" href="../WordIndex/">
+<link rel="Help" href="../HelpOnFormatting/">
 </head>
 
 <body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="../Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../Geekbone/">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
@@ -128,11 +128,11 @@ searchBlur(e);
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
-<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
-<li class="wikilink"><a href="../FindPage">FindPage</a></li>
-<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
-<li class="current"><a href=".">HelpOnThemes</a></li>
+<li class="wikilink"><a href="../Geekbone/">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges/">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage/">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents/">HelpContents</a></li>
+<li class="current"><a href="./">HelpOnThemes</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
@@ -184,7 +184,7 @@ actionsMenuInit('More Actions:');
 <div id="page" lang="en" dir="ltr">
 <div dir="ltr" id="content" lang="en">
 <span class="anchor" id="top"></span>
-<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><a href="../MoinMoin">MoinMoin</a> has a theme plugin system that makes it easy to change the look and feel without touching the core code. You can customize colors by editing the stylesheets, or create a totally new user interface by writing a new theme plugin in Python. When you upgrade <a href="../MoinMoin">MoinMoin</a>, your theme is not touched - it will work with the new version, or needs only small changes due to theme API changes. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span></p>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><a href="../MoinMoin/">MoinMoin</a> has a theme plugin system that makes it easy to change the look and feel without touching the core code. You can customize colors by editing the stylesheets, or create a totally new user interface by writing a new theme plugin in Python. When you upgrade <a href="../MoinMoin/">MoinMoin</a>, your theme is not touched - it will work with the new version, or needs only small changes due to theme API changes. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span></p>
 <p class="line867"></p>
 <div class="table-of-contents">
 <p class="table-of-contents-heading">Contents</p>
@@ -223,7 +223,7 @@ actionsMenuInit('More Actions:');
 <h2 id="head-ccdabe3c3884201235ae05d92476b5b29a45458e">Python module</h2>
 <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line862">The theme code is called by moinmoin with (more or less) abstract data in a dictionary usually called <tt class="backtick">d</tt>. The code then uses items in that dictionary to generate HTML (also heavily relying on CSS). The new theme system in 1.3 avoid using the data dictionary when possible, and instead call different moin parts to get the needed data.  <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span></p>
 <p class="line874">When you do a new theme, first clone your favorite theme, then try to edit the stylesheets to get what you want. Only if you can't reach your goal using CSS only, override some functions in your theme code. <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span></p>
-<p class="line862">All themes are sub classes of <a href="../MoinMoin">MoinMoin</a>.theme.<a class="nonexistent" href="../ThemeBase">ThemeBase</a> which define the primitive user interface elements, like logo, username, title, searchform, editbar, actions menu etc. You should reuse these parts unless you need to change their content or create new element that you can not build from existing parts. The theme API is not stable yet, and might change in the future. <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span></p>
+<p class="line862">All themes are sub classes of <a href="../MoinMoin/">MoinMoin</a>.theme.<a class="nonexistent" href="../ThemeBase">ThemeBase</a> which define the primitive user interface elements, like logo, username, title, searchform, editbar, actions menu etc. You should reuse these parts unless you need to change their content or create new element that you can not build from existing parts. The theme API is not stable yet, and might change in the future. <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span></p>
 <p class="line867">
 </p>
 <h1 id="head-0f9b4561b6bd896ec150c626df63d39d77be3973">Installation of a new theme</h1>
@@ -232,7 +232,7 @@ actionsMenuInit('More Actions:');
 <p class="line867">
 </p>
 <h1 id="head-c9a07412cea7e47a9bebf10ff614e6296c5e2438">Setting the default theme</h1>
-<span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><p class="line862">Once you have created all the necessary theme components and saved them as indicated above, the theme can be applied to your wiki by using the <tt class="backtick">theme_default</tt> option in <tt class="backtick">wikiconfig.py</tt> (see <a href="../HelpOnConfiguration">HelpOnConfiguration</a>).  <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></p>
+<span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><p class="line862">Once you have created all the necessary theme components and saved them as indicated above, the theme can be applied to your wiki by using the <tt class="backtick">theme_default</tt> option in <tt class="backtick">wikiconfig.py</tt> (see <a href="../HelpOnConfiguration/">HelpOnConfiguration</a>).  <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></p>
 <p class="line867">
 </p>
 <h1 id="head-2c83febe1d3bda8ef50855f3786baf5d65a892ad">Sharing your theme</h1>
@@ -284,7 +284,7 @@ actionsMenuInit('More Actions:');
 </li>
 </ul>
 </li>
-<li><p class="line862">as a wiki user, you can override theme CSS settings by putting your own user CSS URL into <a href="../UserPreferences">UserPreferences</a> - this CSS is loaded after the theme CSS, so you can override all you want changed. Your CSS file must be in UTF-8 encoding (and as ASCII is a subset of that, it is ok, too). <span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span></p></li>
+<li><p class="line862">as a wiki user, you can override theme CSS settings by putting your own user CSS URL into <a href="../UserPreferences/">UserPreferences</a> - this CSS is loaded after the theme CSS, so you can override all you want changed. Your CSS file must be in UTF-8 encoding (and as ASCII is a subset of that, it is ok, too). <span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span></p></li>
 </ol>
 <p class="line867"><tt class="backtick">page_header1</tt>, <tt class="backtick">page_header2</tt>, <tt class="backtick">page_footer1</tt> and <tt class="backtick">page_footer2</tt> can now be callables and will be called with the "request" object as a single argument (note that you should accept any keyword arguments in order to be compatible to future changes). <span class="anchor" id="line-79"></span><span class="anchor" id="bottom"></span></p>
 </div>

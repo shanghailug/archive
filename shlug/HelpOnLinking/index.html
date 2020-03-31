@@ -82,19 +82,19 @@ function actionsMenuInit(title) {
 <link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="../Geekbone">
+<link rel="Start" href="../Geekbone/">
 <link rel="Alternate" title="Wiki Markup" href="../HelpOnLinking%3Faction=raw">
 <link rel="Alternate" media="print" title="Print View" href="../HelpOnLinking%3Faction=print">
-<link rel="Search" href="../FindPage">
-<link rel="Index" href="../TitleIndex">
-<link rel="Glossary" href="../WordIndex">
-<link rel="Help" href="../HelpOnFormatting">
+<link rel="Search" href="../FindPage/">
+<link rel="Index" href="../TitleIndex/">
+<link rel="Glossary" href="../WordIndex/">
+<link rel="Help" href="../HelpOnFormatting/">
 </head>
 
 <body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="../Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../Geekbone/">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
@@ -128,11 +128,11 @@ searchBlur(e);
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
-<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
-<li class="wikilink"><a href="../FindPage">FindPage</a></li>
-<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
-<li class="current"><a href=".">HelpOnLinking</a></li>
+<li class="wikilink"><a href="../Geekbone/">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges/">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage/">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents/">HelpContents</a></li>
+<li class="current"><a href="./">HelpOnLinking</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
@@ -265,7 +265,7 @@ actionsMenuInit('More Actions:');
 <span class="anchor" id="line-23"></span><p class="line867">
 </p>
 <h2 id="head-bf745b1bc71cce1f3c71f73f84370c7157cdce47">Arbitrary Page Names</h2>
-<span class="anchor" id="line-24"></span><p class="line862">If you enclose a sequence of characters in square brackets and double quotes <tt>["like this"]</tt>, that makes it a page name. That can be used for specific uses of <a href="../MoinMoin">MoinMoin</a> (like organizing a list of items, e.g. your CD collection, by their "natural" name) or for having a wiki with non-western character sets. <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span></p>
+<span class="anchor" id="line-24"></span><p class="line862">If you enclose a sequence of characters in square brackets and double quotes <tt>["like this"]</tt>, that makes it a page name. That can be used for specific uses of <a href="../MoinMoin/">MoinMoin</a> (like organizing a list of items, e.g. your CD collection, by their "natural" name) or for having a wiki with non-western character sets. <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span></p>
 <p class="line867">
 </p>
 <h2 id="head-b42f4d9da5f8ec463d64645d25121146ee61bcb9">URLs and Inline Images</h2>
@@ -274,7 +274,7 @@ actionsMenuInit('More Actions:');
 <li><p class="line862">direct URL insertion; if the URL ends in an image extension ("<tt>.gif</tt>", "<tt>.jpg</tt>" or "<tt>.png</tt>"), the URL is converted to an image tag. <span class="anchor" id="line-29"></span></p></li>
 <li>bracketed URLs. <span class="anchor" id="line-30"></span>
 </li>
-<li><p class="line891"><a href="../InterWiki">InterWiki</a> links. <span class="anchor" id="line-31"></span></p></li>
+<li><p class="line891"><a href="../InterWiki/">InterWiki</a> links. <span class="anchor" id="line-31"></span></p></li>
 <li>email addresses. <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span>
 </li>
 </ul>
@@ -288,18 +288,18 @@ actionsMenuInit('More Actions:');
 <li>use the bracketed URL syntax. <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span>
 </li>
 </ul>
-<p class="line862">The supported URL schemes are: <tt class="backtick">http</tt>, <tt class="backtick">https</tt>, <tt class="backtick">ftp</tt>, <tt class="backtick">nntp</tt>, <tt class="backtick">news</tt>, <tt class="backtick">mailto</tt>, <tt class="backtick">telnet</tt>, <tt class="backtick">irc</tt> and <tt class="backtick">file</tt>. The administrator of your wiki can extend the supported schemes by using the <tt>url_schemas</tt> variable (see <a href="../HelpOnConfiguration">HelpOnConfiguration</a>). <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span></p>
-<p class="line862">In addition to the standard schemes, there are <a href="../MoinMoin">MoinMoin</a>-specific ones: <tt class="backtick">wiki</tt>, <tt class="backtick">attachment</tt>, <tt class="backtick">inline</tt>, and <tt class="backtick">drawing</tt>. "<tt class="backtick">wiki</tt>" indicates an <a href="../InterWiki">InterWiki</a> link, so <tt class="backtick">MoinMoin:FrontPage</tt> and <tt class="backtick">wiki:MoinMoin:FrontPage</tt> are equivalent; you will normally prefer the shorter form, the "<tt class="backtick">wiki</tt>" scheme becomes important when you use bracketed links, since there you always need a scheme. The other three schemes are related to file attachments and are explained on <a href="../HelpOnActions/AttachFile">HelpOnActions/AttachFile</a>. <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span></p>
-<p class="line862">For more information on the possible markup, see <a href="../HelpOnEditing">HelpOnEditing</a>. For details on how to link to subpages, see <a href="../HelpOnEditing/SubPages">HelpOnEditing/SubPages</a>. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></p>
-<p class="line862">To <em>insert</em> anchors into a page you need the <a href="../HelpOnMacros">macro</a> <em>Anchor</em>: <tt class="backtick">[[Anchor(anchorname)]]</tt>, where "anchorname" is the actual identifier of the anchor. To reference an anchor on the same wiki page use <tt class="backtick">[#anchorname]</tt> or <tt class="backtick">[#anchorname label text]</tt>. To link to an anchor on another wiki page write <tt class="backtick">[:PageName#anchorname]</tt> or <tt class="backtick">[:PageName#anchorname:label text]</tt>, where "Page<tt class="backtick"></tt>Name" is the name of the other page and "anchorname" is the identifier of the anchor on that page. <span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span></p>
-<p class="line862">It is often desirable to create a link to a Wiki page in the current Wiki, but have the link appear with a different text label. While you can use an <a href="../InterWiki">InterWiki</a> link with a Wiki name of Self, this results in an <a href="../InterWiki">InterWiki</a> icon prefix which might be misleading since you're not leaving the current Wiki at all. Use the syntax of <tt class="backtick">[:WikiPage:Label text]</tt> to achieve a link to a current Wiki page without creating an <a href="../InterWiki">InterWiki</a> link. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></p>
-<p class="line867"><img alt="/!\" height="15" src="../htdocs/modern/img/alert.png" title="/!\" width="15"> On some Wikis, a link to the page <a href="../RecentChanges">RecentChanges</a> might refer to the same page as this link: <a class="nonexistent" href="../recentchanges">recentchanges</a>. This is especially true for Windows and Mac OS X systems because they are not case-sensitive normally. <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span></p>
+<p class="line862">The supported URL schemes are: <tt class="backtick">http</tt>, <tt class="backtick">https</tt>, <tt class="backtick">ftp</tt>, <tt class="backtick">nntp</tt>, <tt class="backtick">news</tt>, <tt class="backtick">mailto</tt>, <tt class="backtick">telnet</tt>, <tt class="backtick">irc</tt> and <tt class="backtick">file</tt>. The administrator of your wiki can extend the supported schemes by using the <tt>url_schemas</tt> variable (see <a href="../HelpOnConfiguration/">HelpOnConfiguration</a>). <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span></p>
+<p class="line862">In addition to the standard schemes, there are <a href="../MoinMoin/">MoinMoin</a>-specific ones: <tt class="backtick">wiki</tt>, <tt class="backtick">attachment</tt>, <tt class="backtick">inline</tt>, and <tt class="backtick">drawing</tt>. "<tt class="backtick">wiki</tt>" indicates an <a href="../InterWiki/">InterWiki</a> link, so <tt class="backtick">MoinMoin:FrontPage</tt> and <tt class="backtick">wiki:MoinMoin:FrontPage</tt> are equivalent; you will normally prefer the shorter form, the "<tt class="backtick">wiki</tt>" scheme becomes important when you use bracketed links, since there you always need a scheme. The other three schemes are related to file attachments and are explained on <a href="../HelpOnActions/AttachFile/">HelpOnActions/AttachFile</a>. <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span></p>
+<p class="line862">For more information on the possible markup, see <a href="../HelpOnEditing/">HelpOnEditing</a>. For details on how to link to subpages, see <a href="../HelpOnEditing/SubPages/">HelpOnEditing/SubPages</a>. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></p>
+<p class="line862">To <em>insert</em> anchors into a page you need the <a href="../HelpOnMacros/">macro</a> <em>Anchor</em>: <tt class="backtick">[[Anchor(anchorname)]]</tt>, where "anchorname" is the actual identifier of the anchor. To reference an anchor on the same wiki page use <tt class="backtick">[#anchorname]</tt> or <tt class="backtick">[#anchorname label text]</tt>. To link to an anchor on another wiki page write <tt class="backtick">[:PageName#anchorname]</tt> or <tt class="backtick">[:PageName#anchorname:label text]</tt>, where "Page<tt class="backtick"></tt>Name" is the name of the other page and "anchorname" is the identifier of the anchor on that page. <span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span></p>
+<p class="line862">It is often desirable to create a link to a Wiki page in the current Wiki, but have the link appear with a different text label. While you can use an <a href="../InterWiki/">InterWiki</a> link with a Wiki name of Self, this results in an <a href="../InterWiki/">InterWiki</a> icon prefix which might be misleading since you're not leaving the current Wiki at all. Use the syntax of <tt class="backtick">[:WikiPage:Label text]</tt> to achieve a link to a current Wiki page without creating an <a href="../InterWiki/">InterWiki</a> link. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></p>
+<p class="line867"><img alt="/!\" height="15" src="../htdocs/modern/img/alert.png" title="/!\" width="15"> On some Wikis, a link to the page <a href="../RecentChanges/">RecentChanges</a> might refer to the same page as this link: <a class="nonexistent" href="../recentchanges">recentchanges</a>. This is especially true for Windows and Mac OS X systems because they are not case-sensitive normally. <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span></p>
 <p class="line867"></p>
-<div class="footnotes"><ul><li><p><a href="#fnref-3a7d0c829bad1bcb6ec2ce583f1d1c9591b28bcc-0" id="fndef-3a7d0c829bad1bcb6ec2ce583f1d1c9591b28bcc-0">1</a> The opposite of external references are the internal, automatic <a href="../WikiName">WikiName</a> links. </p></li></ul></div> <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line867">
+<div class="footnotes"><ul><li><p><a href="#fnref-3a7d0c829bad1bcb6ec2ce583f1d1c9591b28bcc-0" id="fndef-3a7d0c829bad1bcb6ec2ce583f1d1c9591b28bcc-0">1</a> The opposite of external references are the internal, automatic <a href="../WikiName/">WikiName</a> links. </p></li></ul></div> <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line867">
 </p>
 <h3 id="head-8e81f2e071973d3e8ef38c8211b26e955f4a0354">Avoiding some stuff gets automatically linked</h3>
 <span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><p class="line862">For avoiding that a word like Page<tt class="backtick"></tt>Name automatically gets linked, use <tt>Page``Name</tt>. <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span></p>
-<p class="line862">You can also suppress <a href="../WikiName">WikiName</a> linking by putting an exclamation mark (<em>bang</em>) before the <a href="../WikiName">WikiName</a>, i.e. <tt class="backtick">!WikiName</tt>. This can be disabled with the configuration option <tt class="backtick">bang_meta = False</tt>. <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span></p>
+<p class="line862">You can also suppress <a href="../WikiName/">WikiName</a> linking by putting an exclamation mark (<em>bang</em>) before the <a href="../WikiName/">WikiName</a>, i.e. <tt class="backtick">!WikiName</tt>. This can be disabled with the configuration option <tt class="backtick">bang_meta = False</tt>. <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span></p>
 <p class="line862">For avoiding that a URL gets automatically linked, use either <tt>`http://...`</tt> or <tt class="backtick">{{{http://...}}}</tt>. <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span></p>
 <p class="line867">
 </p>
@@ -336,9 +336,9 @@ actionsMenuInit('More Actions:');
 <li><p class="line891"><a class="http" href="http://moinmoin.wikiwikiweb.de/wiki/common/moinmoin.png">moinmoin.png</a> <span class="anchor" id="line-90"></span></p></li>
 <li><p class="line891"><a class="external" href="http:/wiki/common/moinmoin.png"><img alt="http:/wiki/common/moinmoin.png" src="http:/wiki/common/moinmoin.png" title="http:/wiki/common/moinmoin.png"></a> partial URL <span class="anchor" id="line-91"></span></p></li>
 <li>
-<p class="line891"><a href="../InterWiki">InterWiki</a> <span class="anchor" id="line-92"></span></p>
+<p class="line891"><a href="../InterWiki/">InterWiki</a> <span class="anchor" id="line-92"></span></p>
 <ul>
-<li><p class="line891"><a href="../InterWiki">InterWiki</a> <span class="anchor" id="line-93"></span></p></li>
+<li><p class="line891"><a href="../InterWiki/">InterWiki</a> <span class="anchor" id="line-93"></span></p></li>
 <li><p class="line891"><a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?InterWiki" title="MeatBall">InterWiki</a> <span class="anchor" id="line-94"></span></p></li>
 <li><p class="line891"><a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?InterWiki" title="MeatBall">InterWiki</a> <span class="anchor" id="line-95"></span></p></li>
 <li><p class="line891"><a class="interwiki" href="http://www.usemod.com/cgi-bin/mb.pl?InterWiki" title="MeatBall">wiki:MeatBall/InterWiki</a> <span class="anchor" id="line-96"></span></p></li>
@@ -347,7 +347,7 @@ actionsMenuInit('More Actions:');
 </li>
 <li><p class="line891"><a class="mailto" href="mailto:user@example.com">user@example.com</a> <span class="anchor" id="line-98"></span></p></li>
 <li><p class="line891"><a class="mailto" href="mailto:user@example.com?subject=test">mailto:user@example.com?subject=test</a> <span class="anchor" id="line-99"></span></p></li>
-<li><p class="line891"><a href="../InterWiki">InterWiki page in this wiki</a> <span class="anchor" id="line-100"></span></p></li>
+<li><p class="line891"><a href="../InterWiki/">InterWiki page in this wiki</a> <span class="anchor" id="line-100"></span></p></li>
 <li><p class="line891"><a href="#anchorname">Link to anchor on this page</a> <span class="anchor" id="line-101"></span></p></li>
 <li><p class="line891"><a class="nonexistent" href="../OtherPage#anchorname">Link to anchor on other page in current wiki with label text</a> <span class="anchor" id="line-102"></span></p></li>
 </ul>

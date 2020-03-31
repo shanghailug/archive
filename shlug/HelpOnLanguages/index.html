@@ -82,19 +82,19 @@ function actionsMenuInit(title) {
 <link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="../Geekbone">
+<link rel="Start" href="../Geekbone/">
 <link rel="Alternate" title="Wiki Markup" href="../HelpOnLanguages%3Faction=raw">
 <link rel="Alternate" media="print" title="Print View" href="../HelpOnLanguages%3Faction=print">
-<link rel="Search" href="../FindPage">
-<link rel="Index" href="../TitleIndex">
-<link rel="Glossary" href="../WordIndex">
-<link rel="Help" href="../HelpOnFormatting">
+<link rel="Search" href="../FindPage/">
+<link rel="Index" href="../TitleIndex/">
+<link rel="Glossary" href="../WordIndex/">
+<link rel="Help" href="../HelpOnFormatting/">
 </head>
 
 <body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="../Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../Geekbone/">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
@@ -128,11 +128,11 @@ searchBlur(e);
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
-<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
-<li class="wikilink"><a href="../FindPage">FindPage</a></li>
-<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
-<li class="current"><a href=".">HelpOnLanguages</a></li>
+<li class="wikilink"><a href="../Geekbone/">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges/">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage/">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents/">HelpContents</a></li>
+<li class="current"><a href="./">HelpOnLanguages</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
@@ -194,7 +194,7 @@ You have to make a configuration decision which affects <tt>wikiconfig.py</tt>.<
   <td style="text-align: right"><p class="line862"> <img alt="&lt;!&gt;" height="15" src="../htdocs/modern/img/attention.png" title="&lt;!&gt;" width="15"> <img alt="/!\" height="15" src="../htdocs/modern/img/alert.png" title="/!\" width="15"> <img alt="(./)" height="15" src="../htdocs/modern/img/checkmark.png" title="(./)" width="20"> </p></td>
 </tr>
 </tbody></table></div>
-<span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line862">This page describes customizing <a href="../MoinMoin">MoinMoin</a>'s language support.  New visitors to your wiki can be presented with a front page in their preferred language, or they can be forced to use the page you specify.  You can also lock down the language used for translated pages and phrases within your wiki. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></p>
+<span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line862">This page describes customizing <a href="../MoinMoin/">MoinMoin</a>'s language support.  New visitors to your wiki can be presented with a front page in their preferred language, or they can be forced to use the page you specify.  You can also lock down the language used for translated pages and phrases within your wiki. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></p>
 <p class="line862">First go to <a href="../SystemPagesSetup">SystemPagesSetup</a> and unpack the system and help page packages for any language you want to support. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span></p>
 <p class="line874">After that, just read the text below, decide which way you want to go and change your configuration. <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span></p>
 <p class="line862">For the impatient (you <strong>must</strong> set <tt class="backtick">page_front_page</tt> to get rid of this page being the front page): <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span></p>
@@ -208,29 +208,29 @@ You have to make a configuration decision which affects <tt>wikiconfig.py</tt>.<
 <span class="anchor" id="line-28"></span>    page_front_page = u"FrontPage"
 <span class="anchor" id="line-29"></span></pre>
 <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><p class="line867"><span class="anchor" id="line-32"></span></p>
-<p class="line862">If you go the <em>single language</em> way, you can copy some of the content of <a href="../FrontPage">FrontPage</a> to the page you choose as your <tt class="backtick">page_front_page</tt>.  Alternatively, if you have the <em>rename</em> action turned on in your wiki, you can rename your <a href="../FrontPage">FrontPage</a> to another name, then assign that name (for example, <strong>Welcome</strong>) to your 'page_front_page' variable. <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span></p>
+<p class="line862">If you go the <em>single language</em> way, you can copy some of the content of <a href="../FrontPage/">FrontPage</a> to the page you choose as your <tt class="backtick">page_front_page</tt>.  Alternatively, if you have the <em>rename</em> action turned on in your wiki, you can rename your <a href="../FrontPage/">FrontPage</a> to another name, then assign that name (for example, <strong>Welcome</strong>) to your 'page_front_page' variable. <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span></p>
 <p class="line867"><span class="anchor" id="line-35"></span></p>
-<p class="line862">If you go the <em>multiple language</em> way, don't forget to edit all translations of <a href="../FrontPage">FrontPage</a>. <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span></p>
+<p class="line862">If you go the <em>multiple language</em> way, don't forget to edit all translations of <a href="../FrontPage/">FrontPage</a>. <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span></p>
 <p class="line867"><img alt="/!\" height="15" src="../htdocs/modern/img/alert.png" title="/!\" width="15"> If you go the <em>multiple languages</em> way, people reaching your wiki will be directed to the front page corresponding to their browser language setting. If you did not prepare that page, they will see the default page for their language and have the impression the wiki is empty or badly maintained. <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span></p>
 <p class="line867">
 </p>
 <h1 id="head-d1ea472c3c480e0851550f4fc9c05ffa4af4af71">User interface texts and language_default</h1>
-<span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><p class="line867"><a href="../MoinMoin">MoinMoin</a> tries to adapt the user interface to the language the user prefers. <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span></p>
-<p class="line862">If the user puts a specific language preference into moin <a href="../UserPreferences">UserPreferences</a> setting, that language will be used for the user interface. But the user doesn't even need to do that if he already has configured his browser with his language preferences. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></p>
+<span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><p class="line867"><a href="../MoinMoin/">MoinMoin</a> tries to adapt the user interface to the language the user prefers. <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span></p>
+<p class="line862">If the user puts a specific language preference into moin <a href="../UserPreferences/">UserPreferences</a> setting, that language will be used for the user interface. But the user doesn't even need to do that if he already has configured his browser with his language preferences. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></p>
 <p class="line862">If there is no specific <tt class="backtick">UserPreferences</tt> language setting, moin tries to adapt to the languages the user configured in his browser. So if the browser tells moin that its preference is Canadian English, then German, then English in general and moin has German and English available (but not a specific configuration for Canadian English), then the user will get a German user interface. <span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span></p>
 <p class="line862">If there is no common language in the user's browser configuration and in moin or if you have set <tt>language_ignore_browser = True</tt>, moin will fall back to using what is configured as language_default. This is also the case if the user's browser does not specify any language. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></p>
 <p class="line862">The usual case when you want to set <tt>language_ignore_browser = True</tt> is when running a local wiki with no international audience and you maintain the wiki in only one (your local) language. Don't forget to specify your one-and-only language using language_default when doing this. <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span></p>
 <p class="line867">
 </p>
 <h1 id="head-30647f8ac566347c14c64ffa1d05db674bc09d3d">System pages, including FrontPage</h1>
-<span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line862">The <a href="../MoinMoin">MoinMoin</a> distribution archive contains the system pages (like <tt class="backtick">RecentChanges</tt>) in different languages (see <a href="../SystemPagesGroup">SystemPagesGroup</a>), selecting the correct language in the same way as for the user interface. <span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span></p>
+<span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line862">The <a href="../MoinMoin/">MoinMoin</a> distribution archive contains the system pages (like <tt class="backtick">RecentChanges</tt>) in different languages (see <a href="../SystemPagesGroup/">SystemPagesGroup</a>), selecting the correct language in the same way as for the user interface. <span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span></p>
 <p class="line862">For example, if the navi_bar contains a link to <tt class="backtick">FrontPage</tt>, moin will first look for a translation of <tt class="backtick">FrontPage</tt> into the user's language. So if the user's language is German (de), we obtain the German translation of <tt class="backtick">FrontPage</tt>, which is <tt class="backtick">StartSeite</tt>. (Internally, moin uses <tt class="backtick">MoinMoin/i18n/de.py</tt> for that, which is automatically generated out of <tt class="backtick">de.po</tt>,) Moin will use <tt class="backtick">StartSeite</tt> if that page actually exists; otherwise, it will fall back to using <tt class="backtick">FrontPage</tt>. <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span></p>
-<p class="line862">This is fine if you want to have a <a href="../FrontPage">FrontPage</a> and translations of it. But what to do if you don't want that? <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span></p>
-<p class="line862">Either delete any translated page of <a href="../FrontPage">FrontPage</a> - they will only be used <strong>if they exist</strong>. Or simply use the <tt class="backtick">page_front_page</tt> configuration variable to choose something different from <tt class="backtick">FrontPage</tt> as your front page, e.g. <tt class="backtick">MyProject</tt>. Moin will then try to look up a translation for <tt class="backtick">MyProject</tt>, but usually won't find any - and thus simply use <tt class="backtick">MyProject</tt> no matter what language the user prefers. <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span></p>
+<p class="line862">This is fine if you want to have a <a href="../FrontPage/">FrontPage</a> and translations of it. But what to do if you don't want that? <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span></p>
+<p class="line862">Either delete any translated page of <a href="../FrontPage/">FrontPage</a> - they will only be used <strong>if they exist</strong>. Or simply use the <tt class="backtick">page_front_page</tt> configuration variable to choose something different from <tt class="backtick">FrontPage</tt> as your front page, e.g. <tt class="backtick">MyProject</tt>. Moin will then try to look up a translation for <tt class="backtick">MyProject</tt>, but usually won't find any - and thus simply use <tt class="backtick">MyProject</tt> no matter what language the user prefers. <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span></p>
 <p class="line867">
 </p>
 <h1 id="head-db4578c5da46ce551d401989b8deb05b5106e6a0">Built-in vs. user-specified translations</h1>
-<span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><p class="line867"><a href="../MoinMoin">MoinMoin</a> normally uses built-in translation (see <tt class="backtick">MoinMoin/i18n/*</tt>) for translating user interface text and system page names in navi_bar. <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span></p>
+<span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><p class="line867"><a href="../MoinMoin/">MoinMoin</a> normally uses built-in translation (see <tt class="backtick">MoinMoin/i18n/*</tt>) for translating user interface text and system page names in navi_bar. <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span></p>
 <p class="line862">But there is the possibility to customize navi_bar with your own stuff. Moin has no built-in translation for that usually, so what to do if you want to have them translated the same way as <tt class="backtick">FrontPage</tt> usually is? <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span></p>
 <p class="line862">Simply create some pages like <tt class="backtick">GermanDict</tt>, <tt class="backtick">FrenchDict</tt>, <tt class="backtick">Simplified_ChineseDict</tt> etc. (use the english name of the language) and put a definition list on them which defines the translations for the English terms, e.g. on page <tt class="backtick">GermanDict</tt>: <span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span></p>
 <pre> MyProject:: MeinProjekt

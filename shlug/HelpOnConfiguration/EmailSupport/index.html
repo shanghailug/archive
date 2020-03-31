@@ -82,20 +82,20 @@ function actionsMenuInit(title) {
 <link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="../../Geekbone">
+<link rel="Start" href="../../Geekbone/">
 <link rel="Alternate" title="Wiki Markup" href="../EmailSupport%3Faction=raw">
 <link rel="Alternate" media="print" title="Print View" href="../EmailSupport%3Faction=print">
-<link rel="Up" href="..">
-<link rel="Search" href="../../FindPage">
-<link rel="Index" href="../../TitleIndex">
-<link rel="Glossary" href="../../WordIndex">
-<link rel="Help" href="../../HelpOnFormatting">
+<link rel="Up" href="../">
+<link rel="Search" href="../../FindPage/">
+<link rel="Index" href="../../TitleIndex/">
+<link rel="Glossary" href="../../WordIndex/">
+<link rel="Help" href="../../HelpOnFormatting/">
 </head>
 
 <body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="../../Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../../Geekbone/">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
@@ -122,7 +122,7 @@ searchBlur(e);
 
 
 <ul id="pagelocation">
-<li><a href="..">HelpOnConfiguration</a></li>
+<li><a href="../">HelpOnConfiguration</a></li>
 <li><a class="backlink" title="Click to do a full-text search for this title" href="../EmailSupport%3Faction=fullsearch%26value=linkto%3A%22HelpOnConfiguration/EmailSupport%22%26context=180">EmailSupport</a></li>
 </ul>
 
@@ -130,11 +130,11 @@ searchBlur(e);
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="../../Geekbone">Geekbone</a></li>
-<li class="wikilink"><a href="../../RecentChanges">RecentChanges</a></li>
-<li class="wikilink"><a href="../../FindPage">FindPage</a></li>
-<li class="wikilink"><a href="../../HelpContents">HelpContents</a></li>
-<li class="current"><a href=".">EmailSupport</a></li>
+<li class="wikilink"><a href="../../Geekbone/">Geekbone</a></li>
+<li class="wikilink"><a href="../../RecentChanges/">RecentChanges</a></li>
+<li class="wikilink"><a href="../../FindPage/">FindPage</a></li>
+<li class="wikilink"><a href="../../HelpContents/">HelpContents</a></li>
+<li class="current"><a href="./">EmailSupport</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
@@ -216,7 +216,7 @@ actionsMenuInit('More Actions:');
 </div> <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867">
 </p>
 <h1 id="head-2abe27b068afff7d1248c3ffdc8920076ce7c07f">E-Mail Configuration</h1>
-<span class="anchor" id="line-12"></span><p class="line862">See also <a href="..">HelpOnConfiguration</a>. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></p>
+<span class="anchor" id="line-12"></span><p class="line862">See also <a href="../">HelpOnConfiguration</a>. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></p>
 <p class="line867">
 </p>
 <h2 id="head-153175076e8f24d471bcc980bebeb3da54a85875">Outgoing mails</h2>
@@ -235,8 +235,8 @@ actionsMenuInit('More Actions:');
 <p class="line867">
 </p>
 <h2 id="head-c8e7589fc896596e1d9cf17522ca4a32c9e71a71">Incoming Mails (1.6 only)</h2>
-<span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line862">If you want to import mails to your <a href="../../MoinMoin">MoinMoin</a> wiki, i.e. allow it to receive and store the mails, you have to setup a few things. <span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span></p>
-<p class="line862">First you have to setup your mail server to pipe every new mail into <a href="../../MoinMoin">MoinMoin</a>. The command  is <tt class="backtick">moin xmlrpc mailimport</tt>. Note that you can use the parameter <tt class="backtick">--config /path/to/dir</tt> to supply the path to a directory with a suitable <a href="../../MoinMoin">MoinMoin</a> configuration file. Then you have ensure that there is a file called <tt class="backtick">mailimportconf.py</tt> in that directory. It has to look like this (there is a sample file shipped in <tt class="backtick">wiki/config</tt>): <span class="anchor" id="line-30"></span></p>
+<span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line862">If you want to import mails to your <a href="../../MoinMoin/">MoinMoin</a> wiki, i.e. allow it to receive and store the mails, you have to setup a few things. <span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span></p>
+<p class="line862">First you have to setup your mail server to pipe every new mail into <a href="../../MoinMoin/">MoinMoin</a>. The command  is <tt class="backtick">moin xmlrpc mailimport</tt>. Note that you can use the parameter <tt class="backtick">--config /path/to/dir</tt> to supply the path to a directory with a suitable <a href="../../MoinMoin/">MoinMoin</a> configuration file. Then you have ensure that there is a file called <tt class="backtick">mailimportconf.py</tt> in that directory. It has to look like this (there is a sample file shipped in <tt class="backtick">wiki/config</tt>): <span class="anchor" id="line-30"></span></p>
 <pre># This secret has to be known by the wiki server
 <span class="anchor" id="line-31"></span>mailimport_secret = u"foo"
 <span class="anchor" id="line-32"></span>
@@ -250,7 +250,7 @@ actionsMenuInit('More Actions:');
 <dd>This is the template for the pagename generated by the mail import code. See below for supported placeholders. <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span>
 </dd>
 <dt>mail_import_wiki_address</dt>
-<dd><p class="line862">The e-mail address of the e-mails that should go into the wiki. <a href="../../MoinMoin">MoinMoin</a> searches for this address to know the target pagename, it should match the address that is known to the mail server. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></p></dd>
+<dd><p class="line862">The e-mail address of the e-mails that should go into the wiki. <a href="../../MoinMoin/">MoinMoin</a> searches for this address to know the target pagename, it should match the address that is known to the mail server. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></p></dd>
 <dt>mail_import_secret</dt>
 <dd><p class="line862">The secret that matches the <tt class="backtick">mailimportconf.py</tt> configuration file. See above. <span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span></p></dd>
 </dl>
@@ -258,19 +258,19 @@ actionsMenuInit('More Actions:');
 <p class="line867">
 </p>
 <h1 id="head-a8fe14ab0e43c1a891ff0fb7bef0e0f63d56dffa">E-Mail Features</h1>
-<span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line867"><a href="../../MoinMoin">MoinMoin</a> currently offers two email-based services, which are explained in the following sections. <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span></p>
+<span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line867"><a href="../../MoinMoin/">MoinMoin</a> currently offers two email-based services, which are explained in the following sections. <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span></p>
 <p class="line867">
 </p>
 <h2 id="head-af01f3e2f44dcb56855265e9acb167c078f5ce6c">Sending Login Data</h2>
-<span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><p class="line862">If emailing is available, the <a href="../../UserPreferences">UserPreferences</a> dialog is expanded with a field "Your email address" and a button " Mail me my account data ". The user can enter the email address he provided at registration and then gets an email containing all necessary data to re-login, after clicking the button. <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span></p>
+<span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><p class="line862">If emailing is available, the <a href="../../UserPreferences/">UserPreferences</a> dialog is expanded with a field "Your email address" and a button " Mail me my account data ". The user can enter the email address he provided at registration and then gets an email containing all necessary data to re-login, after clicking the button. <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span></p>
 <p class="line867">
 </p>
 <h2 id="head-0b5d2f980bbfac9ea21fdb5342c543bd1100809f">Change Notification</h2>
-<span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><p class="line862">Any user can subscribe to changes of wiki pages by either clicking on the envelope icon <img alt="Subscribe" height="10" src="../../htdocs/modern/img/moin-subscribe.png" title="Subscribe" width="14">, or by adding a regex to the "Subscribed wiki pages" field of his <a href="../../UserPreferences">UserPreferences</a>. The system then sends, whenever a page is changed and the author doesn't uncheck the "Send mail notification" checkbox, an email with the author, a link to the page, and the diff of the change. The author does not get notified of his own changes. <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span></p>
+<span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><p class="line862">Any user can subscribe to changes of wiki pages by either clicking on the envelope icon <img alt="Subscribe" height="10" src="../../htdocs/modern/img/moin-subscribe.png" title="Subscribe" width="14">, or by adding a regex to the "Subscribed wiki pages" field of his <a href="../../UserPreferences/">UserPreferences</a>. The system then sends, whenever a page is changed and the author doesn't uncheck the "Send mail notification" checkbox, an email with the author, a link to the page, and the diff of the change. The author does not get notified of his own changes. <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span></p>
 <p class="line867">
 </p>
 <h2 id="head-2868f4588890f9ba2e07626b1698a91a37933c89">Receiving mails (1.6 only)</h2>
-<span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><p class="line867"><a href="../../MoinMoin">MoinMoin</a> is able to receive mails. Mainly, you need to know what the e-mail address of the wiki is and send a mail to it. If you supply the target pagename before the wiki address (typing <tt class="backtick">MyWikiPage &lt;wiki@example.com&gt;</tt> for example), you will get your mail into the wiki quite easily. There are a few rules for your mail: <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span></p>
+<span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><p class="line867"><a href="../../MoinMoin/">MoinMoin</a> is able to receive mails. Mainly, you need to know what the e-mail address of the wiki is and send a mail to it. If you supply the target pagename before the wiki address (typing <tt class="backtick">MyWikiPage &lt;wiki@example.com&gt;</tt> for example), you will get your mail into the wiki quite easily. There are a few rules for your mail: <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span></p>
 <p class="line867">
 </p>
 <h3 id="head-4f82d68e7b9aba5fb268b962db6d828664455a0d">From</h3>
@@ -278,7 +278,7 @@ actionsMenuInit('More Actions:');
 <p class="line867">
 </p>
 <h3 id="head-1c2e7f21ad93247013ceca56b0ddc290e67bb135">To</h3>
-<span class="anchor" id="line-69"></span><p class="line862">To: is (as usual) made of 2 parts, like <tt class="backtick">TEMPLATE &lt;wiki@example.org&gt;</tt>. We use the "realname" part to make up the target page name template (can contain special chars, blanks etc.) and the email address part to get it to the right destination. The simplest form of a target page name template is just a pagename like <a href="../../WikiSandBox">WikiSandBox</a>. <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span></p>
+<span class="anchor" id="line-69"></span><p class="line862">To: is (as usual) made of 2 parts, like <tt class="backtick">TEMPLATE &lt;wiki@example.org&gt;</tt>. We use the "realname" part to make up the target page name template (can contain special chars, blanks etc.) and the email address part to get it to the right destination. The simplest form of a target page name template is just a pagename like <a href="../../WikiSandBox/">WikiSandBox</a>. <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span></p>
 <p class="line874">See the example for the 2 different modes of operation. <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span></p>
 <p class="line867">
 </p>
@@ -295,7 +295,7 @@ actionsMenuInit('More Actions:');
 <p class="line867">
 </p>
 <h3 id="head-6dd275a841a3c0bb7f5e95a1728019b6122aed3c">Generated content</h3>
-<span class="anchor" id="line-88"></span><p class="line862">If requested by a leading <tt class="backtick">+</tt>-sign (e.g. <tt class="backtick">+ PageName/</tt>), <a href="../../MoinMoin">MoinMoin</a> adds a table item to the parent page listing details about the e-mail. <span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span></p>
+<span class="anchor" id="line-88"></span><p class="line862">If requested by a leading <tt class="backtick">+</tt>-sign (e.g. <tt class="backtick">+ PageName/</tt>), <a href="../../MoinMoin/">MoinMoin</a> adds a table item to the parent page listing details about the e-mail. <span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span></p>
 <p class="line867">
 </p>
 <h3 id="head-b6be4e0254e0ee4d040d00e62a01068585d7557b">Pagename generation</h3>

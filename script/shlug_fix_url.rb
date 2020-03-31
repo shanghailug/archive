@@ -175,6 +175,11 @@ def fix_link(target_dir, path, doc, tag, attr)
     url1 = p.relative_path_from(target_dir).to_s
     #puts "    --> #{target_dir} #{p} #{url1}"
 
+    # workaroud for github page url rewrite
+    # without trail '/', github will
+    # rewrite '/%3Fxxx' to '/?xxx', not '/%3Fxxx/index.html'
+    url1 += "/" if p.directory?
+
     tag[attr] = url1
   end
 end

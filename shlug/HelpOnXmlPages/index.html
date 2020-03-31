@@ -82,19 +82,19 @@ function actionsMenuInit(title) {
 <link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="../Geekbone">
+<link rel="Start" href="../Geekbone/">
 <link rel="Alternate" title="Wiki Markup" href="../HelpOnXmlPages%3Faction=raw">
 <link rel="Alternate" media="print" title="Print View" href="../HelpOnXmlPages%3Faction=print">
-<link rel="Search" href="../FindPage">
-<link rel="Index" href="../TitleIndex">
-<link rel="Glossary" href="../WordIndex">
-<link rel="Help" href="../HelpOnFormatting">
+<link rel="Search" href="../FindPage/">
+<link rel="Index" href="../TitleIndex/">
+<link rel="Glossary" href="../WordIndex/">
+<link rel="Help" href="../HelpOnFormatting/">
 </head>
 
 <body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="../Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../Geekbone/">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
@@ -128,11 +128,11 @@ searchBlur(e);
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
-<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
-<li class="wikilink"><a href="../FindPage">FindPage</a></li>
-<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
-<li class="current"><a href=".">HelpOnXmlPages</a></li>
+<li class="wikilink"><a href="../Geekbone/">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges/">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage/">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents/">HelpContents</a></li>
+<li class="current"><a href="./">HelpOnXmlPages</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
@@ -195,7 +195,7 @@ actionsMenuInit('More Actions:');
 </p>
 <h1 id="head-d95efbbf679d8e538de5ca6fb87510078a8ac844">XML Pages &amp; XSLT Processing</h1>
 <span class="anchor" id="line-12"></span><p class="line862">If you have <a class="http" href="http://4suite.org/">Python4Suite</a> installed in your system, it is possible to save XML documents as pages. It's important to start those pages with an XML declaration "<tt>&lt;?xml ...&gt;</tt>" in the very first line. Also, you have to specify the stylesheet that is to be used to process the XML document to HTML. This is done using a <a class="http" href="http://www.w3.org/TR/xml-stylesheet/">standard "xml-stylesheet" processing instruction</a>, with the name of a page containing the stylesheet as the "<tt>href</tt>" parameter. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></p>
-<p class="line862">Do no forget to enable XSLT processing, see <a href="../HelpOnConfiguration">HelpOnConfiguration</a>. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span></p>
+<p class="line862">Do no forget to enable XSLT processing, see <a href="../HelpOnConfiguration/">HelpOnConfiguration</a>. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span></p>
 <p class="line862">See the following example for details, which can also be found on the <a href="../XsltVersion">XsltVersion</a> page. <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span></p>
 <p class="line867">
 </p>
@@ -222,7 +222,7 @@ actionsMenuInit('More Actions:');
 <p class="line867">
 </p>
 <h1 id="head-40d00a7aafa89968e99b76312eabc5216e6bb686">Rendering DocBook</h1>
-<span class="anchor" id="line-39"></span><p class="line862">In order to let <a href="../MoinMoin">MoinMoin</a> render <a class="nonexistent" href="../DocBook">DocBook</a> pages, you will need to follow the steps described below. Afterwards, you will be able to write <a class="nonexistent" href="../DocBook">DocBook</a> files in <a href="../MoinMoin">MoinMoin</a> and see them as rendered HTML. Note that rendering <a class="nonexistent" href="../DocBook">DocBook</a> pages may take some seconds of processing time (this is done after the page is saved). <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span></p>
+<span class="anchor" id="line-39"></span><p class="line862">In order to let <a href="../MoinMoin/">MoinMoin</a> render <a class="nonexistent" href="../DocBook">DocBook</a> pages, you will need to follow the steps described below. Afterwards, you will be able to write <a class="nonexistent" href="../DocBook">DocBook</a> files in <a href="../MoinMoin/">MoinMoin</a> and see them as rendered HTML. Note that rendering <a class="nonexistent" href="../DocBook">DocBook</a> pages may take some seconds of processing time (this is done after the page is saved). <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span></p>
 <p class="line867">
 </p>
 <h2 id="head-365bec0bbe166195162500ec6d4544210ed651da">Installing the DocBook support</h2>
@@ -231,7 +231,7 @@ actionsMenuInit('More Actions:');
 </li>
 <li><p class="line862">Go to <a class="http" href="http://sourceforge.net/project/showfiles.php?group_id=21935&amp;package_id=16608">DocBook files at SourceForge</a> and download the latest archive. It contains the XSLT files necessary for HTML generation. <span class="anchor" id="line-44"></span></p></li>
 <li>
-<p class="line862">Extract the archive and copy the whole directory <tt>html</tt> into another directory that is writable to <a href="../MoinMoin">MoinMoin</a> (e.g. the <tt>data</tt> directory). <span class="anchor" id="line-45"></span></p>
+<p class="line862">Extract the archive and copy the whole directory <tt>html</tt> into another directory that is writable to <a href="../MoinMoin/">MoinMoin</a> (e.g. the <tt>data</tt> directory). <span class="anchor" id="line-45"></span></p>
 <ul><li><p class="line862">After you have upgraded 4suite, you have to delete the file <tt>db_compiled.dat</tt> in this directory. <span class="anchor" id="line-46"></span></p></li></ul>
 </li>
 <li><p class="line862">Edit your wiki configuration,  the attribute <tt>docbook_html_dir</tt> has to point to the directory (which contains e.g. the file <tt>docbook.xsl</tt>) you created in the last step. <span class="anchor" id="line-47"></span></p></li>
@@ -240,9 +240,9 @@ actionsMenuInit('More Actions:');
 <p class="line867">
 </p>
 <h3 id="head-d64762a739ea7f2fb52857815469bdbafda38699">Using DocBook</h3>
-<span class="anchor" id="line-50"></span><p class="line862">Just write your <a class="nonexistent" href="../DocBook">DocBook</a> file like you would have done in a different environment as well. If you want to insert links to other wiki pages, be sure to simply write the <a href="../WikiName">WikiName</a> into the text. Note that pages that would need <tt>["..."]</tt> links in ordinary wiki markup cannot be linked to directly, yet. <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span></p>
+<span class="anchor" id="line-50"></span><p class="line862">Just write your <a class="nonexistent" href="../DocBook">DocBook</a> file like you would have done in a different environment as well. If you want to insert links to other wiki pages, be sure to simply write the <a href="../WikiName/">WikiName</a> into the text. Note that pages that would need <tt>["..."]</tt> links in ordinary wiki markup cannot be linked to directly, yet. <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span></p>
 <p class="line867"><a class="nonexistent" href="../DocBook">DocBook</a> markup is either marked by <tt>#format docbook</tt> in the first line of the page or in a wiki page like this: <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span></p>
-<div class="message">XSLT选项没有激活, 请参阅 <a class="nonexistent" href="../%E5%B8%AE%E5%8A%A9-%E8%AE%BE%E7%BD%AE">帮助-设置</a>, 或者<a href="../HelpOnConfiguration">HelpOnConfiguration</a>.</div>
+<div class="message">XSLT选项没有激活, 请参阅 <a class="nonexistent" href="../%E5%B8%AE%E5%8A%A9-%E8%AE%BE%E7%BD%AE">帮助-设置</a>, 或者<a href="../HelpOnConfiguration/">HelpOnConfiguration</a>.</div>
 <pre>&lt;!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
 &lt;book&gt;
 &lt;bookinfo&gt;

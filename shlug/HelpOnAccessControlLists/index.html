@@ -82,19 +82,19 @@ function actionsMenuInit(title) {
 <link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../htdocs/modern/css/projection.css">
 
 
-<link rel="Start" href="../Geekbone">
+<link rel="Start" href="../Geekbone/">
 <link rel="Alternate" title="Wiki Markup" href="../HelpOnAccessControlLists%3Faction=raw">
 <link rel="Alternate" media="print" title="Print View" href="../HelpOnAccessControlLists%3Faction=print">
-<link rel="Search" href="../FindPage">
-<link rel="Index" href="../TitleIndex">
-<link rel="Glossary" href="../WordIndex">
-<link rel="Help" href="../HelpOnFormatting">
+<link rel="Search" href="../FindPage/">
+<link rel="Index" href="../TitleIndex/">
+<link rel="Glossary" href="../WordIndex/">
+<link rel="Help" href="../HelpOnFormatting/">
 </head>
 
 <body lang="en" dir="ltr">
 
 <div id="header">
-<div id="logo"><a href="../Geekbone">Geekbone.Org</a></div>
+<div id="logo"><a href="../Geekbone/">Geekbone.Org</a></div>
 
 <form id="searchform" method="get" action="">
 <div>
@@ -128,11 +128,11 @@ searchBlur(e);
 
 
 <ul id="navibar">
-<li class="wikilink"><a href="../Geekbone">Geekbone</a></li>
-<li class="wikilink"><a href="../RecentChanges">RecentChanges</a></li>
-<li class="wikilink"><a href="../FindPage">FindPage</a></li>
-<li class="wikilink"><a href="../HelpContents">HelpContents</a></li>
-<li class="current"><a href=".">HelpOnAccessControlLists</a></li>
+<li class="wikilink"><a href="../Geekbone/">Geekbone</a></li>
+<li class="wikilink"><a href="../RecentChanges/">RecentChanges</a></li>
+<li class="wikilink"><a href="../FindPage/">FindPage</a></li>
+<li class="wikilink"><a href="../HelpContents/">HelpContents</a></li>
+<li class="current"><a href="./">HelpOnAccessControlLists</a></li>
 </ul>
 
 <div id="pageline"><hr style="display:none;"></div>
@@ -266,7 +266,7 @@ actionsMenuInit('More Actions:');
 <li><p class="line862">"after" means <strong>not forgetting stuff</strong> accidently (like maybe giving read rights to all) <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span></p></li>
 </ul>
 <p class="line874">It helps if you think of them as before, during, and after processing of page based ACLs. <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span></p>
-<p class="line867"><img alt="(!)" height="15" src="../htdocs/modern/img/idea.png" title="(!)" width="15"> That u"" notation used for the configuration strings means unicode and <em>must be there</em> - see <a href="../HelpOnConfiguration">HelpOnConfiguration</a> for details. <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span></p>
+<p class="line867"><img alt="(!)" height="15" src="../htdocs/modern/img/idea.png" title="(!)" width="15"> That u"" notation used for the configuration strings means unicode and <em>must be there</em> - see <a href="../HelpOnConfiguration/">HelpOnConfiguration</a> for details. <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span></p>
 <p class="line867">
 </p>
 <h2 id="head-d9e097f336dd89f312ae6cac423f2f35ec18c5ed">4. Syntax</h2>
@@ -353,7 +353,7 @@ actionsMenuInit('More Actions:');
 <p class="line867"><span class="anchor" id="Groups"></span> <span class="anchor" id="line-161"></span>
 </p>
 <h2 id="head-b801aef30ca07d97783a310c60f028c9fab7f36d">8. Groups</h2>
-<span class="anchor" id="line-162"></span><p class="line862">User groups make it easier to specify rights for bigger groups. Normally, the name of the group page has to end with <tt class="backtick">Group</tt> like <a class="nonexistent" href="../FriendsGroup">FriendsGroup</a>. This lets <a href="../MoinMoin">MoinMoin</a> recognise it as a list of usernames. This default pattern could be changed (e.g. for non-english languages etc.), see <a href="../HelpOnConfiguration">HelpOnConfiguration</a>. <span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span></p>
+<span class="anchor" id="line-162"></span><p class="line862">User groups make it easier to specify rights for bigger groups. Normally, the name of the group page has to end with <tt class="backtick">Group</tt> like <a class="nonexistent" href="../FriendsGroup">FriendsGroup</a>. This lets <a href="../MoinMoin/">MoinMoin</a> recognise it as a list of usernames. This default pattern could be changed (e.g. for non-english languages etc.), see <a href="../HelpOnConfiguration/">HelpOnConfiguration</a>. <span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span></p>
 <p class="line862">Only <tt class="backtick">SomeUser</tt>'s friends can read and edit this page: <span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span></p>
 <pre>#acl SomeUser:read,write SomeUser/FriendsGroup:read,write
 <span class="anchor" id="line-167"></span></pre>
@@ -377,7 +377,7 @@ actionsMenuInit('More Actions:');
 <span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><p class="line874">You can configure which page names are considered as group definition pages (e.g. for non-english wikis): <span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span></p>
 <pre>page_group_regex =  '[a-z]Group$'    # this is the default
 <span class="anchor" id="line-195"></span></pre>
-<span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><p class="line867"><img alt="/!\" height="15" src="../htdocs/modern/img/alert.png" title="/!\" width="15"> If changes to the group page do not take effect, let <a href="../MoinMoin">MoinMoin</a> rebuild the cache by simply removing all files in the directory <tt>path_to_your_wiki_instance/data/cache/wikidicts/</tt> <span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span></p>
+<span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><p class="line867"><img alt="/!\" height="15" src="../htdocs/modern/img/alert.png" title="/!\" width="15"> If changes to the group page do not take effect, let <a href="../MoinMoin/">MoinMoin</a> rebuild the cache by simply removing all files in the directory <tt>path_to_your_wiki_instance/data/cache/wikidicts/</tt> <span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span></p>
 <p class="line867">
 </p>
 <h2 id="head-7a54879603c7bffec991b53c9381a45f658b2267">9. Usage cases</h2>
