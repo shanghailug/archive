@@ -1,0 +1,1029 @@
+1
+00:00:00,000 --> 00:00:03,240
+Mark shuttleworth 复旦大学 ubuntu 用户见面会
+2007.6.23 复旦大学谢希德厅
+
+2
+00:00:04,873 --> 00:00:08,968
+上海 linux 用户组制作，感谢 manphiz 听写英文
+http://www.shlug.org
+
+3
+00:00:10,100 --> 00:00:14,874
+我很高兴借这次机会，mark shuttleworth到中国来的机会
+
+4
+00:00:14,844 --> 00:00:17,746
+跟大家做一个现场演讲
+
+5
+00:00:18,211 --> 00:00:21,482
+mark shuttleworh他是ubuntu的创始人
+
+6
+00:00:21,999 --> 00:00:24,342
+可能大家都已经听说过他的大名了
+
+7
+00:00:24,726 --> 00:00:28,797
+去年在北航他已经做过一次这样的演讲
+
+8
+00:00:29,334 --> 00:00:31,549
+当时现场的反应比较热烈
+
+9
+00:00:32,008 --> 00:00:34,359
+所以这回mark来中国的时候
+
+10
+00:00:35,107 --> 00:00:37,354
+所以我们就安排这次是在上海
+
+11
+00:00:37,712 --> 00:00:39,447
+因为已经在北京做过了嘛
+
+12
+00:00:40,403 --> 00:00:42,147
+这也是很难得的机会
+
+13
+00:00:42,582 --> 00:00:46,597
+我就不多说了，下面有请 mark shuttleworh
+
+14
+00:00:47,029 --> 00:00:48,997
+为大家讲述他自己的经历
+
+15
+00:00:49,179 --> 00:00:54,921
+和有关开源软件的一些概念和故事，谢谢
+
+16
+00:00:58,363 --> 00:01:02,555
+Alright, glad to meet you here. And it's wonderful to be here
+
+17
+00:01:02,731 --> 00:01:07,979
+So Amy tells me that you were all the students of a whole bunch of different case
+
+18
+00:01:08,011 --> 00:01:12,611
+and I came to know a little bit of you before I started speaking.
+
+19
+00:01:12,895 --> 00:01:19,574
+Could you give me some education profile of what you guys are studing? How many guys here are studying business? 
+
+20
+00:01:22,003 --> 00:01:28,473
+About 4 out of the other. Engineering? OK. Computer engineering?
+
+21
+00:01:29,709 --> 00:01:31,717
+So you are studying computer engineering.
+
+22
+00:01:32,045 --> 00:01:38,322
+How many of you would prefer to start you own businesses 
+and how many would prefer to start working in a large company? 
+
+23
+00:01:39,092 --> 00:01:41,587
+So how many of you would prefer start working in a large company? 
+
+24
+00:01:42,179 --> 00:01:45,778
+And how many of you want to start your own businesses?
+
+25
+00:01:47,176 --> 00:01:54,311
+OK. So I can tell you those guys are going to be really wealthy of the crowd of the people 
+who put their hands up to say they'll start their own businesses, right?
+
+26
+00:01:55,419 --> 00:02:00,963
+So, what I thought I would talk about a little bit today is entrepreneurship 
+
+27
+00:02:01,118 --> 00:02:06,452
+because I believe that economic change is just as important as technological change
+
+28
+00:02:06,595 --> 00:02:09,091
+is just as important as social change, right?
+
+29
+00:02:09,658 --> 00:02:14,040
+And, it's entrepreneurs who really drive economic change,
+
+30
+00:02:14,171 --> 00:02:20,201
+it's entrepreneurs who think of take new idea and turn it into new businesses and then turn it into a global phenomenon.
+
+31
+00:02:20,538 --> 00:02:28,128
+And I'm convinced this is a country which is gonna produce many of the next generation of great entrepreneurs. 
+
+32
+00:02:28,403 --> 00:02:32,218
+So I thought that would be an interesting thing to talk about.
+
+33
+00:02:33,068 --> 00:02:40,346
+If I ask you to do a list of some great businesses that have been started in the last 10 years,
+
+34
+00:02:40,651 --> 00:02:46,778
+ what names will you throw out? Who wants to suggest? 
+
+35
+00:02:50,446 --> 00:02:51,453
+Apple
+
+36
+00:02:53,421 --> 00:02:59,131
+Apple is a great business. They have radically changed in the last 10 years.
+
+37
+00:02:59,148 --> 00:03:01,835
+ They've radically changed the way people think about Apple, right? 
+
+38
+00:03:02,601 --> 00:03:09,880
+10 years ago, maybe many people thought Apple was dying. Today in the darling they are sitting in the trench, right?
+
+39
+00:03:10,102 --> 00:03:11,532
+So that's a very interesting example. 
+
+40
+00:03:12,075 --> 00:03:13,729
+ What other companies do you admire?
+
+41
+00:03:14,332 --> 00:03:20,171
+Intel, another great company. But it's not a really new company and it's not really changing. Yeah?
+
+41
+00:03:26,667 --> 00:03:29,667
+Other brands, come on, tell me what company you admire?
+
+42
+00:03:30,544 --> 00:03:36,301
+Network Appliance
+
+43
+00:03:37,262 --> 00:03:39,573
+Net AP? OK, that's very interesting. 
+
+44
+00:03:40,845 --> 00:03:46,386
+OK, so, the businesses that all kind of defining LH
+
+45
+00:03:46,649 --> 00:03:48,936
+companies like eBay or companies like Google.
+
+46
+00:03:49,235 --> 00:03:51,569
+What's the Chinese equivalent of eBay? 
+
+47
+00:03:52,763 --> 00:03:57,737
+...in advantage of completely in technology that didn't really exist 10 years ago.
+
+48
+00:03:57,837 --> 00:04:07,922
+They are all companies that effectively - we all have those brand names spread accepted today as great company but 10 years ago you couldn't even dream that a company like that exists, right? 
+
+49
+00:04:08,602 --> 00:04:13,185
+if you look at the wealth that's been created in technology of the last 10 years
+
+50
+00:04:13,221 --> 00:04:19,267
+it's largely being created using the technologies that just didn't exist in 1995
+
+51
+00:04:20,209 --> 00:04:25,569
+and those around communities and customer bases that didn't exist in 1995
+
+52
+00:04:26,048 --> 00:04:32,999
+And that highlights for what I think perhaps of importance characteristic of great entrepreneurs, as they understand change.
+
+53
+00:04:34,566 --> 00:04:36,566
+They understand how the world is changing.
+
+54
+00:04:37,076 --> 00:04:40,090
+ They very much want to be part of that change
+
+55
+00:04:41,268 --> 00:04:45,331
+And I think if you, as an entrepreneur
+
+56
+00:04:45,446 --> 00:04:51,124
+if you want to be a great entrepreneur then you have to understand how the world is changing
+
+57
+00:04:51,296 --> 00:04:55,534
+ have to understand how the changes that are going onto the world are going to affect your country
+
+58
+00:04:56,209 --> 00:04:59,304
+So, this is a country of vary change right?
+
+59
+00:04:59,598 --> 00:05:02,556
+ If you look back 10 years how would you say of things that have changed yet? 
+
+60
+00:05:02,992 --> 00:05:06,528
+What would you say the key element of change that is going on there?
+
+61
+00:05:09,854 --> 00:05:14,101
+You feel very connected to the outside world.
+
+62
+00:05:14,311 --> 00:05:17,854
+You feel like that you can follow the news, that you can follow technology developments globally?
+
+63
+00:05:22,304 --> 00:05:23,375
+I think you can, right? 
+
+64
+00:05:23,882 --> 00:05:27,153
+I think you can sit in the university and you can know exactly what's going on in the chemistry
+
+65
+00:05:27,543 --> 00:05:32,134
+you can know exactly what's going on in the physics, you can know exactly what's going on in computer science and business
+
+66
+00:05:32,495 --> 00:05:35,589
+That's amazing! We are the first generation to be able to do that.
+
+67
+00:05:36,230 --> 00:05:42,924
+At our parents' generation it took a very long time before idea from one part of the world to reach some other side of the world, right?
+
+68
+00:05:43,160 --> 00:05:54,399
+This is the biggest change, I would predict that over the next generation in China is going to be your group, the world in which you do business is going to become exactly like Africa
+
+69
+00:05:54,950 --> 00:06:06,634
+exactly like Europe, exactly like America, that says you'll be able to participate as first class citizens instantly in whatever business that you choose. 
+
+70
+00:06:07,518 --> 00:06:12,333
+OK, so what are the characteristics of great entrepreneurs? 
+
+71
+00:06:12,366 --> 00:06:16,117
+Does anybody want to suggest? What does it take to be a great entrepreneur?
+
+72
+00:06:19,305 --> 00:06:21,232
+Yeah, I will say that's a No.1 character. 
+
+73
+00:06:22,538 --> 00:06:29,698
+If you want to create wealth, if you want to do something, you'll have to devote yourself to it, right? 
+
+74
+00:06:29,824 --> 00:06:34,918
+you'll have to devote yourself to it completely. And that's why people are going in quite different distractions, right? 
+
+75
+00:06:34,872 --> 00:06:40,591
+there's easy doing jobs, there's good paying salary. It's easy to live in an average life today, right? 
+
+76
+00:06:40,813 --> 00:06:46,004
+If you want to live an exceptional life, you have to be totally, totally committed to an idea, right? 
+
+77
+00:06:46,343 --> 00:06:50,246
+And it's much easier to committed to that idea if you are actually really fascinated by. 
+
+78
+00:06:51,113 --> 00:06:53,975
+So the No.1 thing I would tell you is if you want to create wealth, right?
+
+79
+00:06:54,132 --> 00:07:01,563
+If you want to become wealthy, if you want to be as the founder of Google, or the founder of eBay, or the founder of Net AP, or the founder of softsource.com
+
+80
+00:07:02,346 --> 00:07:11,272
+you are going to have an idea you find so fascinating that you are willing to devote yourself to it to the exclusion to all the other easier opportunities that you faced through.
+
+81
+00:07:13,880 --> 00:07:18,415
+I don't know, I meet a lot of entrepreneurs, peoples have made billions of billions of billions of dollars
+
+82
+00:07:18,897 --> 00:07:23,791
+and I don't know any of them who's not totally passionate about the value
+
+83
+00:07:24,746 --> 00:07:36,328
+And if you let yourself consecutively to be drawn in the average flow
+
+84
+00:07:36,500 --> 00:07:39,994
+ if you let yourself to define your objectives
+
+85
+00:07:41,244 --> 00:07:45,164
+your attemptives what the large companies telling you to do then it's hard to be so passionate about it.
+
+86
+00:07:45,276 --> 00:07:50,492
+If you say you are going to drive that change, then it's much easier for you to be passionate about it.
+
+87
+00:07:51,132 --> 00:07:53,226
+What else you say of entrepreneurs?
+
+88
+00:07:53,818 --> 00:07:54,481
+Innovation.
+
+89
+00:07:54,791 --> 00:07:58,750
+Innovation, exactly. Innovation is all about change, right?
+
+90
+00:07:59,132 --> 00:08:06,234
+There are 2 ways to be successful, and that's possible that successful people have a bit of both of these. 
+
+91
+00:08:06,333 --> 00:08:10,448
+One way to be successful is to be extremely efficient, right?
+
+92
+00:08:10,901 --> 00:08:15,100
+To take what you've been authorised to do and do it very very efficiently.
+
+93
+00:08:15,267 --> 00:08:18,899
+Or if you are running a business, make sure that the business runs very very efficient.
+
+94
+00:08:18,776 --> 00:08:20,704
+So, say, you are running an airline, right?
+
+95
+00:08:21,261 --> 00:08:26,971
+One way you can succeed this airline is making sure that you run more efficiently on your line than all of your competitors.
+
+96
+00:08:27,898 --> 00:08:34,744
+And, do you have AVAS in the country? Very profiled company, AVAS? 
+
+97
+00:08:35,943 --> 00:08:39,318
+OK, international company, AVAS. Their goal is "we try hard".
+
+98
+00:08:39,762 --> 00:08:45,664
+Basically the thing is we do everything exactly as everybody else, we don't do everything differently, but we try hard, right?
+
+99
+00:08:46,844 --> 00:08:50,650
+Most entrepreneurs I meet don't fall into that category.
+
+100
+00:08:50,918 --> 00:08:57,484
+They are not necessarily extremely efficient managers, they are not necessarily extremely operational strong
+
+101
+00:08:57,472 --> 00:09:00,421
+but what they do is they innovate. They change it
+
+102
+00:09:01,169 --> 00:09:03,896
+And, possibly the greatest "this" that I think that - I don't know who "this" is - 
+
+
+103
+00:09:07,084 --> 00:09:11,572
+that most of the changes that is happening is the changes that is happening to the society despite what you do, right? 
+
+104
+00:09:11,576 --> 00:09:14,160
+Because this is such a huge global economy, right?
+
+105
+00:09:14,594 --> 00:09:16,928
+Whatever you can't change, you can't innovate.
+
+106
+00:09:17,213 --> 00:09:20,931
+Usually what's happening is there is an underlying change going on our society
+
+107
+00:09:21,526 --> 00:09:26,781
+so you understand that underlying change, and you are standing out of a position so fore
+
+108
+00:09:27,348 --> 00:09:34,874
+then you can think you ride the wave of that change very efficient to build your part of business. 
+
+109
+00:09:35,516 --> 00:09:38,643
+Well people sometime say that an entrepreneur is an innovater
+
+110
+00:09:39,247 --> 00:09:43,878
+usually what's happening is that entrepreneur is just understanding what change is going on our society.
+
+111
+00:09:44,928 --> 00:09:46,968
+So you understand how the Internet flows
+
+112
+00:09:46,938 --> 00:09:59,430
+for example, before everybody else does, then you can predict that will create a lot of new kinds of service and you can position yourself to offer the services before everybody else does, right?
+
+113
+00:09:59,823 --> 00:10:01,935
+So it's noticed that nobody actually creates the Internet
+
+114
+00:10:02,443 --> 00:10:05,321
+That's too big for any one person or one company to do.
+
+115
+00:10:05,549 --> 00:10:10,412
+But if you understand how Internet is going to change your society and the business world around you
+
+116
+00:10:10,884 --> 00:10:13,827
+you can position yourself to be the more efficient operator
+
+117
+00:10:14,041 --> 00:10:21,318
+For me, there is a lot of fun, right? To ride these waves of change to society
+
+118
+00:10:21,670 --> 00:10:30,020
+The big wave of change I've seen in my life time have been first starting of alliancings, a wave of change to what's globalization
+
+119
+00:10:30,529 --> 00:10:40,479
+In 1980, if you have a million pounds in England, you went out taking that million pounds anywhere else to go into invest and create your business.
+
+120
+00:10:40,907 --> 00:10:48,562
+Sounds crazy today, because Shanghai, as a global capital, you have hundreds of billions of pounds coming through Shanghai every week, right?
+
+121
+00:10:49,025 --> 00:10:58,375
+That 27 years ago, that industry doesn't exist because there were restricted roles about value investigation outside your country.
+
+122
+00:10:58,480 --> 00:11:02,926
+In the last generation all of the roles have been spread away
+
+123
+00:11:03,067 --> 00:11:17,360
+Some entrepreneurs may forge fortune because they could see that forced globalization will mean that any particular kind of capacity anywhere in the world should ultimately be priced in the same way. 
+
+124
+00:11:17,760 --> 00:11:25,510
+But if you can manufactory something in the UK for one price, then you can manufactory something in India for other price for all of that manufactory that you knew
+
+125
+00:11:26,060 --> 00:11:28,689
+that's one huge change that is going to society
+
+126
+00:11:29,339 --> 00:11:34,536
+The same huge change of the society of my life time was the Internet, right? 
+
+127
+00:11:34,892 --> 00:11:40,682
+The effectiveness of information compute at no cost, instantly, anywhere at the world
+
+128
+00:11:41,243 --> 00:11:43,891
+And that, the first capital to be able to do
+
+129
+00:11:44,414 --> 00:11:50,382
+The next big change that's going through the society was information, that making information effectively move very very efficiently. 
+
+130
+00:11:50,852 --> 00:11:59,724
+And that still what makes me embarrass that file rolls and filtering, things like that, but trend absolutely is to make sure that information is instantly available anyway.
+
+131
+00:12:00,566 --> 00:12:06,740
+And people should thought about the trend of imminent to send stuff out, right? 
+
+132
+00:12:07,111 --> 00:12:11,949
+If you could set up a website, you could reach every customer in the world
+
+133
+00:12:15,783 --> 00:12:23,172
+So the next big change that we are starting to see, is kind of like that wave coming back, and else, right?
+
+134
+00:12:23,210 --> 00:12:34,576
+So the first change is all about connecting the world so the companies you have in domain can send information out to provide service out to the edges of that network, right?
+
+135
+00:12:35,023 --> 00:12:39,133
+Now we've been seeing is that the edges of that network are starting to talk back
+
+136
+00:12:40,313 --> 00:12:48,055
+Basically what's happening is that information that contents of ideas from the edges of networks are coming in and changing the center.
+
+137
+00:12:49,960 --> 00:12:54,102
+So can you guys get access to wikipedia? That's an eminent business of success.
+
+138
+00:12:54,325 --> 00:12:58,018
+The secret of that eminent business of success is their customers
+
+139
+00:12:58,492 --> 00:13:06,979
+It's people coming back to them and give them information and then it has the richest collection of information about books in the world
+
+140
+00:13:07,415 --> 00:13:09,175
+But they didn't build that knowledge
+
+141
+00:13:09,736 --> 00:13:15,446
+What they've done basically, they started out seeking information that provide service globally
+
+142
+00:13:15,508 --> 00:13:25,699
+then the wave came back they started gathering back your knowledge, your idea, your preferences, your favorite books, you folks about particular book, right?
+
+143
+00:13:26,055 --> 00:13:29,110
+To see how this change is happening
+
+144
+00:13:30,558 --> 00:13:34,581
+The next generation of great business I believe are all going to reflect this
+
+145
+00:13:34,980 --> 00:13:43,994
+Google reflects this by taking everytime you create a webpage you link to other webpages, you are telling Google what's important to under where
+
+146
+00:13:44,885 --> 00:13:49,532
+Google is effectively using your knowledge from the edge of the network, right?
+
+147
+00:13:50,020 --> 00:13:57,514
+So, when you are now connected to all of those business, see there is an underlying effect happening there. 
+
+148
+00:13:57,767 --> 00:14:04,724
+There really is. Take eBay for example. The value of eBay is not created by eBay, but created by all of they use it
+
+149
+00:14:04,819 --> 00:14:08,339
+You go to eBay, people are going to eBay, because everybody else is going there.
+
+150
+00:14:08,686 --> 00:14:11,238
+You go to wikipedia because everybody else is going there.
+
+151
+00:14:11,679 --> 00:14:14,839
+You see, the value is not created in the center and then exported.
+
+152
+00:14:15,212 --> 00:14:17,875
+The value's been created in the edges and has falled back in.
+
+153
+00:14:19,164 --> 00:14:29,697
+I think it's a very interesting example of how that phenomenon of "the edge talking back to the center" is changing the world of software, right? 
+
+154
+00:14:30,158 --> 00:14:37,700
+It used to be this way to build software that to hire very smart guys all around the world and move them to the center
+
+155
+00:14:38,383 --> 00:14:51,619
+so Microsoft and Oracle and SAP were going to hire people and move them to Redmond or San Francisco or Germany and they'll have centralized development of our trees
+
+156
+00:14:51,987 --> 00:14:56,746
+and they'll send their results back out to the edges of their network.
+
+157
+00:14:57,056 --> 00:14:59,088
+But today free software is turning that around
+
+158
+00:15:00,483 --> 00:15:06,856
+that is saying, "OK, let's find the smartest and the most self-motivated people who's interesting in technology at the edges of that network.
+
+159
+00:15:07,040 --> 00:15:11,239
+Let's honor and gather all their thinking and bring it to the center."
+
+160
+00:15:11,716 --> 00:15:16,098
+So we completely fundamentally change the way that software has been produced.
+
+161
+00:15:16,780 --> 00:15:29,520
+And I think just like wikipedia, is a bit of repository of knowledge, that, say, like encyclopedia, or encyclopedia protenica, or - I didn't know the equivalent of Chineses
+
+162
+00:15:30,328 --> 00:15:41,391
+So it is that free software think it's to be a bit of repository of technology expertise than proprietary software which's getting them at the center. OK. 
+
+163
+00:15:42,042 --> 00:15:46,753
+So that things came to be that free software actually started to happen before wikipedia
+
+164
+00:15:46,756 --> 00:15:58,049
+started to happen before eminence, started to happen before some of those other businesses because free software at the very very base of Internet
+
+165
+00:15:58,443 --> 00:16:10,056
+the people hope to spate the Internet promoting the program so they started to show this bit of ability of harnessing knowledge from the edge of network communicating to the center well before they wish to use it. 
+
+166
+00:16:10,489 --> 00:16:14,560
+But I predict you that every single industry is going to be changed by this.
+
+167
+00:16:15,614 --> 00:16:22,236
+Think of the music industry today. Today's music industry so looks like that centralized kind of thing.
+
+168
+00:16:21,968 --> 00:16:25,975
+Content used to produced in the center and then shipped out, right?
+
+169
+00:16:26,303 --> 00:16:27,525
+To the edges of the entry.
+
+170
+00:16:27,803 --> 00:16:35,354
+But what's going to be like to continued is the opposite. Content is produced in the edges of the network can then shipped in, right? 
+
+171
+00:16:35,701 --> 00:16:41,492
+You will define what the popular music is by talking to your friends and in that conversation
+
+172
+00:16:41,545 --> 00:16:49,535
+out of that global conversation, will come the heats of the year, rather than the heats of the year being defined in the center and then moved out
+
+173
+00:16:49,889 --> 00:16:51,873
+What else interesting? Engineering, right?
+
+174
+00:16:52,193 --> 00:16:55,784
+It's very interesting. At the moment people understand what free software is
+
+175
+00:16:56,674 --> 00:17:03,552
+But we'll going to see the equivalent phenomenon happening in every type of Engineering, right?
+
+176
+00:17:03,853 --> 00:17:09,060
+Motor cars. It doesn't make sense to have motor cars design central, right? 
+
+177
+00:17:09,550 --> 00:17:11,613
+To have each company to have to reinvent the wheel
+
+178
+00:17:11,601 --> 00:17:18,391
+It makes much more sense for us to be effective to evolve designs based on the base talent of whatever it has to be over time. 
+
+179
+00:17:18,805 --> 00:17:27,307
+Houses. It's now a website being set up which affects all the architects to design houses
+
+180
+00:17:27,548 --> 00:17:34,786
+using the same processes by which wikipedia is written, using the same processes by which free software
+
+181
+00:17:35,137 --> 00:17:39,967
+by which Linux is written, the same processes by which Anderson gathers its databases because of this.
+
+182
+00:17:40,097 --> 00:17:47,686
+Harnessing architectural talent from all around the world and producing a shaved repository of architectural references and designs. 
+
+183
+00:17:48,237 --> 00:17:52,892
+It's very hard for me the think of a single industry which is not going to be touched by this
+
+184
+00:17:53,374 --> 00:17:57,534
+So, as an entrepreneur, whatever your personnal passions are, right
+
+185
+00:17:58,010 --> 00:18:00,953
+whatever you interested in things, whatever you interested in, right?
+
+186
+00:18:01,527 --> 00:18:06,230
+Start thinking about how these processes could affect your industry, right? 
+
+187
+00:18:06,316 --> 00:18:12,595
+You interested in chemistry, for example, some of those were asking me questions earlier and he's chemist.
+
+188
+00:18:12,545 --> 00:18:17,359
+Start to thinking about how could you aggregate chemical knowledge, right
+
+189
+00:18:17,821 --> 00:18:25,371
+from the edges of the network and build a shaved repository like wikipedia. And then how could you build businesses around that, right? 
+
+190
+00:18:25,588 --> 00:18:29,914
+How could you change the business model to reflect the change of operational model
+
+191
+00:18:30,458 --> 00:18:38,976
+Because each of these changes is powered by technology change but ultimately is also powered by economical change, right? 
+
+192
+00:18:39,911 --> 00:18:47,437
+So the business model of Google is very different to the business model of Microsoft, completely different.
+
+193
+00:18:47,830 --> 00:18:54,581
+And Microsoft really needs to understand how they can evolve so that they can keep up with the underlying changes. 
+
+194
+00:18:54,943 --> 00:19:02,213
+OK. So I also want to talk a little bit about free software's platform for entrepreneurs, right?
+
+195
+00:19:02,563 --> 00:19:14,673
+If you are entrepreneur, your job is to close the gap, to close the economical gap, to find the opportunity and then build the infrastructure to service that opportunity. 
+
+196
+00:19:15,605 --> 00:19:18,579
+If I look at all of the great technology businesses through Net AP
+
+197
+00:19:19,835 --> 00:19:21,282
+through - how many of you guys here use VMWare?
+
+198
+00:19:23,289 --> 00:19:24,721
+through the use of VMWare
+
+199
+00:19:25,074 --> 00:19:37,727
+through the bake of information service businesses like Google, Yahoo, bake electronic trading businesses like Schwann or eBay or something.
+
+200
+00:19:38,113 --> 00:19:42,575
+All of these businesses were actually built out using free software components, right? 
+
+201
+00:19:42,915 --> 00:19:48,353
+The value of software industry is not the licensing cost of the software
+
+202
+00:19:48,922 --> 00:19:54,504
+It's the value of the economic processes that you are able to set up using that software
+
+203
+00:19:55,070 --> 00:19:57,453
+If you are entrepreneur, if you are technology entrepreneur today
+
+204
+00:19:57,908 --> 00:20:08,665
+it's worth thinking about the fact you can get starting of using that piece of software you can customized the tools to your purposes as of using free software. 
+
+205
+00:20:08,770 --> 00:20:13,537
+You can effectively build your business much more efficiently using free software
+
+206
+00:20:13,782 --> 00:20:22,075
+So I'm going to predict the fact to be that the best technology businesses over the next 15 or 20 years are all going to be powered by free software
+
+207
+00:20:22,399 --> 00:20:26,997
+Youtube, are you guys see youtube out there? You can? OK
+
+208
+00:20:27,171 --> 00:20:31,523
+Youtube is all built on free software that it use MySQL as a database
+
+209
+00:20:31,760 --> 00:20:45,204
+they use Linux as the cooperating system, and their offering is proprietary in the sense that they don't give you their code but all of the pieces they need to build their businesses are all built of free software
+
+210
+00:20:48,551 --> 00:20:50,933
+Over the next 10 years it's going to be consuming electronics
+
+211
+00:20:51,488 --> 00:20:55,534
+How many of you guys know about the One Laptop Per Child project? That's few of that
+
+212
+00:20:55,791 --> 00:21:00,014
+The things of that is they provide functional computers at a very low price
+
+213
+00:21:00,821 --> 00:21:05,387
+So the complete inversion of the traditional way of PC market
+
+214
+00:21:05,559 --> 00:21:13,556
+The traditional way of making in PC market was you set high price stocks like 700 dollars, 900 dollars, plus 100 dollars
+
+215
+00:21:13,736 --> 00:21:18,693
+and you trying to squeeze as much functionalities into those price points as you can.
+
+216
+00:21:19,885 --> 00:21:25,389
+But with One Laptop Per Child project they turn it around, they said this is actually here
+
+217
+00:21:25,570 --> 00:21:30,137
+let's define the useful amount of computational functionality that we can give in equal
+
+218
+00:21:30,786 --> 00:21:33,921
+and we see how cheaply we can produce that useful function
+
+219
+00:21:34,384 --> 00:21:37,903
+This year we can do it from 700 dollars, and next year we can do it from fewer dollars
+
+220
+00:21:38,840 --> 00:21:42,750
+and after that we can do it from 99 dollars, and then you got a 100 dollar laptop right?
+
+221
+00:21:43,393 --> 00:21:50,695
+One Laptop Per Child. And so, my sense is that we are going to, in training time, when computing is going to be absolutely bakers to be available.
+
+222
+00:21:50,800 --> 00:21:52,481
+Your furnice is basically a computer.
+
+223
+00:21:53,192 --> 00:21:59,782
+And virtual of 60% or their firms within 3 years are all going to run on Linux.
+
+224
+00:22:00,351 --> 00:22:06,726
+But, we don't yet know, what people will do with that, with those computing platforms.
+
+225
+00:22:06,879 --> 00:22:12,901
+So I think a lot of innovational, a lot of the economic, the next generation of businesses are effectively going to be
+
+226
+00:22:13,321 --> 00:22:20,023
+you know, powered by handcrafted devices, relatively being powered by Internet
+
+227
+00:22:20,182 --> 00:22:23,006
+because you have many - or powered by PC
+
+228
+00:22:23,452 --> 00:22:29,722
+You have many many more people who are carrying handcrafted devices then you do have people to sitting in front of the computer all the time. 
+
+229
+00:22:30,160 --> 00:22:34,847
+I've got a laptop that is sitting in the car right now, but I've got a phone with me right here.
+
+230
+00:22:35,473 --> 00:22:44,776
+So if you can provide services, if you can build new economic models around delivering services to people with some sort of consumer electronic device
+
+231
+00:22:45,259 --> 00:22:48,099
+then you have a much bigger effective and tracable market
+
+232
+00:22:49,003 --> 00:22:53,818
+So all the services that we saw firstly generated around the Internet like eminence of eBay
+
+233
+00:22:54,178 --> 00:23:02,417
+such as that, are all going to move to woods in focus, to target to consumer electronics, small handcrafted artifect.
+
+234
+00:23:04,478 --> 00:23:06,611
+And it will be great business built around those. 
+
+235
+00:23:06,629 --> 00:23:11,379
+And I hope that some of you will be building those businesses
+
+236
+00:23:11,778 --> 00:23:14,377
+ Let me know a little bit about your going to
+
+237
+00:23:12,818 --> 00:23:18,337
+How many guys have the willing to go to? OK, so, quite a few about of. 
+
+238
+00:23:19,928 --> 00:23:24,742
+The essence is take some of the changes to the natural conclusion, right? 
+
+239
+00:23:24,822 --> 00:23:30,764
+If you look at the licensing cost of operating system, it's been dropping and dropping and dropping and dropping and dropping and dropping. 
+
+240
+00:23:30,674 --> 00:23:33,088
+So we say "OK, what's the natural conclusion?"
+
+241
+00:23:33,147 --> 00:23:38,889
+The natural conclusion is that the businesses are of completely changes and people just get rid of licensing cost all together
+
+242
+00:23:39,155 --> 00:23:42,177
+so that's why we make a room to absolutely freely available.
+
+243
+00:23:42,913 --> 00:23:47,665
+And, if you look at the amount of the free software that being used, right?
+
+244
+00:23:48,292 --> 00:23:49,715
+That is completely ascending now.
+
+245
+00:23:49,841 --> 00:23:57,609
+Apple now, the Apple operating system consists of about 80% of them is free software, and any about 20% of them are propriety. 
+
+246
+00:23:57,872 --> 00:24:01,542
+So we say fine we'll take that train to its natural conclusion. 
+
+247
+00:24:02,075 --> 00:24:04,889
+ So all of the room are going to making free software. ...propriety.
+
+248
+00:24:06,115 --> 00:24:12,737
+So let's make sure that we build something which represents the natural conclusion of that big change, right?
+
+249
+00:24:13,090 --> 00:24:16,849
+... as of the technology of that big change then you became the platform.
+
+250
+00:24:17,143 --> 00:24:25,085
+So that's why I think it's going to be so popular because the basic represents the fundamental shift that is going on in the software industry, right? 
+
+251
+00:24:25,983 --> 00:24:31,125
+That these are the value that people are looking for, these are the things which empower people most efficiently.
+
+252
+00:24:32,074 --> 00:24:37,272
+So, as entrepreneur, if you are going to become entrepreneur, entrepreneurship encourage you to do the same thing, right? 
+
+253
+00:24:37,395 --> 00:24:41,209
+Ask yourself the question: what are the big changes that I may interested in? 
+
+254
+00:24:41,688 --> 00:24:48,135
+How all that affects the feel that I'm interested in? And how do I build something which best reflects that change? 
+
+255
+00:24:48,370 --> 00:24:51,065
+Which best implements that change?
+

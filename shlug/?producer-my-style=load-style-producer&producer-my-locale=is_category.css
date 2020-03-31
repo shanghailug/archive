@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-<html><body><p>* {
+
+* {
 margin:0;
 padding:0;
 }
@@ -111,10 +111,10 @@ margin:10px 10px 10px 0px;
 display: block;
 }
 
-html&gt;body .alignleft { width: auto; height: auto; }
-html&gt;body .alignright { width: auto; height: auto; }
-html&gt;body .aligncenter { width: auto; height: auto;  margin-top:10px; }
-html&gt;body .alignnone { width: auto; height: auto;  margin-top:10px; }
+html>body .alignleft { width: auto; height: auto; }
+html>body .alignright { width: auto; height: auto; }
+html>body .aligncenter { width: auto; height: auto;  margin-top:10px; }
+html>body .alignnone { width: auto; height: auto;  margin-top:10px; }
 
 .postmetadata { clear:both;}
 
@@ -145,19 +145,19 @@ img.alignright { max-width:480px; }
 img.aligncenter { max-width:650px; }
 img.alignnone { max-width:650px; }
 div.slideshow-container img { max-width:600px; }
-html&gt;body .alignleft { max-width:480px; }
-html&gt;body .alignright { max-width:480px; }
-html&gt;body .aligncenter { max-width:650px; }
-html&gt;body .alignnone { max-width:650px; }
+html>body .alignleft { max-width:480px; }
+html>body .alignright { max-width:480px; }
+html>body .aligncenter { max-width:650px; }
+html>body .alignnone { max-width:650px; }
 .wp-caption.aligncenter img { max-width:650px; }
 .wp-caption.alignnone img {  max-width:650px; }
 .wp-caption.alignleft img {  max-width:480px;  }
 .wp-caption.alignright img {  max-width:480px; }
-img.alignleft, .wp-caption.alignleft img { width: expression(this.clientWidth &gt; 480 ? '480px':true) }
-img.alignright, .wp-caption.alignright img { width: expression(this.clientWidth &gt; 480 ? '480px':true) }
-img.alignnone, .wp-caption.alignnone img { width: expression(this.clientWidth &gt; 650 ? '650px':true) }
-img.aligncenter, .wp-caption.aligncenter img { width: expression(this.clientWidth &gt; 650 ? '650px':true) }
-div.slideshow-container img { width: expression(this.clientWidth &gt; 600 ? '600px':true) }
+img.alignleft, .wp-caption.alignleft img { width: expression(this.clientWidth > 480 ? '480px':true) }
+img.alignright, .wp-caption.alignright img { width: expression(this.clientWidth > 480 ? '480px':true) }
+img.alignnone, .wp-caption.alignnone img { width: expression(this.clientWidth > 650 ? '650px':true) }
+img.aligncenter, .wp-caption.aligncenter img { width: expression(this.clientWidth > 650 ? '650px':true) }
+div.slideshow-container img { width: expression(this.clientWidth > 600 ? '600px':true) }
 #page { width:990px; }
 
 
@@ -1227,4 +1227,3 @@ padding: 0 4px 5px;
 margin: 0;
 }
 
-</p></body></html>

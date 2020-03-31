@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-<html><body><p>* {
+
+* {
 margin:0;
 padding:0;
 }
@@ -111,10 +111,10 @@ margin:10px 10px 10px 0px;
 display: block;
 }
 
-html&gt;body .alignleft { width: auto; height: auto; }
-html&gt;body .alignright { width: auto; height: auto; }
-html&gt;body .aligncenter { width: auto; height: auto;  margin-top:10px; }
-html&gt;body .alignnone { width: auto; height: auto;  margin-top:10px; }
+html>body .alignleft { width: auto; height: auto; }
+html>body .alignright { width: auto; height: auto; }
+html>body .aligncenter { width: auto; height: auto;  margin-top:10px; }
+html>body .alignnone { width: auto; height: auto;  margin-top:10px; }
 
 .postmetadata { clear:both;}
 
@@ -127,54 +127,38 @@ html&gt;body .alignnone { width: auto; height: auto;  margin-top:10px; }
 #contentcontainer { clear:both; overflow:hidden; padding:5px 0px; margin:0 auto; }
 
 
-.postarea { padding:0px; width:540px;margin:0;auto;}
+.postarea { padding:0px;width:765px;margin:0 auto;}
 .entry { padding:10px; }
-.postarea .stickyposts { width:100%; }
 .postarea h1 { width:100%; }
+.postarea .stickyposts { width:100%; }
 .byline { width:99%; }
 .postmetadata{ width:98%; margin:0 auto; }
 .bnavigation { width:98%; margin:20px auto 0px auto; }
 .bnavleft { width:45%; }
 .bnavright { width:45%; }
 .paginav { margin-top:10px; width:100%; }
-.latestpostsleft { float:left; width:230px; margin:10px; padding:10px;   }
-.latestpostsright { float:left; width:230px; margin:10px; padding:10px;   }
+.latestpostsleft { float:left; width:45%; margin:10px; padding:10px;   }
+.latestpostsright { float:left; width:45%; margin:10px; padding:10px;   }
 .postarea textarea, .entry textarea, #commentform textarea { width:100%; }
-img.alignleft { max-width:250px; }
-img.alignright { max-width:250px; }
-img.aligncenter { max-width:450px; }
-img.alignnone { max-width:450px; }
+img.alignleft { max-width:480px; }
+img.alignright { max-width:480px; }
+img.aligncenter { max-width:650px; }
+img.alignnone { max-width:650px; }
 div.slideshow-container img { max-width:600px; }
-html&gt;body .alignleft { max-width:250px; }
-html&gt;body .alignright { max-width:250px; }
-html&gt;body .aligncenter { max-width:450px; }
-html&gt;body .alignnone { max-width:450px; }
-.wp-caption.aligncenter img {  max-width:450px; height:auto; }
-.wp-caption.alignnone img {  max-width:450px; }
-.wp-caption.alignleft img {  max-width:250px;  }
-.wp-caption.alignright img {  max-width:250px;  }
-img.alignleft, .size-full, .wp-caption.alignleft img { width: expression(this.clientWidth &gt; 250 ? '250px':true) }
-img.alignright, .size-full, .wp-caption.alignright img { width: expression(this.clientWidth &gt; 250 ? '250px':true) }
-img.alignnone, .size-full, .wp-caption.alignnone img { width: expression(this.clientWidth &gt; 450 ? '450px':true) }
-img.aligncenter, .size-full, .wp-caption.aligncenter img { width: expression(this.clientWidth &gt; 450 ? '450px':true) }
-div.slideshow-container img { width: expression(this.clientWidth &gt; 600 ? '600px':true) }
-#page { width:990px; margin:0 auto; }
-#page .pageleft {  width:765px; float:left; }
-#page .pageleft .layout1top .layout1-1 { width:315px; }
-#page .pageleft .layout1top .layout1-2 { width:220px; }
-#page .pageleft .layout1top .layout1-3 { width:220px;  }
-#page .pageleft .layout1top .layout1-1,#page .pageleft .layout1top .layout1-2 { margin-right:5px; }
-#page .pageleft .layout1bottom { width:765px; }
-#page .pageleft .layout1bottom2 .layout1-4-2-1 {  width:380px;  }
-#page .pageleft .layout1bottom2 .layout1-4-2-2 {  width:380px;  }
-
-#page .pageleft .layout2top .layout2-1 { width:420px; margin-right:5px;   }
-#page .pageleft .layout2top .layout2-2 { width:340px;  }
-#page .pageleft .layout2bottom { width:765px; }
-#page .pageleft .layout2bottom .layout2bottomleft {  width:260px; }
-#page .pageleft .layout2bottom .layout2bottomright { width:500px; margin-right:5px; }
-#page .pageleft .layout2bottom2 { width:765px; }
-.stickyposts { width:765px;}
+html>body .alignleft { max-width:480px; }
+html>body .alignright { max-width:480px; }
+html>body .aligncenter { max-width:650px; }
+html>body .alignnone { max-width:650px; }
+.wp-caption.aligncenter img { max-width:650px; }
+.wp-caption.alignnone img {  max-width:650px; }
+.wp-caption.alignleft img {  max-width:480px;  }
+.wp-caption.alignright img {  max-width:480px; }
+img.alignleft, .wp-caption.alignleft img { width: expression(this.clientWidth > 480 ? '480px':true) }
+img.alignright, .wp-caption.alignright img { width: expression(this.clientWidth > 480 ? '480px':true) }
+img.alignnone, .wp-caption.alignnone img { width: expression(this.clientWidth > 650 ? '650px':true) }
+img.aligncenter, .wp-caption.aligncenter img { width: expression(this.clientWidth > 650 ? '650px':true) }
+div.slideshow-container img { width: expression(this.clientWidth > 600 ? '600px':true) }
+#page { width:990px; }
 
 
 .postarea { margin-bottom:25px; }
@@ -1243,4 +1227,3 @@ padding: 0 4px 5px;
 margin: 0;
 }
 
-</p></body></html>
