@@ -178,7 +178,7 @@ def fix_link(target_dir, path, doc, tag, attr)
     # workaroud for github page url rewrite
     # without trail '/', github will
     # rewrite '/%3Fxxx' to '/?xxx', not '/%3Fxxx/index.html'
-    url1 += "/" if p.directory?
+    url1 += "/" if Pathname(url_unescape(p.to_s)).directory?
 
     tag[attr] = url1
   end
